@@ -1,0 +1,20 @@
+name: s7dump
+
+on:
+  push:
+    paths: ["s7dump/**", ".github/workflows/s7dump.yml"]
+  pull_request:
+    paths: ["s7dump/**", ".github/workflows/s7dump.yml"]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - run: dotnet test s7dump/tests/s7dump.Tests -p:RestoreLockedMode=true

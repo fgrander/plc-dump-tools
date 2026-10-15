@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- STEP 7 V5.x project dump for the direct export route. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>s7dump</AssemblyName>
+    <RootNamespace>S7Dump</RootNamespace>
+    <Version>1.0.0</Version>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- LGPL-2.1 library stays a separate, replaceable DLL: never publish single-file -->
+    <PublishSingleFile>false</PublishSingleFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Dump/*.cs" />
+    <Compile Remove="tests/**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetProjects.DotNetSiemensPLCToolBoxLibrary" Version="4.4.10" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+</Project>

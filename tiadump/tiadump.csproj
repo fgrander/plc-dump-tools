@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- TIA Portal project/library dump through TIA Openness.
+       net48 x64 because the installed Openness assemblies ship only for net48. The Siemens
+       assemblies are referenced from the TIA installation and never copied (Private=false);
+       at run time Openness/AssemblyResolver.cs loads them from the installed TIA Portal. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>tiadump</AssemblyName>
+    <RootNamespace>TiaDump</RootNamespace>
+    <Version>1.0.0</Version>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <!-- Openness API folder of the TIA Portal this tool is built against (override per build) -->
+    <TiaMajor Condition="'$(TiaMajor)' == ''">21</TiaMajor>
+    <TiaPublicApi Condition="'$(TiaPublicApi)' == ''">C:\Program Files\Siemens\Automation\Portal V$(TiaMajor)\PublicAPI\V$(TiaMajor)\net48</TiaPublicApi>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Openness/*.cs" />
+    <Compile Include="Dump/*.cs" />
+    <Compile Include="Spikes/*.cs" />
+    <Compile Remove="tests/**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="Siemens.Engineering.Base">
+      <HintPath>$(TiaPublicApi)\Siemens.Engineering.Base.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Step7">
+      <HintPath>$(TiaPublicApi)\Siemens.Engineering.Step7.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Safety">
+      <HintPath>$(TiaPublicApi)\Siemens.Engineering.Safety.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.WinCC">
+      <HintPath>$(TiaPublicApi)\Siemens.Engineering.WinCC.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.WinCCUnified">
+      <HintPath>$(TiaPublicApi)\Siemens.Engineering.WinCCUnified.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

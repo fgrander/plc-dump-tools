@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+*.user
+.vs/
+.idea/
+TestResults/
+# real PLC projects for the sample tests stay local
+samples/

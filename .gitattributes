@@ -1,0 +1,6 @@
+# Normalize line endings in the repo; use native endings on checkout
+* text=auto
+
+# PowerShell scripts use CRLF on Windows
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
