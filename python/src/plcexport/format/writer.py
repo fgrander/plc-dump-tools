@@ -9,8 +9,8 @@ puts the files on disk so that an existing export is never left half overwritten
 from __future__ import annotations
 
 import hashlib
-import os
 import shutil
+import sys
 import uuid
 from collections.abc import Iterable, Mapping
 from dataclasses import asdict, dataclass, field
@@ -919,7 +919,7 @@ WINDOWS_MAX_PATH = 259  # characters, without the terminating NUL
 
 def path_limit() -> int | None:
     """The longest path this system can write, or None if there is no such limit."""
-    if os.name != "nt":
+    if sys.platform != "win32":
         return None
     try:
         import winreg
