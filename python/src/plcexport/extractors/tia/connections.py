@@ -1,5 +1,7 @@
-"""TIA Portal connections -> the connection model. The input is a PLC's ``configured_connections`` list of ``dump.json``; values are
-copied as found, only the local ID is read as the hex value TIA Portal shows."""
+"""TIA Portal connections -> the connection model.
+
+The input is a PLC's ``configured_connections`` list of ``dump.json``; values are copied as
+found, only the local ID is read as the hex value TIA Portal shows."""
 
 from __future__ import annotations
 

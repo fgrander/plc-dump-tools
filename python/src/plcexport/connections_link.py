@@ -1,6 +1,7 @@
 """Link communication calls to configured connections and report the findings.
 
-Platform-independent: the STEP 7 and the TIA extractor build the connections and the unlinked calls, and both get the same rules here.
+Platform-independent: the STEP 7 and the TIA extractor build the connections and the unlinked
+calls, and both get the same rules here.
 
 An *owner* is the PLC a connection or a program belongs to, named like the connection ref
 without its ID (``<station>/<module>``). Only S7 connections are linked.

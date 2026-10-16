@@ -1,4 +1,5 @@
-"""tiadump dump -> ExportBundle, on the recorded fixtures and on small synthetic dumps for cases the samples do not contain."""
+"""tiadump dump -> ExportBundle, on the recorded fixtures and on small synthetic dumps for
+cases the samples do not contain."""
 
 from __future__ import annotations
 
