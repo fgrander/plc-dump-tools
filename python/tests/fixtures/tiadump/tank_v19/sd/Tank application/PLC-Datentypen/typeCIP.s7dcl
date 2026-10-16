@@ -1,0 +1,31 @@
+﻿TYPE
+    typeCIP : STRUCT
+        { S7_MLC := "MLC_35x" }
+        cipStartTime : Time_Of_Day := TOD#22:00:00;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3jX"
+        }
+        cipActive : Bool;
+        { S7_MLC := "MLC_rF" }
+        cipId : Int;
+        { S7_MLC := "MLC_xf" }
+        cipProcess : String;
+        { S7_MLC := "MLC_3sM" }
+        cipStep : String;
+        { S7_MLC := "MLC_5Bj" }
+        cipTemperature : Real;
+        { S7_MLC := "MLC_4vL" }
+        cipConcentration : Real;
+        { S7_MLC := "MLC_ee" }
+        cipFlowrate : Real;
+        { S7_MLC := "MLC_WP" }
+        cipStep1 : Bool;
+        { S7_MLC := "MLC_WD" }
+        cipStep2 : Bool;
+        { S7_MLC := "MLC_44J" }
+        cipStep3 : Bool;
+        { S7_MLC := "MLC_4sJ" }
+        cipStep4 : Bool;
+    END_STRUCT;
+END_TYPE

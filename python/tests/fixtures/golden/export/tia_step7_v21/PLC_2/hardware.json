@@ -1,0 +1,53 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "firmware": "V4.0",
+      "name": "PLC_2",
+      "order_no": "6ES7 515-2UN03-0AB0",
+      "ref": "cpu:PLC_2"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V4.0",
+      "order_no": "6ES7 515-2UN03-0AB0",
+      "rack": "PLC_2/PLC_2",
+      "ref": "PLC_2/PLC_2",
+      "slot": 1,
+      "type": "PLC_2"
+    },
+    {
+      "order_no": "6ES7 590-1***0-0AA0",
+      "rack": "PLC_2/Rail_0",
+      "ref": "PLC_2/Rail_0",
+      "slot": 0,
+      "type": "Rail_0"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.0.4/24",
+      "device_name": "plc_2.profinet interface_1",
+      "interface": "Ethernet",
+      "ref": "PLC_2/X1/Ethernet",
+      "subnet": "S120Democase_PN_1"
+    },
+    {
+      "address": "192.168.1.4/24",
+      "device_name": "plc_2.profinet interface_2",
+      "interface": "Ethernet",
+      "ref": "PLC_2/X2/Ethernet"
+    }
+  ],
+  "racks": [
+    {
+      "name": "PLC_2",
+      "ref": "PLC_2/PLC_2"
+    },
+    {
+      "name": "Rail_0",
+      "ref": "PLC_2/Rail_0"
+    }
+  ]
+}

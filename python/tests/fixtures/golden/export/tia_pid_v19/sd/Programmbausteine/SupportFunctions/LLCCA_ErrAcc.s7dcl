@@ -1,0 +1,90 @@
+﻿{
+    S7_Author := "Author A";
+    S7_BlockComment := "MLC_2";
+    S7_BlockTitle := "MLC_1";
+    S7_EditorMode := "SCL";
+    S7_Family := "LLCCA";
+    S7_GenerateENOforSCL := "TRUE";
+    S7_IECCheck := "TRUE";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "LLCCA_ErrAcc"
+    VAR_INPUT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3";
+            S7_Visibility := "Hidden := External"
+        }
+        iPv : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4";
+            S7_Visibility := "Hidden := External"
+        }
+        iSp : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_5";
+            S7_Visibility := "Hidden := External"
+        }
+        iReset : Bool;
+    END_VAR
+    VAR_OUTPUT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_6"
+        }
+        oErrAcc : LReal;
+    END_VAR
+    VAR
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statErrAcc : LReal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statRuntime : LReal;
+    END_VAR
+    VAR_TEMP
+        tempDeltaTime : LReal;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Description header 
+            //================================================================================== 
+            // LCC Automation AB / (c)Copyright 2024
+            // Released under the MIT License
+            //---------------------------------------------------------------------------------- 
+            // Title:            LLCCA_ErrAcc
+            // Comment/Function: Process value to setpoint error accumulator
+            // Library/Family:   LLCCA (Library LCC Automation AB)
+            // Author:           Author A / author@example.invalid
+            // Target System:    CPU 1510SP-1
+            // Engineering:      TIA Portal 19 update 3
+            // Restrictions:     none
+            // Requirements:     PLC (S7-1200 / S7-1500)
+            //---------------------------------------------------------------------------------- 
+            // Change log table: 
+            // Version     | Date       | Author           | Changes applied
+            //-------------|------------|------------------|------------------------------------ 
+            // 001.000.001 | 2024-11-27 | Author A   | First release
+            //==================================================================================
+        END_REGION
+        
+        #tempDeltaTime := RUNTIME(#statRuntime);
+        
+        IF #iReset THEN
+            #statErrAcc := 0.0;
+        ELSE
+            #statErrAcc := #statErrAcc + (ABS(#iSp - #iPv) * #tempDeltaTime);
+        END_IF;
+        
+        // set output
+        #oErrAcc := #statErrAcc;
+    END_NETWORK
+END_FUNCTION_BLOCK

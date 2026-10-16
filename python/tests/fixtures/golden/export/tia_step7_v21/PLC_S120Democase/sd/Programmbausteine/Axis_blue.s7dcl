@@ -1,0 +1,153 @@
+﻿{
+    S7_BlockNumber := "10";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "Axis_blue"
+    VAR
+        MC_POWER_Instance : MC_POWER;
+        MC_RESET_Instance : MC_RESET;
+        MC_HOME_Instance : MC_HOME;
+        MC_HALT_Instance : MC_HALT;
+        MC_MOVEVELOCITY_Instance : MC_MOVEVELOCITY;
+        MC_MOVERELATIVE_Instance : MC_MOVERELATIVE;
+        MC_MOVEABSOLUTE_Instance : MC_MOVEABSOLUTE;
+        { S7_Setpoint := "False" }
+        MC_OUTPUTCAM_Instance : MC_OUTPUTCAM;
+    END_VAR
+    VAR_TEMP
+        tempVelocity : LReal;
+        velocity : LReal;
+    END_VAR
+
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            #MC_POWER_Instance.MC_POWER(
+                Axis := "PositioningAxis_blue",
+                Enable := "ControlUnit_AddressIn".E_DIGITAL.DI_00,
+                StartMode :=  ,
+                StopMode :=  ,
+                Status =>  ,
+                Busy =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_RESET_Instance.MC_RESET(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_01,
+                Restart :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_HOME_Instance.MC_HOME(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_02,
+                Position :=  ,
+                Mode :=  ,
+                ReferenceMarkPosition =>  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_HALT_Instance.MC_HALT(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_03,
+                Deceleration :=  ,
+                Jerk :=  ,
+                AbortAcceleration :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            { S7_Templates := "[SrcType := Int, DestType := LReal]" }
+            Normalize(
+                min := 0,
+                value := "TB30_AI_0",
+                max := 16384,
+                out => #velocity
+            )
+            { S7_Templates := "SrcType := LReal" }
+            Mul(
+                in1 := #velocity,
+                in2 := 6000.0,
+                out => #tempVelocity
+            )
+            { S7_Templates := "value_type := LReal" }
+            Limit(
+                min := 0.0,
+                in := #tempVelocity,
+                max := 6000.0,
+                out => #velocity
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            #MC_MOVEVELOCITY_Instance.MC_MOVEVELOCITY(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_04,
+                Velocity := #velocity,
+                Acceleration :=  ,
+                Deceleration :=  ,
+                Jerk :=  ,
+                Direction :=  ,
+                Current :=  ,
+                PositionControlled :=  ,
+                InVelocity =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_MOVERELATIVE_Instance.MC_MOVERELATIVE(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_05,
+                Distance := 360.0,
+                Velocity :=  ,
+                Acceleration :=  ,
+                Deceleration :=  ,
+                Jerk :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_MOVEABSOLUTE_Instance.MC_MOVEABSOLUTE(
+                Axis := "PositioningAxis_blue",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_06,
+                Position :=  ,
+                Velocity :=  ,
+                Acceleration :=  ,
+                Deceleration :=  ,
+                Jerk :=  ,
+                Direction :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

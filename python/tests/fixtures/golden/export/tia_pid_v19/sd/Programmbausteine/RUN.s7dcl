@@ -1,0 +1,196 @@
+﻿{
+    S7_Author := "Author A";
+    S7_GenerateENOforSCL := "TRUE";
+    S7_IECCheck := "TRUE";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.0"
+}
+FUNCTION_BLOCK "RUN"
+    VAR_INPUT
+        setpoint : Real;
+    END_VAR
+    VAR_IN_OUT
+        resetAll : Bool;
+        resetPvSim : Bool;
+        resetPID : Bool;
+        resetAccErr : Bool;
+    END_VAR
+    VAR
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statSetpoint : Real;
+    END_VAR
+    VAR_TEMP
+        tempPv_LCCA_PID : Real;
+        tempPv_PID_C : Real;
+        tempResetPvSim : Bool;
+        tempResetPID : Bool;
+        tempResetAccErr : Bool;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        IF #setpoint <> #statSetpoint THEN
+          "LLCCA_PID_DB".Setpoint := #setpoint;
+          "PID_Compact_1".Setpoint := #setpoint;
+          #statSetpoint := #setpoint;
+          #resetAccErr := TRUE;
+        END_IF;
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG #resetAll
+            O( in2 := #resetPvSim )
+            Coil( #tempResetPvSim )
+        END_RUNG
+        RUNG #resetAll
+            O( in2 := #resetPID )
+            Coil( #tempResetPID )
+        END_RUNG
+        RUNG #resetAll
+            O( in2 := #resetAccErr )
+            Coil( #tempResetAccErr )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG TRUE
+            A()
+            wire#w1
+            R_Coil( #resetAll )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #resetPvSim )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #resetPID )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #resetAccErr )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "LLCCA_PvSim_LLCCA_PID_DB"(
+                enable := true,
+                input :=  ,
+                reset := #tempResetPvSim,
+                ioAddFactor :=  ,
+                ioAddTimeLag :=  ,
+                ioAddFilter :=  ,
+                ioSubType :=  ,
+                ioSubFactor :=  ,
+                ioSubTimeLag :=  ,
+                ioSubFilter :=  ,
+                ioSubConstant :=  ,
+                ioSubStartValue :=  ,
+                ioNoiceFactor :=  ,
+                out => #tempPv_LCCA_PID,
+                addComp =>  ,
+                subComp =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "LLCCA_PID_DB"(
+                Setpoint :=  ,
+                Input := #tempPv_LCCA_PID,
+                ManualValue :=  ,
+                Reset := #tempResetPID,
+                ioMode :=  ,
+                ioKp :=  ,
+                ioTi :=  ,
+                ioTd :=  ,
+                Out => "LLCCA_PvSim_LLCCA_PID_DB".input,
+                Terms =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "LLCCA_ErrAcc_DB_LLCCA_PID"(
+                iPv := "LLCCA_PID_DB".Input,
+                iSp := "LLCCA_PID_DB".Setpoint,
+                iReset := #tempResetAccErr,
+                oErrAcc =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "LLCCA_PvSim_PID_C_DB"(
+                enable := true,
+                input :=  ,
+                reset := #tempResetPvSim,
+                ioAddFactor :=  ,
+                ioAddTimeLag :=  ,
+                ioAddFilter :=  ,
+                ioSubType :=  ,
+                ioSubFactor :=  ,
+                ioSubTimeLag :=  ,
+                ioSubFilter :=  ,
+                ioSubConstant :=  ,
+                ioSubStartValue :=  ,
+                ioNoiceFactor :=  ,
+                out => #tempPv_PID_C,
+                addComp =>  ,
+                subComp =>  
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_1"
+    }
+    NETWORK
+        RUNG
+            "PID_Compact_1".PID_Compact(
+                Setpoint :=  ,
+                Input := #tempPv_PID_C,
+                Input_PER :=  ,
+                Disturbance :=  ,
+                ManualEnable :=  ,
+                ManualValue :=  ,
+                ErrorAck :=  ,
+                Reset := #tempResetPID,
+                ModeActivate :=  ,
+                ScaledInput =>  ,
+                Output => "LLCCA_PvSim_PID_C_DB".input,
+                Output_PER =>  ,
+                Output_PWM =>  ,
+                SetpointLimit_H =>  ,
+                SetpointLimit_L =>  ,
+                InputWarning_H =>  ,
+                InputWarning_L =>  ,
+                State =>  ,
+                Error =>  ,
+                ErrorBits =>  ,
+                Mode :=  
+            )
+        END_RUNG
+        RUNG true
+            R_Coil( "PID_Compact_1".Reset )
+            R_Coil( "PID_Compact_1".ErrorAck )
+            R_Coil( "PID_Compact_1".ModeActivate )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "LLCCA_ErrAcc_DB_PID_C"(
+                iPv := "PID_Compact_1".Input,
+                iSp := "PID_Compact_1".Setpoint,
+                iReset := #tempResetAccErr,
+                oErrAcc =>  
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,2337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-10-09T20:27:00.7380612Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+          <Section Name="Input">
+            <Member Name="externalSignals" Datatype="&quot;typeSignals&quot;" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">signals from external model</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="tankSignals" Datatype="Struct">
+                    <Member Name="actLevel" Datatype="Real" />
+                    <Member Name="maxLevel" Datatype="Bool" />
+                    <Member Name="actPressure" Datatype="Real" />
+                    <Member Name="actTemperature" Datatype="Real" />
+                    <Member Name="maxTemperature" Datatype="Bool" />
+                  </Member>
+                  <Member Name="bottleSignals" Datatype="Struct">
+                    <Member Name="actLevel" Datatype="Real" />
+                    <Member Name="maxLevel" Datatype="Bool" />
+                    <Member Name="outputTank" Datatype="Real" />
+                  </Member>
+                  <Member Name="energySignals" Datatype="Struct">
+                    <Member Name="energyConsumptionFillingTank" Datatype="Real" />
+                    <Member Name="waterConsumptionFillingTank" Datatype="Real" />
+                    <Member Name="energyConsumptionHeatingTank" Datatype="Real" />
+                    <Member Name="energyConsumptionFillingBottles" Datatype="Real" />
+                    <Member Name="gasConsumptionHeatingTank" Datatype="Real" />
+                  </Member>
+                  <Member Name="energySignalsPerState" Datatype="Struct">
+                    <Member Name="stateId" Datatype="UInt" />
+                    <Member Name="energyConsumptionStatePoweringUp" Datatype="Real" />
+                    <Member Name="energyConsumptionStatePoweringDown" Datatype="Real" />
+                    <Member Name="energyConsumptionStateOff" Datatype="Real" />
+                    <Member Name="energyConsumptionStateStandby" Datatype="Real" />
+                    <Member Name="energyConsumptionStateOperational" Datatype="Real" />
+                    <Member Name="energyConsumptionStateWorking" Datatype="Real" />
+                    <Member Name="energyConsumptionStatesTotal" Datatype="Real" />
+                  </Member>
+                  <Member Name="alarm" Datatype="Word" />
+                  <Member Name="errorCode" Datatype="UInt" />
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Output" />
+          <Section Name="InOut">
+            <Member Name="model" Datatype="&quot;typeModel&quot;" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">model parameter</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="cycleTime" Datatype="Real" />
+                  <Member Name="tank" Datatype="Struct">
+                    <Member Name="AT" Datatype="Real" />
+                    <Member Name="H" Datatype="Real" />
+                    <Member Name="Vin" Datatype="Real" />
+                    <Member Name="maxLevel" Datatype="Real" />
+                    <Member Name="roomTemperature" Datatype="Real" />
+                    <Member Name="maxTemperature" Datatype="Real" />
+                    <Member Name="density" Datatype="Real" />
+                  </Member>
+                  <Member Name="bottle" Datatype="Struct">
+                    <Member Name="maxLevel" Datatype="Real" />
+                    <Member Name="AB" Datatype="Real" />
+                    <Member Name="shiftingCycle" Datatype="UInt" />
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="operate" Datatype="&quot;typeOperate&quot;" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">application operation</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="extModeActive" Datatype="Bool" />
+                  <Member Name="state" Datatype="&quot;typeState&quot;">
+                    <Sections>
+                      <Section Name="None">
+                        <Member Name="FillingTank" Datatype="Bool" />
+                        <Member Name="HeatingTank" Datatype="Bool" />
+                        <Member Name="FillingBottle" Datatype="Bool" />
+                        <Member Name="ShiftingBottle" Datatype="Bool" />
+                        <Member Name="Stop" Datatype="Bool" />
+                        <Member Name="Reset" Datatype="Bool" />
+                        <Member Name="Error" Datatype="Bool" />
+                      </Section>
+                    </Sections>
+                  </Member>
+                  <Member Name="machineState" Datatype="Int" />
+                  <Member Name="machineStateOEE" Datatype="Int" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="signals" Datatype="&quot;typeSignals&quot;" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">current signals from tank</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="tankSignals" Datatype="Struct">
+                    <Member Name="actLevel" Datatype="Real" />
+                    <Member Name="maxLevel" Datatype="Bool" />
+                    <Member Name="actPressure" Datatype="Real" />
+                    <Member Name="actTemperature" Datatype="Real" />
+                    <Member Name="maxTemperature" Datatype="Bool" />
+                  </Member>
+                  <Member Name="bottleSignals" Datatype="Struct">
+                    <Member Name="actLevel" Datatype="Real" />
+                    <Member Name="maxLevel" Datatype="Bool" />
+                    <Member Name="outputTank" Datatype="Real" />
+                  </Member>
+                  <Member Name="energySignals" Datatype="Struct">
+                    <Member Name="energyConsumptionFillingTank" Datatype="Real" />
+                    <Member Name="waterConsumptionFillingTank" Datatype="Real" />
+                    <Member Name="energyConsumptionHeatingTank" Datatype="Real" />
+                    <Member Name="energyConsumptionFillingBottles" Datatype="Real" />
+                    <Member Name="gasConsumptionHeatingTank" Datatype="Real" />
+                  </Member>
+                  <Member Name="energySignalsPerState" Datatype="Struct">
+                    <Member Name="stateId" Datatype="UInt" />
+                    <Member Name="energyConsumptionStatePoweringUp" Datatype="Real" />
+                    <Member Name="energyConsumptionStatePoweringDown" Datatype="Real" />
+                    <Member Name="energyConsumptionStateOff" Datatype="Real" />
+                    <Member Name="energyConsumptionStateStandby" Datatype="Real" />
+                    <Member Name="energyConsumptionStateOperational" Datatype="Real" />
+                    <Member Name="energyConsumptionStateWorking" Datatype="Real" />
+                    <Member Name="energyConsumptionStatesTotal" Datatype="Real" />
+                  </Member>
+                  <Member Name="alarm" Datatype="Word" />
+                  <Member Name="errorCode" Datatype="UInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="process" Datatype="&quot;typeProcess&quot;" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">current process information</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="productId" Datatype="String" />
+                  <Member Name="numberProduced" Datatype="UDInt" />
+                  <Member Name="numberFaulty" Datatype="UDInt" />
+                  <Member Name="numberGood" Datatype="UDInt" />
+                  <Member Name="batchId" Datatype="UDInt" />
+                  <Member Name="productTypeId" Datatype="UInt" />
+                  <Member Name="productTypeName" Datatype="String" />
+                  <Member Name="productSerialNumber" Datatype="String" />
+                  <Member Name="productQRCode" Datatype="USInt" />
+                  <Member Name="speedActual" Datatype="UDInt" />
+                  <Member Name="speedTarget" Datatype="UDInt" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="appSignals" Datatype="&quot;typeApp&quot;" Accessibility="Public">
+              <Sections>
+                <Section Name="None">
+                  <Member Name="APP_Start" Datatype="Bool" />
+                  <Member Name="APP_Stop" Datatype="Bool" />
+                  <Member Name="APP_Reset" Datatype="Bool" />
+                  <Member Name="APP_QRCode" Datatype="String" />
+                  <Member Name="APP_ErrorSimulation" Datatype="Bool" />
+                  <Member Name="APP_Error" Datatype="Bool" />
+                  <Member Name="APP_Alarm" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="hmiSignals" Datatype="&quot;typeHmi&quot;" Accessibility="Public">
+              <Sections>
+                <Section Name="None">
+                  <Member Name="HMI_Start" Datatype="Bool" />
+                  <Member Name="HMI_Stop" Datatype="Bool" />
+                  <Member Name="HMI_Reset" Datatype="Bool" />
+                  <Member Name="HMI_NextBottle" Datatype="Bool" />
+                  <Member Name="HMI_Error" Datatype="Bool" />
+                  <Member Name="HMI_InstallFillingPump" Datatype="Bool" />
+                  <Member Name="HMI_RenewHeatingElement" Datatype="Bool" />
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="errors" Datatype="&quot;typeError&quot;" Accessibility="Public">
+              <Comment>
+                <MultiLanguageText Lang="en-US">error information</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="errorTrigger" Datatype="Bool" />
+                  <Member Name="errorDuration" Datatype="Time" />
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+          <Section Name="Static">
+            <Member Name="statShiftingBottle" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statShiftingTrigger" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statShiftingTimer" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statHmiBottleLevel" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">parameter for HMI to show current bottle level</MultiLanguageText>
+              </Comment>
+            </Member>
+            <Member Name="statHmiDoShift" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">trigger for HMI to shift bottles</MultiLanguageText>
+              </Comment>
+            </Member>
+            <Member Name="statHmiFaultyBottle" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">trigger for HMI for faulty bottle</MultiLanguageText>
+              </Comment>
+            </Member>
+            <Member Name="statBatchIdOld" Datatype="UDInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">helper when batchID changed</MultiLanguageText>
+              </Comment>
+              <StartValue>0</StartValue>
+            </Member>
+            <Member Name="statFillingTankTrigger" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statStartCounter" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statProducedStart" Datatype="UDInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statProducedEnd" Datatype="UDInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statSizeBatchID" Datatype="USInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statSizeNumberProduced" Datatype="USInt" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statStringBatchID" Datatype="String" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+            <Member Name="statStringProductID" Datatype="String" Remanence="NonRetain" Accessibility="Public">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+                <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+            </Member>
+          </Section>
+          <Section Name="Temp">
+            <Member Name="tempBottleMaxLevel" Datatype="Real" />
+            <Member Name="tempTimerFinished" Datatype="Bool" />
+            <Member Name="tempTimeOutput" Datatype="Time" />
+            <Member Name="tempCurrentTime" Datatype="DTL" Version="1.0" />
+            <Member Name="tempTimeRet" Datatype="Int" />
+          </Section>
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_2_Filling</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="model" />
+                    <Component Name="bottle" />
+                    <Component Name="maxLevel" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="22">
+                  <Constant>
+                    <ConstantType>Real</ConstantType>
+                    <ConstantValue>1000.0</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tempBottleMaxLevel" />
+                  </Symbol>
+                </Access>
+                <Part Name="Mul" UId="24" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                  <AutomaticTyped Name="SrcType" />
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="26">
+                  <OpenCon UId="25" />
+                  <NameCon UId="24" Name="en" />
+                </Wire>
+                <Wire UId="27">
+                  <IdentCon UId="21" />
+                  <NameCon UId="24" Name="in1" />
+                </Wire>
+                <Wire UId="28">
+                  <IdentCon UId="22" />
+                  <NameCon UId="24" Name="in2" />
+                </Wire>
+                <Wire UId="29">
+                  <NameCon UId="24" Name="out" />
+                  <IdentCon UId="23" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Calculation of params</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="FillingTank" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="statFillingTankTrigger" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="batchId" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="24">
+                  <Constant>
+                    <ConstantType>UDInt</ConstantType>
+                    <ConstantValue>1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="batchId" />
+                  </Symbol>
+                </Access>
+                <Part Name="PBox" UId="26" />
+                <Part Name="Add" UId="27" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                  <TemplateValue Name="SrcType" Type="Type">UDInt</TemplateValue>
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="28">
+                  <IdentCon UId="21" />
+                  <NameCon UId="26" Name="in" />
+                </Wire>
+                <Wire UId="29">
+                  <IdentCon UId="22" />
+                  <NameCon UId="26" Name="bit" />
+                </Wire>
+                <Wire UId="30">
+                  <NameCon UId="26" Name="out" />
+                  <NameCon UId="27" Name="en" />
+                </Wire>
+                <Wire UId="31">
+                  <IdentCon UId="23" />
+                  <NameCon UId="27" Name="in1" />
+                </Wire>
+                <Wire UId="32">
+                  <IdentCon UId="24" />
+                  <NameCon UId="27" Name="in2" />
+                </Wire>
+                <Wire UId="33">
+                  <NameCon UId="27" Name="out" />
+                  <IdentCon UId="25" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Set process values (filling tank)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="ShiftingBottle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="statShiftingTrigger" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberProduced" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="24">
+                  <Constant>
+                    <ConstantType>UDInt</ConstantType>
+                    <ConstantValue>1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberProduced" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="signals" />
+                    <Component Name="bottleSignals" />
+                    <Component Name="actLevel" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="tempBottleMaxLevel" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberFaulty" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="29">
+                  <Constant>
+                    <ConstantType>UDInt</ConstantType>
+                    <ConstantValue>1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="30">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberFaulty" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="31">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="ShiftingBottle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="32">
+                  <Symbol>
+                    <Component Name="statHmiFaultyBottle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="33">
+                  <Symbol>
+                    <Component Name="signals" />
+                    <Component Name="bottleSignals" />
+                    <Component Name="actLevel" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="34">
+                  <Symbol>
+                    <Component Name="statHmiBottleLevel" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="35">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="ShiftingBottle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="36">
+                  <Symbol>
+                    <Component Name="statHmiDoShift" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="37">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberProduced" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="38">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberFaulty" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="39">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberGood" />
+                  </Symbol>
+                </Access>
+                <Part Name="PBox" UId="40" />
+                <Part Name="Add" UId="41" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                  <TemplateValue Name="SrcType" Type="Type">UDInt</TemplateValue>
+                </Part>
+                <Part Name="Lt" UId="42">
+                  <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+                </Part>
+                <Part Name="A" UId="43">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Add" UId="44" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                  <TemplateValue Name="SrcType" Type="Type">UDInt</TemplateValue>
+                </Part>
+                <Part Name="Sr" UId="45">
+                  <Negated Name="r1" />
+                </Part>
+                <Part Name="Move" UId="46" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+                </Part>
+                <Part Name="Sr" UId="47">
+                  <Negated Name="r1" />
+                </Part>
+                <Part Name="Sub" UId="48" DisabledENO="true">
+                  <AutomaticTyped Name="SrcType" />
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="50">
+                  <IdentCon UId="21" />
+                  <NameCon UId="40" Name="in" />
+                </Wire>
+                <Wire UId="51">
+                  <IdentCon UId="22" />
+                  <NameCon UId="40" Name="bit" />
+                </Wire>
+                <Wire UId="52">
+                  <NameCon UId="40" Name="out" />
+                  <NameCon UId="41" Name="en" />
+                  <NameCon UId="43" Name="in1" />
+                  <NameCon UId="46" Name="en" />
+                  <NameCon UId="47" Name="s" />
+                </Wire>
+                <Wire UId="53">
+                  <IdentCon UId="23" />
+                  <NameCon UId="41" Name="in1" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="24" />
+                  <NameCon UId="41" Name="in2" />
+                </Wire>
+                <Wire UId="55">
+                  <NameCon UId="41" Name="out" />
+                  <IdentCon UId="25" />
+                </Wire>
+                <Wire UId="56">
+                  <IdentCon UId="26" />
+                  <NameCon UId="42" Name="in1" />
+                </Wire>
+                <Wire UId="57">
+                  <IdentCon UId="27" />
+                  <NameCon UId="42" Name="in2" />
+                </Wire>
+                <Wire UId="58">
+                  <NameCon UId="42" Name="out" />
+                  <NameCon UId="43" Name="in2" />
+                </Wire>
+                <Wire UId="59">
+                  <NameCon UId="43" Name="out" />
+                  <NameCon UId="44" Name="en" />
+                  <NameCon UId="45" Name="s" />
+                </Wire>
+                <Wire UId="60">
+                  <IdentCon UId="28" />
+                  <NameCon UId="44" Name="in1" />
+                </Wire>
+                <Wire UId="61">
+                  <IdentCon UId="29" />
+                  <NameCon UId="44" Name="in2" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="44" Name="out" />
+                  <IdentCon UId="30" />
+                </Wire>
+                <Wire UId="63">
+                  <IdentCon UId="31" />
+                  <NameCon UId="45" Name="r1" />
+                </Wire>
+                <Wire UId="64">
+                  <IdentCon UId="32" />
+                  <NameCon UId="45" Name="operand" />
+                </Wire>
+                <Wire UId="65">
+                  <IdentCon UId="33" />
+                  <NameCon UId="46" Name="in" />
+                </Wire>
+                <Wire UId="66">
+                  <NameCon UId="46" Name="out1" />
+                  <IdentCon UId="34" />
+                </Wire>
+                <Wire UId="67">
+                  <IdentCon UId="35" />
+                  <NameCon UId="47" Name="r1" />
+                </Wire>
+                <Wire UId="68">
+                  <IdentCon UId="36" />
+                  <NameCon UId="47" Name="operand" />
+                </Wire>
+                <Wire UId="69">
+                  <OpenCon UId="49" />
+                  <NameCon UId="48" Name="en" />
+                </Wire>
+                <Wire UId="70">
+                  <IdentCon UId="37" />
+                  <NameCon UId="48" Name="in1" />
+                </Wire>
+                <Wire UId="71">
+                  <IdentCon UId="38" />
+                  <NameCon UId="48" Name="in2" />
+                </Wire>
+                <Wire UId="72">
+                  <NameCon UId="48" Name="out" />
+                  <IdentCon UId="39" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Set process values (shifting bottle, number produced)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Token Text="IF" UId="21" />
+              <Blank Num="1" UId="22" />
+              <Access Scope="LocalVariable" UId="23">
+                <Symbol UId="24">
+                  <Component Name="process" UId="25" />
+                  <Token Text="." UId="26" />
+                  <Component Name="batchId" UId="27" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="28" />
+              <Token Text="&lt;&gt;" UId="29" />
+              <Blank Num="1" UId="30" />
+              <Access Scope="LocalVariable" UId="31">
+                <Symbol UId="32">
+                  <Component Name="statBatchIdOld" UId="33" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="34" />
+              <Token Text="THEN" UId="35" />
+              <NewLine Num="1" UId="36" />
+              <Blank Num="4" UId="37" />
+              <NewLine Num="1" UId="38" />
+              <Blank Num="4" UId="39" />
+              <Token Text="IF" UId="40" />
+              <Blank Num="1" UId="41" />
+              <Access Scope="LocalVariable" UId="42">
+                <Symbol UId="43">
+                  <Component Name="process" UId="44" />
+                  <Token Text="." UId="45" />
+                  <Component Name="batchId" UId="46" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="47" />
+              <Token Text="=" UId="48" />
+              <Blank Num="1" UId="49" />
+              <Access Scope="LiteralConstant" UId="50">
+                <Constant UId="51">
+                  <ConstantValue UId="53">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="54" />
+              <Token Text="THEN" UId="55" />
+              <NewLine Num="1" UId="56" />
+              <Blank Num="8" UId="57" />
+              <Access Scope="LocalVariable" UId="58">
+                <Symbol UId="59">
+                  <Component Name="process" UId="60" />
+                  <Token Text="." UId="61" />
+                  <Component Name="productTypeId" UId="62" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="63" />
+              <Token Text=":=" UId="64" />
+              <Blank Num="1" UId="65" />
+              <Access Scope="LiteralConstant" UId="66">
+                <Constant UId="67">
+                  <ConstantValue UId="69">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="70" />
+              <NewLine Num="1" UId="71" />
+              <Blank Num="4" UId="72" />
+              <Token Text="ELSE" UId="73" />
+              <NewLine Num="1" UId="74" />
+              <Blank Num="8" UId="75" />
+              <Token Text="IF" UId="76" />
+              <Blank Num="1" UId="77" />
+              <Access Scope="LocalVariable" UId="78">
+                <Symbol UId="79">
+                  <Component Name="process" UId="80" />
+                  <Token Text="." UId="81" />
+                  <Component Name="productTypeId" UId="82" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="83" />
+              <Token Text="=" UId="84" />
+              <Blank Num="1" UId="85" />
+              <Access Scope="LiteralConstant" UId="86">
+                <Constant UId="87">
+                  <ConstantValue UId="89">3</ConstantValue>
+                </Constant>
+              </Access>
+              <Blank Num="1" UId="90" />
+              <Token Text="THEN" UId="91" />
+              <NewLine Num="1" UId="92" />
+              <Blank Num="12" UId="93" />
+              <Access Scope="LocalVariable" UId="94">
+                <Symbol UId="95">
+                  <Component Name="process" UId="96" />
+                  <Token Text="." UId="97" />
+                  <Component Name="productTypeId" UId="98" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="99" />
+              <Token Text=":=" UId="100" />
+              <Blank Num="1" UId="101" />
+              <Access Scope="LiteralConstant" UId="102">
+                <Constant UId="103">
+                  <ConstantValue UId="105">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="106" />
+              <NewLine Num="1" UId="107" />
+              <Blank Num="8" UId="108" />
+              <Token Text="ELSE" UId="109" />
+              <NewLine Num="1" UId="110" />
+              <Blank Num="12" UId="111" />
+              <Access Scope="LocalVariable" UId="112">
+                <Symbol UId="113">
+                  <Component Name="process" UId="114" />
+                  <Token Text="." UId="115" />
+                  <Component Name="productTypeId" UId="116" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="117" />
+              <Token Text=":=" UId="118" />
+              <Blank Num="1" UId="119" />
+              <Access Scope="LocalVariable" UId="120">
+                <Symbol UId="121">
+                  <Component Name="process" UId="122" />
+                  <Token Text="." UId="123" />
+                  <Component Name="productTypeId" UId="124" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="125" />
+              <Token Text="+" UId="126" />
+              <Blank Num="1" UId="127" />
+              <Access Scope="LiteralConstant" UId="128">
+                <Constant UId="129">
+                  <ConstantValue UId="131">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="132" />
+              <NewLine Num="1" UId="133" />
+              <Blank Num="8" UId="134" />
+              <Token Text="END_IF" UId="135" />
+              <Token Text=";" UId="136" />
+              <NewLine Num="1" UId="137" />
+              <Blank Num="4" UId="138" />
+              <Token Text="END_IF" UId="139" />
+              <Token Text=";" UId="140" />
+              <NewLine Num="1" UId="141" />
+              <Blank Num="4" UId="142" />
+              <NewLine Num="1" UId="143" />
+              <Blank Num="4" UId="144" />
+              <Token Text="CASE" UId="145" />
+              <Blank Num="1" UId="146" />
+              <Access Scope="LocalVariable" UId="147">
+                <Symbol UId="148">
+                  <Component Name="process" UId="149" />
+                  <Token Text="." UId="150" />
+                  <Component Name="productTypeId" UId="151" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="152" />
+              <Token Text="OF" UId="153" />
+              <NewLine Num="1" UId="154" />
+              <Blank Num="8" UId="155" />
+              <Access Scope="LiteralConstant" UId="156">
+                <Constant UId="157">
+                  <ConstantValue UId="159">1</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=":" UId="160" />
+              <Blank Num="2" UId="161" />
+              <NewLine Num="1" UId="162" />
+              <Blank Num="12" UId="163" />
+              <Access Scope="LocalVariable" UId="164">
+                <Symbol UId="165">
+                  <Component Name="process" UId="166" />
+                  <Token Text="." UId="167" />
+                  <Component Name="productTypeName" UId="168" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="169" />
+              <Token Text=":=" UId="170" />
+              <Blank Num="1" UId="171" />
+              <Access Scope="LiteralConstant" UId="172">
+                <Constant UId="173">
+                  <ConstantValue UId="175">'Sparkling water'</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="176" />
+              <NewLine Num="1" UId="177" />
+              <Blank Num="8" UId="178" />
+              <Access Scope="LiteralConstant" UId="179">
+                <Constant UId="180">
+                  <ConstantValue UId="182">2</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=":" UId="183" />
+              <NewLine Num="1" UId="184" />
+              <Blank Num="12" UId="185" />
+              <Access Scope="LocalVariable" UId="186">
+                <Symbol UId="187">
+                  <Component Name="process" UId="188" />
+                  <Token Text="." UId="189" />
+                  <Component Name="productTypeName" UId="190" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="191" />
+              <Token Text=":=" UId="192" />
+              <Blank Num="1" UId="193" />
+              <Access Scope="LiteralConstant" UId="194">
+                <Constant UId="195">
+                  <ConstantValue UId="197">'Medium water'</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="198" />
+              <NewLine Num="1" UId="199" />
+              <Blank Num="8" UId="200" />
+              <Access Scope="LiteralConstant" UId="201">
+                <Constant UId="202">
+                  <ConstantValue UId="204">3</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=":" UId="205" />
+              <NewLine Num="1" UId="206" />
+              <Blank Num="12" UId="207" />
+              <Access Scope="LocalVariable" UId="208">
+                <Symbol UId="209">
+                  <Component Name="process" UId="210" />
+                  <Token Text="." UId="211" />
+                  <Component Name="productTypeName" UId="212" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="213" />
+              <Token Text=":=" UId="214" />
+              <Blank Num="1" UId="215" />
+              <Access Scope="LiteralConstant" UId="216">
+                <Constant UId="217">
+                  <ConstantValue UId="219">'Still water'</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="220" />
+              <NewLine Num="1" UId="221" />
+              <Blank Num="8" UId="222" />
+              <Token Text="ELSE" UId="223" />
+              <NewLine Num="1" UId="224" />
+              <Blank Num="12" UId="225" />
+              <Access Scope="LocalVariable" UId="226">
+                <Symbol UId="227">
+                  <Component Name="process" UId="228" />
+                  <Token Text="." UId="229" />
+                  <Component Name="productTypeName" UId="230" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="231" />
+              <Token Text=":=" UId="232" />
+              <Blank Num="1" UId="233" />
+              <Access Scope="LiteralConstant" UId="234">
+                <Constant UId="235">
+                  <ConstantValue UId="237">'Undefined'</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="238" />
+              <NewLine Num="1" UId="239" />
+              <Blank Num="4" UId="240" />
+              <Token Text="END_CASE" UId="241" />
+              <Token Text=";" UId="242" />
+              <NewLine Num="1" UId="243" />
+              <Blank Num="4" UId="244" />
+              <NewLine Num="1" UId="245" />
+              <Blank Num="4" UId="246" />
+              <Access Scope="LocalVariable" UId="247">
+                <Symbol UId="248">
+                  <Component Name="statBatchIdOld" UId="249" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="250" />
+              <Token Text=":=" UId="251" />
+              <Blank Num="1" UId="252" />
+              <Access Scope="LocalVariable" UId="253">
+                <Symbol UId="254">
+                  <Component Name="process" UId="255" />
+                  <Token Text="." UId="256" />
+                  <Component Name="batchId" UId="257" />
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="258" />
+              <NewLine Num="2" UId="259" />
+              <Token Text="END_IF" UId="260" />
+              <Token Text=";" UId="261" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>1 'Sparkling water'
+2 'Medium water'
+3 'Still water'</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Set process values (product type ID, name)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="batchId" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="numberProduced" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="productTypeId" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="ShiftingBottle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="productSerialNumber" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="process" />
+                    <Component Name="productQRCode" />
+                  </Symbol>
+                </Access>
+                <Call UId="27">
+                  <CallInfo Name="FB_Generate_Serial_Number" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="28">
+                      <Component Name="Generate_Serial_Number_DB" />
+                    </Instance>
+                    <Parameter Name="batchId" Section="Input" Type="UDInt" />
+                    <Parameter Name="productId" Section="Input" Type="UDInt" />
+                    <Parameter Name="productType" Section="Input" Type="Int" />
+                    <Parameter Name="trigger" Section="Input" Type="Bool" />
+                    <Parameter Name="serialNumber" Section="Output" Type="String" />
+                    <Parameter Name="qrCode" Section="Output" Type="USInt" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="30">
+                  <OpenCon UId="29" />
+                  <NameCon UId="27" Name="en" />
+                </Wire>
+                <Wire UId="31">
+                  <IdentCon UId="21" />
+                  <NameCon UId="27" Name="batchId" />
+                </Wire>
+                <Wire UId="32">
+                  <IdentCon UId="22" />
+                  <NameCon UId="27" Name="productId" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="23" />
+                  <NameCon UId="27" Name="productType" />
+                </Wire>
+                <Wire UId="34">
+                  <IdentCon UId="24" />
+                  <NameCon UId="27" Name="trigger" />
+                </Wire>
+                <Wire UId="35">
+                  <NameCon UId="27" Name="serialNumber" />
+                  <IdentCon UId="25" />
+                </Wire>
+                <Wire UId="36">
+                  <NameCon UId="27" Name="qrCode" />
+                  <IdentCon UId="26" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Generate serial number and QR code</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+                <Text UId="22"> NOT WORKING currently</Text>
+              </LineComment>
+              <NewLine Num="1" UId="23" />
+              <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+                <Text UId="25"> --&gt; fix values as defined in GDB.process.speedActual</Text>
+              </LineComment>
+              <NewLine Num="3" UId="26" />
+              <LineComment Inserted="true" NoClosingBracket="false" UId="27">
+                <Text UId="28">
+
+// get current date
+#tempTimeRet := RD_LOC_T(#tempCurrentTime);  // get local time (DTL)
+
+// start counting every hour
+IF (#tempCurrentTime.MINUTE = 0 AND #tempCurrentTime.SECOND = 0) THEN
+    #statStartCounter := true;
+    #statProducedStart := #process.numberProduced;
+END_IF;
+
+"IEC_Timer_0_DB".TON(IN := #statStartCounter,
+                     PT := T#59m_30s,
+                     Q =&gt; #tempTimerFinished,
+                     ET =&gt; #tempTimeOutput);
+
+IF #tempTimerFinished THEN
+    #statStartCounter := false;
+    #statProducedEnd := #process.numberProduced;
+    IF #statProducedEnd &gt; #statProducedStart THEN
+        #process.speedActual := #statProducedEnd - #statProducedStart;
+    ELSE
+        #process.speedActual := 4294967295 - #statProducedStart + #statProducedEnd;
+    END_IF;
+END_IF;
+
+</Text>
+              </LineComment>
+              <NewLine Num="1" UId="29" />
+              <Blank Num="2" UId="30" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Calculate production speed (pcs/h)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Token Text="IF" UId="21" />
+              <Blank Num="1" UId="22" />
+              <Access Scope="LocalVariable" UId="23">
+                <Symbol UId="24">
+                  <Component Name="operate" UId="25" />
+                  <Token Text="." UId="26" />
+                  <Component Name="state" UId="27" />
+                  <Token Text="." UId="28" />
+                  <Component Name="ShiftingBottle" UId="29" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="30" />
+              <Token Text="THEN" UId="31" />
+              <NewLine Num="1" UId="32" />
+              <Blank Num="4" UId="33" />
+              <NewLine Num="1" UId="34" />
+              <Blank Num="4" UId="35" />
+              <Access Scope="Call" UId="36">
+                <CallInfo UId="37" BlockType="FC">
+                  <Instance Scope="GlobalVariable" UId="39">
+                    <Component Name="FC_2_GetStringSizeOfNumber" UId="38" />
+                  </Instance>
+                  <Token Text="(" UId="40" />
+                  <Parameter Name="number" UId="41">
+                    <Blank Num="1" UId="42" />
+                    <Token Text=":=" UId="43" />
+                    <Blank Num="1" UId="44" />
+                    <Access Scope="LocalVariable" UId="45">
+                      <Symbol UId="46">
+                        <Component Name="process" UId="47" />
+                        <Token Text="." UId="48" />
+                        <Component Name="batchId" UId="49" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="50" />
+                  <NewLine Num="1" UId="51" />
+                  <Blank Num="33" UId="52" />
+                  <Parameter Name="stringSize" UId="53">
+                    <Blank Num="1" UId="54" />
+                    <Token Text="=&gt;" UId="55" />
+                    <Blank Num="1" UId="56" />
+                    <Access Scope="LocalVariable" UId="57">
+                      <Symbol UId="58">
+                        <Component Name="statSizeBatchID" UId="59" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="60" />
+                </CallInfo>
+              </Access>
+              <Token Text=";" UId="61" />
+              <NewLine Num="1" UId="62" />
+              <Blank Num="4" UId="63" />
+              <NewLine Num="1" UId="64" />
+              <Blank Num="4" UId="65" />
+              <Access Scope="Call" UId="66">
+                <CallInfo UId="67" BlockType="FC">
+                  <Instance Scope="GlobalVariable" UId="69">
+                    <Component Name="FC_2_GetStringSizeOfNumber" UId="68" />
+                  </Instance>
+                  <Token Text="(" UId="70" />
+                  <Parameter Name="number" UId="71">
+                    <Blank Num="1" UId="72" />
+                    <Token Text=":=" UId="73" />
+                    <Blank Num="1" UId="74" />
+                    <Access Scope="LocalVariable" UId="75">
+                      <Symbol UId="76">
+                        <Component Name="process" UId="77" />
+                        <Token Text="." UId="78" />
+                        <Component Name="numberProduced" UId="79" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="80" />
+                  <NewLine Num="1" UId="81" />
+                  <Blank Num="33" UId="82" />
+                  <Parameter Name="stringSize" UId="83">
+                    <Blank Num="1" UId="84" />
+                    <Token Text="=&gt;" UId="85" />
+                    <Blank Num="1" UId="86" />
+                    <Access Scope="LocalVariable" UId="87">
+                      <Symbol UId="88">
+                        <Component Name="statSizeNumberProduced" UId="89" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="90" />
+                </CallInfo>
+              </Access>
+              <Token Text=";" UId="91" />
+              <NewLine Num="1" UId="92" />
+              <Blank Num="4" UId="93" />
+              <NewLine Num="1" UId="94" />
+              <Blank Num="4" UId="95" />
+              <Access Scope="Call" UId="96">
+                <Instruction Name="VAL_STRG" UId="97">
+                  <Token Text="(" UId="98" />
+                  <Parameter Name="IN" UId="99">
+                    <Blank Num="1" UId="100" />
+                    <Token Text=":=" UId="101" />
+                    <Blank Num="1" UId="102" />
+                    <Access Scope="LocalVariable" UId="103">
+                      <Symbol UId="104">
+                        <Component Name="process" UId="105" />
+                        <Token Text="." UId="106" />
+                        <Component Name="batchId" UId="107" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="108" />
+                  <NewLine Num="1" UId="109" />
+                  <Blank Num="13" UId="110" />
+                  <Parameter Name="SIZE" UId="111">
+                    <Blank Num="1" UId="112" />
+                    <Token Text=":=" UId="113" />
+                    <Blank Num="1" UId="114" />
+                    <Access Scope="LocalVariable" UId="115">
+                      <Symbol UId="116">
+                        <Component Name="statSizeBatchID" UId="117" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="118" />
+                  <NewLine Num="1" UId="119" />
+                  <Blank Num="13" UId="120" />
+                  <Parameter Name="PREC" UId="121">
+                    <Blank Num="1" UId="122" />
+                    <Token Text=":=" UId="123" />
+                    <Blank Num="1" UId="124" />
+                    <Access Scope="LiteralConstant" UId="125">
+                      <Constant UId="126">
+                        <ConstantValue UId="128">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="129" />
+                  <NewLine Num="1" UId="130" />
+                  <Blank Num="13" UId="131" />
+                  <Parameter Name="FORMAT" UId="132">
+                    <Blank Num="1" UId="133" />
+                    <Token Text=":=" UId="134" />
+                    <Blank Num="1" UId="135" />
+                    <Access Scope="LiteralConstant" UId="136">
+                      <Constant UId="137">
+                        <ConstantValue UId="139">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="140" />
+                  <NewLine Num="1" UId="141" />
+                  <Blank Num="13" UId="142" />
+                  <Parameter Name="P" UId="143">
+                    <Blank Num="1" UId="144" />
+                    <Token Text=":=" UId="145" />
+                    <Blank Num="1" UId="146" />
+                    <Access Scope="LiteralConstant" UId="147">
+                      <Constant UId="148">
+                        <ConstantValue UId="150">1</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="151" />
+                  <NewLine Num="1" UId="152" />
+                  <Blank Num="13" UId="153" />
+                  <Parameter Name="OUT" UId="154">
+                    <Blank Num="1" UId="155" />
+                    <Token Text="=&gt;" UId="156" />
+                    <Blank Num="1" UId="157" />
+                    <Access Scope="LocalVariable" UId="158">
+                      <Symbol UId="159">
+                        <Component Name="statStringBatchID" UId="160" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="161" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="162" />
+              <NewLine Num="1" UId="163" />
+              <Blank Num="4" UId="164" />
+              <NewLine Num="1" UId="165" />
+              <Blank Num="4" UId="166" />
+              <Access Scope="Call" UId="167">
+                <Instruction Name="VAL_STRG" UId="168">
+                  <Token Text="(" UId="169" />
+                  <Parameter Name="IN" UId="170">
+                    <Blank Num="1" UId="171" />
+                    <Token Text=":=" UId="172" />
+                    <Blank Num="1" UId="173" />
+                    <Access Scope="LocalVariable" UId="174">
+                      <Symbol UId="175">
+                        <Component Name="process" UId="176" />
+                        <Token Text="." UId="177" />
+                        <Component Name="numberProduced" UId="178" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="179" />
+                  <NewLine Num="1" UId="180" />
+                  <Blank Num="13" UId="181" />
+                  <Parameter Name="SIZE" UId="182">
+                    <Blank Num="1" UId="183" />
+                    <Token Text=":=" UId="184" />
+                    <Blank Num="1" UId="185" />
+                    <Access Scope="LocalVariable" UId="186">
+                      <Symbol UId="187">
+                        <Component Name="statSizeNumberProduced" UId="188" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="189" />
+                  <NewLine Num="1" UId="190" />
+                  <Blank Num="13" UId="191" />
+                  <Parameter Name="PREC" UId="192">
+                    <Blank Num="1" UId="193" />
+                    <Token Text=":=" UId="194" />
+                    <Blank Num="1" UId="195" />
+                    <Access Scope="LiteralConstant" UId="196">
+                      <Constant UId="197">
+                        <ConstantValue UId="199">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="200" />
+                  <NewLine Num="1" UId="201" />
+                  <Blank Num="13" UId="202" />
+                  <Parameter Name="FORMAT" UId="203">
+                    <Blank Num="1" UId="204" />
+                    <Token Text=":=" UId="205" />
+                    <Blank Num="1" UId="206" />
+                    <Access Scope="LiteralConstant" UId="207">
+                      <Constant UId="208">
+                        <ConstantValue UId="210">0</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="211" />
+                  <NewLine Num="1" UId="212" />
+                  <Blank Num="13" UId="213" />
+                  <Parameter Name="P" UId="214">
+                    <Blank Num="1" UId="215" />
+                    <Token Text=":=" UId="216" />
+                    <Blank Num="1" UId="217" />
+                    <Access Scope="LiteralConstant" UId="218">
+                      <Constant UId="219">
+                        <ConstantValue UId="221">1</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="222" />
+                  <NewLine Num="1" UId="223" />
+                  <Blank Num="13" UId="224" />
+                  <Parameter Name="OUT" UId="225">
+                    <Blank Num="1" UId="226" />
+                    <Token Text="=&gt;" UId="227" />
+                    <Blank Num="1" UId="228" />
+                    <Access Scope="LocalVariable" UId="229">
+                      <Symbol UId="230">
+                        <Component Name="statStringProductID" UId="231" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text=")" UId="232" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="233" />
+              <NewLine Num="1" UId="234" />
+              <Blank Num="4" UId="235" />
+              <NewLine Num="1" UId="236" />
+              <Blank Num="4" UId="237" />
+              <Access Scope="LocalVariable" UId="238">
+                <Symbol UId="239">
+                  <Component Name="process" UId="240" />
+                  <Token Text="." UId="241" />
+                  <Component Name="productId" UId="242" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="243" />
+              <Token Text=":=" UId="244" />
+              <Blank Num="1" UId="245" />
+              <Access Scope="Call" UId="246">
+                <Instruction Name="CONCAT" UId="247">
+                  <Token Text="(" UId="248" />
+                  <NewLine Num="1" UId="249" />
+                  <Blank Num="33" UId="250" />
+                  <Parameter Name="IN1" UId="251">
+                    <Blank Num="1" UId="252" />
+                    <Token Text=":=" UId="253" />
+                    <Blank Num="1" UId="254" />
+                    <Access Scope="LocalVariable" UId="255">
+                      <Symbol UId="256">
+                        <Component Name="statStringBatchID" UId="257" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="258" />
+                  <NewLine Num="1" UId="259" />
+                  <Blank Num="33" UId="260" />
+                  <Parameter Name="IN2" UId="261">
+                    <Blank Num="1" UId="262" />
+                    <Token Text=":=" UId="263" />
+                    <Blank Num="1" UId="264" />
+                    <Access Scope="LiteralConstant" UId="265">
+                      <Constant UId="266">
+                        <ConstantValue UId="268">'.'</ConstantValue>
+                      </Constant>
+                    </Access>
+                  </Parameter>
+                  <Token Text="," UId="269" />
+                  <NewLine Num="1" UId="270" />
+                  <Blank Num="33" UId="271" />
+                  <Parameter Name="IN3" UId="272">
+                    <Blank Num="1" UId="273" />
+                    <Token Text=":=" UId="274" />
+                    <Blank Num="1" UId="275" />
+                    <Access Scope="LocalVariable" UId="276">
+                      <Symbol UId="277">
+                        <Component Name="statStringProductID" UId="278" />
+                      </Symbol>
+                    </Access>
+                  </Parameter>
+                  <NewLine Num="1" UId="279" />
+                  <Blank Num="4" UId="280" />
+                  <Token Text=")" UId="282" />
+                </Instruction>
+              </Access>
+              <Token Text=";" UId="283" />
+              <NewLine Num="1" UId="284" />
+              <Token Text="END_IF" UId="285" />
+              <Token Text=";" UId="286" />
+              <NewLine Num="1" UId="287" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Generate produt ID (batchID.numberProduced)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Token Text="CASE" UId="21" />
+              <Blank Num="1" UId="22" />
+              <Access Scope="LocalVariable" UId="23">
+                <Symbol UId="24">
+                  <Component Name="operate" UId="25" />
+                  <Token Text="." UId="26" />
+                  <Component Name="machineState" UId="27" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="28" />
+              <Token Text="OF" UId="29" />
+              <NewLine Num="1" UId="30" />
+              <Blank Num="4" UId="31" />
+              <Access Scope="GlobalConstant" UId="32">
+                <Constant Name="STATE_FILL_TANK" UId="33" />
+              </Access>
+              <Token Text=":" UId="36" />
+              <NewLine Num="1" UId="37" />
+              <Blank Num="8" UId="38" />
+              <Access Scope="LocalVariable" UId="39">
+                <Symbol UId="40">
+                  <Component Name="model" UId="41" />
+                  <Token Text="." UId="42" />
+                  <Component Name="cycleTime" UId="43" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="44" />
+              <Token Text=":=" UId="45" />
+              <Blank Num="1" UId="46" />
+              <Access Scope="LiteralConstant" UId="47">
+                <Constant UId="48">
+                  <ConstantValue UId="50">0.001</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="51" />
+              <NewLine Num="1" UId="52" />
+              <Blank Num="4" UId="53" />
+              <Access Scope="GlobalConstant" UId="54">
+                <Constant Name="STATE_HEAT_TANK" UId="55" />
+              </Access>
+              <Token Text=":" UId="58" />
+              <NewLine Num="1" UId="59" />
+              <Blank Num="8" UId="60" />
+              <Access Scope="LocalVariable" UId="61">
+                <Symbol UId="62">
+                  <Component Name="model" UId="63" />
+                  <Token Text="." UId="64" />
+                  <Component Name="cycleTime" UId="65" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="66" />
+              <Token Text=":=" UId="67" />
+              <Blank Num="1" UId="68" />
+              <Access Scope="LiteralConstant" UId="69">
+                <Constant UId="70">
+                  <ConstantValue UId="72">0.001</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="73" />
+              <NewLine Num="1" UId="74" />
+              <Blank Num="4" UId="75" />
+              <Token Text="ELSE" UId="76" />
+              <NewLine Num="1" UId="77" />
+              <Blank Num="8" UId="78" />
+              <Access Scope="LocalVariable" UId="79">
+                <Symbol UId="80">
+                  <Component Name="model" UId="81" />
+                  <Token Text="." UId="82" />
+                  <Component Name="cycleTime" UId="83" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="84" />
+              <Token Text=":=" UId="85" />
+              <Blank Num="1" UId="86" />
+              <Access Scope="LiteralConstant" UId="87">
+                <Constant UId="88">
+                  <ConstantValue UId="90">0.005</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="91" />
+              <NewLine Num="1" UId="92" />
+              <Token Text="END_CASE" UId="93" />
+              <Token Text=";" UId="94" />
+              <NewLine Num="1" UId="95" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Set cycle time</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="extModeActive" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="operate" />
+                    <Component Name="state" />
+                    <Component Name="Reset" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="model" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="operate" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="signals" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="process" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="appSignals" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="hmiSignals" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="29">
+                  <Symbol>
+                    <Component Name="errors" />
+                  </Symbol>
+                </Access>
+                <Call UId="30">
+                  <CallInfo Name="FB_3_Simulation" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="31">
+                      <Component Name="DB_3_Simulation" />
+                    </Instance>
+                    <Parameter Name="reset" Section="Input" Type="Bool" />
+                    <Parameter Name="model" Section="Input" Type="&quot;typeModel&quot;" />
+                    <Parameter Name="operate" Section="Input" Type="&quot;typeOperate&quot;" />
+                    <Parameter Name="signals" Section="InOut" Type="&quot;typeSignals&quot;" />
+                    <Parameter Name="process" Section="InOut" Type="&quot;typeProcess&quot;" />
+                    <Parameter Name="appSignals" Section="InOut" Type="&quot;typeApp&quot;" />
+                    <Parameter Name="hmiSignals" Section="InOut" Type="&quot;typeHmi&quot;" />
+                    <Parameter Name="errors" Section="InOut" Type="&quot;typeError&quot;" />
+                  </CallInfo>
+                  <Negated Name="en" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="32">
+                  <IdentCon UId="21" />
+                  <NameCon UId="30" Name="en" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="22" />
+                  <NameCon UId="30" Name="reset" />
+                </Wire>
+                <Wire UId="34">
+                  <IdentCon UId="23" />
+                  <NameCon UId="30" Name="model" />
+                </Wire>
+                <Wire UId="35">
+                  <IdentCon UId="24" />
+                  <NameCon UId="30" Name="operate" />
+                </Wire>
+                <Wire UId="36">
+                  <IdentCon UId="25" />
+                  <NameCon UId="30" Name="signals" />
+                </Wire>
+                <Wire UId="37">
+                  <IdentCon UId="26" />
+                  <NameCon UId="30" Name="process" />
+                </Wire>
+                <Wire UId="38">
+                  <IdentCon UId="27" />
+                  <NameCon UId="30" Name="appSignals" />
+                </Wire>
+                <Wire UId="39">
+                  <IdentCon UId="28" />
+                  <NameCon UId="30" Name="hmiSignals" />
+                </Wire>
+                <Wire UId="40">
+                  <IdentCon UId="29" />
+                  <NameCon UId="30" Name="errors" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Simulation (fill tank / heat tank / fill bottle)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="30" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+              <Token Text="IF" UId="21" />
+              <Blank Num="1" UId="22" />
+              <Access Scope="LocalVariable" UId="23">
+                <Symbol UId="24">
+                  <Component Name="operate" UId="25" />
+                  <Token Text="." UId="26" />
+                  <Component Name="state" UId="27" />
+                  <Token Text="." UId="28" />
+                  <Component Name="Reset" UId="29" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="30" />
+              <Token Text="THEN" UId="31" />
+              <NewLine Num="1" UId="32" />
+              <Blank Num="4" UId="33" />
+              <Access Scope="LocalVariable" UId="34">
+                <Symbol UId="35">
+                  <Component Name="process" UId="36" />
+                  <Token Text="." UId="37" />
+                  <Component Name="batchId" UId="38" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="39" />
+              <Token Text=":=" UId="40" />
+              <Blank Num="1" UId="41" />
+              <Access Scope="LiteralConstant" UId="42">
+                <Constant UId="43">
+                  <ConstantValue UId="45">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="46" />
+              <NewLine Num="1" UId="47" />
+              <Blank Num="4" UId="48" />
+              <Access Scope="LocalVariable" UId="49">
+                <Symbol UId="50">
+                  <Component Name="process" UId="51" />
+                  <Token Text="." UId="52" />
+                  <Component Name="numberFaulty" UId="53" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="54" />
+              <Token Text=":=" UId="55" />
+              <Blank Num="1" UId="56" />
+              <Access Scope="LiteralConstant" UId="57">
+                <Constant UId="58">
+                  <ConstantValue UId="60">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="61" />
+              <NewLine Num="1" UId="62" />
+              <Blank Num="4" UId="63" />
+              <Access Scope="LocalVariable" UId="64">
+                <Symbol UId="65">
+                  <Component Name="process" UId="66" />
+                  <Token Text="." UId="67" />
+                  <Component Name="numberGood" UId="68" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="69" />
+              <Token Text=":=" UId="70" />
+              <Blank Num="1" UId="71" />
+              <Access Scope="LiteralConstant" UId="72">
+                <Constant UId="73">
+                  <ConstantValue UId="75">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="76" />
+              <NewLine Num="1" UId="77" />
+              <Blank Num="4" UId="78" />
+              <Access Scope="LocalVariable" UId="79">
+                <Symbol UId="80">
+                  <Component Name="process" UId="81" />
+                  <Token Text="." UId="82" />
+                  <Component Name="numberProduced" UId="83" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="84" />
+              <Token Text=":=" UId="85" />
+              <Blank Num="1" UId="86" />
+              <Access Scope="LiteralConstant" UId="87">
+                <Constant UId="88">
+                  <ConstantValue UId="90">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="91" />
+              <NewLine Num="2" UId="92" />
+              <Blank Num="4" UId="93" />
+              <Access Scope="LocalVariable" UId="94">
+                <Symbol UId="95">
+                  <Component Name="process" UId="96" />
+                  <Token Text="." UId="97" />
+                  <Component Name="productId" UId="98" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="99" />
+              <Token Text=":=" UId="100" />
+              <Blank Num="1" UId="101" />
+              <Access Scope="LiteralConstant" UId="102">
+                <Constant UId="103">
+                  <ConstantValue UId="105">''</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="106" />
+              <NewLine Num="1" UId="107" />
+              <Blank Num="4" UId="108" />
+              <Access Scope="LocalVariable" UId="109">
+                <Symbol UId="110">
+                  <Component Name="process" UId="111" />
+                  <Token Text="." UId="112" />
+                  <Component Name="productSerialNumber" UId="113" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="114" />
+              <Token Text=":=" UId="115" />
+              <Blank Num="1" UId="116" />
+              <Access Scope="LiteralConstant" UId="117">
+                <Constant UId="118">
+                  <ConstantValue UId="120">''</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="121" />
+              <NewLine Num="1" UId="122" />
+              <Blank Num="4" UId="123" />
+              <Access Scope="LocalVariable" UId="124">
+                <Symbol UId="125">
+                  <Component Name="process" UId="126" />
+                  <Token Text="." UId="127" />
+                  <Component Name="productTypeName" UId="128" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="129" />
+              <Token Text=":=" UId="130" />
+              <Blank Num="1" UId="131" />
+              <Access Scope="LiteralConstant" UId="132">
+                <Constant UId="133">
+                  <ConstantValue UId="135">''</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="136" />
+              <NewLine Num="1" UId="137" />
+              <Blank Num="4" UId="138" />
+              <Access Scope="LocalVariable" UId="139">
+                <Symbol UId="140">
+                  <Component Name="process" UId="141" />
+                  <Token Text="." UId="142" />
+                  <Component Name="productQRCode" UId="143" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="144" />
+              <Token Text=":=" UId="145" />
+              <Blank Num="1" UId="146" />
+              <Access Scope="LiteralConstant" UId="147">
+                <Constant UId="148">
+                  <ConstantValue UId="150">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="151" />
+              <NewLine Num="1" UId="152" />
+              <Blank Num="4" UId="153" />
+              <Access Scope="LocalVariable" UId="154">
+                <Symbol UId="155">
+                  <Component Name="process" UId="156" />
+                  <Token Text="." UId="157" />
+                  <Component Name="productTypeId" UId="158" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="159" />
+              <Token Text=":=" UId="160" />
+              <Blank Num="1" UId="161" />
+              <Access Scope="LiteralConstant" UId="162">
+                <Constant UId="163">
+                  <ConstantValue UId="165">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="166" />
+              <NewLine Num="1" UId="167" />
+              <Blank Num="4" UId="168" />
+              <NewLine Num="1" UId="169" />
+              <Blank Num="4" UId="170" />
+              <Access Scope="LocalVariable" UId="171">
+                <Symbol UId="172">
+                  <Component Name="process" UId="173" />
+                  <Token Text="." UId="174" />
+                  <Component Name="speedActual" UId="175" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="176" />
+              <Token Text=":=" UId="177" />
+              <Blank Num="1" UId="178" />
+              <Access Scope="LiteralConstant" UId="179">
+                <Constant UId="180">
+                  <ConstantValue UId="182">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="183" />
+              <NewLine Num="1" UId="184" />
+              <Blank Num="4" UId="185" />
+              <Access Scope="LocalVariable" UId="186">
+                <Symbol UId="187">
+                  <Component Name="process" UId="188" />
+                  <Token Text="." UId="189" />
+                  <Component Name="speedTarget" UId="190" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="191" />
+              <Token Text=":=" UId="192" />
+              <Blank Num="1" UId="193" />
+              <Access Scope="LiteralConstant" UId="194">
+                <Constant UId="195">
+                  <ConstantValue UId="197">0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="198" />
+              <NewLine Num="1" UId="199" />
+              <Blank Num="4" UId="200" />
+              <NewLine Num="1" UId="201" />
+              <Blank Num="4" UId="202" />
+              <Access Scope="LocalVariable" UId="203">
+                <Symbol UId="204">
+                  <Component Name="statHmiBottleLevel" UId="205" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="206" />
+              <Token Text=":=" UId="207" />
+              <Blank Num="1" UId="208" />
+              <Access Scope="LiteralConstant" UId="209">
+                <Constant UId="210">
+                  <ConstantValue UId="212">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="213" />
+              <NewLine Num="1" UId="214" />
+              <Blank Num="4" UId="215" />
+              <Access Scope="LocalVariable" UId="216">
+                <Symbol UId="217">
+                  <Component Name="signals" UId="218" />
+                  <Token Text="." UId="219" />
+                  <Component Name="energySignals" UId="220" />
+                  <Token Text="." UId="221" />
+                  <Component Name="energyConsumptionFillingBottles" UId="222" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="223" />
+              <Token Text=":=" UId="224" />
+              <Blank Num="1" UId="225" />
+              <Access Scope="LiteralConstant" UId="226">
+                <Constant UId="227">
+                  <ConstantValue UId="229">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="230" />
+              <NewLine Num="1" UId="231" />
+              <Blank Num="4" UId="232" />
+              <Access Scope="LocalVariable" UId="233">
+                <Symbol UId="234">
+                  <Component Name="signals" UId="235" />
+                  <Token Text="." UId="236" />
+                  <Component Name="energySignals" UId="237" />
+                  <Token Text="." UId="238" />
+                  <Component Name="energyConsumptionFillingTank" UId="239" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="240" />
+              <Token Text=":=" UId="241" />
+              <Blank Num="1" UId="242" />
+              <Access Scope="LiteralConstant" UId="243">
+                <Constant UId="244">
+                  <ConstantValue UId="246">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="247" />
+              <NewLine Num="1" UId="248" />
+              <Blank Num="4" UId="249" />
+              <Access Scope="LocalVariable" UId="250">
+                <Symbol UId="251">
+                  <Component Name="signals" UId="252" />
+                  <Token Text="." UId="253" />
+                  <Component Name="energySignals" UId="254" />
+                  <Token Text="." UId="255" />
+                  <Component Name="energyConsumptionHeatingTank" UId="256" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="257" />
+              <Token Text=":=" UId="258" />
+              <Blank Num="1" UId="259" />
+              <Access Scope="LiteralConstant" UId="260">
+                <Constant UId="261">
+                  <ConstantValue UId="263">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="264" />
+              <NewLine Num="1" UId="265" />
+              <Blank Num="4" UId="266" />
+              <Access Scope="LocalVariable" UId="267">
+                <Symbol UId="268">
+                  <Component Name="signals" UId="269" />
+                  <Token Text="." UId="270" />
+                  <Component Name="energySignals" UId="271" />
+                  <Token Text="." UId="272" />
+                  <Component Name="waterConsumptionFillingTank" UId="273" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="274" />
+              <Token Text=":=" UId="275" />
+              <Blank Num="1" UId="276" />
+              <Access Scope="LiteralConstant" UId="277">
+                <Constant UId="278">
+                  <ConstantValue UId="280">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="281" />
+              <NewLine Num="1" UId="282" />
+              <Blank Num="4" UId="283" />
+              <Access Scope="LocalVariable" UId="284">
+                <Symbol UId="285">
+                  <Component Name="signals" UId="286" />
+                  <Token Text="." UId="287" />
+                  <Component Name="energySignals" UId="288" />
+                  <Token Text="." UId="289" />
+                  <Component Name="gasConsumptionHeatingTank" UId="290" />
+                </Symbol>
+              </Access>
+              <Blank Num="1" UId="291" />
+              <Token Text=":=" UId="292" />
+              <Blank Num="1" UId="293" />
+              <Access Scope="LiteralConstant" UId="294">
+                <Constant UId="295">
+                  <ConstantValue UId="297">0.0</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="298" />
+              <NewLine Num="1" UId="299" />
+              <Blank Num="4" UId="300" />
+              <NewLine Num="1" UId="301" />
+              <Token Text="END_IF" UId="302" />
+              <Token Text=";" UId="303" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="33" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Reset process parameter</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="35" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="36" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Filling process</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

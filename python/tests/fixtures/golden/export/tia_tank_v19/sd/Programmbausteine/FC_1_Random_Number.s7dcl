@@ -1,0 +1,42 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_1_Random_Number" : Void
+    VAR_INPUT
+        "Min" : UDInt;
+        "Max" : UDInt;
+    END_VAR
+    VAR_OUTPUT
+        RandomNumber : UDInt;
+    END_VAR
+    VAR_TEMP
+        range : UDInt;
+        tmp : UDInt;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // generate random number
+        #tmp := DINT_TO_UDINT(TIME_TO_DINT(TIME_TCK()));
+        
+        IF #tmp < 0 THEN
+            #tmp := #tmp * - 1;
+        END_IF;
+        
+        "Manipulator" := "Manipulator" + 1;
+        
+        IF "Manipulator" = 10 THEN
+            "Manipulator" := 1;
+        END_IF;
+        
+        #tmp := #tmp / "Manipulator";
+        
+        #range := #Max - #Min;
+        
+        #tmp := #tmp MOD (#range + 1);
+        #RandomNumber := #tmp + #Min;
+        
+    END_NETWORK
+END_FUNCTION

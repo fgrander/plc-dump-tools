@@ -1,0 +1,927 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_1_Sequence"
+    VAR_INPUT
+        { S7_MLC := "MLC_1" }
+        externalSignals : _.typeSignals;
+    END_VAR
+    VAR_IN_OUT
+        { S7_MLC := "MLC_2" }
+        model : _.typeModel;
+        { S7_MLC := "MLC_3" }
+        operate : _.typeOperate;
+        { S7_MLC := "MLC_4" }
+        signals : _.typeSignals;
+        { S7_MLC := "MLC_5" }
+        process : _.typeProcess;
+        { S7_MLC := "MLC_6" }
+        hmi : _.typeHmi;
+        { S7_MLC := "MLC_7" }
+        app : _.typeApp;
+        errors : _.typeError;
+    END_VAR
+    VAR
+        { S7_MLC := "MLC_8" }
+        statStart : Bool;
+        { S7_MLC := "MLC_9" }
+        statStop : Bool;
+        { S7_MLC := "MLC_10" }
+        statReset : Bool;
+        { S7_MLC := "MLC_11" }
+        statInit : Bool := true;
+        { S7_MLC := "MLC_12" }
+        statNextBottle : Bool;
+        { S7_MLC := "MLC_13" }
+        statError : Bool;
+        { S7_MLC := "MLC_14" }
+        statState : Int;
+        { S7_MLC := "MLC_15" }
+        statAlarm : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statMemoryStart : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statMemoryStop : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statMemoryReset : Bool;
+        statMemoryNextBottle : Bool;
+        statMemoryError : Bool;
+        { S7_MLC := "MLC_16" }
+        statHmiStateStart : Bool;
+        statShiftingTimer : Int;
+        statShiftingTimerTrigger : Bool;
+        statShiftingTrigger : Bool;
+        statShiftingTimerDone : Bool;
+        statHmiQrCodeReceived : Bool;
+        statHMIQrCodeReceivedTrigger : Bool;
+        statQrCodeTrigger : Bool;
+        { S7_MLC := "MLC_17" }
+        statTankEmpty : Bool;
+        { S7_MLC := "MLC_18" }
+        statTankEmptyMemory : Bool;
+        { S7_MLC := "MLC_19" }
+        statOverflow : Bool;
+        { S7_MLC := "MLC_20" }
+        statOverflowStartTrigger : Bool;
+        statOverflowStartMemory : Bool;
+        Program_Alarm : Program_Alarm;
+        { S7_MLC := "MLC_21" }
+        statAssocValues : AssocValues;
+        { S7_Setpoint := "True" }
+        statTriggerAlarm : Bool;
+        statTriggerAlarmMemory : Bool;
+        statErrorCodeOld : UInt;
+    END_VAR
+    VAR_TEMP
+        tempQrCodeLen : Int;
+        tempProgramAlarmError : Bool;
+        tempProgramAlarmStatus : Word;
+        tempAlarmStateError : Bool;
+        tempAlarmStateStatus : Word;
+        tempProgramAlarmError2 : Bool;
+        tempProgramAlarmStatus2 : Word;
+        tempAlarmStateError2 : Bool;
+        tempAlarmStateStatus2 : Word;
+        tempRetVal : Int;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_23";
+        S7_NetworkTitle := "MLC_22"
+    }
+    NETWORK
+        RUNG #hmi.HMI_Start
+            O( in2 := #app.APP_Start )
+            P_Coil(
+                operand => #statStart,
+                bit := #statMemoryStart
+            )
+        END_RUNG
+        RUNG #hmi.HMI_Stop
+            O( in2 := #app.APP_Stop )
+            P_Coil(
+                operand => #statStop,
+                bit := #statMemoryStop
+            )
+        END_RUNG
+        RUNG #hmi.HMI_Reset
+            O( in2 := #app.APP_Reset )
+            P_Coil(
+                operand => #statReset,
+                bit := #statMemoryReset
+            )
+        END_RUNG
+        RUNG #hmi.HMI_NextBottle
+            P_Coil(
+                operand => #statNextBottle,
+                bit := #statMemoryNextBottle
+            )
+        END_RUNG
+        RUNG #hmi.HMI_Error
+            O( in2 := #app.APP_Error )
+            S_SR(
+                operand := #statError,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG #hmi.HMI_Error
+            NOT A( in2 := NOT #app.APP_Error )
+        END_RUNG wire#w1
+        RUNG #app.APP_Alarm
+            S_SR(
+                operand := #statAlarm,
+                r1 := NOT #app.APP_Alarm
+            )
+        END_RUNG
+        RUNG #hmi.HMI_Error
+            O( in2 := wire#w2 )
+            Move(
+                in := "ERROR_1_BottleInWrongPosition",
+                out1 => #signals.errorCode
+            )
+        END_RUNG
+        RUNG #app.APP_Error
+            A( in2 := NOT #app.APP_ErrorSimulation )
+        END_RUNG wire#w2
+        RUNG #hmi.HMI_Error
+            NOT A( in2 := NOT #app.APP_Error )
+            Move(
+                in := "ERROR_0_NoError",
+                out1 => #signals.errorCode
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_24"
+    }
+    NETWORK
+        RUNG #hmi.HMI_Start
+            O( in2 := #app.APP_Start )
+            A( in2 := #statStart )
+            wire#w1
+            R_Coil( #hmi.HMI_Start )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #app.APP_Start )
+        END_RUNG
+        RUNG #hmi.HMI_Stop
+            O( in2 := #app.APP_Stop )
+            A( in2 := #statStop )
+            wire#w2
+            R_Coil( #hmi.HMI_Stop )
+        END_RUNG
+        RUNG wire#w2
+            R_Coil( #app.APP_Stop )
+        END_RUNG
+        RUNG #hmi.HMI_Reset
+            O( in2 := #app.APP_Reset )
+            A( in2 := #statReset )
+            wire#w3
+            R_Coil( #hmi.HMI_Reset )
+        END_RUNG
+        RUNG wire#w3
+            R_Coil( #app.APP_Reset )
+        END_RUNG
+        RUNG #hmi.HMI_NextBottle
+            A( in2 := #statNextBottle )
+            R_Coil( #hmi.HMI_NextBottle )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_25"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            O(
+                in2 := #operate.state.HeatingTank,
+                in3 := #operate.state.FillingBottle,
+                in4 := #operate.state.ShiftingBottle
+            )
+            S_SR(
+                operand := #statHmiStateStart,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG #operate.state.FillingTank
+            NOT A(
+                in2 := NOT #operate.state.HeatingTank,
+                in3 := NOT #operate.state.FillingBottle,
+                in4 := NOT #operate.state.ShiftingBottle
+            )
+        END_RUNG wire#w1
+        RUNG
+            { S7_Templates := "str_type := String" }
+            LEN(
+                in := #app.APP_QRCode,
+                out => #tempQrCodeLen
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            GT_Contact(
+                in1 := #tempQrCodeLen,
+                in2 := 0
+            )
+            P_Trig( #statQrCodeTrigger )
+            S_Coil( #statHmiQrCodeReceived )
+        END_RUNG
+        RUNG #statHmiQrCodeReceived
+            N_Trig( #statHMIQrCodeReceivedTrigger )
+            S_Move(
+                in := '',
+                out => #app.APP_QRCode
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_26"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            GT_Contact(
+                in1 := #statShiftingTimer,
+                in2 := 0
+            )
+            Sub(
+                in1 := #statShiftingTimer,
+                in2 := 1,
+                out => #statShiftingTimer
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #statShiftingTimer,
+                in2 := 0
+            )
+            P_Coil(
+                operand => #statShiftingTimerDone,
+                bit := #statShiftingTimerTrigger
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_27"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            EQ_Contact(
+                in1 := #signals.tankSignals.actLevel,
+                in2 := 0.0
+            )
+            A( in2 := wire#w1 )
+            P_Coil(
+                operand => #statTankEmpty,
+                bit := #statTankEmptyMemory
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := ULInt" }
+            GT_Contact(
+                in1 := #process.numberProduced,
+                in2 := 0
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_28"
+    }
+    NETWORK
+        RUNG #statInit
+            O( in2 := #statTankEmpty )
+            Move(
+                in := #model.tank.roomTemperature,
+                out1 => #signals.tankSignals.actTemperature
+            )
+        END_RUNG
+        RUNG
+            R_Coil( #statInit )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_29"
+    }
+    NETWORK
+        RUNG #statStart
+            O(
+                in2 := #statTankEmpty,
+                in3 := #statOverflowStartTrigger
+            )
+            S_SR(
+                operand := #operate.state.FillingTank,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG #operate.state.HeatingTank
+            O(
+                in2 := #operate.state.Stop,
+                in3 := #operate.state.Error
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_30"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            A( in2 := #signals.tankSignals.maxLevel )
+            S_SR(
+                operand := #operate.state.HeatingTank,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG #operate.state.FillingBottle
+            O(
+                in2 := #operate.state.Stop,
+                in3 := #operate.state.Error
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_31"
+    }
+    NETWORK
+        RUNG #operate.state.HeatingTank
+            A( in2 := #signals.tankSignals.maxTemperature )
+            O( in2 := wire#w2 )
+            A( in2 := wire#w3 )
+            S_SR(
+                operand := #operate.state.FillingBottle,
+                r1 := wire#w5
+            )
+        END_RUNG
+        RUNG #operate.state.ShiftingBottle
+            A(
+                in2 := wire#w1,
+                in3 := #statShiftingTimerDone
+            )
+        END_RUNG wire#w2
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            EQ_Contact(
+                in1 := #signals.bottleSignals.actLevel,
+                in2 := 0.0
+            )
+        END_RUNG wire#w1
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            GT_Contact(
+                in1 := #signals.tankSignals.actLevel,
+                in2 := 0.0
+            )
+        END_RUNG wire#w3
+        RUNG #operate.state.ShiftingBottle
+            A( in2 := wire#w4 )
+            O(
+                in2 := #operate.state.Stop,
+                in3 := #statNextBottle,
+                in4 := #statTankEmpty,
+                in5 := #operate.state.Error
+            )
+        END_RUNG wire#w5
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            GT_Contact(
+                in1 := #statShiftingTimer,
+                in2 := 0.0
+            )
+        END_RUNG wire#w4
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_32"
+    }
+    NETWORK
+        RUNG #operate.state.FillingBottle
+            A( in2 := #signals.bottleSignals.maxLevel )
+            O( in2 := #statNextBottle )
+            S_SR(
+                operand := #operate.state.ShiftingBottle,
+                r1 := wire#w1
+            )
+            P_Trig( #statShiftingTrigger )
+            Move(
+                in := #model.bottle.shiftingCycle,
+                out1 => #statShiftingTimer
+            )
+        END_RUNG
+        RUNG #operate.state.FillingBottle
+            A( in2 := NOT #signals.bottleSignals.maxLevel )
+            O(
+                in2 := #operate.state.FillingTank,
+                in3 := #operate.state.Stop,
+                in4 := #operate.state.Error
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_34";
+        S7_NetworkTitle := "MLC_33"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := UDInt" }
+            EQ_Contact(
+                in1 := #process.numberProduced,
+                in2 := 4_294_967_295
+            )
+            S_SR(
+                operand := #statOverflow,
+                r1 := #statOverflowStartTrigger
+            )
+        END_RUNG
+        RUNG #statOverflow
+            A( in2 := #operate.state.Reset )
+            P_Coil(
+                operand => #statOverflowStartTrigger,
+                bit := #statOverflowStartMemory
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_35"
+    }
+    NETWORK
+        RUNG #statStop
+            O(
+                in2 := wire#w1,
+                in3 := #statOverflow
+            )
+            S_SR(
+                operand := #operate.state.Stop,
+                r1 := wire#w2
+            )
+        END_RUNG
+        RUNG
+            N_Contact(
+                operand := #operate.state.Error,
+                bit := #statMemoryError
+            )
+        END_RUNG wire#w1
+        RUNG #statStart
+            O(
+                in2 := #operate.state.Reset,
+                in3 := #operate.state.Error
+            )
+        END_RUNG wire#w2
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_36"
+    }
+    NETWORK
+        RUNG #statReset
+            O( in2 := #statOverflow )
+            A( in2 := #operate.state.Stop )
+            S_SR(
+                operand := #operate.state.Reset,
+                r1 := #operate.state.FillingTank
+            )
+        END_RUNG
+        RUNG #statReset
+            S_Coil( #statInit )
+        END_RUNG
+        RUNG #statReset
+            Move(
+                in := 0,
+                out1 => #statShiftingTimer
+            )
+        END_RUNG
+        RUNG #statReset
+            Move(
+                in := 0,
+                out1 => #statState
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_37"
+    }
+    NETWORK
+        RUNG #statError
+            S_SR(
+                operand := #operate.state.Error,
+                r1 := NOT #statError
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_39";
+        S7_NetworkTitle := "MLC_38"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            Move(
+                in := "STATE_FILL_TANK",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.HeatingTank
+            Move(
+                in := "STATE_HEAT_TANK",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.FillingBottle
+            Move(
+                in := "STATE_FILL_BOTTLE",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.ShiftingBottle
+            Move(
+                in := "STATE_SHIFT_BOTTLE",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.Stop
+            Move(
+                in := "STATE_STOP",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.Reset
+            Move(
+                in := "STATE_RESET",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+        RUNG #operate.state.Error
+            Move(
+                in := "STATE_ERROR",
+                out1 => #operate.machineState
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_41";
+        S7_NetworkTitle := "MLC_40"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            O(
+                in2 := #operate.state.HeatingTank,
+                in3 := #operate.state.FillingBottle,
+                in4 := #operate.state.ShiftingBottle
+            )
+            Move(
+                in := "OEE_PRODUCTION",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG #operate.state.Stop
+            O( in2 := #operate.state.Reset )
+            Move(
+                in := "OEE_PLANNED_DOWN",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG #operate.state.Error
+            A( in2 := wire#w1 )
+            Move(
+                in := "OEE_ERROR_1_BottleInWrongPosition",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_1_BottleInWrongPosition"
+            )
+        END_RUNG wire#w1
+        RUNG #operate.state.Error
+            A( in2 := wire#w2 )
+            Move(
+                in := "OEE_ERROR_2_CrackedBottleDetected",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_2_CrackedBottleDetected"
+            )
+        END_RUNG wire#w2
+        RUNG #operate.state.Error
+            A( in2 := wire#w3 )
+            Move(
+                in := "OEE_ERROR_3_NoBottleOnTheConveyor",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_3_NoBottleOnTheConveyor"
+            )
+        END_RUNG wire#w3
+        RUNG #operate.state.Error
+            A( in2 := wire#w4 )
+            Move(
+                in := "OEE_ERROR_4_WrongBottleDetected",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_4_WrongBottleDetected"
+            )
+        END_RUNG wire#w4
+        RUNG #operate.state.Error
+            A( in2 := wire#w5 )
+            Move(
+                in := "OEE_ERROR_5_ConveyorMalfunction",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_5_ConveyorMalfunction"
+            )
+        END_RUNG wire#w5
+        RUNG #operate.state.Error
+            A( in2 := wire#w6 )
+            Move(
+                in := "OEE_ERROR_6_FillerMalfunction",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_6_FillerMalfunction"
+            )
+        END_RUNG wire#w6
+        RUNG #operate.state.Error
+            A( in2 := wire#w7 )
+            Move(
+                in := "OEE_ERROR_7_ValveBlocked",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_7_ValveBlocked"
+            )
+        END_RUNG wire#w7
+        RUNG #operate.state.Error
+            A( in2 := wire#w8 )
+            Move(
+                in := "OEE_ERROR_8_NoFlowInMainPipe",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_8_NoFlowInMainPipe"
+            )
+        END_RUNG wire#w8
+        RUNG #operate.state.Error
+            A( in2 := wire#w9 )
+            Move(
+                in := "OEE_ERROR_9_GenericError_CheckPlcBuffer",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_9_GenericError_CheckPlcBuffer"
+            )
+        END_RUNG wire#w9
+        RUNG #operate.state.Error
+            A( in2 := wire#w10 )
+            Move(
+                in := "OEE_ERROR_10_GenericError_CheckAlarmBuffer",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_10_GenericError_CheckAlarmBuffer"
+            )
+        END_RUNG wire#w10
+        RUNG #operate.state.Error
+            A( in2 := wire#w11 )
+            Move(
+                in := "OEE_ERROR_11_GenericError_ContactWithSupplier",
+                out1 => #operate.machineStateOEE
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := #signals.errorCode,
+                in2 := "ERROR_11_GenericError_ContactWithSupplier"
+            )
+        END_RUNG wire#w11
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_43";
+        S7_NetworkTitle := "MLC_42"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            InRange(
+                min := 1,
+                in := #operate.machineState,
+                max := 4
+            )
+            Move(
+                in := #operate.machineState,
+                out1 => #statState
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_45";
+        S7_NetworkTitle := "MLC_44"
+    }
+    NETWORK
+        RUNG #statStart
+            A( in2 := wire#w1 )
+            S_Coil( #operate.state.FillingTank )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #statState,
+                in2 := "STATE_FILL_TANK"
+            )
+        END_RUNG wire#w1
+        RUNG #statStart
+            A( in2 := wire#w2 )
+            S_Coil( #operate.state.HeatingTank )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #statState,
+                in2 := "STATE_HEAT_TANK"
+            )
+        END_RUNG wire#w2
+        RUNG #statStart
+            A( in2 := wire#w3 )
+            S_Coil( #operate.state.FillingBottle )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #statState,
+                in2 := "STATE_FILL_BOTTLE"
+            )
+        END_RUNG wire#w3
+        RUNG #statStart
+            A( in2 := wire#w4 )
+            S_Coil( #operate.state.ShiftingBottle )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #statState,
+                in2 := "STATE_SHIFT_BOTTLE"
+            )
+        END_RUNG wire#w4
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_46"
+    }
+    NETWORK
+        RUNG true
+            #Program_Alarm.Program_Alarm(
+                SIG := #statAlarm,
+                TIMESTAMP :=  ,
+                SD_1 := #process.batchId,
+                SD_2 :=  ,
+                SD_3 :=  ,
+                SD_4 :=  ,
+                SD_5 :=  ,
+                SD_6 :=  ,
+                SD_7 :=  ,
+                SD_8 :=  ,
+                SD_9 :=  ,
+                SD_10 :=  ,
+                Error => #tempProgramAlarmError,
+                Status => #tempProgramAlarmStatus
+            )
+        END_RUNG
+        RUNG true
+            Get_AlarmState(
+                Alarm := #Program_Alarm,
+                AlarmState => #signals.alarm,
+                Error => #tempAlarmStateError,
+                STATUS => #tempAlarmStateStatus
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_47"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            GT_Contact(
+                in1 := #signals.errorCode,
+                in2 := 8000
+            )
+            A( in2 := wire#w1 )
+            P_Coil(
+                operand => #statTriggerAlarm,
+                bit := #statTriggerAlarmMemory
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := UInt" }
+            NE_Contact(
+                in1 := #signals.errorCode,
+                in2 := #statErrorCodeOld
+            )
+        END_RUNG wire#w1
+        RUNG
+            Move(
+                in := #process.numberProduced,
+                out1 => #statAssocValues.Value[1]
+            )
+        END_RUNG
+        RUNG #statTriggerAlarm
+            Gen_UsrMsg(
+                Mode := 1,
+                TextID := #signals.errorCode,
+                TextListID := 512,
+                Ret_Val => #tempRetVal,
+                AssocValues := #statAssocValues
+            )
+        END_RUNG
+        RUNG true
+            Move(
+                in := #signals.errorCode,
+                out1 => #statErrorCodeOld
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_48"
+    }
+    NETWORK
+        RUNG
+            "DB_2_Filling_DB"(
+                externalSignals := #externalSignals,
+                model := #model,
+                operate := #operate,
+                signals := #signals,
+                process := #process,
+                appSignals := #app,
+                hmiSignals := #hmi,
+                errors := #errors
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

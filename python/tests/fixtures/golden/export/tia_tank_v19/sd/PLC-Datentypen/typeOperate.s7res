@@ -1,0 +1,9 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: true = activate external model / simulation
+  - id: MLC_2
+    en-US: operating state
+  - id: MLC_3
+    en-US: machine production state (1 = filling tank, 2 = heating tank, 3 = filling bottle, 4 = shifting bottle, 5 = stop, 6 = reset)
+  - id: MLC_4
+    en-US: machine OEE state (1 = production, 2 = planned downtime, 3 = unplanned downtime)

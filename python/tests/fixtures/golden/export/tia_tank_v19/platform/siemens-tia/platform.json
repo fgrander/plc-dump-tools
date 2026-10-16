@@ -1,0 +1,14 @@
+{
+  "compiled_units": [
+    "Block_1_DB",
+    "FB_5_CIP_Simulation_Graph",
+    "FB_Prodiag",
+    "ProDiagOB"
+  ],
+  "missing_packages": [
+    "WinCC Unified Comfort V21"
+  ],
+  "saved_version": "V19",
+  "tia_version": "V21",
+  "tiadump": "1.0.0"
+}

@@ -1,0 +1,689 @@
+{
+  "dump_version": 1,
+  "tool": {
+    "name": "s7dump",
+    "version": "1.0.0",
+    "library_version": "4.4.10.0"
+  },
+  "project": {
+    "name": "PRESS_1",
+    "description": "Presse 1 Steuerung",
+    "kind": "project",
+    "step7_version": null,
+    "encoding": "windows-1252",
+    "languages": {
+      "stored": "und",
+      "maintained": []
+    },
+    "mnemonic": {
+      "exported": "en",
+      "project": "de"
+    },
+    "pcs7": false
+  },
+  "stations": [
+    {
+      "name": "SIMATIC 300(1)",
+      "type": "Simatic300"
+    }
+  ],
+  "cpus": [
+    {
+      "name": "CPU 315-2 PN/DP",
+      "station": "SIMATIC 300(1)",
+      "rack": 0,
+      "slot": 2,
+      "order_no": "6ES7 315-2EH14-0AB0",
+      "type": "Simatic300",
+      "program": "S7 Program(1)"
+    }
+  ],
+  "cps": [],
+  "networks": [
+    {
+      "subnet": null,
+      "station": "SIMATIC 300(1)",
+      "device": 1,
+      "device_name": null,
+      "kind": "ethernet",
+      "node": "AKD-PN",
+      "address": "192.168.0.11/24"
+    },
+    {
+      "subnet": null,
+      "station": "SIMATIC 300(1)",
+      "device": null,
+      "device_name": null,
+      "kind": "ethernet",
+      "node": "CP 343-1",
+      "address": "10.1.2.20/16"
+    },
+    {
+      "subnet": null,
+      "station": "SIMATIC 300(1)",
+      "device": null,
+      "device_name": null,
+      "kind": "ethernet",
+      "node": "CPU 315-2 PN/DP",
+      "address": "192.168.0.10/24"
+    },
+    {
+      "subnet": null,
+      "station": "SIMATIC 300(1)",
+      "device": null,
+      "device_name": null,
+      "kind": "mpi",
+      "node": "CPU 315-2 PN/DP",
+      "address": "2"
+    }
+  ],
+  "programs": [
+    {
+      "name": "S7 Program(1)",
+      "cpu": "CPU 315-2 PN/DP",
+      "catalog": {
+        "blocks": 9,
+        "sources": 1,
+        "symbols": 14
+      },
+      "blocks": [
+        {
+          "type": "OB",
+          "number": 1,
+          "symbolic_name": "Main",
+          "family": "MAIN",
+          "version": "0.1",
+          "author": null,
+          "language": "KOP",
+          "know_how_protected": false,
+          "title": "Hauptprogramm",
+          "description": null,
+          "mc7_size": 180,
+          "interface": [],
+          "networks": [
+            {
+              "no": 1,
+              "title": "Pumpe Start/Stopp",
+              "comment": "Selbsthaltung der Hydraulikpumpe",
+              "stl": [
+                "      A     \"I_Start\"",
+                "      O     \"M_Run\"",
+                "      AN    \"I_Stop\"",
+                "      =     \"Q_Pump\"",
+                "      =     \"M_Run\""
+              ]
+            },
+            {
+              "no": 2,
+              "title": "Heizung",
+              "comment": null,
+              "stl": [
+                "      CALL  \"FB_Heating\" , \"DB_Heating\"",
+                "       TempActual:=\"I_TempPlate\"",
+                "       HeaterOn  :=\"Q_Heater_On\""
+              ]
+            },
+            {
+              "no": 3,
+              "title": "Rezeptzähler",
+              "comment": null,
+              "stl": [
+                "      L     \"DB_Recipe\".Counter",
+                "      L     1",
+                "      +I",
+                "      T     \"DB_Recipe\".Counter"
+              ]
+            }
+          ],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "FB",
+          "number": 10,
+          "symbolic_name": "FB_Heating",
+          "family": "HEAT",
+          "version": "1.2",
+          "author": "Max Mustermann",
+          "language": "FUP",
+          "know_how_protected": false,
+          "title": "Heizplattenregelung",
+          "description": "Begrenzt die Plattentemperatur auf TempLimit.",
+          "mc7_size": 96,
+          "interface": [
+            {
+              "name": "TempActual",
+              "section": "IN",
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": []
+            },
+            {
+              "name": "HeaterOn",
+              "section": "OUT",
+              "type": "BOOL",
+              "start": null,
+              "comment": null,
+              "members": []
+            },
+            {
+              "name": "TempLimit",
+              "section": "STAT",
+              "type": "REAL",
+              "start": "2.500000e+002",
+              "comment": "Maximale Plattentemperatur",
+              "members": []
+            },
+            {
+              "name": "Valve",
+              "section": "STAT",
+              "type": "FB11",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "10.0",
+              "length": 4
+            },
+            {
+              "name": "t",
+              "section": "TEMP",
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": []
+            }
+          ],
+          "networks": [
+            {
+              "no": 1,
+              "title": "Temperatur begrenzen",
+              "comment": null,
+              "stl": [
+                "      L     #TempActual",
+                "      L     #TempLimit",
+                "      <R",
+                "      =     #HeaterOn"
+              ]
+            },
+            {
+              "no": 2,
+              "title": "Ventil",
+              "comment": null,
+              "stl": [
+                "      CALL  #Valve",
+                "       Open    :=#HeaterOn",
+                "       Position:=#t"
+              ]
+            }
+          ],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "FB",
+          "number": 11,
+          "symbolic_name": "FB_Valve",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "SCL",
+          "know_how_protected": false,
+          "title": null,
+          "description": null,
+          "mc7_size": 40,
+          "interface": [
+            {
+              "name": "Open",
+              "section": "IN",
+              "type": "BOOL",
+              "start": null,
+              "comment": null,
+              "members": []
+            },
+            {
+              "name": "Position",
+              "section": "OUT",
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": []
+            }
+          ],
+          "networks": [
+            {
+              "no": 1,
+              "title": null,
+              "comment": null,
+              "stl": [
+                "      A     #Open",
+                "      JCN   M001",
+                "      L     1.000000e+002",
+                "      T     #Position",
+                "M001: NOP   0"
+              ]
+            }
+          ],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "FC",
+          "number": 5,
+          "symbolic_name": "FC_Scale",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "AWL",
+          "know_how_protected": false,
+          "title": "Analogwert skalieren",
+          "description": null,
+          "mc7_size": 120,
+          "interface": [
+            {
+              "name": "Raw",
+              "section": "IN",
+              "type": "INT",
+              "start": null,
+              "comment": null,
+              "members": []
+            },
+            {
+              "name": "RET_VAL",
+              "section": "RETURN",
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": []
+            }
+          ],
+          "networks": [
+            {
+              "no": 1,
+              "title": "Skalieren",
+              "comment": null,
+              "stl": [
+                "      L     #Raw",
+                "      ITD",
+                "      DTR",
+                "      T     #RET_VAL"
+              ]
+            },
+            {
+              "no": 2,
+              "title": "Zeiten, Zähler, indirekt",
+              "comment": null,
+              "stl": [
+                "      A     M     10.0",
+                "      L     S5T#5S",
+                "      SE    T      5",
+                "      A     T      5",
+                "      =     Q      4.2",
+                "      A     I      0.3",
+                "      CU    C      3",
+                "      L     MW    20",
+                "      T     DB20.DBW    4",
+                "      L     IW [AR1,P#0.0]",
+                "      OPN   DB    20",
+                "      L     DBW [MD    10]"
+              ]
+            }
+          ],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "SFB",
+          "number": 4,
+          "symbolic_name": "TON",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "STL",
+          "know_how_protected": false,
+          "title": null,
+          "description": null,
+          "mc7_size": 0,
+          "interface": [],
+          "networks": [],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "DB",
+          "number": 20,
+          "symbolic_name": "DB_Recipe",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "DB",
+          "know_how_protected": false,
+          "title": null,
+          "description": null,
+          "mc7_size": 14,
+          "interface": [
+            {
+              "name": "Counter",
+              "section": null,
+              "type": "INT",
+              "start": "0",
+              "comment": null,
+              "members": [],
+              "offset": "0.0",
+              "length": 2
+            },
+            {
+              "name": "Limits",
+              "section": null,
+              "type": "STRUCT",
+              "start": null,
+              "comment": null,
+              "members": [
+                {
+                  "name": "Max",
+                  "section": null,
+                  "type": "REAL",
+                  "start": "2.600000e+002",
+                  "comment": null,
+                  "members": [],
+                  "offset": "2.0",
+                  "length": 4
+                },
+                {
+                  "name": "Min",
+                  "section": null,
+                  "type": "REAL",
+                  "start": "2.000000e+001",
+                  "comment": null,
+                  "members": [],
+                  "offset": "6.0",
+                  "length": 4
+                }
+              ],
+              "offset": "2.0",
+              "length": 8
+            },
+            {
+              "name": "Setpoint",
+              "section": null,
+              "type": "REAL",
+              "start": "2.300000e+002",
+              "comment": "Sollwert",
+              "members": [],
+              "offset": "10.0",
+              "length": 4
+            }
+          ],
+          "networks": [],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "DB",
+          "number": 30,
+          "symbolic_name": "DB_Heating",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "DB",
+          "know_how_protected": false,
+          "title": null,
+          "description": null,
+          "mc7_size": 14,
+          "interface": [
+            {
+              "name": "TempActual",
+              "section": "IN",
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "0.0",
+              "length": 4
+            },
+            {
+              "name": "HeaterOn",
+              "section": "OUT",
+              "type": "BOOL",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "4.0",
+              "length": 1
+            },
+            {
+              "name": "TempLimit",
+              "section": "STAT",
+              "type": "REAL",
+              "start": "2.500000e+002",
+              "comment": null,
+              "members": [],
+              "offset": "6.0",
+              "length": 4
+            },
+            {
+              "name": "Valve",
+              "section": "STAT",
+              "type": "FB11",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "10.0",
+              "length": 4
+            }
+          ],
+          "networks": [],
+          "instance_of": "FB10",
+          "errors": []
+        },
+        {
+          "type": "UDT",
+          "number": 1,
+          "symbolic_name": "UDT_Limits",
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "DB",
+          "know_how_protected": false,
+          "title": null,
+          "description": null,
+          "mc7_size": 0,
+          "interface": [
+            {
+              "name": "Max",
+              "section": null,
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "0.0",
+              "length": 4
+            },
+            {
+              "name": "Min",
+              "section": null,
+              "type": "REAL",
+              "start": null,
+              "comment": null,
+              "members": [],
+              "offset": "4.0",
+              "length": 4
+            }
+          ],
+          "networks": [],
+          "instance_of": null,
+          "errors": []
+        },
+        {
+          "type": "VAT",
+          "number": 1,
+          "symbolic_name": null,
+          "family": null,
+          "version": null,
+          "author": null,
+          "language": "STL",
+          "know_how_protected": false,
+          "title": "Beobachten Presse",
+          "description": null,
+          "mc7_size": 0,
+          "interface": [],
+          "networks": [],
+          "instance_of": null,
+          "errors": []
+        }
+      ],
+      "sources": [
+        {
+          "name": "FB_Valve",
+          "kind": "scl",
+          "text": "FUNCTION_BLOCK FB 11\nTITLE = 'Ventil'\nVAR_INPUT\n  Open : BOOL;\nEND_VAR\nVAR_OUTPUT\n  Position : REAL;\nEND_VAR\nBEGIN\n  IF Open THEN\n    Position := 100.0;\n  END_IF;\nEND_FUNCTION_BLOCK\n",
+          "defines": [
+            "FB 11"
+          ],
+          "errors": []
+        }
+      ],
+      "symbols": [
+        {
+          "symbol": "DB_Heating",
+          "address": "DB 30",
+          "type": "FB 10",
+          "comment": "Instanz Heizung"
+        },
+        {
+          "symbol": "DB_Recipe",
+          "address": "DB 20",
+          "type": "DB 20",
+          "comment": "Rezeptdaten"
+        },
+        {
+          "symbol": "FB_Heating",
+          "address": "FB 10",
+          "type": "FB 10",
+          "comment": "Heizplattenregelung"
+        },
+        {
+          "symbol": "FB_Valve",
+          "address": "FB 11",
+          "type": "FB 11",
+          "comment": null
+        },
+        {
+          "symbol": "FC_Scale",
+          "address": "FC 5",
+          "type": "FC 5",
+          "comment": "Analogwert skalieren"
+        },
+        {
+          "symbol": "I_Start",
+          "address": "I 0.0",
+          "type": "BOOL",
+          "comment": "Start Taster"
+        },
+        {
+          "symbol": "I_Stop",
+          "address": "I 0.1",
+          "type": "BOOL",
+          "comment": "Stopp Taster (Öffner)"
+        },
+        {
+          "symbol": "I_TempPlate",
+          "address": "PIW 256",
+          "type": "INT",
+          "comment": "Plattentemperatur"
+        },
+        {
+          "symbol": "M_Run",
+          "address": "M 10.0",
+          "type": "BOOL",
+          "comment": "Anlage läuft"
+        },
+        {
+          "symbol": "Main",
+          "address": "OB 1",
+          "type": "OB 1",
+          "comment": "Hauptprogramm"
+        },
+        {
+          "symbol": "Q_Heater_On",
+          "address": "Q 4.1",
+          "type": "BOOL",
+          "comment": "Heizung ein"
+        },
+        {
+          "symbol": "Q_Pump",
+          "address": "Q 4.0",
+          "type": "BOOL",
+          "comment": "Hydraulikpumpe"
+        },
+        {
+          "symbol": "TON",
+          "address": "SFB 4",
+          "type": "SFB 4",
+          "comment": null
+        },
+        {
+          "symbol": "UDT_Limits",
+          "address": "UDT 1",
+          "type": "UDT 1",
+          "comment": null
+        }
+      ]
+    }
+  ],
+  "pcs7_charts": [],
+  "errors": [],
+  "ethernet": [
+    {
+      "node": 4,
+      "rack": 0,
+      "interface": "PN-IO",
+      "io_system": null,
+      "device": null,
+      "router": null,
+      "mac": "08-00-06-01-00-00",
+      "use_router": false,
+      "use_ip": true,
+      "use_iso": false,
+      "station": "SIMATIC 300(1)",
+      "slot": 2,
+      "module": "CPU 315-2 PN/DP",
+      "ip": "192.168.0.10",
+      "mask": "255.255.255.0"
+    },
+    {
+      "node": 7,
+      "rack": 0,
+      "interface": null,
+      "io_system": null,
+      "device": null,
+      "router": null,
+      "mac": "08-00-06-01-00-00",
+      "use_router": false,
+      "use_ip": true,
+      "use_iso": false,
+      "station": "SIMATIC 300(1)",
+      "slot": 4,
+      "module": "CP 343-1",
+      "ip": "10.1.2.20",
+      "mask": "255.255.0.0"
+    },
+    {
+      "node": 21,
+      "rack": null,
+      "interface": "AKD-PN",
+      "io_system": "PROFINET-IO-System",
+      "device": 1,
+      "router": null,
+      "mac": "08-00-06-01-00-00",
+      "use_router": false,
+      "use_ip": true,
+      "use_iso": false,
+      "station": "SIMATIC 300(1)",
+      "slot": 1,
+      "module": "AKD-PN",
+      "ip": "192.168.0.11",
+      "mask": "255.255.255.0"
+    }
+  ]
+}

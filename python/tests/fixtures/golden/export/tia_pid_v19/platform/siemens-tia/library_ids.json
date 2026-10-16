@@ -1,0 +1,28 @@
+{
+  "links": {
+    "LGF_Random_Real": "98dbea35-a29f-4a6e-b939-312840c2a3e5",
+    "LLCCA_ErrAcc": "b676b477-b72b-4664-bf06-a0ea58034386",
+    "LLCCA_MedianFilter": "28f1dc23-6268-4db5-ade4-b2c679672f21",
+    "LLCCA_PID": "37aafe9f-08a3-4ccc-94bd-11024b9259db",
+    "LLCCA_PvSim": "5ac19fbf-ea5d-45ab-9b98-68bda8cd9f19",
+    "LLCCA_TimeLag": "9b95f548-075b-4e00-90c6-9a221d5363d4"
+  },
+  "type_versions": {
+    "LGF/04 Math operations/LGF_Random_Real@3.0.1": "de1d6c4e-9b50-46ed-abb6-ef5d19f9bcfe",
+    "LGF/LGF_Description@5.1.1": "a1b1030f-8203-4be3-8305-593355207848",
+    "LLCCA_ErrAcc@1.0.1": "9e157ab2-7b19-414a-85ce-5fab63e20f5d",
+    "LLCCA_MedianFilter@1.0.0": "74ec92ad-8b4c-4f35-8812-bc962a4a56a2",
+    "LLCCA_PID@0.3.1": "ab0d9be0-fab3-4eb7-b8fb-71d2fdfc3b68",
+    "LLCCA_PvSim@1.0.0": "b19e1d1e-8938-40d6-bc4f-cc20a13b5e2a",
+    "LLCCA_TimeLag@1.0.1": "0700d37f-60b5-4657-b23a-9d1ccf668ff4"
+  },
+  "types": {
+    "LGF/04 Math operations/LGF_Random_Real": "98dbea35-a29f-4a6e-b939-312840c2a3e5",
+    "LGF/LGF_Description": "b6be1e47-f510-45cb-8ba5-397608fe7c96",
+    "LLCCA_ErrAcc": "b676b477-b72b-4664-bf06-a0ea58034386",
+    "LLCCA_MedianFilter": "28f1dc23-6268-4db5-ade4-b2c679672f21",
+    "LLCCA_PID": "37aafe9f-08a3-4ccc-94bd-11024b9259db",
+    "LLCCA_PvSim": "5ac19fbf-ea5d-45ab-9b98-68bda8cd9f19",
+    "LLCCA_TimeLag": "9b95f548-075b-4e00-90c6-9a221d5363d4"
+  }
+}

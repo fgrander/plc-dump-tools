@@ -1,0 +1,850 @@
+{
+  "cleanup": {
+    "outside_work": []
+  },
+  "compiled_units": [],
+  "counts": {
+    "PLC_1": {
+      "tag_tables": 1,
+      "tags": 0,
+      "units": 4
+    },
+    "PLC_2": {
+      "tag_tables": 1,
+      "tags": 0,
+      "units": 4
+    },
+    "PLC_S120Democase": {
+      "tag_tables": 2,
+      "tags": 20,
+      "units": 15
+    },
+    "_hardware": {
+      "modules": 6
+    },
+    "_project_library": {
+      "master_copies": 0,
+      "type_versions": 0,
+      "types": 0
+    }
+  },
+  "devices": [
+    {
+      "alarms": {
+        "supervisions_file": "alarms/PLC_1/supervisions.xlsx",
+        "texts_file": null
+      },
+      "connected_hmis": [],
+      "family": "S7-1500",
+      "firmware": "V4.0",
+      "kind": "plc",
+      "library_links": [],
+      "name": "PLC_1",
+      "order_no": "6ES7 515-2UN03-0AB0",
+      "safety": {
+        "signatures": []
+      },
+      "tag_tables": [
+        {
+          "file": "simaticml/PLC_1/tags/PLC-Variablen/Default tag table.xml",
+          "folder": "PLC-Variablen",
+          "name": "Default tag table"
+        }
+      ],
+      "units": [
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "Main",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "SCL",
+          "name": "FOB_RTG1",
+          "number": 123,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main_Safety_RTG1.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "F_FBD",
+          "name": "Main_Safety_RTG1",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "F_DB",
+          "name": "Main_Safety_RTG1_DB",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        }
+      ]
+    },
+    {
+      "alarms": {
+        "supervisions_file": "alarms/PLC_2/supervisions.xlsx",
+        "texts_file": null
+      },
+      "connected_hmis": [],
+      "family": "S7-1500",
+      "firmware": "V4.0",
+      "kind": "plc",
+      "library_links": [],
+      "name": "PLC_2",
+      "order_no": "6ES7 515-2UN03-0AB0",
+      "safety": {
+        "signatures": []
+      },
+      "tag_tables": [
+        {
+          "file": "simaticml/PLC_2/tags/PLC-Variablen/Default tag table.xml",
+          "folder": "PLC-Variablen",
+          "name": "Default tag table"
+        }
+      ],
+      "units": [
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_2/Programmbausteine/Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "Main",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "SCL",
+          "name": "FOB_RTG1",
+          "number": 123,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_2/Programmbausteine/Main_Safety_RTG1.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "F_FBD",
+          "name": "Main_Safety_RTG1",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_2/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "F_DB",
+          "name": "Main_Safety_RTG1_DB",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        }
+      ]
+    },
+    {
+      "alarms": {
+        "supervisions_file": "alarms/PLC_S120Democase/supervisions.xlsx",
+        "texts_file": "alarms/PLC_S120Democase/alarm_texts.xlsx"
+      },
+      "connected_hmis": [],
+      "family": "S7-1500",
+      "firmware": "V2.9",
+      "kind": "plc",
+      "library_links": [],
+      "name": "PLC_S120Democase",
+      "order_no": "6ES7 515-2UM01-0AB0",
+      "safety": {
+        "signatures": []
+      },
+      "tag_tables": [
+        {
+          "file": "simaticml/PLC_S120Democase/tags/PLC-Variablen/Default tag table.xml",
+          "folder": "PLC-Variablen",
+          "name": "Default tag table"
+        },
+        {
+          "file": "simaticml/PLC_S120Democase/tags/PLC-Variablen/DemocaseAppTagTable.xml",
+          "folder": "PLC-Variablen",
+          "name": "DemocaseAppTagTable"
+        }
+      ],
+      "units": [
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "Main",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "SCL",
+          "name": "FOB_RTG1",
+          "number": 123,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Main_Safety_RTG1.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "F_FBD",
+          "name": "Main_Safety_RTG1",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "F_DB",
+          "name": "Main_Safety_RTG1_DB",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "1.0"
+          },
+          "consistent": false,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "MC_Servo",
+          "number": 91,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "1.0"
+          },
+          "consistent": false,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "MC_Interpolator",
+          "number": 92,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Axis_red.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "FBD",
+          "name": "Axis_red",
+          "number": 11,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Axis_red_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "DB",
+          "name": "Axis_red_DB",
+          "number": 11,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Axis_blue.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "FBD",
+          "name": "Axis_blue",
+          "number": 10,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/Axis_blue_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "DB",
+          "name": "Axis_blue_DB",
+          "number": 10,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/DriveController_Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "DriveController_Main",
+          "number": 123,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/SclBlock.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "SCL",
+          "name": "SclBlock",
+          "number": 2,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/Programmbausteine/GlobalBlock.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "DB",
+          "language": "DB",
+          "name": "GlobalBlock",
+          "number": 2,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {},
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/PLC-Datentypen/PD_TEL_393_IN.s7dcl"
+          ],
+          "folder": "PLC-Datentypen",
+          "kind": "UDT",
+          "language": "UDT",
+          "name": "PD_TEL_393_IN",
+          "number": null,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {},
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_S120Democase/PLC-Datentypen/PD_TEL_393_OUT.s7dcl"
+          ],
+          "folder": "PLC-Datentypen",
+          "kind": "UDT",
+          "language": "UDT",
+          "name": "PD_TEL_393_OUT",
+          "number": null,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        }
+      ]
+    }
+  ],
+  "dump_version": 1,
+  "errors": [
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_1/FOB_RTG1"
+    },
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_2/FOB_RTG1"
+    },
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_S120Democase/FOB_RTG1"
+    },
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_S120Democase/MC_Interpolator"
+    },
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_S120Democase/MC_Servo"
+    }
+  ],
+  "hardware": {
+    "devices": [
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Rail_0",
+            "order_no": "6ES7 590-1***0-0AA0",
+            "path": "Rail_0",
+            "rack": "Rail_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V4.0",
+            "interfaces": [],
+            "name": "PLC_1",
+            "order_no": "6ES7 515-2UN03-0AB0",
+            "path": "PLC_1",
+            "rack": "PLC_1",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.3/24",
+                "device_name": "plc_1.profinet interface_1",
+                "node": "X1",
+                "subnet": "S120Democase_PN",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_1",
+            "order_no": null,
+            "path": "PLC_1/PROFINET interface_1",
+            "rack": "PLC_1",
+            "slot": 32768
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.3/24",
+                "device_name": "plc_1.profinet interface_2",
+                "node": "X2",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_2",
+            "order_no": null,
+            "path": "PLC_1/PROFINET interface_2",
+            "rack": "PLC_1",
+            "slot": 33024
+          }
+        ],
+        "name": "PLC_1"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Rail_0",
+            "order_no": "6ES7 590-1***0-0AA0",
+            "path": "Rail_0",
+            "rack": "Rail_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V4.0",
+            "interfaces": [],
+            "name": "PLC_2",
+            "order_no": "6ES7 515-2UN03-0AB0",
+            "path": "PLC_2",
+            "rack": "PLC_2",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.4/24",
+                "device_name": "plc_2.profinet interface_1",
+                "node": "X1",
+                "subnet": "S120Democase_PN_1",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_1",
+            "order_no": null,
+            "path": "PLC_2/PROFINET interface_1",
+            "rack": "PLC_2",
+            "slot": 32768
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.4/24",
+                "device_name": "plc_2.profinet interface_2",
+                "node": "X2",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_2",
+            "order_no": null,
+            "path": "PLC_2/PROFINET interface_2",
+            "rack": "PLC_2",
+            "slot": 33024
+          }
+        ],
+        "name": "PLC_2"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Rail_0",
+            "order_no": "6ES7 590-1***0-0AA0",
+            "path": "Rail_0",
+            "rack": "Rail_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V2.9",
+            "interfaces": [],
+            "name": "PLC_S120Democase",
+            "order_no": "6ES7 515-2UM01-0AB0",
+            "path": "PLC_S120Democase",
+            "rack": "PLC_S120Democase",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.1/24",
+                "device_name": "plc_s120democase.profinet interface_1",
+                "node": "X1",
+                "subnet": "S120Democase_PN_2",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_1",
+            "order_no": null,
+            "path": "PLC_S120Democase/PROFINET interface_1",
+            "rack": "PLC_S120Democase",
+            "slot": 32768
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.1/24",
+                "device_name": "plc_s120democase.profinet interface_2",
+                "node": "X2",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET interface_2",
+            "order_no": null,
+            "path": "PLC_S120Democase/PROFINET interface_2",
+            "rack": "PLC_S120Democase",
+            "slot": 33024
+          }
+        ],
+        "name": "PLC_S120Democase"
+      }
+    ],
+    "subnets": [
+      {
+        "io_systems": [
+          "PROFINET IO-System"
+        ],
+        "kind": "Ethernet",
+        "name": "S120Democase_PN",
+        "nodes": [
+          "PLC_1/X1"
+        ]
+      },
+      {
+        "io_systems": [
+          "PROFINET IO-System"
+        ],
+        "kind": "Ethernet",
+        "name": "S120Democase_PN_1",
+        "nodes": [
+          "PLC_2/X1"
+        ]
+      },
+      {
+        "io_systems": [
+          "S120Democase_PN_IO"
+        ],
+        "kind": "Ethernet",
+        "name": "S120Democase_PN_2",
+        "nodes": [
+          "PLC_S120Democase/X1"
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "editing": "de-DE",
+    "project": [
+      "de-DE"
+    ],
+    "reference": "de-DE"
+  },
+  "library": null,
+  "missing_packages": [
+    {
+      "name": "STEP 7 Safety V21",
+      "objects": []
+    },
+    {
+      "name": "Tech WebApplication V21",
+      "objects": []
+    }
+  ],
+  "multiuser": {
+    "kind": "none"
+  },
+  "project_library": {
+    "kind": "project",
+    "master_copies": [],
+    "name": "Step7",
+    "types": [],
+    "version": null
+  },
+  "source": {
+    "file": "Step7.zap21",
+    "kind": "project",
+    "saved_update": null,
+    "saved_version": "V21"
+  },
+  "tia": {
+    "upgrade": null,
+    "version": "V21"
+  },
+  "tool": {
+    "name": "tiadump",
+    "openness": "V21",
+    "version": "1.0.0"
+  }
+}

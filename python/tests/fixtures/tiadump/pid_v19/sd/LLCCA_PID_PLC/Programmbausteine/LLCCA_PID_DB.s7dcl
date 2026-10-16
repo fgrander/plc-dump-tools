@@ -1,0 +1,8 @@
+﻿{
+    S7_Author := "Author A";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.0"
+}
+DATA_BLOCK LLCCA_PID_DB : LLCCA_PID
+END_DATA_BLOCK

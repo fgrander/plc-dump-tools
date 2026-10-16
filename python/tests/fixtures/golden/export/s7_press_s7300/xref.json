@@ -1,0 +1,180 @@
+[
+  {
+    "access": "call",
+    "from_unit": "FB_Heating",
+    "line": 56,
+    "network_no": 2,
+    "target": "FB_Valve",
+    "target_kind": "unit"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 43,
+    "network_no": 2,
+    "target": "M 10.0",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "FC_Scale",
+    "line": 45,
+    "network_no": 2,
+    "target": "T 5",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 46,
+    "network_no": 2,
+    "target": "T 5",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "FC_Scale",
+    "line": 47,
+    "network_no": 2,
+    "target": "Q 4.2",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 48,
+    "network_no": 2,
+    "target": "I 0.3",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "FC_Scale",
+    "line": 49,
+    "network_no": 2,
+    "target": "C 3",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 50,
+    "network_no": 2,
+    "target": "MW 20",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "FC_Scale",
+    "line": 51,
+    "network_no": 2,
+    "target": "DB20.DBW 4",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 53,
+    "network_no": 2,
+    "target": "DB_Recipe",
+    "target_kind": "unit"
+  },
+  {
+    "access": "read",
+    "from_unit": "FC_Scale",
+    "line": 54,
+    "network_no": 2,
+    "target": "MD 10",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "Main",
+    "line": 27,
+    "network_no": 1,
+    "target": "\"I_Start\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "Main",
+    "line": 28,
+    "network_no": 1,
+    "target": "\"M_Run\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "read",
+    "from_unit": "Main",
+    "line": 29,
+    "network_no": 1,
+    "target": "\"I_Stop\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "Main",
+    "line": 30,
+    "network_no": 1,
+    "target": "\"Q_Pump\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "Main",
+    "line": 31,
+    "network_no": 1,
+    "target": "\"M_Run\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "Main",
+    "line": 37,
+    "network_no": 2,
+    "target": "\"DB_Heating\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "Main",
+    "line": 37,
+    "network_no": 2,
+    "target": "FB_Heating",
+    "target_kind": "unit"
+  },
+  {
+    "access": "read",
+    "from_unit": "Main",
+    "line": 38,
+    "network_no": 2,
+    "target": "\"I_TempPlate\"",
+    "target_kind": "variable",
+    "via_param": "TempActual"
+  },
+  {
+    "access": "write",
+    "from_unit": "Main",
+    "line": 39,
+    "network_no": 2,
+    "target": "\"Q_Heater_On\"",
+    "target_kind": "variable",
+    "via_param": "HeaterOn"
+  },
+  {
+    "access": "read",
+    "from_unit": "Main",
+    "line": 45,
+    "network_no": 3,
+    "target": "\"DB_Recipe\".Counter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "write",
+    "from_unit": "Main",
+    "line": 48,
+    "network_no": 3,
+    "target": "\"DB_Recipe\".Counter",
+    "target_kind": "variable"
+  }
+]

@@ -1,0 +1,132 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "2.01"
+}
+FUNCTION_BLOCK "LSim_I"
+    VAR_INPUT
+        { S7_MLC := "MLC_53h" }
+        calcParam : Bool;
+        { S7_MLC := "MLC_54A" }
+        input : Real;
+        { S7_MLC := "MLC_5BW" }
+        tmLag1 : Real := 1.0;
+        { S7_MLC := "MLC_3Zf" }
+        cycle : Real := 0.1;
+        { S7_MLC := "MLC_3EV" }
+        maxOut : Real := 100.0;
+        { S7_MLC := "MLC_Yd" }
+        minOut : Real;
+        { S7_MLC := "MLC_Sx" }
+        reset : Bool;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_wS" }
+        error : Bool;
+        { S7_MLC := "MLC_gC" }
+        status : Word;
+        { S7_MLC := "MLC_4SG" }
+        maxReached : Bool;
+        { S7_MLC := "MLC_4js" }
+        minReached : Bool;
+        { S7_MLC := "MLC_4CS" }
+        output : Real;
+    END_VAR
+    VAR
+        { S7_MLC := "MLC_382" }
+        statRxn1 : Real;
+        { S7_MLC := "MLC_3R7" }
+        statRyn1 : Real;
+        statRa1 : Real;
+        statRb1 : Real;
+        statOverfirst : Bool;
+        { S7_MLC := "MLC_3RM" }
+        statOutput : Real;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //=============================================================================
+        //SIEMENS AG
+        //(c)Copyright 2017 All Rights Reserved
+        //-----------------------------------------------------------------------------
+        //Library:       Library for Controlled System Simulation
+        //Tested with:   S7-1500 FW V2.0 / S7-1200 FW V4.2
+        //Engineering:   STEP 7 V14 Upd2 (TIA Portal)
+        //Restrictions:  Cyclic interrupt
+        //Requirements:  memory card needed for S7-1500
+        //Functionality: Simulation of a I-System
+        //
+        //             1
+        //  F(p) = -----------
+        //         (tmLag1*p)
+        //          
+        //  Call the simulation in a cyclic interrupt with
+        //  cyclic interrupt time at least = tmLag1/10!
+        //-----------------------------------------------------------------------------
+        //Change log table:
+        //Version  Date       Expert in charge                Changes applied
+        //02.00.00 03.02.2016 Siemens Industry Online Support Release (STEP 7 V13 SP1)
+        //02.00.01 02.03.2017 Siemens Industry Online Support Release (STEP 7 V14)
+        //=============================================================================
+        
+        // check parameter
+        IF #tmLag1 <= 0 THEN
+          #error := True;
+          #status := W#16#8001;     // Parameter Error
+          #statRxn1 := 0.0;
+          #statRyn1 := 0.0;
+          #statOutput := 0;
+          #output := 0;
+          RETURN;
+        ELSE
+          #error := FALSE;
+          #status := W#16#0000;     // no error
+        END_IF;
+        
+        // calculates the z-parameter for the difference equatation
+        IF #calcParam = True OR NOT #statOverfirst THEN
+        #statOverfirst:=1;
+          // Calculate z-parameters for IT1-System
+        #statRb1 := #cycle/#tmLag1;
+        #statRa1 := -1;
+        
+        END_IF;
+        
+        // reset Memory
+        IF #reset = True THEN
+          #statRxn1 := 0.0;
+          #statRyn1 := 0.0;
+          #statOutput:=0;
+        END_IF;
+        
+        // save delayed output-signals
+        #statRyn1:= #statOutput;
+        
+        // difference equatation for the I-system
+        #statOutput := #statRxn1* #statRb1 - #statRyn1*#statRa1;
+        
+        // save delayed input-signals
+        #statRxn1 := #input;
+        
+        // max limit of acutating variable
+        IF #statOutput > #maxOut THEN
+          #statOutput := #maxOut;
+          #maxReached:= True;
+        ELSE
+          #maxReached := False;
+        END_IF;
+        
+        // min limit of acutating variable
+        IF #statOutput < #minOut THEN
+          #statOutput := #minOut;
+          #minReached := True;
+        ELSE
+          #minReached := False;
+        END_IF;
+        
+        #output := #statOutput;
+        
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

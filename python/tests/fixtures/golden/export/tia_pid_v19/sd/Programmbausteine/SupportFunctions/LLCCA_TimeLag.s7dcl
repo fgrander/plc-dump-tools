@@ -1,0 +1,179 @@
+﻿{
+    S7_Author := "Author A";
+    S7_BlockComment := "MLC_2";
+    S7_BlockTitle := "MLC_1";
+    S7_EditorMode := "SCL";
+    S7_Family := "LLCCA";
+    S7_GenerateENOforSCL := "TRUE";
+    S7_IECCheck := "TRUE";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.0"
+}
+FUNCTION_BLOCK "LLCCA_TimeLag"
+    VAR_INPUT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3";
+            S7_Visibility := "Hidden := External"
+        }
+        in : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4";
+            S7_Visibility := "Hidden := External"
+        }
+        init : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_5";
+            S7_Visibility := "Hidden := External"
+        }
+        reset : Bool;
+    END_VAR
+    VAR_OUTPUT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_6";
+            S7_Visibility := "Hidden := External"
+        }
+        out : Real;
+    END_VAR
+    VAR_IN_OUT RETAIN
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_7";
+            S7_Visibility := "Hidden := External"
+        }
+        timeLag : USInt := 10;
+    END_VAR
+    VAR
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statRuntimeMem : LReal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statTimeLag : Array[0..#TIME_LAG_MAX] of Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statTimer : LReal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statInit : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statReset : Bool;
+    END_VAR
+    VAR_TEMP
+        tempCycleTime : LReal;
+        "i" : USInt;
+    END_VAR
+    VAR CONSTANT
+        TIME_CYCLE : Real := 0.1;
+        TIME_LAG_MAX : USInt := 250;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Description header 
+            //================================================================================== 
+            // LCC Automation AB / (c)Copyright 2024
+            // Released under the MIT License
+            //---------------------------------------------------------------------------------- 
+            // Title:            LLCCA_PID
+            // Comment/Function: The output value is delayed by an adjustable time
+            // Library/Family:   LLCCA (Library LCC Automation AB)
+            // Author:           Author A / author@example.invalid
+            // Target System:    CPU 1510SP-1
+            // Engineering:      TIA Portal 19 update 3
+            // Restrictions:     none
+            // Requirements:     PLC (S7-1200 / S7-1500)
+            //---------------------------------------------------------------------------------- 
+            // Change log table: 
+            // Version     | Date       | Author           | Changes applied
+            //-------------|------------|------------------|------------------------------------ 
+            // 001.000.001 | 2024-11-27 | Author A   | First release
+            //==================================================================================
+        END_REGION
+        
+        IF #timeLag > 0 THEN
+          
+          // run time lag code
+          
+          REGION cycleTime
+            #tempCycleTime := RUNTIME(#statRuntimeMem);
+          END_REGION
+          //------------------------------------------------------------------------------------------
+          REGION init
+            
+            IF #init AND NOT #statInit THEN
+              #statInit := TRUE;
+              #statTimer := #TIME_CYCLE;
+              FOR #i := 0 TO #TIME_LAG_MAX DO
+                #statTimeLag[#i] := #in;
+              END_FOR;
+            ELSIF NOT #init THEN
+              #statInit := FALSE;
+            END_IF;
+            
+          END_REGION
+          //------------------------------------------------------------------------------------------
+          REGION reset
+            
+            IF #reset AND NOT #statReset THEN
+              #statReset := TRUE;
+              #statTimer := #TIME_CYCLE;
+              FOR #i := 0 TO #TIME_LAG_MAX DO
+                #statTimeLag[#i] := 0.0;
+              END_FOR;
+            ELSIF NOT #reset THEN
+              #statReset := FALSE;
+            END_IF;
+            
+          END_REGION
+          //------------------------------------------------------------------------------------------
+          REGION limits
+            
+            // max
+            IF #timeLag > #TIME_LAG_MAX/10 THEN
+              #timeLag := #TIME_LAG_MAX/10;
+            END_IF;
+            
+          END_REGION
+          //------------------------------------------------------------------------------------------
+          // decrease timer
+          #statTimer := #statTimer - #tempCycleTime;
+          
+          // save value to memory
+          IF #statTimer < 0.0 THEN
+            #statTimer := #TIME_CYCLE;
+            
+            FOR #i := 0 TO #TIME_LAG_MAX-1 DO
+              #statTimeLag[#TIME_LAG_MAX - #i] := #statTimeLag[#TIME_LAG_MAX - #i - 1];
+            END_FOR;
+            #statTimeLag[0] := #in;
+            
+          END_IF;
+          
+          // set output
+          #out := #statTimeLag[#timeLag*10];
+          
+        ELSE
+          // no time lag
+          
+          // set output
+          #out := #in;
+        
+        END_IF;
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

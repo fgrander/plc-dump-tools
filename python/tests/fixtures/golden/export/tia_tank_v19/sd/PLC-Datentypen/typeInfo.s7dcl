@@ -1,0 +1,8 @@
+﻿TYPE
+    typeInfo : STRUCT
+        { S7_MLC := "MLC_1" }
+        "version" : String;
+        { S7_MLC := "MLC_2" }
+        "date" : String;
+    END_STRUCT;
+END_TYPE

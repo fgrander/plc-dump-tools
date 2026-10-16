@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/unit_front_matter.schema.json",
+  "title": "Front matter of units/<KIND>/<name>.md and datatypes/<name>.md (contract §5)",
+  "type": "object",
+  "required": [
+    "name",
+    "kind",
+    "language",
+    "protected",
+    "parse_quality"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "OB",
+        "FB",
+        "FC",
+        "DB",
+        "IDB",
+        "UDT",
+        "TAG_TABLE",
+        "OTHER"
+      ]
+    },
+    "number": {
+      "type": "integer"
+    },
+    "language": {
+      "enum": [
+        "scl",
+        "stl",
+        "st",
+        "ntn",
+        "il",
+        "none"
+      ]
+    },
+    "original_language": {
+      "type": "string"
+    },
+    "protected": {
+      "type": "boolean"
+    },
+    "safety": {
+      "type": "boolean"
+    },
+    "parse_quality": {
+      "enum": [
+        "full",
+        "partial",
+        "names_only"
+      ]
+    },
+    "folder": {
+      "type": "string"
+    },
+    "instance_of": {
+      "type": "string"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "comment": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "path_prefix": {
+      "type": "string"
+    },
+    "variable_scope": {
+      "enum": [
+        "global_tag",
+        "db_member",
+        "fb_interface",
+        "fc_interface",
+        "udt_member"
+      ]
+    },
+    "interface": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/member"
+      }
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "no",
+          "line_start",
+          "line_end"
+        ],
+        "properties": {
+          "no": {
+            "type": "integer"
+          },
+          "line_start": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "line_end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "comment": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "element_texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "network_no",
+          "element_ref",
+          "kind",
+          "lang",
+          "text"
+        ],
+        "properties": {
+          "network_no": {
+            "type": "integer"
+          },
+          "element_ref": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "title",
+              "comment"
+            ]
+          },
+          "lang": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "part": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*/[1-9][0-9]*$"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "member": {
+      "type": "object",
+      "required": [
+        "name",
+        "type"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "section": {
+          "enum": [
+            "IN",
+            "OUT",
+            "IN_OUT",
+            "STATIC",
+            "TEMP",
+            "CONSTANT",
+            "RETURN"
+          ]
+        },
+        "start": {
+          "type": "string"
+        },
+        "retain": {
+          "type": "boolean"
+        },
+        "comment": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "dims": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^\\d+\\.[0-7]$"
+        },
+        "io_direction": {
+          "enum": [
+            "input",
+            "output",
+            "memory"
+          ]
+        },
+        "accessible": {
+          "type": "boolean"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "writable": {
+          "type": "boolean"
+        },
+        "safety": {
+          "const": true
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/member"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

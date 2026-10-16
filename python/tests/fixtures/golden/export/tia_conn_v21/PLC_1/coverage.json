@@ -1,0 +1,62 @@
+{
+  "categories": {
+    "connections": {
+      "reason": "other:calls in 1 protected block(s) not readable",
+      "state": "partial"
+    },
+    "datatypes": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hardware": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hmi": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "other:no safety signatures read",
+      "state": "partial"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    }
+  },
+  "gaps": [
+    {
+      "category": "connections",
+      "item": "FOB_RTG1",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "FOB_RTG1",
+      "reason": "protected"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "coupler_side_without_controller",
+      "message": "PNPN Coupler/PNPN Coupler.X2: connected to no IO system; its transfer areas have no addresses"
+    },
+    {
+      "code": "coupler_side_without_controller",
+      "message": "PNPN Coupler_1/PNPN Coupler_1.X2: connected to no IO system; its transfer areas have no addresses"
+    },
+    {
+      "code": "transfer_area_length_mismatch",
+      "message": "PNPN Coupler_1/PNPN Coupler_1.X1 Transferbereich_1: the area has 1 byte(s), its input address 36 has 16 bits; the address is exported"
+    }
+  ]
+}

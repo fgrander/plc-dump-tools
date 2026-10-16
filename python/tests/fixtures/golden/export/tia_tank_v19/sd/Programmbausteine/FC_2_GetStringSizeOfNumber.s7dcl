@@ -1,0 +1,43 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_2_GetStringSizeOfNumber" : Void
+    VAR_INPUT
+        number : UDInt;
+    END_VAR
+    VAR_OUTPUT
+        stringSize : Int;
+    END_VAR
+    VAR_TEMP
+        size : USInt;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        IF #number < 10 THEN
+            #size := 1;
+        ELSIF #number >= 10 AND #number < 100 THEN
+            #size := 2;
+        ELSIF #number >= 100 AND #number < 1000 THEN
+            #size := 3;
+        ELSIF #number >= 1000 AND #number < 10000 THEN
+            #size := 4;
+        ELSIF #number >= 10000 AND #number < 100000 THEN
+            #size := 5;
+        ELSIF #number >= 100000 AND #number < 1000000 THEN
+            #size := 6;
+        ELSIF #number >= 1000000 AND #number < 10000000 THEN
+            #size := 7;
+        ELSIF #number >= 10000000 AND #number < 100000000 THEN
+            #size := 8;
+        ELSIF #number >= 100000000 AND #number < 1000000000 THEN
+            #size := 9;
+        ELSIF #number >= 1000000000 AND #number < 10000000000 THEN
+            #size := 10;
+        ELSE    // max UDINT = 4.294.967.295
+            #size := 11;
+        END_IF;
+    END_NETWORK
+END_FUNCTION

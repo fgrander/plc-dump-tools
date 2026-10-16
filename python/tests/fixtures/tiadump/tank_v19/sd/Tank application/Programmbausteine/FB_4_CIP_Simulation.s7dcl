@@ -1,0 +1,181 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_4_CIP_Simulation"
+    VAR_OUTPUT
+        { S7_MLC := "MLC_Mg" }
+        startCip : Bool;
+        { S7_MLC := "MLC_Uw" }
+        stopCip : Bool;
+    END_VAR
+    VAR_IN_OUT
+        cip : _.typeCIP;
+    END_VAR
+    VAR
+        statMemoryActive : Bool;
+        statSystemTime : DTL;
+        statTemperature : Real;
+        statStartStep1 : Bool;
+        statStartStep2 : Bool;
+        statStartStep3 : Bool;
+        statStartStep4 : Bool;
+        statConcentration : Real;
+    END_VAR
+    VAR_TEMP
+        tempRet : Int;
+        tempRandomConcentration : Real;
+        tempRandomFlowrate : Real;
+        tempStartInit : Bool;
+        tempStartStep1 : Bool;
+        tempStartStep2 : Bool;
+        tempStartStep3 : Bool;
+        tempStartStep4 : Bool;
+        tempEnd : Bool;
+        { S7_MLC := "MLC_4Hr" }
+        tempCurrentDate : DTL;
+        { S7_MLC := "MLC_45Z" }
+        tempDateDiff : Time;
+        { S7_MLC := "MLC_4Gq" }
+        tempStartTime : Time;
+        { S7_MLC := "MLC_55y" }
+        tempCurrentTOD : Time_Of_Day;
+        { S7_MLC := "MLC_Lj" }
+        tempCurrentTime : Time;
+        { S7_MLC := "MLC_3Kd" }
+        tempStartDate : DTL;
+        { S7_MLC := "MLC_4qJ" }
+        tempTimeOut : Time;
+    END_VAR
+
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_3TG"
+    }
+    NETWORK
+        // start CIP
+        // ----------
+        
+        // get current date
+        #tempRet := RD_LOC_T(#tempCurrentDate);     // get local time (DTL)
+        
+        // START with configured #cipStartTime
+        // ------------------------------------
+        (*
+        // get start date (DTL)
+        #tempStartDate := TOD_TO_DTL(#cip.cipStartTime);
+        
+        // Start CIP process
+        IF (#tempCurrentDate.HOUR = #tempStartDate.HOUR) AND (#tempCurrentDate.MINUTE = #tempStartDate.MINUTE) AND (#tempCurrentDate.SECOND = #tempStartDate.SECOND) THEN
+            #cip.cipActive := true;
+        END_IF;
+        *)
+        
+        // START every 1 hour
+        // -------------------
+        
+        // Start CIP process
+        IF (#tempCurrentDate.MINUTE = 0 AND #tempCurrentDate.SECOND = 0) THEN
+            #cip.cipActive := true;
+        END_IF;
+        
+        
+        IF #cip.cipActive = false THEN
+            #cip.cipProcess := ''; 
+            #cip.cipStep := '';
+            #cip.cipTemperature := 0;
+            #cip.cipConcentration := 0;
+            #cip.cipFlowrate := 0;
+            #cip.cipStep1 := false;
+            #cip.cipStep2 := false;
+            #cip.cipStep3 := false;
+            #cip.cipStep4 := false;
+        END_IF;
+        
+        IF #cip.cipActive = true THEN
+            #cip.cipProcess := 'Full wash';
+        END_IF;
+        
+        // INIT Step (1 second)
+        "R_TRIG_CIP_Step1"(CLK := #cip.cipActive, Q => #tempStartInit);
+        
+        IF #tempStartInit THEN
+            #cip.cipId := #cip.cipId + 1;
+        END_IF;
+        
+        // start S7 graph (official input of graph block)
+        #startCip := #tempStartInit;
+        
+        // STEP1 (after 1 second)
+        "IEC_Timer_CIP_Init".TON(IN:=#cip.cipActive,
+                                 PT:=T#1s,
+                                 Q=>#tempStartStep1,
+                                 ET=>#tempTimeOut);
+        
+        IF #tempStartStep1 THEN
+            #cip.cipStep4 := false;
+            #cip.cipStep1 := true;
+            #cip.cipStep := 'pre-rinse';
+            #cip.cipTemperature := 125.0;
+        END_IF;
+        
+        // STEP 2 (after 6 minutes)
+        "IEC_Timer_CIP_Step2".TON(IN := #cip.cipActive,
+                              PT := T#6m,
+                              Q => #tempStartStep2,
+                              ET => #tempTimeOut);
+        
+        IF #tempStartStep2 THEN
+            #cip.cipStep1 := false;
+            #cip.cipStep2 := true;
+            
+            #cip.cipStep := 'alkali-wash';
+            #cip.cipTemperature := 227.0;
+            #cip.cipConcentration := 340.0;
+        END_IF;
+        
+        // STEP 3 (after 22 minutes)
+        "IEC_Timer_CIP_Step3".TON(IN := #cip.cipActive,
+                                  PT := T#22m,
+                                  Q => #tempStartStep3,
+                                  ET => #tempTimeOut);
+        
+        IF #tempStartStep3 THEN
+            #cip.cipStep2 := false;
+            #cip.cipStep3 := true;
+            
+            #cip.cipStep := 'acid-wash';
+            #cip.cipTemperature := 840.0;
+            #cip.cipConcentration := 2013.0;
+        END_IF;
+        
+        // STEP 4 (after 44 minutes)
+        "IEC_Timer_CIP_Step4".TON(IN := #cip.cipActive,
+                                  PT := T#44m,
+                                  Q => #tempStartStep4,
+                                  ET => #tempTimeOut);
+        IF #tempStartStep4 THEN
+            #cip.cipStep3 := false;
+            #cip.cipStep4 := true;
+            
+            #cip.cipStep := 'final-rinse';
+            #cip.cipTemperature := 347.0;
+            #cip.cipConcentration := 1830.0;
+        END_IF;
+        
+        // END
+        "IEC_Timer_CIP_End".TON(IN := #cip.cipActive,
+                                PT := T#58m,
+                                Q => #tempEnd,
+                                ET => #tempTimeOut);
+        
+        IF #tempEnd THEN
+            #cip.cipActive := false;
+        END_IF;
+        
+        // stop s7 graph
+        #stopCip := #tempEnd OR NOT #cip.cipActive;
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

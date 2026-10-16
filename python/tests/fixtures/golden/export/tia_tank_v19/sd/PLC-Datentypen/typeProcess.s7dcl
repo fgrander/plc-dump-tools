@@ -1,0 +1,26 @@
+﻿TYPE
+    typeProcess : STRUCT
+        { S7_MLC := "MLC_1" }
+        productId : String;
+        { S7_MLC := "MLC_2" }
+        numberProduced : UDInt;
+        { S7_MLC := "MLC_3" }
+        numberFaulty : UDInt;
+        { S7_MLC := "MLC_4" }
+        numberGood : UDInt;
+        { S7_MLC := "MLC_5" }
+        batchId : UDInt;
+        { S7_MLC := "MLC_6" }
+        productTypeId : UInt;
+        { S7_MLC := "MLC_7" }
+        productTypeName : String;
+        { S7_MLC := "MLC_8" }
+        productSerialNumber : String;
+        { S7_MLC := "MLC_9" }
+        productQRCode : USInt;
+        { S7_MLC := "MLC_10" }
+        speedActual : UDInt;
+        { S7_MLC := "MLC_11" }
+        speedTarget : UDInt;
+    END_STRUCT;
+END_TYPE

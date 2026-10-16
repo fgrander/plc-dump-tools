@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "hardware_modules": 2,
+    "hmi_screens": 0,
+    "units": 17,
+    "variables": 20,
+    "xrefs": 0
+  },
+  "coverage_summary": {
+    "datatypes": "delivered",
+    "hardware": "delivered",
+    "hmi": "delivered",
+    "program_units": "delivered",
+    "safety": "partial",
+    "structure": "delivered",
+    "symbols": "delivered"
+  },
+  "device": "PLC_S120Democase",
+  "exported_at": "<exported_at>",
+  "extractor": {
+    "id": "tia",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.1.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "parts": [
+    {
+      "kind": "common",
+      "path": "."
+    },
+    {
+      "checksum": "sha256:560cbf191387159235907d6831e35aa8cbfa8244b2ffd9218e096b136503ba86",
+      "files": 12,
+      "kind": "siemens-simatic-sd",
+      "path": "sd"
+    }
+  ],
+  "platform": {
+    "id": "siemens-tia",
+    "version": "V21"
+  },
+  "project": {
+    "controller": "6ES7 515-2UM01-0AB0",
+    "languages": [
+      "de-DE"
+    ],
+    "line_or_machine": null
+  },
+  "source": {
+    "checksum": "sha256:83db3e1a8064d28c51580573089d08d40aff4825fe09edaa9fcb1be545a719d3",
+    "kind": "folder",
+    "path": "<source.path>"
+  },
+  "upgrade": null
+}

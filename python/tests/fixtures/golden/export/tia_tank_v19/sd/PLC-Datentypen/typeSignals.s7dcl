@@ -1,0 +1,37 @@
+﻿TYPE
+    typeSignals : STRUCT
+        tankSignals : STRUCT
+            actLevel : Real;
+            maxLevel : Bool;
+            actPressure : Real;
+            actTemperature : Real;
+            maxTemperature : Bool;
+        END_STRUCT;
+        bottleSignals : STRUCT
+            actLevel : Real;
+            maxLevel : Bool;
+            outputTank : Real;
+        END_STRUCT;
+        energySignals : STRUCT
+            energyConsumptionFillingTank : Real;
+            waterConsumptionFillingTank : Real;
+            energyConsumptionHeatingTank : Real;
+            energyConsumptionFillingBottles : Real;
+            gasConsumptionHeatingTank : Real;
+        END_STRUCT;
+        energySignalsPerState : STRUCT
+            stateId : UInt;
+            energyConsumptionStatePoweringUp : Real;
+            energyConsumptionStatePoweringDown : Real;
+            energyConsumptionStateOff : Real;
+            energyConsumptionStateStandby : Real;
+            energyConsumptionStateOperational : Real;
+            energyConsumptionStateWorking : Real;
+            energyConsumptionStatesTotal : Real;
+        END_STRUCT;
+        { S7_MLC := "MLC_1" }
+        alarm : Word;
+        { S7_MLC := "MLC_2" }
+        errorCode : UInt;
+    END_STRUCT;
+END_TYPE

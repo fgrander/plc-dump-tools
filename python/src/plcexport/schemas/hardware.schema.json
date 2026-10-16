@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/hardware.schema.json",
+  "title": "hardware.json (contract §7)",
+  "type": "object",
+  "required": [
+    "controllers",
+    "racks",
+    "modules",
+    "channels",
+    "networks"
+  ],
+  "properties": {
+    "controllers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "name"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "order_no": {
+            "type": "string"
+          },
+          "firmware": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "racks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "name"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "type"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "rack": {
+            "type": "string"
+          },
+          "slot": {
+            "type": "integer"
+          },
+          "order_no": {
+            "type": "string"
+          },
+          "firmware": {
+            "type": "string"
+          },
+          "address_ranges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "module_ref",
+          "address"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "module_ref": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "interface"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "interface": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "device_name": {
+            "type": "string"
+          },
+          "subnet": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

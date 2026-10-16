@@ -1,0 +1,341 @@
+﻿{
+    S7_BlockTitle := "MLC_Xj";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_2_Filling"
+    VAR_INPUT
+        { S7_MLC := "MLC_4q5" }
+        externalSignals : _.typeSignals;
+    END_VAR
+    VAR_IN_OUT
+        { S7_MLC := "MLC_3hp" }
+        model : _.typeModel;
+        { S7_MLC := "MLC_33F" }
+        operate : _.typeOperate;
+        { S7_MLC := "MLC_ph" }
+        signals : _.typeSignals;
+        { S7_MLC := "MLC_46E" }
+        process : _.typeProcess;
+        appSignals : _.typeApp;
+        hmiSignals : _.typeHmi;
+        { S7_MLC := "MLC_4GK" }
+        errors : _.typeError;
+    END_VAR
+    VAR
+        statShiftingBottle : Bool;
+        statShiftingTrigger : Bool;
+        statShiftingTimer : Int;
+        { S7_MLC := "MLC_45j" }
+        statHmiBottleLevel : Real;
+        { S7_MLC := "MLC_x8" }
+        statHmiDoShift : Bool;
+        { S7_MLC := "MLC_sw" }
+        statHmiFaultyBottle : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4vt";
+            S7_Visibility := "Hidden := External"
+        }
+        statBatchIdOld : UDInt := 0;
+        statFillingTankTrigger : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statStartCounter : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statProducedStart : UDInt;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statProducedEnd : UDInt;
+        statSizeBatchID : USInt;
+        statSizeNumberProduced : USInt;
+        statStringBatchID : String;
+        statStringProductID : String;
+    END_VAR
+    VAR_TEMP
+        tempBottleMaxLevel : Real;
+        tempTimerFinished : Bool;
+        tempTimeOutput : Time;
+        tempCurrentTime : DTL;
+        tempTimeRet : Int;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3SK"
+    }
+    NETWORK
+        RUNG
+            Mul(
+                in1 := #model.bottle.maxLevel,
+                in2 := 1000.0,
+                out => #tempBottleMaxLevel
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_gi"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            P_Trig( #statFillingTankTrigger )
+            { S7_Templates := "SrcType := UDInt" }
+            Add(
+                in1 := #process.batchId,
+                in2 := 1,
+                out => #process.batchId
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_38n"
+    }
+    NETWORK
+        RUNG #operate.state.ShiftingBottle
+            P_Trig( #statShiftingTrigger )
+            wire#w1
+            { S7_Templates := "SrcType := UDInt" }
+            Add(
+                in1 := #process.numberProduced,
+                in2 := 1,
+                out => #process.numberProduced
+            )
+        END_RUNG
+        RUNG wire#w1
+            A( in2 := wire#w2 )
+            wire#w3
+            { S7_Templates := "SrcType := UDInt" }
+            Add(
+                in1 := #process.numberFaulty,
+                in2 := 1,
+                out => #process.numberFaulty
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            LT_Contact(
+                in1 := #signals.bottleSignals.actLevel,
+                in2 := #tempBottleMaxLevel
+            )
+        END_RUNG wire#w2
+        RUNG wire#w3
+            S_SR(
+                operand := #statHmiFaultyBottle,
+                r1 := NOT #operate.state.ShiftingBottle
+            )
+        END_RUNG
+        RUNG wire#w1
+            Move(
+                in := #signals.bottleSignals.actLevel,
+                out1 => #statHmiBottleLevel
+            )
+        END_RUNG
+        RUNG wire#w1
+            S_SR(
+                operand := #statHmiDoShift,
+                r1 := NOT #operate.state.ShiftingBottle
+            )
+        END_RUNG
+        RUNG
+            Sub(
+                in1 := #process.numberProduced,
+                in2 := #process.numberFaulty,
+                out => #process.numberGood
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkComment := "MLC_zy";
+        S7_NetworkTitle := "MLC_3B3"
+    }
+    NETWORK
+        IF #process.batchId <> #statBatchIdOld THEN
+            
+            IF #process.batchId = 1 THEN
+                #process.productTypeId := 1;
+            ELSE
+                IF #process.productTypeId = 3 THEN
+                    #process.productTypeId := 1;
+                ELSE
+                    #process.productTypeId := #process.productTypeId + 1;
+                END_IF;
+            END_IF;
+            
+            CASE #process.productTypeId OF
+                1:  
+                    #process.productTypeName := 'Sparkling water';
+                2:
+                    #process.productTypeName := 'Medium water';
+                3:
+                    #process.productTypeName := 'Still water';
+                ELSE
+                    #process.productTypeName := 'Undefined';
+            END_CASE;
+            
+            #statBatchIdOld := #process.batchId;
+        
+        END_IF;
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_uj"
+    }
+    NETWORK
+        RUNG
+            "Generate_Serial_Number_DB"(
+                batchId := #process.batchId,
+                productId := #process.numberProduced,
+                productType := #process.productTypeId,
+                trigger := #operate.state.ShiftingBottle,
+                serialNumber => #process.productSerialNumber,
+                qrCode => #process.productQRCode
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_Xe"
+    }
+    NETWORK
+        // NOT WORKING currently
+        // --> fix values as defined in GDB.process.speedActual
+        
+        
+        (*
+        
+        // get current date
+        #tempTimeRet := RD_LOC_T(#tempCurrentTime);  // get local time (DTL)
+        
+        // start counting every hour
+        IF (#tempCurrentTime.MINUTE = 0 AND #tempCurrentTime.SECOND = 0) THEN
+            #statStartCounter := true;
+            #statProducedStart := #process.numberProduced;
+        END_IF;
+        
+        "IEC_Timer_0_DB".TON(IN := #statStartCounter,
+                             PT := T#59m_30s,
+                             Q => #tempTimerFinished,
+                             ET => #tempTimeOutput);
+        
+        IF #tempTimerFinished THEN
+            #statStartCounter := false;
+            #statProducedEnd := #process.numberProduced;
+            IF #statProducedEnd > #statProducedStart THEN
+                #process.speedActual := #statProducedEnd - #statProducedStart;
+            ELSE
+                #process.speedActual := 4294967295 - #statProducedStart + #statProducedEnd;
+            END_IF;
+        END_IF;
+        
+        *)
+          
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_3ar"
+    }
+    NETWORK
+        IF #operate.state.ShiftingBottle THEN
+            
+            "FC_2_GetStringSizeOfNumber"(number := #process.batchId,
+                                         stringSize => #statSizeBatchID);
+            
+            "FC_2_GetStringSizeOfNumber"(number := #process.numberProduced,
+                                         stringSize => #statSizeNumberProduced);
+            
+            VAL_STRG(IN := #process.batchId,
+                     SIZE := #statSizeBatchID,
+                     PREC := 0,
+                     FORMAT := 0,
+                     P := 1,
+                     OUT => #statStringBatchID);
+            
+            VAL_STRG(IN := #process.numberProduced,
+                     SIZE := #statSizeNumberProduced,
+                     PREC := 0,
+                     FORMAT := 0,
+                     P := 1,
+                     OUT => #statStringProductID);
+            
+            #process.productId := CONCAT(
+                                         IN1 := #statStringBatchID,
+                                         IN2 := '.',
+                                         IN3 := #statStringProductID
+            );
+        END_IF;
+        
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_3Kh"
+    }
+    NETWORK
+        CASE #operate.machineState OF
+            "STATE_FILL_TANK":
+                #model.cycleTime := 0.001;
+            "STATE_HEAT_TANK":
+                #model.cycleTime := 0.001;
+            ELSE
+                #model.cycleTime := 0.005;
+        END_CASE;
+        
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_rR"
+    }
+    NETWORK
+        RUNG #operate.extModeActive
+            NOT "DB_3_Simulation"(
+                reset := #operate.state.Reset,
+                model := #model,
+                operate := #operate,
+                signals := #signals,
+                process := #process,
+                appSignals := #appSignals,
+                hmiSignals := #hmiSignals,
+                errors := #errors
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_4bJ"
+    }
+    NETWORK
+        IF #operate.state.Reset THEN
+            #process.batchId := 0;
+            #process.numberFaulty := 0;
+            #process.numberGood := 0;
+            #process.numberProduced := 0;
+        
+            #process.productId := '';
+            #process.productSerialNumber := '';
+            #process.productTypeName := '';
+            #process.productQRCode := 0;
+            #process.productTypeId := 0;
+            
+            #process.speedActual := 0;
+            #process.speedTarget := 0;
+            
+            #statHmiBottleLevel := 0.0;
+            #signals.energySignals.energyConsumptionFillingBottles := 0.0;
+            #signals.energySignals.energyConsumptionFillingTank := 0.0;
+            #signals.energySignals.energyConsumptionHeatingTank := 0.0;
+            #signals.energySignals.waterConsumptionFillingTank := 0.0;
+            #signals.energySignals.gasConsumptionHeatingTank := 0.0;
+            
+        END_IF;
+    END_NETWORK
+END_FUNCTION_BLOCK

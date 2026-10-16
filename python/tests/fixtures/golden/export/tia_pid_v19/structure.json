@@ -1,0 +1,56 @@
+{
+  "devices": [
+    {
+      "name": "ET 200SP station_1"
+    },
+    {
+      "name": "LLCCA_PID_HMI"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Default tag table"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "LLCCA_ErrAcc_DB_LLCCA_PID",
+        "LLCCA_ErrAcc_DB_PID_C",
+        "LLCCA_PID",
+        "LLCCA_PID_DB",
+        "LLCCA_PvSim",
+        "LLCCA_PvSim_LLCCA_PID_DB",
+        "LLCCA_PvSim_PID_C_DB",
+        "Main",
+        "RUN",
+        "RUN_DB"
+      ]
+    },
+    {
+      "path": "Programmbausteine/LGF",
+      "units": [
+        "LGF_Random_Real"
+      ]
+    },
+    {
+      "path": "Programmbausteine/SupportFunctions",
+      "units": [
+        "LLCCA_ErrAcc",
+        "LLCCA_MedianFilter",
+        "LLCCA_TimeLag"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    }
+  ]
+}

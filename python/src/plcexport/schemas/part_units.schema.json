@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/part_units.schema.json",
+  "title": "parts/<kind>.json: units whose content is in a native part",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "name",
+      "kind",
+      "files"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "kind": {
+        "enum": [
+          "OB",
+          "FB",
+          "FC",
+          "DB",
+          "IDB",
+          "UDT",
+          "TAG_TABLE",
+          "OTHER"
+        ]
+      },
+      "number": {
+        "type": "integer"
+      },
+      "language": {
+        "type": "string"
+      },
+      "folder": {
+        "type": "string"
+      },
+      "protected": {
+        "type": "boolean"
+      },
+      "safety": {
+        "type": "boolean"
+      },
+      "instance_of": {
+        "type": "string"
+      },
+      "attributes": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "files": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,119 @@
+﻿MultiLingualTexts:
+  - id: MLC_3js
+    en-US: signals from external model
+  - id: MLC_4ej
+    en-US: model parameter
+  - id: MLC_3VU
+    en-US: application operation
+  - id: MLC_4bk
+    en-US: current signals from tank
+  - id: MLC_47C
+    en-US: current process information
+  - id: MLC_3P2
+    en-US: signals from hmi
+  - id: MLC_3jR
+    en-US: signals from app
+  - id: MLC_48q
+    en-US: trigger for start command
+  - id: MLC_3tm
+    en-US: trigger for stop command
+  - id: MLC_cj
+    en-US: trigger for reset command
+  - id: MLC_53t
+    en-US: helper variable to initialize some parameters
+  - id: MLC_3vJ
+    en-US: trigger to shift next bottle
+  - id: MLC_3M3
+    en-US: trigger to set error
+  - id: MLC_3qg
+    en-US: memory for reactivating state after STOP
+  - id: MLC_46K
+    en-US: trigger to generate program alarm
+  - id: MLC_4Gd
+    en-US: helper for hmi (true, if state 1-4)
+  - id: MLC_3LE
+    en-US: trigger when tank is empty
+  - id: MLC_4yc
+    en-US: tank empty memory
+  - id: MLC_3dw
+    en-US: overflow of counter "numberProduced"
+  - id: MLC_3Zt
+    en-US: trigger to start after overflow
+  - id: MLC_4g7
+    en-US: values for Gen_UsrMsg block
+  - id: MLC_us
+    en-US: Handling signals from hmi or app
+  - id: MLC_sE
+    en-US: '--[P]-- (positive signal edge) -> stat-Variable becomes true for one cycle'
+  - id: MLC_44f
+    en-US: Reset signals from hmi or app
+  - id: MLC_4Ms
+    en-US: Helper for hmi display
+  - id: MLC_59F
+    en-US: 'SHIFTING: shifting bottle - timer'
+  - id: MLC_3NY
+    en-US: Tank empty during filling process
+  - id: MLC_3Kt
+    en-US: Init
+  - id: MLC_34b
+    en-US: Filling tank
+  - id: MLC_4pK
+    en-US: Heating tank
+  - id: MLC_4T2
+    en-US: Filling bottle
+  - id: MLC_3hW
+    en-US: Shifting bottle
+  - id: MLC_4wi
+    en-US: Catch overflow
+  - id: MLC_qr
+    en-US: |-
+      If max of UDINT is reached
+      > Stop (automatically)
+      > Reset (automatically)
+      > Start (automatically)
+  - id: MLC_3Yk
+    en-US: Stop
+  - id: MLC_4ru
+    en-US: Reset
+  - id: MLC_3V6
+    en-US: Error
+  - id: MLC_593
+    en-US: Set machine state
+  - id: MLC_3ez
+    en-US: |-
+      1 = filling tank
+      2 = heating tank
+      3 = filling bottle
+      4 = shifting bottle
+      5 = stop
+      6 = reset
+      7 = error
+  - id: MLC_L6
+    en-US: Set machine state OEE
+  - id: MLC_3mU
+    en-US: |-
+      1 = production
+      2 = planned down
+      3 = unplanned down
+  - id: MLC_4TL
+    en-US: Save current operating state for STOP case (only states 1-4)
+  - id: MLC_mm
+    en-US: |-
+      1 = filling tank
+      2 = heating tank
+      3 = filling bottle
+      4 = shifting bottle
+  - id: MLC_58L
+    en-US: Reactivate old state after STOP
+  - id: MLC_3gL
+    en-US: |-
+      1 = filling tank
+      2 = heating tank
+      3 = filling bottle
+      4 = shifting bottle
+  - id: MLC_58A
+    en-US: Program alarm - manual triggered
+  - id: MLC_hF
+    en-US: Program alarm - out of error code
+  - id: MLC_4Nf
+    en-US: Call filling function

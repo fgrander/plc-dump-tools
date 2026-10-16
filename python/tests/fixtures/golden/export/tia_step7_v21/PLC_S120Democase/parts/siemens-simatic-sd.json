@@ -1,0 +1,146 @@
+[
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/GlobalBlock.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "DB",
+    "name": "GlobalBlock",
+    "number": 2
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Axis_blue.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "FBD",
+    "name": "Axis_blue",
+    "number": 10
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Axis_red.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "FBD",
+    "name": "Axis_red",
+    "number": 11
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main_Safety_RTG1.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "F_FBD",
+    "name": "Main_Safety_RTG1",
+    "number": 1,
+    "safety": true
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/SclBlock.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "SclBlock",
+    "number": 2
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Axis_blue_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "Axis_blue_DB",
+    "number": 10
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Axis_red_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "Axis_red_DB",
+    "number": 11
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "Main_Safety_RTG1_DB",
+    "number": 1,
+    "safety": true
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/DriveController_Main.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "OB",
+    "language": "LAD",
+    "name": "DriveController_Main",
+    "number": 123
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "OB",
+    "language": "LAD",
+    "name": "Main",
+    "number": 1
+  },
+  {
+    "files": [
+      "sd/PLC-Datentypen/PD_TEL_393_IN.s7dcl"
+    ],
+    "folder": "PLC-Datentypen",
+    "kind": "UDT",
+    "name": "PD_TEL_393_IN"
+  },
+  {
+    "files": [
+      "sd/PLC-Datentypen/PD_TEL_393_OUT.s7dcl"
+    ],
+    "folder": "PLC-Datentypen",
+    "kind": "UDT",
+    "name": "PD_TEL_393_OUT"
+  }
+]

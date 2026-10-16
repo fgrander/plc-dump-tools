@@ -1,7 +1,7 @@
 # `s7dump` JSON output (version 1)
 
 `s7dump` is a .NET 8 tool that reads STEP 7 V5.x projects without STEP 7. Its output is described
-by the JSON Schema [`schema/s7dump.schema.json`](../schema/s7dump.schema.json); consumers should
+by the JSON Schema [`s7classic/dump_schema.json`](../python/src/plcexport/extractors/s7classic/dump_schema.json); consumers should
 validate a dump against it before using it.
 
 ## Command line

@@ -1,0 +1,45 @@
+{
+  "categories": {
+    "datatypes": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "hardware": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hmi": {
+      "reason": "unsupported",
+      "state": "partial"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    }
+  },
+  "gaps": [
+    {
+      "category": "hmi",
+      "item": "HMI_RT_1 alarms",
+      "reason": "unsupported"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "hmi_plc_tag_unknown",
+      "message": "HMI_RT_1: the HMI tag export names the connection but not the PLC tag"
+    }
+  ]
+}

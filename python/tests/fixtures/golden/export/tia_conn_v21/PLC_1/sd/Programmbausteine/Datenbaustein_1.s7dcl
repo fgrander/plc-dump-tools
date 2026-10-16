@@ -1,0 +1,16 @@
+﻿{
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK Datenbaustein_1
+    VAR
+        Len1 : Int;
+        { S7_Setpoint := "False" }
+        read : _.send_rec;
+        { S7_Setpoint := "True" }
+        Len2 : Int;
+        { S7_Setpoint := "False" }
+        write : _.send_rec;
+    END_VAR
+END_DATA_BLOCK

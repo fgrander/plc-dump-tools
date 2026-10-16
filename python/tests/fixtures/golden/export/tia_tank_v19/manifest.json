@@ -1,0 +1,143 @@
+{
+  "counts": {
+    "hardware_modules": 3,
+    "hmi_screens": 2,
+    "units": 35,
+    "variables": 459,
+    "xrefs": 16
+  },
+  "coverage_summary": {
+    "datatypes": "delivered",
+    "hardware": "delivered",
+    "hmi": "partial",
+    "program_units": "delivered",
+    "safety": "unavailable",
+    "structure": "delivered",
+    "symbols": "delivered"
+  },
+  "device": "Tank application",
+  "exported_at": "<exported_at>",
+  "extractor": {
+    "id": "tia",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.1.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "parts": [
+    {
+      "kind": "common",
+      "path": "."
+    },
+    {
+      "checksum": "sha256:8a473afa5d81fea0c267eebbcec63dc22df498516838be25870b77c0731b2b7d",
+      "files": 52,
+      "kind": "siemens-simatic-sd",
+      "path": "sd"
+    }
+  ],
+  "platform": {
+    "id": "siemens-tia",
+    "version": "V21"
+  },
+  "project": {
+    "controller": "6ES7 513-1AL02-0AB0",
+    "languages": [
+      "en-US"
+    ],
+    "line_or_machine": null
+  },
+  "source": {
+    "checksum": "sha256:85475de9d937d3a67746e298074d6370375821e469cb5e18a09864dd943882da",
+    "kind": "folder",
+    "path": "<source.path>"
+  },
+  "upgrade": {
+    "from": "V19",
+    "messages": [
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\FB_2_Filling' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\LSim_I' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\FB_1_Sequence' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\LSim_PT1' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\Cyclic interrupt' - Checksum inconsistency for 'General; Event'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\LSim_PT3' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\Random_Number' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\Main' - Checksum inconsistency for 'General; Event'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\DB_1_Sequence' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\DB_2_Filling_DB' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\DB_3_Simulation' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\F_TRIG_DB_Error_Finished' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\TechnologicalParamFolder\\PID_Temp_1' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeInfo' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeOperate' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeProcess' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeState' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeSignals' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeHmi' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeApp' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeError' - Checksum inconsistency for 'General'.",
+      "Warning: Project element: '\\PLC\\ControllerDataTypeFolder\\typeModel' - Checksum inconsistency for 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Main' - Prüfsummeninkonsistenz für 'General; Event; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Main' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Main' - Prüfsummeninkonsistenz für 'StructureMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Cyclic interrupt' - Prüfsummeninkonsistenz für 'General; Event; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Cyclic interrupt' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_1_Sequence' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_1_Sequence' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_2_Filling' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_2_Filling' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_I' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_I' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_3_Simulation' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_3_Simulation' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_PT1' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_PT1' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_PT3' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LSim_PT3' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FC_1_Random_Number' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FC_1_Random_Number' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_4_CIP_Simulation' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_4_CIP_Simulation' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FC_2_GetStringSizeOfNumber' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FC_2_GetStringSizeOfNumber' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\ProDiagOB' - Prüfsummeninkonsistenz für 'General; Event; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\ProDiagOB' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LGF\\06 Converter operations\\LGF_DTLToString_ISO' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\LGF\\06 Converter operations\\LGF_DTLToString_ISO' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_5_CIP_Simulation_Graph' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_5_CIP_Simulation_Graph' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_Prodiag' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_Prodiag' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_Generate_Serial_Number' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\FB_Generate_Serial_Number' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\GDB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\DB_1_Sequence' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\DB_2_Filling_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\DB_3_Simulation' - Prüfsummeninkonsistenz für 'Interface; General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\F_TRIG_DB_Error_Finished' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Generate_Serial_Number_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\Block_1_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\DB_4_CIP_Simulation' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\DB_5_CIP_Simulation_Graph' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\IEC_Timer_CIP_Step2' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\R_TRIG_CIP_Step1' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\IEC_Timer_CIP_Step3' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\IEC_Timer_CIP_Step4' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\IEC_Timer_CIP_End' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ProgramBlocksFolder\\SystemBlocksFolder\\ProgramResourcesFolder\\IEC_Timer_CIP_Init' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeModel' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeOperate' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeProcess' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeState' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeSignals' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeHmi' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeApp' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeInfo' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeError' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\Tank application\\ControllerDataTypeFolder\\typeCIP' - Prüfsummeninkonsistenz für 'General'."
+    ],
+    "to": "V21",
+    "tool": "TIA Portal V21"
+  }
+}

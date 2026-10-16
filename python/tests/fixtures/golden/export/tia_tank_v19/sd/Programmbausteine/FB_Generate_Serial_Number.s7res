@@ -1,0 +1,7 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: Create serial number
+  - id: MLC_2
+    en-US: Create QR Code
+  - id: MLC_3
+    en-US: Reset

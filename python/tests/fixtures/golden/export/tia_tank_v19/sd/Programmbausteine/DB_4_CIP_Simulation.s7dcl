@@ -1,0 +1,7 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_4_CIP_Simulation : FB_4_CIP_Simulation
+END_DATA_BLOCK

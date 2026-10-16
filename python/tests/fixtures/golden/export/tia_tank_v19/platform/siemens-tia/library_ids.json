@@ -1,0 +1,15 @@
+{
+  "links": {
+    "LGF_DTLToString_ISO": "46e10fb3-0cc2-4190-8748-c4d61a83e4cf"
+  },
+  "type_versions": {
+    "HMI Template Suite/01 - HMI Style/HMITemplateSuite@2.0.0": "3f0f7982-977f-4afa-8fd5-14676d06a395",
+    "HMI Template Suite/02 - Objects/ValueStepper/ValueStepperInt_Vertical2@1.0.0": "cf982571-944a-4158-a9f2-d810e1b2c47d",
+    "LGF/06 Converter operations/LGF_DTLToString_ISO@3.0.1": "3a2dea2f-db51-447d-97f5-f6fef4144014"
+  },
+  "types": {
+    "HMI Template Suite/01 - HMI Style/HMITemplateSuite": "6a5058e3-8bf9-4ca1-b82e-f26f1924e797",
+    "HMI Template Suite/02 - Objects/ValueStepper/ValueStepperInt_Vertical2": "47ce7f9a-791e-4287-a838-ba455da701d8",
+    "LGF/06 Converter operations/LGF_DTLToString_ISO": "46e10fb3-0cc2-4190-8748-c4d61a83e4cf"
+  }
+}

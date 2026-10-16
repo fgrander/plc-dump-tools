@@ -1,0 +1,30 @@
+{
+  "devices": [
+    {
+      "name": "S7-1500/ET200MP-Station_2"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Standard-Variablentabelle"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "Main"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    }
+  ]
+}

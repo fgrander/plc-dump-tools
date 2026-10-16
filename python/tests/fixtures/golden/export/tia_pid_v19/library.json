@@ -1,0 +1,129 @@
+{
+  "company": false,
+  "duplicate_of": null,
+  "kind": "project",
+  "master_copies": [],
+  "name": "LLCCA_PID",
+  "types": [
+    {
+      "folder": "",
+      "kind": "plc_block",
+      "name": "LLCCA_ErrAcc",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2024-11-27",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "folder": "",
+      "kind": "plc_block",
+      "name": "LLCCA_MedianFilter",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2024-11-27",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "folder": "",
+      "kind": "plc_block",
+      "name": "LLCCA_PID",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2024-11-27",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "0.3.1"
+        }
+      ]
+    },
+    {
+      "folder": "",
+      "kind": "plc_block",
+      "name": "LLCCA_PvSim",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2024-11-27",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "folder": "",
+      "kind": "plc_block",
+      "name": "LLCCA_TimeLag",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2024-11-27",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "folder": "LGF",
+      "kind": "plc_block",
+      "name": "LGF_Description",
+      "versions": [
+        {
+          "author": "Author B",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2022-06-08",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "5.1.1"
+        }
+      ]
+    },
+    {
+      "folder": "LGF/04 Math operations",
+      "kind": "plc_block",
+      "name": "LGF_Random_Real",
+      "versions": [
+        {
+          "author": "Author B",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2021-02-09",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "3.0.1"
+        }
+      ]
+    }
+  ],
+  "version": null
+}

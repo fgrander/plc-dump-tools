@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "4";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_3_Simulation : FB_3_Simulation
+END_DATA_BLOCK

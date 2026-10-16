@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/xref.schema.json",
+  "title": "xref.json (contract §7)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "target",
+      "target_kind",
+      "from_unit",
+      "access"
+    ],
+    "properties": {
+      "target": {
+        "type": "string",
+        "minLength": 1
+      },
+      "target_kind": {
+        "enum": [
+          "variable",
+          "unit"
+        ]
+      },
+      "from_unit": {
+        "type": "string"
+      },
+      "network_no": {
+        "type": "integer"
+      },
+      "line": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "access": {
+        "enum": [
+          "read",
+          "write",
+          "read_write",
+          "call",
+          "unknown_direction",
+          "indirect"
+        ]
+      },
+      "via_param": {
+        "type": "string"
+      },
+      "channel_ref": {
+        "type": "string"
+      },
+      "hmi_ref": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

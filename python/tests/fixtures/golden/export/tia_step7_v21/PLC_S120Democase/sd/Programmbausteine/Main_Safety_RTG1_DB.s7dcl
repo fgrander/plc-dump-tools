@@ -1,0 +1,9 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_Safety := "True";
+    S7_StandardRetain := "FALSE";
+    S7_UserDefinedId := "FUSI";
+    S7_Version := "0.1"
+}
+DATA_BLOCK Main_Safety_RTG1_DB : Main_Safety_RTG1
+END_DATA_BLOCK

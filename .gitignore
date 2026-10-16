@@ -7,3 +7,9 @@ publish/
 TestResults/
 # real PLC projects for the sample tests stay local
 samples/
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env

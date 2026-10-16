@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: application operation
+  - id: MLC_2
+    en-US: model parameter
+  - id: MLC_3
+    en-US: signals from external model
+  - id: MLC_4
+    en-US: current signals from tank and bottle
+  - id: MLC_5
+    en-US: current process information
+  - id: MLC_6
+    en-US: signals from hmi
+  - id: MLC_7
+    en-US: signals from edge app
+  - id: MLC_8
+    en-US: infos regarding this TIA project
+  - id: MLC_9
+    en-US: parameter for error simulation
+  - id: MLC_10
+    en-US: parameter for cip simulation (tank cleaning)

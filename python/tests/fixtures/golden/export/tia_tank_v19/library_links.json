@@ -1,0 +1,18 @@
+{
+  "compared_with": [],
+  "links": [
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LGF_DTLToString_ISO",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "LGF",
+      "status": "released",
+      "type_folder": "LGF/06 Converter operations",
+      "type_name": "LGF_DTLToString_ISO",
+      "version": "3.0.1"
+    }
+  ]
+}

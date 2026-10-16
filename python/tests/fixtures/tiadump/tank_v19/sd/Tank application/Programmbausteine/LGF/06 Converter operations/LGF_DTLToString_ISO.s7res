@@ -1,0 +1,90 @@
+﻿MultiLingualTexts:
+  - id: MLC_3tR
+    en-US: LGF_DTLtoString_ISO
+  - id: MLC_4ZE
+    en-US: This function converts a date of data type DTL into a character string of data type STRING in international format (YYYY MM DD…).
+  - id: MLC_4Jw
+    en-US: Date to convert as DTL tag
+  - id: MLC_48u
+    en-US: Separator between the components of the output date.
+  - id: MLC_Sh
+    en-US: Temp string to setup the date string
+  - id: MLC_4qz
+    en-US: Temp iterator for replacing withspaces with '0' in nanosecondstring
+  - id: MLC_SS
+    en-US: Number of character positions for Year
+  - id: MLC_4CD
+    en-US: Number of character positions for Month, Day, Minute and Second
+  - id: MLC_4wt
+    en-US: Number of character positions for Nanoseconds
+  - id: MLC_Pb
+    en-US: Number of decimal places to convert
+  - id: MLC_4VS
+    en-US: Output format of the characters
+  - id: MLC_3F5
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_4gF
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_48r
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_4A6
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_4pS
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_4Kj
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_4n9
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_3Ut
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_3Re
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_47R
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_42y
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_35J
+    en-US: Character starting in string at which position the result is written.
+  - id: MLC_3mM
+    en-US: Seperator for Nanosecond
+  - id: MLC_Mw
+    en-US: Seperator for Time
+  - id: MLC_3uE
+    en-US: Default separator for Date
+  - id: MLC_3EX
+    en-US: Number of Nonosecond characters to be checked for replacing withspaces wit '0'
+  - id: MLC_45V
+    de-DE: |2+
+
+      Der Baustein liest ein Datum vom Datentyp DTL ein und konvertiert die einzelnen Komponenten des Datums (Jahr, Monat, Tag, Stunde...) in eine Zeichenkette und gibt diese im internationalen Format aus. Das Trennzeichen zwischen den Komponenten des Datums ist variabel.
+
+      ##### Internationales Format (ISO 8601):
+
+      {.imagePageWidth}
+      ![LGF_DTLtoString_ISO - Aufbau der Zeichenkette nach ISO 8601](LGF_DTLtoString_ISO.png "LGF_DTLtoString_ISO - Aufbau der Zeichenkette nach ISO 8601")
+
+      ##### Trennzeichen:
+
+      Am Eingangsparameter `separatorDate` geben Sie das Trennzeichen zwischen den Komponenten des Kalenderdatums vor.
+
+      ##### Beispiel:
+
+      * separatorDate = `/` - outString = `2016/03/16…`
+      * separatorDate = `-` - outString = `2016-03-16…`
+    en-US: |2+
+
+      The block reads a date of data type DTL and converts the individual components of the date (year, month, day, hour…) into a character string and outputs it in international format. The separator between the components of the date is variable.
+
+      ##### International format (ISO 8601):
+
+      {.imagePageWidth}
+      ![LGF_DTLtoString_ISO - Structure of the character string in accordance with ISO 8601](LGF_DTLtoString_ISO.png "LGF_DTLtoString_ISO - Structure of the character string in accordance with ISO 8601")
+
+      ##### Separator:
+
+      At the input parameter `separatorDate`, you specify the separator between the components of the calendar date.
+
+      ##### Example:
+
+      * separatorDate = `/` - outString = `2016/03/16…`
+      * separatorDate = `-` - outString = `2016-03-16…`

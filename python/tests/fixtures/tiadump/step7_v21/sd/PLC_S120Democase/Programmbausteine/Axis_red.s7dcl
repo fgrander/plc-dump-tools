@@ -1,0 +1,116 @@
+﻿{
+    S7_BlockNumber := "11";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "Axis_red"
+    VAR
+        MC_POWER_Instance : MC_POWER;
+        MC_RESET_Instance : MC_RESET;
+        MC_HOME_Instance : MC_HOME;
+        MC_HALT_Instance : MC_HALT;
+        MC_MOVEVELOCITY_Instance : MC_MOVEVELOCITY;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        MC_GEARIN_Instance : MC_GEARIN;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        MC_MOVERELATIVE_1 : MC_MOVERELATIVE;
+    END_VAR
+
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            #MC_POWER_Instance.MC_POWER(
+                Axis := "SynchronousAxis_red",
+                Enable := "ControlUnit_AddressIn".E_DIGITAL.DIDO_08,
+                StartMode :=  ,
+                StopMode :=  ,
+                Status =>  ,
+                Busy =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_RESET_Instance.MC_RESET(
+                Axis := "SynchronousAxis_red",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DI_01,
+                Restart :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_HOME_Instance.MC_HOME(
+                Axis := "SynchronousAxis_red",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DIDO_10,
+                Position := 0.0,
+                Mode := 0,
+                ReferenceMarkPosition =>  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+            #MC_HALT_Instance.MC_HALT(
+                Axis := "SynchronousAxis_red",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DIDO_11,
+                Deceleration :=  ,
+                Jerk :=  ,
+                AbortAcceleration :=  ,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            #MC_GEARIN_Instance.MC_GEARIN(
+                Master := "PositioningAxis_blue",
+                Slave := "SynchronousAxis_red",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DIDO_12,
+                RatioNumerator := 1,
+                RatioDenominator :=  ,
+                Acceleration :=  ,
+                Deceleration :=  ,
+                Jerk :=  ,
+                InGear =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+        END_RUNG
+        RUNG
+            #MC_MOVERELATIVE_1.MC_MOVERELATIVE(
+                Axis := "SynchronousAxis_red",
+                Execute := "ControlUnit_AddressIn".E_DIGITAL.DIDO_09,
+                Distance := 360.0,
+                Velocity := -1.0,
+                Acceleration := -1.0,
+                Deceleration := -1.0,
+                Jerk := -1.0,
+                Done =>  ,
+                Busy =>  ,
+                CommandAborted =>  ,
+                Error =>  ,
+                ErrorId =>  
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

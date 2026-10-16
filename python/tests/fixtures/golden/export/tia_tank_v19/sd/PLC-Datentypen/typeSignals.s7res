@@ -1,0 +1,5 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: alarm bit
+  - id: MLC_2
+    en-US: error code

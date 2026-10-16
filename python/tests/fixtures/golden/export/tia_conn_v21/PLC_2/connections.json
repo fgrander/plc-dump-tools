@@ -1,0 +1,34 @@
+{
+  "connections": [
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.1.5",
+        "id": "0x0110",
+        "interface": "S7-1500/ET200MP-Station_2/X2/Ethernet",
+        "module": "S7-1500/ET200MP-Station_2/PLC_2",
+        "tsap": "SIMATIC-ACC11001"
+      },
+      "name": "S7_Verbindung_3",
+      "partner": {
+        "address": "192.168.1.1",
+        "name": "PLC_1",
+        "rack": 0,
+        "slot": 1,
+        "specified": false,
+        "tsap": "SIMATIC-ACC10201"
+      },
+      "ref": "S7-1500/ET200MP-Station_2/PLC_2/0x0110"
+    }
+  ],
+  "couplers": [],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "S7-1500/ET200MP-Station_2/PLC_2/0x0110"
+    }
+  ],
+  "uses": []
+}

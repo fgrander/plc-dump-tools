@@ -1,0 +1,66 @@
+{
+  "devices": [
+    {
+      "name": "ET 200S-Station_1"
+    },
+    {
+      "name": "GSD-Geraet_1"
+    },
+    {
+      "name": "PNPN Coupler"
+    },
+    {
+      "name": "PNPN Coupler_1"
+    },
+    {
+      "name": "S7-1500/ET200MP-Station_1"
+    },
+    {
+      "name": "S7-300/ET200M-Station_1"
+    },
+    {
+      "name": "SCALANCE XB-200"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Datentypen",
+      "units": [
+        "send_rec"
+      ]
+    },
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Standard-Variablentabelle"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "Baustein_Graph",
+        "Datenbaustein_1",
+        "FOB_RTG1",
+        "Main",
+        "Main_Safety_RTG1",
+        "Main_Safety_RTG1_DB"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "FOB_RTG1",
+      "units": [
+        "FOB_RTG1"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    }
+  ]
+}

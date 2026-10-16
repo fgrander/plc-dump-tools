@@ -2,7 +2,7 @@
 
 Dumps TIA Portal projects and global libraries through **TIA Portal Openness** into `dump.json`
 plus exported files; see [`docs/tiadump.md`](../docs/tiadump.md) for the CLI, exit codes and dump
-format, and [`schema/tiadump.schema.json`](../schema/tiadump.schema.json) for the schema.
+format, and [`tia/dump_schema.json`](../python/src/plcexport/extractors/tia/dump_schema.json) for the schema.
 
 `tiadump` only ever opens a **copy** inside `--work`. It never saves, downloads, goes online or
 imports, and compiles only units of the working copy that cannot be exported otherwise;

@@ -1,0 +1,5 @@
+﻿MultiLingualTexts:
+  - id: MLC_4sV
+    en-US: manually trigger error simulation
+  - id: MLC_3qZ
+    en-US: error duration for simulation

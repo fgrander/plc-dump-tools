@@ -1,0 +1,87 @@
+{
+  "counts": {
+    "hardware_modules": 4,
+    "hmi_screens": 4,
+    "units": 15,
+    "variables": 0,
+    "xrefs": 78
+  },
+  "coverage_summary": {
+    "datatypes": "unavailable",
+    "hardware": "delivered",
+    "hmi": "partial",
+    "program_units": "delivered",
+    "safety": "unavailable",
+    "structure": "delivered",
+    "symbols": "unavailable"
+  },
+  "device": "LLCCA_PID_PLC",
+  "exported_at": "<exported_at>",
+  "extractor": {
+    "id": "tia",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.1.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "parts": [
+    {
+      "kind": "common",
+      "path": "."
+    },
+    {
+      "checksum": "sha256:1d09ff9aa9516ff2df4d9035c7c99cb5b57f3bb6d2243833db6e7ef799c688f8",
+      "files": 22,
+      "kind": "siemens-simatic-sd",
+      "path": "sd"
+    }
+  ],
+  "platform": {
+    "id": "siemens-tia",
+    "version": "V21"
+  },
+  "project": {
+    "controller": "6ES7 510-1DK03-0AB0",
+    "languages": [
+      "en-US"
+    ],
+    "line_or_machine": null
+  },
+  "source": {
+    "checksum": "sha256:9fd58ec8646ccb842c49a664324dc2ffee3ccc2163b083033359b90a98ee8a6a",
+    "kind": "folder",
+    "path": "<source.path>"
+  },
+  "upgrade": {
+    "from": "V19",
+    "messages": [
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PID' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PID' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\RUN' - Prüfsummeninkonsistenz für 'General; VersionControlInterface'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\RUN' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LGF\\LGF_Random_Real' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LGF\\LGF_Random_Real' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LGF\\LGF_Random_Real' - Prüfsummeninkonsistenz für 'StructureMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PvSim' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PvSim' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_ErrAcc' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_ErrAcc' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_MedianFilter' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_MedianFilter' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_TimeLag' - Prüfsummeninkonsistenz für 'General; VersionControlInterface; LibraryType'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\SupportFunctions\\LLCCA_TimeLag' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\Main' - Prüfsummeninkonsistenz für 'General; Event; VersionControlInterface'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\Main' - Prüfsummeninkonsistenz für 'CallerMemoryLayout'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PID_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PvSim_LLCCA_PID_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_PvSim_PID_C_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\RUN_DB' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_ErrAcc_DB_LLCCA_PID' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\ProgramBlocksFolder\\LLCCA_ErrAcc_DB_PID_C' - Prüfsummeninkonsistenz für 'General'.",
+      "Warning: Projektelement: '\\LLCCA_PID_PLC\\TechnologicalParamFolder\\PID_Compact_1' - Prüfsummeninkonsistenz für 'General'."
+    ],
+    "to": "V21",
+    "tool": "TIA Portal V21"
+  }
+}

@@ -1,0 +1,15 @@
+﻿MultiLingualTexts:
+  - id: MLC_3KN
+    en-US: trigger from app to start
+  - id: MLC_3DA
+    en-US: trigger from app to stop
+  - id: MLC_3ik
+    en-US: trigger from app to reset
+  - id: MLC_3tC
+    en-US: string from app containing QR code (scanning app)
+  - id: MLC_3Ht
+    en-US: activate automatically error simulation (true = active)
+  - id: MLC_3Qk
+    en-US: generate a manual error (true = error)
+  - id: MLC_3E9
+    en-US: trigger from app to generate program alarm

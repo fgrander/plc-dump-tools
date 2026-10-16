@@ -1,0 +1,268 @@
+{
+  "connections": [
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.0.10",
+        "id": "0x0001",
+        "interface": "SIMATIC 300(1)/CPU 315-2 PN/DP/ethernet",
+        "module": "SIMATIC 300(1)/0.2",
+        "tsap": "10.02"
+      },
+      "name": "S7-Verbindung 1",
+      "one_way": true,
+      "partner": {
+        "address": "10.101.10.20",
+        "name": "HomePLC2",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "10.02"
+      },
+      "ref": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0001",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.0.10",
+        "id": "0x0002",
+        "interface": "SIMATIC 300(1)/CPU 315-2 PN/DP/ethernet",
+        "module": "SIMATIC 300(1)/0.2",
+        "tsap": "12.02"
+      },
+      "name": "S7-Verbindung 3",
+      "one_way": true,
+      "partner": {
+        "address": "10.1.2.20",
+        "module": "SIMATIC 300(1)/0.4",
+        "name": "CP 343-1",
+        "rack": 0,
+        "slot": 4,
+        "specified": true,
+        "tsap": "03.04"
+      },
+      "ref": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0002",
+      "sources": {
+        "active": "both",
+        "partner_address": "compiled",
+        "tsaps": "compiled"
+      }
+    },
+    {
+      "details": "not_read",
+      "kind": "other",
+      "local": {
+        "id": "0x0003",
+        "module": "SIMATIC 300(1)/0.2"
+      },
+      "name": "ISO-on-TCP-Verbindung 1",
+      "ref": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0003",
+      "type_id": 1332999
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.0.10",
+        "id": "0x0004",
+        "interface": "SIMATIC 300(1)/CPU 315-2 PN/DP/ethernet",
+        "module": "SIMATIC 300(1)/0.2",
+        "tsap": "14.02"
+      },
+      "name": "S7-Verbindung 4",
+      "one_way": true,
+      "partner": {
+        "address": "10.5.5.5",
+        "name": "Unbekannt",
+        "rack": 0,
+        "slot": 0,
+        "specified": false,
+        "tsap": "03.00"
+      },
+      "ref": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0004",
+      "sources": {
+        "active": "tables",
+        "partner_address": "tables",
+        "tsaps": "tables"
+      }
+    },
+    {
+      "active": false,
+      "details": "read",
+      "differences": [
+        {
+          "compiled": "10.04",
+          "field": "partner_tsap",
+          "tables": "10.03"
+        }
+      ],
+      "kind": "s7",
+      "local": {
+        "address": "192.168.0.10",
+        "id": "0x0010",
+        "interface": "SIMATIC 300(1)/CPU 315-2 PN/DP/ethernet",
+        "module": "SIMATIC 300(1)/0.2",
+        "tsap": "11.02"
+      },
+      "name": "S7-Verbindung 2",
+      "one_way": true,
+      "partner": {
+        "address": "10.102.10.20",
+        "name": "HomePLC3",
+        "rack": 0,
+        "slot": 3,
+        "specified": false,
+        "tsap": "10.04"
+      },
+      "ref": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0010",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "id": "0x0005"
+      },
+      "name": "S7-Verbindung 5",
+      "one_way": true,
+      "partner": {
+        "address": "10.9.9.9",
+        "name": "Fremd",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "10.02"
+      },
+      "ref": "list 2/0x0005",
+      "sources": {
+        "active": "tables",
+        "partner_address": "tables",
+        "tsaps": "tables"
+      }
+    }
+  ],
+  "couplers": [],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0004"
+    },
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0010"
+    },
+    {
+      "code": "tables_compiled_differ",
+      "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0010"
+    }
+  ],
+  "uses": [
+    {
+      "areas": [
+        {
+          "length_bytes": 2,
+          "param": "ADDR_1",
+          "pointer": "P#DB1.DBX0.0 INT 1",
+          "role": "remote",
+          "start": "0.0"
+        },
+        {
+          "db": "DB_Recipe",
+          "length_bytes": 8,
+          "members": [
+            "\"DB_Recipe\".Limits",
+            "\"DB_Recipe\".Limits.Max",
+            "\"DB_Recipe\".Limits.Min"
+          ],
+          "param": "RD_1",
+          "pointer": "P#DB20.DBX2.0 REAL 2",
+          "role": "receive",
+          "start": "2.0"
+        }
+      ],
+      "block": "GET",
+      "called": "SFB 14 #Read",
+      "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0001",
+      "id": {
+        "value": "0x0001"
+      },
+      "network_no": 1,
+      "unit": "FB_Comm"
+    },
+    {
+      "areas": [
+        {
+          "db": "DB_Recipe",
+          "length_bytes": 4,
+          "members": [
+            "\"DB_Recipe\".Setpoint"
+          ],
+          "param": "SD_1",
+          "pointer": "P#DB20.DBX10.0 REAL 1",
+          "role": "send",
+          "start": "10.0"
+        }
+      ],
+      "block": "BSEND",
+      "called": "FB 12 #Send",
+      "findings": [
+        {
+          "code": "id_not_configured"
+        },
+        {
+          "code": "id_r_id_maybe_swapped",
+          "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0010"
+        }
+      ],
+      "id": {
+        "value": "0xAAAA"
+      },
+      "len": {
+        "unresolved": "MW 10"
+      },
+      "network_no": 2,
+      "r_id": {
+        "value": "0x00000010"
+      },
+      "unit": "FB_Comm"
+    },
+    {
+      "areas": [
+        {
+          "param": "RD_1",
+          "role": "receive",
+          "unassigned": true
+        }
+      ],
+      "block": "BRCV",
+      "called": "FB 13 #Recv",
+      "connection": "SIMATIC 300(1)/CPU 315-2 PN/DP/0x0002",
+      "id": {
+        "value": "0x0002"
+      },
+      "len": {
+        "unassigned": true
+      },
+      "network_no": 3,
+      "r_id": {
+        "value": "0x00000001"
+      },
+      "unit": "FB_Comm"
+    }
+  ]
+}

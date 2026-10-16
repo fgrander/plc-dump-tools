@@ -1,0 +1,78 @@
+{
+  "devices": [
+    {
+      "name": "PLC_S120Democase"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Datentypen",
+      "units": [
+        "PD_TEL_393_IN",
+        "PD_TEL_393_OUT"
+      ]
+    },
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Default tag table",
+        "DemocaseAppTagTable"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "Axis_blue",
+        "Axis_blue_DB",
+        "Axis_red",
+        "Axis_red_DB",
+        "DriveController_Main",
+        "FOB_RTG1",
+        "GlobalBlock",
+        "MC_Interpolator",
+        "MC_Servo",
+        "Main",
+        "Main_Safety_RTG1",
+        "Main_Safety_RTG1_DB",
+        "SclBlock"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "DriveController_Main",
+      "units": [
+        "DriveController_Main"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "FOB_RTG1",
+      "units": [
+        "FOB_RTG1"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "MC_Interpolator",
+      "units": [
+        "MC_Interpolator"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "MC_Servo",
+      "units": [
+        "MC_Servo"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    }
+  ]
+}

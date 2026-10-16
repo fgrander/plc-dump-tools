@@ -1,0 +1,31 @@
+{
+  "parameters": [],
+  "signatures": [
+    {
+      "kind": "mc7_checksum",
+      "scope": "F_DB_EStop",
+      "value": "4711"
+    },
+    {
+      "kind": "mc7_checksum",
+      "scope": "F_EStop",
+      "value": "23100"
+    },
+    {
+      "kind": "mc7_checksum",
+      "scope": "F_GLOBDB",
+      "value": "10574"
+    },
+    {
+      "kind": "f_collective_signature",
+      "scope": "F_GLOBDB.F_PROG_SIG",
+      "value": "DW#16#626E0828"
+    }
+  ],
+  "tags": [],
+  "units": [
+    "F_DB_EStop",
+    "F_EStop",
+    "F_GLOBDB"
+  ]
+}

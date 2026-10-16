@@ -1,0 +1,25 @@
+{
+  "alarms": [
+    {
+      "id": "plc:PositioningAxis_blue/MC Alarm"
+    },
+    {
+      "id": "plc:PositioningAxis_blue/MC Fatal Alarm"
+    },
+    {
+      "id": "plc:PositioningAxis_blue/MC Warning"
+    },
+    {
+      "id": "plc:SynchronousAxis_red/MC Alarm"
+    },
+    {
+      "id": "plc:SynchronousAxis_red/MC Fatal Alarm"
+    },
+    {
+      "id": "plc:SynchronousAxis_red/MC Warning"
+    }
+  ],
+  "devices": [],
+  "hmi_tags": [],
+  "recipes": []
+}

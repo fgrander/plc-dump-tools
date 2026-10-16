@@ -1,0 +1,7 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK Generate_Serial_Number_DB : FB_Generate_Serial_Number
+END_DATA_BLOCK

@@ -1,0 +1,200 @@
+[
+  {
+    "attributes": {
+      "author": "Author A",
+      "family": "LLCCA",
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/SupportFunctions/LLCCA_ErrAcc.s7dcl",
+      "sd/Programmbausteine/SupportFunctions/LLCCA_ErrAcc.s7res"
+    ],
+    "folder": "Programmbausteine/SupportFunctions",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "LLCCA_ErrAcc",
+    "number": 2
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "family": "LLCCA",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/SupportFunctions/LLCCA_MedianFilter.s7dcl",
+      "sd/Programmbausteine/SupportFunctions/LLCCA_MedianFilter.s7res"
+    ],
+    "folder": "Programmbausteine/SupportFunctions",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "LLCCA_MedianFilter",
+    "number": 4
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "family": "LLCCA",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_PID.s7dcl",
+      "sd/Programmbausteine/LLCCA_PID.s7res"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "LLCCA_PID",
+    "number": 3
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "family": "LLCCA",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_PvSim.s7dcl",
+      "sd/Programmbausteine/LLCCA_PvSim.s7res"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "LLCCA_PvSim",
+    "number": 19
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "family": "LLCCA",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/SupportFunctions/LLCCA_TimeLag.s7dcl",
+      "sd/Programmbausteine/SupportFunctions/LLCCA_TimeLag.s7res"
+    ],
+    "folder": "Programmbausteine/SupportFunctions",
+    "kind": "FB",
+    "language": "SCL",
+    "name": "LLCCA_TimeLag",
+    "number": 18
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/RUN.s7dcl",
+      "sd/Programmbausteine/RUN.s7res"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "FBD",
+    "name": "RUN",
+    "number": 1
+  },
+  {
+    "attributes": {
+      "author": "Siemens_Digital_Industries",
+      "family": "LGF",
+      "version": "0.0.0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/LGF/LGF_Random_Real.s7dcl",
+      "sd/Programmbausteine/LGF/LGF_Random_Real.s7res"
+    ],
+    "folder": "Programmbausteine/LGF",
+    "kind": "FC",
+    "language": "SCL",
+    "name": "LGF_Random_Real",
+    "number": 10077
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_ErrAcc_DB_LLCCA_PID.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "LLCCA_ErrAcc_DB_LLCCA_PID",
+    "number": 10
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_ErrAcc_DB_PID_C.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "LLCCA_ErrAcc_DB_PID_C",
+    "number": 11
+  },
+  {
+    "attributes": {
+      "author": "Author A",
+      "version": "0.0"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_PID_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "LLCCA_PID_DB",
+    "number": 2
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_PvSim_LLCCA_PID_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "LLCCA_PvSim_LLCCA_PID_DB",
+    "number": 1
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/LLCCA_PvSim_PID_C_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "LLCCA_PvSim_PID_C_DB",
+    "number": 3
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/RUN_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "RUN_DB",
+    "number": 5
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main.s7dcl",
+      "sd/Programmbausteine/Main.s7res"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "OB",
+    "language": "FBD",
+    "name": "Main",
+    "number": 1
+  }
+]

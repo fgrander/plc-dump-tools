@@ -1,0 +1,25 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: CIP start time 1x per day
+  - id: MLC_2
+    en-US: Activate/deactivate the CIP process
+  - id: MLC_3
+    en-US: CIP id
+  - id: MLC_4
+    en-US: CIP process (full wash, quick wash)
+  - id: MLC_5
+    en-US: CIP step
+  - id: MLC_6
+    en-US: CIP temperature
+  - id: MLC_7
+    en-US: CIP concentration
+  - id: MLC_8
+    en-US: CIP flowrate
+  - id: MLC_9
+    en-US: Step 1 active
+  - id: MLC_10
+    en-US: Step 2 active
+  - id: MLC_11
+    en-US: Step 3 active
+  - id: MLC_12
+    en-US: Step 4 active

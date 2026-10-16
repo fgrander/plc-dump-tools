@@ -1,0 +1,68 @@
+[
+  {
+    "address": "I 0.0",
+    "comment": {
+      "de": "Start Taster"
+    },
+    "data_type": "BOOL",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"I_Start\"",
+    "table": "Symbols"
+  },
+  {
+    "address": "I 0.1",
+    "comment": {
+      "de": "Stopp Taster (Öffner)"
+    },
+    "data_type": "BOOL",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"I_Stop\"",
+    "table": "Symbols"
+  },
+  {
+    "address": "PIW 256",
+    "comment": {
+      "de": "Plattentemperatur"
+    },
+    "data_type": "INT",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"I_TempPlate\"",
+    "table": "Symbols"
+  },
+  {
+    "address": "M 10.0",
+    "comment": {
+      "de": "Anlage läuft"
+    },
+    "data_type": "BOOL",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"M_Run\"",
+    "table": "Symbols"
+  },
+  {
+    "address": "Q 4.1",
+    "comment": {
+      "de": "Heizung ein"
+    },
+    "data_type": "BOOL",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"Q_Heater_On\"",
+    "table": "Symbols"
+  },
+  {
+    "address": "Q 4.0",
+    "comment": {
+      "de": "Hydraulikpumpe"
+    },
+    "data_type": "BOOL",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"Q_Pump\"",
+    "table": "Symbols"
+  }
+]

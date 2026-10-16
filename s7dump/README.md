@@ -2,7 +2,7 @@
 
 Reads a Siemens STEP 7 V5.x project (`.s7p`, library `.s7l`) **without STEP 7** and writes one
 JSON document (format: [`docs/s7dump-json.md`](../docs/s7dump-json.md), schema:
-[`schema/s7dump.schema.json`](../schema/s7dump.schema.json)). It only reads; it never writes
+[`s7classic/dump_schema.json`](../python/src/plcexport/extractors/s7classic/dump_schema.json)). It only reads; it never writes
 anything but its `--out` file, and it never connects to a PLC.
 
 ```text

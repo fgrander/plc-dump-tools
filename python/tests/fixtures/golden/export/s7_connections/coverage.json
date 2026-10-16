@@ -1,0 +1,64 @@
+{
+  "categories": {
+    "connections": {
+      "reason": "other:1 connection(s) listed only (type not read); compiled connection data missing; TSAPs from the tables; owner module of a connection list not found; calls in 1 protected block(s) not readable",
+      "state": "partial"
+    },
+    "datatypes": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hardware": {
+      "reason": "other:direct route reads stations, CPUs, CPs and networks only",
+      "state": "partial"
+    },
+    "hmi": {
+      "reason": "unsupported",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "other:safety program detection is not built yet",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": null,
+      "state": "delivered"
+    }
+  },
+  "gaps": [
+    {
+      "category": "connections",
+      "item": "FB_Secret",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "BRCV",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "BSEND",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "FB_Secret",
+      "reason": "protected"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "connection_without_owner",
+      "message": "connection 'S7-Verbindung 5' (ID 0x0005): owner not found"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "categories": {
+    "datatypes": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hardware": {
+      "reason": "other:direct route reads stations, CPUs, CPs and networks only",
+      "state": "partial"
+    },
+    "hmi": {
+      "reason": "unsupported",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "other:safety program detection is not built yet",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": null,
+      "state": "delivered"
+    }
+  },
+  "gaps": [
+    {
+      "category": "program_units",
+      "item": "FB_Heating",
+      "reason": "protected"
+    }
+  ],
+  "warnings": []
+}

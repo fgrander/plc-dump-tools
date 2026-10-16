@@ -1,0 +1,548 @@
+[
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_13",
+    "target": "LLCCA_PID_DB_Input",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_19",
+    "target": "LLCCA_PID_DB_ManualValue",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_14",
+    "target": "LLCCA_PID_DB_Out",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_18",
+    "target": "LLCCA_PID_DB_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_27",
+    "target": "LLCCA_PID_DB_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_7",
+    "target": "LLCCA_PID_DB_ioKp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/Symbolic I/O field_1",
+    "target": "LLCCA_PID_DB_ioMode",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_9",
+    "target": "LLCCA_PID_DB_ioTd",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_8",
+    "target": "LLCCA_PID_DB_ioTi",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_6",
+    "target": "LLCCA_PID_DB_statAdvanced_derivateFilter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/Symbolic I/O field_2",
+    "target": "LLCCA_PID_DB_statAdvanced_tuningRule",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/Symbolic I/O field_4",
+    "target": "LLCCA_PID_DB_statStepTuning_state",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_2",
+    "target": "LLCCA_PID_DB_statStepTuning_t",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_16",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_addComp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_4",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioAddFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_21",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioAddFilter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_15",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioAddTimeLag",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_1",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioNoiceFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_10",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioSubConstant",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_22",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioSubFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_25",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioSubFilter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_23",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioSubStartValue",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_12",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_ioSubTimeLag",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_24",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_out",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_17",
+    "target": "LLCCA_PvSim_LLCCA_PID_DB_subComp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:LLCCA_PID",
+    "hmi_ref": "LLCCA_PID/I/O field_20",
+    "target": "PID_Compact_1_Progress",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_16",
+    "target": "LLCCA_PvSim_PID_C_DB_addComp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_4",
+    "target": "LLCCA_PvSim_PID_C_DB_ioAddFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_21",
+    "target": "LLCCA_PvSim_PID_C_DB_ioAddFilter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_15",
+    "target": "LLCCA_PvSim_PID_C_DB_ioAddTimeLag",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_1",
+    "target": "LLCCA_PvSim_PID_C_DB_ioNoiceFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_20",
+    "target": "LLCCA_PvSim_PID_C_DB_ioSubConstant",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_22",
+    "target": "LLCCA_PvSim_PID_C_DB_ioSubFactor",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_26",
+    "target": "LLCCA_PvSim_PID_C_DB_ioSubFilter",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_23",
+    "target": "LLCCA_PvSim_PID_C_DB_ioSubStartValue",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_25",
+    "target": "LLCCA_PvSim_PID_C_DB_ioSubTimeLag",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_24",
+    "target": "LLCCA_PvSim_PID_C_DB_out",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_17",
+    "target": "LLCCA_PvSim_PID_C_DB_subComp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/Symbolic I/O field_3",
+    "target": "PID_Compact_1_ErrorBits",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_13",
+    "target": "PID_Compact_1_Input",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_19",
+    "target": "PID_Compact_1_ManualValue",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/Symbolic I/O field_1",
+    "target": "PID_Compact_1_Mode",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_14",
+    "target": "PID_Compact_1_Output",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_11",
+    "target": "PID_Compact_1_PIDSelfTune.SUT.State",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/Symbolic I/O field_4",
+    "target": "PID_Compact_1_PIDSelfTune.SUT.TuneRule",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_12",
+    "target": "PID_Compact_1_PIDSelfTune.TIR.State",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/Symbolic I/O field_5",
+    "target": "PID_Compact_1_PIDSelfTune.TIR.TuneRule",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_2",
+    "target": "PID_Compact_1_Progress",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_10",
+    "target": "PID_Compact_1_Retain.CtrlParams.Cycle",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_9",
+    "target": "PID_Compact_1_Retain.CtrlParams.DWeighting",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_3",
+    "target": "PID_Compact_1_Retain.CtrlParams.Gain",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_8",
+    "target": "PID_Compact_1_Retain.CtrlParams.PWeighting",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_6",
+    "target": "PID_Compact_1_Retain.CtrlParams.Td",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_7",
+    "target": "PID_Compact_1_Retain.CtrlParams.TdFiltRatio",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_5",
+    "target": "PID_Compact_1_Retain.CtrlParams.Ti",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_18",
+    "target": "PID_Compact_1_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/I/O field_27",
+    "target": "PID_Compact_1_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:SIEMENS_PID_C",
+    "hmi_ref": "SIEMENS_PID_C/Symbolic I/O field_2",
+    "target": "PID_Compact_1_State",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_4",
+    "target": "LLCCA_ErrAcc_DB_LLCCA_PID_oErrAcc",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_6",
+    "target": "LLCCA_ErrAcc_DB_PID_C_oErrAcc",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_1",
+    "target": "LLCCA_PID_DB_Input",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_3",
+    "target": "LLCCA_PID_DB_Out",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_2",
+    "target": "LLCCA_PID_DB_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_19",
+    "target": "LLCCA_PID_DB_Terms_d",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_18",
+    "target": "LLCCA_PID_DB_Terms_i",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_17",
+    "target": "LLCCA_PID_DB_Terms_p",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_7",
+    "target": "LLCCA_PID_DB_ioKp",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_9",
+    "target": "LLCCA_PID_DB_ioTd",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_8",
+    "target": "LLCCA_PID_DB_ioTi",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_5",
+    "target": "LLCCA_PID_DB_statIntegralSum",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_10",
+    "target": "PID_Compact_1_Input",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_12",
+    "target": "PID_Compact_1_Output",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_16",
+    "target": "PID_Compact_1_PIDCtrl.IntegralSum",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_13",
+    "target": "PID_Compact_1_Retain.CtrlParams.Gain",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_15",
+    "target": "PID_Compact_1_Retain.CtrlParams.Td",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_14",
+    "target": "PID_Compact_1_Retain.CtrlParams.Ti",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_11",
+    "target": "PID_Compact_1_Setpoint",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:_MAIN",
+    "hmi_ref": "_MAIN/I/O field_20",
+    "target": "RUN_DB_setpoint",
+    "target_kind": "variable"
+  }
+]

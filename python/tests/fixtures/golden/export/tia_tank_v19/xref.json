@@ -1,0 +1,114 @@
+[
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/Bar_3",
+    "target": "HMI_bottleLevel1",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/Bar_4",
+    "target": "HMI_bottleLevel2",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/Bar_5",
+    "target": "HMI_bottleLevel3",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/I/O field_2",
+    "target": "alarmIncoming",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_7",
+    "target": "batchID",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_3",
+    "target": "bootleNumberFaulty",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/Bar_2",
+    "target": "bottleLevel",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_4",
+    "target": "bottleLevel",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_2",
+    "target": "bottlesProduced",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/I/O field_1",
+    "target": "qrCodeReceived",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/D6_Pilotlight_Red",
+    "target": "stateError",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/D6_Pilotlight_Green",
+    "target": "stateRunning",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/Bar_1",
+    "target": "tankLevel",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_1",
+    "target": "tankLevel",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI_6",
+    "target": "tankPressure",
+    "target_kind": "variable"
+  },
+  {
+    "access": "unknown_direction",
+    "from_unit": "hmi:10_Startscreen",
+    "hmi_ref": "10_Startscreen/ioKPI",
+    "target": "tankTemperature",
+    "target_kind": "variable"
+  }
+]

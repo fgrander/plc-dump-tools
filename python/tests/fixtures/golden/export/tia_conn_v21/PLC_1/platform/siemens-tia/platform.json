@@ -1,0 +1,12 @@
+{
+  "compiled_units": [
+    "Baustein_Graph"
+  ],
+  "missing_packages": [
+    "STEP 7 Safety V21",
+    "WinCC Basic/Comfort/Advanced V11 Update 2"
+  ],
+  "saved_version": "V21",
+  "tia_version": "V21",
+  "tiadump": "1.0.0"
+}

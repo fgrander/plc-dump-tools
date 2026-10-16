@@ -1,0 +1,40 @@
+{
+  "categories": {
+    "datatypes": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "hardware": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hmi": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "other:no safety signatures read",
+      "state": "partial"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    }
+  },
+  "gaps": [
+    {
+      "category": "program_units",
+      "item": "FOB_RTG1",
+      "reason": "protected"
+    }
+  ],
+  "warnings": []
+}

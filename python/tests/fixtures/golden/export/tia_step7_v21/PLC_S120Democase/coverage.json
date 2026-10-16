@@ -1,0 +1,55 @@
+{
+  "categories": {
+    "datatypes": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hardware": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hmi": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "other:no safety signatures read",
+      "state": "partial"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": null,
+      "state": "delivered"
+    }
+  },
+  "gaps": [
+    {
+      "category": "program_units",
+      "item": "FOB_RTG1",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "MC_Interpolator",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "MC_Servo",
+      "reason": "protected"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "alarm_text_inherited",
+      "message": "PLC_S120Democase: 6 alarm text(s) are inherited from the alarm type; type-level texts are not exported by TIA Openness"
+    }
+  ]
+}

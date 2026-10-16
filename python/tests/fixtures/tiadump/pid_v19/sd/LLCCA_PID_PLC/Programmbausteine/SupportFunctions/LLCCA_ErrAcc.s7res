@@ -1,0 +1,15 @@
+﻿MultiLingualTexts:
+  - id: MLC_32Q
+    en-US: LLCCA_ErrAcc
+  - id: MLC_a4
+    en-US: |-
+      LCC Automation AB / (c)Copyright 2024
+      Released under the MIT License
+  - id: MLC_3H8
+    en-US: process value
+  - id: MLC_Tp
+    en-US: setpoint
+  - id: MLC_3Qx
+    en-US: reset
+  - id: MLC_3uf
+    en-US: error accumulator output

@@ -1,0 +1,18 @@
+﻿TYPE
+    typeApp : STRUCT
+        { S7_MLC := "MLC_3KN" }
+        APP_Start : Bool;
+        { S7_MLC := "MLC_3DA" }
+        APP_Stop : Bool;
+        { S7_MLC := "MLC_3ik" }
+        APP_Reset : Bool;
+        { S7_MLC := "MLC_3tC" }
+        APP_QRCode : String;
+        { S7_MLC := "MLC_3Ht" }
+        APP_ErrorSimulation : Bool;
+        { S7_MLC := "MLC_3Qk" }
+        APP_Error : Bool;
+        { S7_MLC := "MLC_3E9" }
+        APP_Alarm : Bool;
+    END_STRUCT;
+END_TYPE

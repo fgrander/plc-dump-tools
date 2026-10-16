@@ -1,0 +1,41 @@
+﻿MultiLingualTexts:
+  - id: MLC_55C
+    en-US: input variable
+  - id: MLC_4j4
+    en-US: time lag 1 in s
+  - id: MLC_35Q
+    en-US: time lag 2 in s
+  - id: MLC_rk
+    en-US: time lag 3 in s
+  - id: MLC_4vh
+    en-US: proportional gain
+  - id: MLC_3TL
+    en-US: disturbance variable (additional to "input")
+  - id: MLC_4bW
+    en-US: sample time [in sec]
+  - id: MLC_53Z
+    en-US: 'complete restart (#output = #input)'
+  - id: MLC_4dz
+    en-US: 'error (#tmLag1 <= 0 or #tmLag2 <= 0 or #tmLag3 <= 0)'
+  - id: MLC_cJ
+    en-US: 'status (if #error = TRUE then status = 16#8001)'
+  - id: MLC_4cr
+    en-US: 'output signal (if #error = FALSE)'
+  - id: MLC_4zW
+    en-US: feedback path value 1
+  - id: MLC_Ui
+    en-US: feedback path value 2
+  - id: MLC_RF
+    en-US: feedback path value 3
+  - id: MLC_vz
+    en-US: help variable
+  - id: MLC_YV
+    en-US: cycle to real
+  - id: MLC_VZ
+    en-US: time lag 1 to real
+  - id: MLC_43n
+    en-US: time lag 2 to real
+  - id: MLC_3bd
+    en-US: time lag 3 to real
+  - id: MLC_34x
+    en-US: new output variable

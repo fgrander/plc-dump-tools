@@ -12,6 +12,16 @@ Both dump blocks, interfaces, symbols/tags, hardware configuration with I/O addr
 and configured connections (with TSAPs) and communication block calls. `tiadump` also dumps HMI
 devices, alarms, safety signatures and library types.
 
+[`plcexport`](python/) (Python) turns those dumps into the **common export format**: per PLC a
+folder of JSON tables (symbols, I/O, hardware, cross references, connections), one Markdown file
+per program unit, and for TIA Portal the SIMATIC SD files, ready to be committed to a git
+repository and read by people and LLM agents ([`docs/common-format.md`](docs/common-format.md)):
+
+```bash
+cd python && uv sync
+uv run plcexport one <project> --out <export folder>
+```
+
 ## Read-only
 
 Neither tool writes to a project, connects to a PLC or opens a network connection.
@@ -22,12 +32,21 @@ Neither tool writes to a project, connects to a PLC or opens a network connectio
   exported otherwise. [`ForbiddenApiTests`](tiadump/tests/tiadump.Tests/ForbiddenApiTests.cs) fails
   the build if the code calls such an API.
 
-## Output format
+## Formats
+
+The common export format: [`common-format.md`](docs/common-format.md), with
+[`common-format-tia.md`](docs/common-format-tia.md), [`connections-json.md`](docs/connections-json.md),
+[`connections-json-tia.md`](docs/connections-json-tia.md),
+[`udt-member-offsets.md`](docs/udt-member-offsets.md) and
+[`stl-xref-rules.md`](docs/stl-xref-rules.md); extractors follow
+[`extractor-contract.md`](docs/extractor-contract.md).
+
+The dump formats of the two tools:
 
 | Document | Schema |
 |---|---|
-| [`docs/s7dump-json.md`](docs/s7dump-json.md), [`docs/s7dump-connections.md`](docs/s7dump-connections.md) | [`schema/s7dump.schema.json`](schema/s7dump.schema.json) |
-| [`docs/tiadump.md`](docs/tiadump.md), [`docs/tiadump-connections.md`](docs/tiadump-connections.md), [`docs/tiadump-installed.md`](docs/tiadump-installed.md) | [`schema/tiadump.schema.json`](schema/tiadump.schema.json) |
+| [`docs/s7dump-json.md`](docs/s7dump-json.md), [`docs/s7dump-connections.md`](docs/s7dump-connections.md) | [`s7classic/dump_schema.json`](python/src/plcexport/extractors/s7classic/dump_schema.json) |
+| [`docs/tiadump.md`](docs/tiadump.md), [`docs/tiadump-connections.md`](docs/tiadump-connections.md), [`docs/tiadump-installed.md`](docs/tiadump-installed.md) | [`tia/dump_schema.json`](python/src/plcexport/extractors/tia/dump_schema.json) |
 
 ## Tests with real projects
 
@@ -38,7 +57,7 @@ named by `S7DUMP_SAMPLES_DIR` and `TIADUMP_SAMPLES_DIR`. Without samples those t
 
 ## License
 
-[LGPL-2.1](LICENSE). `s7dump` uses
+[LGPL-2.1](LICENSE), for all parts. `s7dump` uses
 [DotNetSiemensPLCToolBoxLibrary](https://github.com/dotnetprojects/DotNetSiemensPLCToolBoxLibrary)
 (LGPL-2.1). `tiadump` references the TIA Portal Openness assemblies of the local TIA Portal
 installation; they are not part of this repository and are never copied into the build output.

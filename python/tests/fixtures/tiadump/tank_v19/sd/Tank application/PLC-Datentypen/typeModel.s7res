@@ -1,0 +1,7 @@
+﻿MultiLingualTexts:
+  - id: MLC_Kv
+    en-US: cycle time[s]
+  - id: MLC_3eN
+    en-US: model struct of tank
+  - id: MLC_3Ym
+    en-US: model struct of bottle

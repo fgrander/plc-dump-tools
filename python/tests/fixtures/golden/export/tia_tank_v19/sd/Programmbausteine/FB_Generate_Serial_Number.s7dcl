@@ -1,0 +1,182 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_Generate_Serial_Number"
+    VAR_INPUT
+        batchId : UDInt;
+        productId : UDInt;
+        productType : Int;
+        trigger : Bool;
+    END_VAR
+    VAR_OUTPUT
+        serialNumber : String;
+        qrCode : USInt;
+    END_VAR
+    VAR
+        sizeBatch : USInt;
+        sizeId : USInt;
+        retVal : USInt;
+        dateString : String;
+        batchString : String;
+        productString : String;
+        typeString : String;
+        pTrigAux_1 : Bool;
+    END_VAR
+    VAR_TEMP
+        localTime : DTL;
+        qrNoTemp : String;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        // get string size of batch ID
+        "FC_2_GetStringSizeOfNumber"(number:=#batchId,
+                                     stringSize=>#sizeBatch);
+        
+        // get string size of prodcut ID
+        "FC_2_GetStringSizeOfNumber"(number:=#productId,
+                                     stringSize=>#sizeId);
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            P_Contact(
+                operand := #trigger,
+                bit := #pTrigAux_1
+            )
+            wire#w1
+            { S7_Templates := "date_type := DTL" }
+            RD_LOC_T(
+                RET_VAL => #retVal,
+                OUT => #localTime
+            )
+            "LGF_DTLToString_ISO"(
+                date := #localTime,
+                separator := '.',
+                Ret_Val => #dateString
+            )
+        END_RUNG
+        RUNG wire#w1
+            
+            S_Move(
+                in := '',
+                out => #batchString
+            )
+            {
+                S7_Templates := "[value_type := UDInt, str_type := String]"
+            }
+            ValueToString(
+                in := #batchId,
+                size := #sizeBatch,
+                prec := 0,
+                format := 0,
+                P := 1,
+                out => #batchString
+            )
+        END_RUNG
+        RUNG wire#w1
+            
+            S_Move(
+                in := '',
+                out => #productString
+            )
+            {
+                S7_Templates := "[value_type := UDInt, str_type := String]"
+            }
+            ValueToString(
+                in := #productId,
+                size := #sizeId,
+                prec := 0,
+                format := 0,
+                P := 1,
+                out => #productString
+            )
+        END_RUNG
+        RUNG wire#w1
+            
+            S_Move(
+                in := '',
+                out => #typeString
+            )
+            {
+                S7_Templates := "[value_type := Int, str_type := String]"
+            }
+            ValueToString(
+                in := #productType,
+                size := 1,
+                prec := 0,
+                format := 0,
+                P := 1,
+                out => #typeString
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_1"
+    }
+    NETWORK
+        #serialNumber := CONCAT(
+                                 IN1 := REPLACE(IN1:=DELETE(IN:=#dateString, L:=13, P:=17), IN2:='/', L:=1, P:=11),
+                                 IN2 := '/',
+                                 IN3 := #typeString,
+                                 IN4 := '/',
+                                 IN5 := #batchString,
+                                 IN6 := '/',
+                                 IN7 := #productString
+        );
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_2"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            {
+                S7_Templates := "str_type := String"
+            }
+            RIGHT(
+                in := #productString,
+                l := 1,
+                out => #qrNoTemp
+            )
+            {
+                S7_Templates := "[src_type := String, dest_type := USInt]"
+            }
+            StringToValue(
+                in := #qrNoTemp,
+                format := 0,
+                P := 1,
+                out => #qrCode
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := UDInt" }
+            EQ_Contact(
+                in1 := #productId,
+                in2 := 0
+            )
+            wire#w1
+            
+            Move(
+                in := 0,
+                out1 => #qrCode
+            )
+        END_RUNG
+        RUNG wire#w1
+            
+            S_Move(
+                in := '',
+                out => #serialNumber
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

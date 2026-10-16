@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/hmi.schema.json",
+  "title": "hmi/hmi.json (contract §7)",
+  "type": "object",
+  "required": [
+    "devices",
+    "alarms",
+    "hmi_tags",
+    "recipes"
+  ],
+  "properties": {
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "alarms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "class": {
+            "type": "string"
+          },
+          "text": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "trigger_tag": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hmi_tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "device"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "device": {
+            "type": "string"
+          },
+          "plc_tag": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "device"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "device": {
+            "type": "string"
+          },
+          "elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

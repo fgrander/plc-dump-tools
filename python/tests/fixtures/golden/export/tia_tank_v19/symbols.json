@@ -1,0 +1,244 @@
+[
+  {
+    "data_type": "UInt",
+    "initial": "8000",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_0_NoError\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8010",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_10_GenericError_CheckAlarmBuffer\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8011",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_11_GenericError_ContactWithSupplier\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8001",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_1_BottleInWrongPosition\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8002",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_2_CrackedBottleDetected\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8003",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_3_NoBottleOnTheConveyor\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8004",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_4_WrongBottleDetected\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8005",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_5_ConveyorMalfunction\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8006",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_6_FillerMalfunction\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8007",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_7_ValveBlocked\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8008",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_8_NoFlowInMainPipe\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8009",
+    "scope": "global_tag",
+    "symbol": "\"ERROR_9_GenericError_CheckPlcBuffer\"",
+    "table": "Default tag table"
+  },
+  {
+    "accessible": true,
+    "address": "%MW0",
+    "data_type": "Int",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Manipulator\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "data_type": "UInt",
+    "initial": "13",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_10_GenericError_CheckAlarmBuffer\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "14",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_11_GenericError_ContactWithSupplier\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "4",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_1_BottleInWrongPosition\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "5",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_2_CrackedBottleDetected\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "6",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_3_NoBottleOnTheConveyor\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "7",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_4_WrongBottleDetected\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "8",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_5_ConveyorMalfunction\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "9",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_6_FillerMalfunction\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "10",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_7_ValveBlocked\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "11",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_8_NoFlowInMainPipe\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "12",
+    "scope": "global_tag",
+    "symbol": "\"OEE_ERROR_9_GenericError_CheckPlcBuffer\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "2",
+    "scope": "global_tag",
+    "symbol": "\"OEE_PLANNED_DOWN\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "1",
+    "scope": "global_tag",
+    "symbol": "\"OEE_PRODUCTION\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "UInt",
+    "initial": "3",
+    "scope": "global_tag",
+    "symbol": "\"OEE_UNPLANNED_DOWN\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "7",
+    "scope": "global_tag",
+    "symbol": "\"STATE_ERROR\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "3",
+    "scope": "global_tag",
+    "symbol": "\"STATE_FILL_BOTTLE\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "1",
+    "scope": "global_tag",
+    "symbol": "\"STATE_FILL_TANK\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "2",
+    "scope": "global_tag",
+    "symbol": "\"STATE_HEAT_TANK\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "6",
+    "scope": "global_tag",
+    "symbol": "\"STATE_RESET\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "4",
+    "scope": "global_tag",
+    "symbol": "\"STATE_SHIFT_BOTTLE\"",
+    "table": "Default tag table"
+  },
+  {
+    "data_type": "Int",
+    "initial": "5",
+    "scope": "global_tag",
+    "symbol": "\"STATE_STOP\"",
+    "table": "Default tag table"
+  }
+]

@@ -1,0 +1,146 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "2.01"
+}
+FUNCTION_BLOCK "LSim_PT3"
+    VAR_INPUT
+        { S7_MLC := "MLC_1" }
+        input : Real;
+        { S7_MLC := "MLC_2" }
+        tmLag1 : Real := 29.0;
+        { S7_MLC := "MLC_3" }
+        tmLag2 : Real := 17.5;
+        { S7_MLC := "MLC_4" }
+        tmLag3 : Real := 3.1;
+        { S7_MLC := "MLC_5" }
+        gain : Real := 1.0;
+        { S7_MLC := "MLC_6" }
+        disturb : Real;
+        { S7_MLC := "MLC_7" }
+        cycle : Real := 0.1;
+        { S7_MLC := "MLC_8" }
+        reset : Bool;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_9" }
+        error : Bool;
+        { S7_MLC := "MLC_10" }
+        status : Word;
+        { S7_MLC := "MLC_11" }
+        output : Real;
+    END_VAR
+    VAR
+        { S7_MLC := "MLC_12" }
+        statFback1 : Real;
+        { S7_MLC := "MLC_13" }
+        statFback2 : Real;
+        { S7_MLC := "MLC_14" }
+        statFback3 : Real;
+    END_VAR
+    VAR_TEMP
+        { S7_MLC := "MLC_15" }
+        tempHvar : Real;
+        { S7_MLC := "MLC_16" }
+        tempCycleR : Real;
+        { S7_MLC := "MLC_17" }
+        tempTmLag1R : Real;
+        { S7_MLC := "MLC_18" }
+        tempTmLag2R : Real;
+        { S7_MLC := "MLC_19" }
+        tempTmLag3R : Real;
+        { S7_MLC := "MLC_20" }
+        tempOutvNew : Real;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //=============================================================================
+        //SIEMENS AG
+        //(c)Copyright 2017 All Rights Reserved
+        //-----------------------------------------------------------------------------
+        //Library:       Library for Controlled System Simulation
+        //Tested with:   S7-1500 FW V2.0 / S7-1200 FW V4.2
+        //Engineering:   STEP 7 V14 Upd2 (TIA Portal)
+        //Restrictions:  Cyclic interrupt
+        //Requirements:  memory card needed for S7-1500
+        //Functionality: Simulation of an PT3-system
+        //
+        //                               gain
+        //  F(p) = ------------------------------------------------------
+        //         (tmLag1 * p + 1) * (tmLag2 * p + 1) * (tmLag3 * p + 1)
+        //          
+        //  Call the simulation in a cyclic interrupt with
+        //  cyclic interrupt time at least = tmLag1/10!
+        //-----------------------------------------------------------------------------
+        //Change log table:
+        //Version  Date       Expert in charge                Changes applied
+        //02.00.00 03.02.2016 Siemens Industry Online Support Release (STEP 7 V13 SP1)
+        //02.00.01 02.03.2017 Siemens Industry Online Support Release (STEP 7 V14)
+        //=============================================================================
+        // check parameter
+        IF #tmLag1 <= 0 OR #tmLag2 <= 0 OR #tmLag3 <= 0 THEN
+          #error := TRUE;
+          #status := W#16#8001;     // Parameter Error
+          #output := #input; //write output data
+          #statFback1 := #input; //write static data
+          #statFback2 := #input;
+          #statFback3 := #input;
+          RETURN;
+        ELSE
+          #error := FALSE;
+          #status := W#16#0000;     // no error
+        END_IF;
+        
+        IF #reset THEN //complete restart routine
+          
+          #output := #input;//write output data
+          #statFback1 := #input;//write static data
+          #statFback2 := #input;
+          #statFback3 := #input;
+        
+        ELSE //cycle mode routine
+          
+          #tempCycleR  := #cycle*1000; //transform data type
+          #tempTmLag1R := #tmLag1*1000;
+          #tempTmLag2R := #tmLag2*1000;
+          #tempTmLag3R := #tmLag3*1000;
+          
+          IF #tempCycleR * 0.5 > #tempTmLag1R THEN //limit TM_LAG1
+            #tempTmLag1R := #tempCycleR * 0.5;
+          END_IF;
+          
+          IF #tempCycleR * 0.5 > #tempTmLag2R THEN //limit TM_LAG2
+            #tempTmLag2R := #tempCycleR * 0.5;
+          END_IF;
+          
+          IF #tempCycleR * 0.5 > #tempTmLag3R THEN //limit TM_LAG2
+            #tempTmLag3R := #tempCycleR * 0.5;
+          END_IF;
+          
+          //1. first order lag algorithm
+          #tempHvar     := #tempCycleR / (#tempTmLag1R * 2.0); 
+          #tempHvar     := (#gain * (#input + #disturb) - #statFback1) * #tempHvar / (#tempHvar + 1.0);
+          #tempOutvNew  := #tempHvar + #statFback1;
+          #statFback1  := #tempHvar * 2.0 + #statFback1;
+          
+          //2. first order lag algorithm
+          #tempHvar     := #tempCycleR / (#tempTmLag2R * 2.0); 
+          #tempHvar     := ((#tempOutvNew - #statFback2) * #tempHvar) / (#tempHvar + 1.0);
+          #tempOutvNew  := #tempHvar + #statFback2;
+          #statFback2  := #tempHvar * 2.0 + #statFback2;
+          
+          //3. first order lag algorithm
+          #tempHvar     := #tempCycleR / (#tempTmLag3R * 2.0); 
+          #tempHvar     := ((#tempOutvNew - #statFback3) * #tempHvar) / (#tempHvar + 1.0);
+          #tempOutvNew  := #tempHvar + #statFback3;
+          #statFback3  := #tempHvar * 2.0 + #statFback3;
+          
+          #output := #tempOutvNew; //write output
+          
+        END_IF;
+        
+        
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

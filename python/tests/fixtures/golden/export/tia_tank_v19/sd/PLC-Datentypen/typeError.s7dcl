@@ -1,0 +1,8 @@
+﻿TYPE
+    typeError : STRUCT
+        { S7_MLC := "MLC_1" }
+        errorTrigger : Bool := false;
+        { S7_MLC := "MLC_2" }
+        errorDuration : Time := T#300s;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,83 @@
+{
+  "compared_with": [],
+  "links": [
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LGF_Random_Real",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "LGF",
+      "status": "released",
+      "type_folder": "LGF/04 Math operations",
+      "type_name": "LGF_Random_Real",
+      "version": "3.0.1"
+    },
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LLCCA_ErrAcc",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "PID_1500",
+      "status": "released",
+      "type_folder": "",
+      "type_name": "LLCCA_ErrAcc",
+      "version": "1.0.1"
+    },
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LLCCA_MedianFilter",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "PID_1500",
+      "status": "released",
+      "type_folder": "",
+      "type_name": "LLCCA_MedianFilter",
+      "version": "1.0.0"
+    },
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LLCCA_PID",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "PID_1500",
+      "status": "released",
+      "type_folder": "",
+      "type_name": "LLCCA_PID",
+      "version": "0.3.1"
+    },
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LLCCA_PvSim",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "PID_1500",
+      "status": "released",
+      "type_folder": "",
+      "type_name": "LLCCA_PvSim",
+      "version": "1.0.0"
+    },
+    {
+      "comparison": "not_compared",
+      "library": null,
+      "newest_released": null,
+      "object": "LLCCA_TimeLag",
+      "object_kind": "unit",
+      "origin": "unknown_library",
+      "original_library": "LLCCA_PID",
+      "status": "released",
+      "type_folder": "",
+      "type_name": "LLCCA_TimeLag",
+      "version": "1.0.1"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: LGF_Random_Real
+  - id: MLC_2
+    en-US: |-
+      This function generates a random value with each call.  
+      The random number has the data type Real in the range from 0.0 to 1.0.
+  - id: MLC_3
+    en-US: 'FALSE: No error  TRUE: An error occurred during the execution of the FB'
+  - id: MLC_4
+    en-US: '16#0000-16#7FFF: Status of the FB  16#8000-16#FFFF: Error identification (see following Table)'
+  - id: MLC_5
+    en-US: Status or return value of called FB's, FC's and system blocks
+  - id: MLC_6
+    en-US: Temp memory for System time
+  - id: MLC_7
+    en-US: Temp UDInt converted to DWord for access to individual bytes
+  - id: MLC_8
+    en-US: Temp status of the instruction `RD_SYS_T`
+  - id: MLC_9
+    en-US: Temp Random startvalue
+  - id: MLC_10
+    en-US: Zero / 0.0 - value in case of  error
+  - id: MLC_11
+    en-US: Maximum UDInt datatype
+  - id: MLC_12
+    en-US: 'Status: sub function call ends without error'
+  - id: MLC_13
+    en-US: Execution finished without errors
+  - id: MLC_14
+    en-US: Error in `RD_SYS_T` command - check `subFunctionStatus` code
+  - id: MLC_15
+    de-DE: |2+
+
+      Hinweis
+      :    In `subFunctionStatus` wird der Status von aufgerufenen Anweisungen ausgegeben. Der Ausgangswert in `status` gibt in diesem Fall an, welche Anweisung den Fehler verursacht hat. Holen Sie sich in diesem Fall die Informationen aus der TIA Portal Online Hilfe zu den jeweiligen Anweisungen.
+
+      Die Funktion generiert zufällige Werte im Bereich:  
+      $ 0.0 ≤ ReturnVal ≤ 1.0 $.
+
+      Der Zufallswert wird aus den Nanosekunden der aktuellen Systemzeit der CPU gebildet. Dabei wird die Bytereihenfolge dieses Wertes invertiert und anschließend in eine Gleitkommazahl ungewandelt.
+    en-US: |2+
+
+      Note
+      :    The status of called commands is output in `subFunctionStatus`. In this case, the output value in `status` indicates which command caused the error. In this case, refer to the TIA Portal Online Help section for information on the respective commands.
+
+      The function generates random values in the range:  
+      $ 0.0 ≤ ReturnVal ≤ 1.0 $.
+
+      The random value is formed from the nanoseconds of the current system time of the CPU. The byte order of this value is inverted and then converted to a floating point.

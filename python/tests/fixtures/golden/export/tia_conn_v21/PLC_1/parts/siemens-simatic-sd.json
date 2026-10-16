@@ -1,0 +1,62 @@
+[
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Datenbaustein_1.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "DB",
+    "name": "Datenbaustein_1",
+    "number": 3
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main_Safety_RTG1.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "FB",
+    "language": "F_FBD",
+    "name": "Main_Safety_RTG1",
+    "number": 1,
+    "safety": true
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "IDB",
+    "name": "Main_Safety_RTG1_DB",
+    "number": 1,
+    "safety": true
+  },
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "OB",
+    "language": "LAD",
+    "name": "Main",
+    "number": 1
+  },
+  {
+    "files": [
+      "sd/PLC-Datentypen/send_rec.s7dcl"
+    ],
+    "folder": "PLC-Datentypen",
+    "kind": "UDT",
+    "name": "send_rec"
+  }
+]

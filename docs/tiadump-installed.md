@@ -25,7 +25,7 @@ denied, 64 = usage).
 ## `dump.json`: `used_products`
 
 Projects (not libraries): `used_products: [{name, version}]` from `Project.UsedProducts`, sorted
-by name. Optional in `tiadump.schema.json` so that recorded dumps without it stay valid.
+by name. Optional in the dump schema so that recorded dumps without it stay valid.
 
 ## Read-only
 

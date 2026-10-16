@@ -1,0 +1,222 @@
+[
+  {
+    "accessible": true,
+    "address": "%M0.7",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_0.5Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.6",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_0.625Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.4",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_1.25Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.0",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_10Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.5",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_1Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.2",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_2.5Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.3",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_2Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%M0.1",
+    "data_type": "Bool",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_5Hz\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%MB0",
+    "data_type": "Byte",
+    "io_direction": "memory",
+    "scope": "global_tag",
+    "symbol": "\"Clock_Byte\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%I300.0",
+    "data_type": "\"PD_TEL_393_IN\"",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"ControlUnit_AddressIn\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%Q300.0",
+    "data_type": "\"PD_TEL_393_OUT\"",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"ControlUnit_AddressOut\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%IW2",
+    "data_type": "Int",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"ET200_AI_0\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%IW4",
+    "data_type": "Int",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"ET200_AI_1\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%Q303.5",
+    "data_type": "Bool",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"OutputCam_1_Interface_Address\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%I280.0",
+    "data_type": "\"PD_TEL105_IN\"",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"PositioningAxis_blue_Actor_Interface_AddressIn\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%Q280.0",
+    "data_type": "\"PD_TEL105_OUT\"",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"PositioningAxis_blue_Actor_Interface_AddressOut\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%I260.0",
+    "data_type": "\"PD_TEL105_IN\"",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"SynchronousAxis_red_Actor_Interface_AddressIn\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%Q260.0",
+    "data_type": "\"PD_TEL105_OUT\"",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"SynchronousAxis_red_Actor_Interface_AddressOut\"",
+    "table": "Default tag table",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%IW342",
+    "data_type": "Word",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"TB30_AI_0\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  },
+  {
+    "accessible": true,
+    "address": "%IW344",
+    "data_type": "Word",
+    "io_direction": "input",
+    "scope": "global_tag",
+    "symbol": "\"TB30_AI_1\"",
+    "table": "DemocaseAppTagTable",
+    "visible": true,
+    "writable": true
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "counts": {
+    "hardware_modules": 23,
+    "hmi_screens": 0,
+    "units": 8,
+    "variables": 383,
+    "xrefs": 0
+  },
+  "coverage_summary": {
+    "connections": "partial",
+    "datatypes": "delivered",
+    "hardware": "delivered",
+    "hmi": "unavailable",
+    "program_units": "delivered",
+    "safety": "partial",
+    "structure": "delivered",
+    "symbols": "unavailable"
+  },
+  "device": "PLC_1",
+  "exported_at": "<exported_at>",
+  "extractor": {
+    "id": "tia",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.1.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "parts": [
+    {
+      "kind": "common",
+      "path": "."
+    },
+    {
+      "checksum": "sha256:de763aa5865f21260d8da36abec1caf986474173ed09405769b2410001a0f8b2",
+      "files": 5,
+      "kind": "siemens-simatic-sd",
+      "path": "sd"
+    }
+  ],
+  "platform": {
+    "id": "siemens-tia",
+    "version": "V21"
+  },
+  "project": {
+    "controller": "6ES7 517-3FP00-0AB0",
+    "languages": [
+      "de-DE"
+    ],
+    "line_or_machine": null
+  },
+  "source": {
+    "checksum": "sha256:d9d59865879888bed53ff48dfd7e17498607dde584fad7460161f689e106bf37",
+    "kind": "folder",
+    "path": "<source.path>"
+  },
+  "upgrade": null
+}

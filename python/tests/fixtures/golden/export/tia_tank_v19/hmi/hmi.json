@@ -1,0 +1,300 @@
+{
+  "alarms": [
+    {
+      "id": "plc:DB_1_Sequence/Program_Alarm"
+    }
+  ],
+  "devices": [
+    {
+      "name": "HMI_RT_5",
+      "type": "comfort"
+    },
+    {
+      "name": "MTP1500_Runtime",
+      "type": "unified"
+    }
+  ],
+  "hmi_tags": [
+    {
+      "device": "HMI_RT_5",
+      "name": "Brightness"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "ButtonDown"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "CodeView"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "CurrentLanguage"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "CurrentMachineState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "CurrentRecipeName"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "CurrentUserName"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DiagState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummTagReal1"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyDeltaInt"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyDeltaReal"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyTagBool"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyTagInt1"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyTagInt2"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "DummyTagInt3"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleInfo1"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleInfo2"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleInfo3"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleInfo4"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleInfoActive"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleLevel"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleLevel1"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleLevel2"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_bottleLevel3"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "HMI_doShift"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "InScreenTabState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "MainNavigationState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "OptionPanelNavigationState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "Password"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "PopUpBackground"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "StartScreenName"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "SubNavigationState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "ThirdLevelNavigationState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "UserIsLoggedIn"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "UserName"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "alarmIncoming"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "batchID"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "bootleNumberFaulty"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "bottleFaulty"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "bottleID"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "bottleLevel"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "bottlesProduced"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "energyFillingBottles"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "energyFillingTank"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "energyGas"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "energyHeatingTank"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "energyWaterFillingTank"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "hmiError"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "hmiNextBottle"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "hmiReset"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "hmiStart"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "hmiStop"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "machineState"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "qrCode"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "qrCodeReceived"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateError"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateFillingBottle"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateFillingTank"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateHeatingTank"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateReset"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateRunning"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateShiftingBottle"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "stateStop"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankLevel"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankLevelMax"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankLevelMaxReached"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankPressure"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankTempMax"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tankTemperature"
+    },
+    {
+      "device": "HMI_RT_5",
+      "name": "tempInvisibleObject"
+    }
+  ],
+  "recipes": []
+}

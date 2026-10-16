@@ -1,0 +1,1087 @@
+﻿{
+    S7_BlockNumber := "4";
+    S7_BlockTitle := "MLC_3jc";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_3_Simulation"
+    VAR_INPUT
+        { S7_MLC := "MLC_3Df" }
+        reset : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3CN";
+            S7_Visibility := "Hidden := External"
+        }
+        model : _.typeModel;
+        { S7_MLC := "MLC_3m6" }
+        operate : _.typeOperate;
+    END_VAR
+    VAR_IN_OUT
+        { S7_MLC := "MLC_4fZ" }
+        signals : _.typeSignals;
+        { S7_MLC := "MLC_4Ee" }
+        process : _.typeProcess;
+        appSignals : _.typeApp;
+        hmiSignals : _.typeHmi;
+        errors : _.typeError;
+    END_VAR
+    VAR
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_vz";
+            S7_Visibility := "Hidden := External"
+        }
+        "statVinl/min" : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_X2";
+            S7_Visibility := "Hidden := External"
+        }
+        "statVinM3/S" : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_YX";
+            S7_Visibility := "Hidden := External"
+        }
+        statInputTanklevel : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4pu";
+            S7_Visibility := "Hidden := External"
+        }
+        statTankLevelSqrt : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_yY";
+            S7_Visibility := "Hidden := External"
+        }
+        statOutGainSqrt : Real;
+        { S7_MLC := "MLC_3cA" }
+        statOutGainDiv : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4yN";
+            S7_Visibility := "Hidden := External"
+        }
+        statOutGainValue : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4XT";
+            S7_Visibility := "Hidden := External"
+        }
+        statVoutSwitch : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3UY";
+            S7_Visibility := "Hidden := External"
+        }
+        statVoutMultiplier : Real;
+        { S7_MLC := "MLC_3rB" }
+        statTankLevel : Real;
+        { S7_MLC := "MLC_4a6" }
+        statLiquidMass : Real;
+        { S7_MLC := "MLC_3r7" }
+        statLiquidPower : Real;
+        { S7_MLC := "MLC_392" }
+        statLiquidPressure_Pa : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4yu";
+            S7_Setpoint := "False";
+            S7_Visibility := "Hidden := External"
+        }
+        instLSim_I_tank : _.LSim_I;
+        {
+            S7_MLC := "MLC_3sE";
+            S7_Setpoint := "True"
+        }
+        statPT1in1 : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_34J";
+            S7_Visibility := "Hidden := External"
+        }
+        statPT1out1 : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4Sb";
+            S7_Visibility := "Hidden := External"
+        }
+        statPT1out2 : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3Bb";
+            S7_Setpoint := "False";
+            S7_Visibility := "Hidden := External"
+        }
+        instLSim_PT1_1 : _.LSim_PT1;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_43Y";
+            S7_Setpoint := "False";
+            S7_Visibility := "Hidden := External"
+        }
+        instLSim_PT1_2 : _.LSim_PT1;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3wd";
+            S7_Setpoint := "False";
+            S7_Visibility := "Hidden := External"
+        }
+        instLSim_PT1_3 : _.LSim_PT1;
+        { S7_MLC := "MLC_LX" }
+        instLSim_PT3 : _.LSim_PT3;
+        {
+            S7_MLC := "MLC_Wb";
+            S7_Setpoint := "True"
+        }
+        statPT3in : Real;
+        { S7_MLC := "MLC_pV" }
+        instLSim_I_bottle : _.LSim_I;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3sz";
+            S7_Visibility := "Hidden := External"
+        }
+        statBottleLevel : Real;
+        { S7_MLC := "MLC_3gr" }
+        statResetHeatingTrigger : Bool;
+        statResetHeatingMem : Bool;
+        { S7_MLC := "MLC_Ld" }
+        statHeatingActive : Bool;
+        statTriggerResetEnergy : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4wU";
+            S7_Visibility := "Hidden := External"
+        }
+        statStopMem : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4mB";
+            S7_Visibility := "Hidden := External"
+        }
+        statShiftingMem : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4Mg";
+            S7_Visibility := "Hidden := External"
+        }
+        statErrorMem : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4WY";
+            S7_Visibility := "Hidden := External"
+        }
+        statResetError : Bool;
+        instTimerError : IEC_TIMER;
+        {
+            S7_MLC := "MLC_iM";
+            S7_Setpoint := "True"
+        }
+        statStart : Bool;
+        { S7_MLC := "MLC_4jB" }
+        statTmLagHeat : Real;
+        statTmLagHeatActive : Real := 1.0;
+        statTmLagHeatNotActive : Real := 0.01;
+        { S7_MLC := "MLC_3NQ" }
+        statTmLagTank : Real := 0.1;
+        { S7_MLC := "MLC_gV" }
+        statTmLagBottle : Real := 0.01;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statRandomNumberStates : Int;
+        statTimerRunning : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        statRandomState : UDInt;
+        instTimerRandomState : IEC_TIMER;
+        statTimerDuration : Time;
+    END_VAR
+    VAR_TEMP
+        tempValue : Real;
+        { S7_MLC := "MLC_4RZ" }
+        tempEnableHeating : Bool;
+        tempRandomFillingTank : Real;
+        tempRandomHeatingTank : Real;
+        tempRandomFillingBottle : Real;
+        { S7_MLC := "MLC_4r2" }
+        tempRandomFaultyBottles : Int;
+        { S7_MLC := "MLC_4wq" }
+        tempRandomError : Int;
+        { S7_MLC := "MLC_3wK" }
+        tempRandomErrorTrigger : Int;
+        { S7_MLC := "MLC_Zn" }
+        tempStopTrigger : Bool;
+        { S7_MLC := "MLC_493" }
+        tempShiftingTrigger : Bool;
+        { S7_MLC := "MLC_fA" }
+        tempErrorTrigger : Bool;
+        tempStartTimer : Bool;
+    END_VAR
+    VAR CONSTANT
+        { S7_MLC := "MLC_3bY" }
+        RECALC_VIN : Real := 1.667E-05;
+        { S7_MLC := "MLC_4QD" }
+        GAIN_SQRT : Real := 19.62;
+        { S7_MLC := "MLC_uw" }
+        GAIN_HEAT : Real := 1.0;
+        { S7_MLC := "MLC_Vd" }
+        ACCELERATION : Real := 9.81;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_fC"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            Move(
+                in := #model.tank.Vin,
+                out1 => #"statVinl/min"
+            )
+        END_RUNG
+        RUNG #operate.state.FillingTank
+            NOT Move(
+                in := 0.0,
+                out1 => #"statVinl/min"
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_5BZ"
+    }
+    NETWORK
+        RUNG
+            Mul(
+                in1 := #"statVinl/min",
+                in2 := #RECALC_VIN,
+                out => #"statVinM3/S"
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3cj"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            Sqrt(
+                in := #statTankLevel,
+                out => #statTankLevelSqrt
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4jg"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            Sqrt(
+                in := #GAIN_SQRT,
+                out => #statOutGainSqrt
+            )
+        END_RUNG
+        RUNG
+            Div(
+                in1 := #model.bottle."AB",
+                in2 := #model.tank."AT",
+                out => #statOutGainDiv
+            )
+        END_RUNG
+        RUNG
+            Mul(
+                in1 := #statOutGainDiv,
+                in2 := #statOutGainSqrt,
+                out => #statOutGainValue
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_33B"
+    }
+    NETWORK
+        RUNG #hmiSignals.HMI_InstallFillingPump
+            NOT Mul(
+                in1 := #statTankLevelSqrt,
+                in2 := #statOutGainValue,
+                out => #statVoutMultiplier
+            )
+        END_RUNG
+        RUNG #hmiSignals.HMI_InstallFillingPump
+            Mul(
+                in1 := 1.0,
+                in2 := #statOutGainValue,
+                out => #statVoutMultiplier
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3xc"
+    }
+    NETWORK
+        RUNG #operate.state.FillingBottle
+            Move(
+                in := 1.0,
+                out1 => #statVoutSwitch
+            )
+        END_RUNG
+        RUNG #operate.state.FillingBottle
+            NOT Move(
+                in := 0.0,
+                out1 => #statVoutSwitch
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_Lc"
+    }
+    NETWORK
+        RUNG
+            Mul(
+                in1 := #statVoutSwitch,
+                in2 := #statVoutMultiplier,
+                out => #signals.bottleSignals.outputTank
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4w6"
+    }
+    NETWORK
+        RUNG
+            Sub(
+                in1 := #"statVinM3/S",
+                in2 := #signals.bottleSignals.outputTank,
+                out => #statInputTanklevel
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_34m"
+    }
+    NETWORK
+        RUNG
+            #instLSim_I_tank(
+                calcParam := true,
+                input := #statInputTanklevel,
+                tmLag1 := #statTmLagTank,
+                cycle := #model.cycleTime,
+                maxOut := #model.tank.maxLevel,
+                minOut :=  ,
+                reset := #reset,
+                error =>  ,
+                status =>  ,
+                maxReached =>  ,
+                minReached =>  ,
+                output => #statTankLevel
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4Dy"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            GE_Contact(
+                in1 := #statTankLevel,
+                in2 := #model.tank.maxLevel
+            )
+            S_SR(
+                operand := #signals.tankSignals.maxLevel,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            LT_Contact(
+                in1 := #statTankLevel,
+                in2 := #model.tank.maxLevel
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_jF"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            Mul(
+                in1 := 1000.0,
+                in2 := #statTankLevel,
+                out => #signals.tankSignals.actLevel
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_3s6";
+        S7_NetworkTitle := "MLC_4u5"
+    }
+    NETWORK
+        RUNG
+            Mul(
+                in1 := #statTankLevel,
+                in2 := #model.tank.density,
+                out => #statLiquidMass
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_xk";
+        S7_NetworkTitle := "MLC_3Sv"
+    }
+    NETWORK
+        RUNG
+            Mul(
+                in1 := #statLiquidMass,
+                in2 := #ACCELERATION,
+                out => #statLiquidPower
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_Vc";
+        S7_NetworkTitle := "MLC_X4"
+    }
+    NETWORK
+        RUNG
+            Div(
+                in1 := #statLiquidPower,
+                in2 := #model.tank."AT",
+                out => #statLiquidPressure_Pa
+            )
+        END_RUNG
+        RUNG
+            Div(
+                in1 := #statLiquidPressure_Pa,
+                in2 := 1000.0,
+                out => #signals.tankSignals.actPressure
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4AZ"
+    }
+    NETWORK
+        RUNG #operate.state.FillingBottle
+            O(
+                in2 := #operate.state.ShiftingBottle,
+                in3 := #reset
+            )
+            #instLSim_I_bottle(
+                calcParam := true,
+                input := #signals.bottleSignals.outputTank,
+                tmLag1 := #statTmLagBottle,
+                cycle := #model.cycleTime,
+                maxOut := #model.bottle.maxLevel,
+                minOut := 0.0,
+                reset := wire#w1,
+                error =>  ,
+                status =>  ,
+                maxReached =>  ,
+                minReached =>  ,
+                output => #statBottleLevel
+            )
+        END_RUNG
+        RUNG #reset
+            O( in2 := #operate.state.ShiftingBottle )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3Sf"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            GE_Contact(
+                in1 := #statBottleLevel,
+                in2 := #model.bottle.maxLevel
+            )
+            S_SR(
+                operand := #signals.bottleSignals.maxLevel,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            LT_Contact(
+                in1 := #statBottleLevel,
+                in2 := #model.bottle.maxLevel
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_53U"
+    }
+    NETWORK
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            Mul(
+                in1 := 1000.0,
+                in2 := #statBottleLevel,
+                out => #signals.bottleSignals.actLevel
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkComment := "MLC_kN";
+        S7_NetworkTitle := "MLC_nZ"
+    }
+    NETWORK
+        RUNG #operate.state.HeatingTank
+            S_SR(
+                operand := #statHeatingActive,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG #operate.state.FillingTank
+            O( in2 := #reset )
+        END_RUNG wire#w1
+        RUNG #statHeatingActive
+            NOT Move(
+                in := #statTmLagHeatNotActive,
+                out1 => #statTmLagHeat
+            )
+        END_RUNG
+        RUNG #statHeatingActive
+            Move(
+                in := #statTmLagHeatActive,
+                out1 => #statTmLagHeat
+            )
+        END_RUNG
+        RUNG #statHeatingActive
+            NOT Move(
+                in := #model.tank.roomTemperature,
+                out1 => #statPT1in1
+            )
+        END_RUNG
+        RUNG #statHeatingActive
+            Move(
+                in := #model.tank.maxTemperature,
+                out1 => #statPT1in1
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_tC"
+    }
+    NETWORK
+        RUNG #operate.state.HeatingTank
+            O(
+                in2 := #operate.state.FillingTank,
+                in3 := #reset
+            )
+            S_Coil( #tempEnableHeating )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4Dm"
+    }
+    NETWORK
+        RUNG #operate.state.FillingTank
+            O( in2 := #reset )
+            P_Coil(
+                operand => #statResetHeatingTrigger,
+                bit := #statResetHeatingMem
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3J3"
+    }
+    NETWORK
+        RUNG #tempEnableHeating
+            #instLSim_PT1_1(
+                calcParam := true,
+                input := #statPT1in1,
+                tmLag1 := #statTmLagHeat,
+                gain := #GAIN_HEAT,
+                cycle := #model.cycleTime,
+                maxOut :=  ,
+                minOut :=  ,
+                reset := #statResetHeatingTrigger,
+                error =>  ,
+                status =>  ,
+                maxReached =>  ,
+                minReached =>  ,
+                output => #statPT1out1
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_q9"
+    }
+    NETWORK
+        RUNG #tempEnableHeating
+            #instLSim_PT1_2(
+                calcParam := true,
+                input := #statPT1out1,
+                tmLag1 := #statTmLagHeat,
+                gain := #GAIN_HEAT,
+                cycle := #model.cycleTime,
+                maxOut :=  ,
+                minOut :=  ,
+                reset := #statResetHeatingTrigger,
+                error =>  ,
+                status =>  ,
+                maxReached =>  ,
+                minReached =>  ,
+                output => #statPT1out2
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_vf"
+    }
+    NETWORK
+        RUNG #tempEnableHeating
+            #instLSim_PT1_3(
+                calcParam := true,
+                input := #statPT1out2,
+                tmLag1 := #statTmLagHeat,
+                gain := #GAIN_HEAT,
+                cycle := #model.cycleTime,
+                maxOut :=  ,
+                minOut :=  ,
+                reset := #statResetHeatingTrigger,
+                error =>  ,
+                status =>  ,
+                maxReached =>  ,
+                minReached =>  ,
+                output => #signals.tankSignals.actTemperature
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_576"
+    }
+    NETWORK
+        RUNG #reset
+            NOT Move(
+                in := #model.tank.maxTemperature,
+                out1 => #statPT3in
+            )
+        END_RUNG
+        RUNG #reset
+            Move(
+                in := #model.tank.roomTemperature,
+                out1 => #statPT3in
+            )
+        END_RUNG
+        RUNG false
+            #instLSim_PT3(
+                input := #statPT3in,
+                tmLag1 := 1.0,
+                tmLag2 := 1.0,
+                tmLag3 := 1.0,
+                gain :=  ,
+                disturb :=  ,
+                cycle := #model.cycleTime,
+                reset := #reset,
+                error =>  ,
+                status =>  ,
+                output => #signals.tankSignals.actTemperature
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3bM"
+    }
+    NETWORK
+        RUNG
+            Sub(
+                in1 := #model.tank.maxTemperature,
+                in2 := 0.01,
+                out => #tempValue
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            GE_Contact(
+                in1 := #signals.tankSignals.actTemperature,
+                in2 := #tempValue
+            )
+            S_SR(
+                operand := #signals.tankSignals.maxTemperature,
+                r1 := wire#w1
+            )
+        END_RUNG
+        RUNG
+            { S7_Templates := "SrcType := Real" }
+            LT_Contact(
+                in1 := #signals.tankSignals.actTemperature,
+                in2 := #tempValue
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3vY"
+    }
+    NETWORK
+        RUNG
+            P_Contact(
+                operand := #operate.state.FillingTank,
+                bit := #statTriggerResetEnergy
+            )
+            wire#w1
+            Move(
+                in := 0.0,
+                out1 => #signals.energySignals.energyConsumptionFillingBottles
+            )
+        END_RUNG
+        RUNG wire#w1
+            Move(
+                in := 0.0,
+                out1 => #signals.energySignals.energyConsumptionFillingTank
+            )
+        END_RUNG
+        RUNG wire#w1
+            Move(
+                in := 0.0,
+                out1 => #signals.energySignals.energyConsumptionHeatingTank
+            )
+        END_RUNG
+        RUNG wire#w1
+            Move(
+                in := 0.0,
+                out1 => #signals.energySignals.waterConsumptionFillingTank
+            )
+        END_RUNG
+        RUNG wire#w1
+            Move(
+                in := 0.0,
+                out1 => #signals.energySignals.gasConsumptionHeatingTank
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkComment := "MLC_577";
+        S7_NetworkTitle := "MLC_3Jx"
+    }
+    NETWORK
+        // energy [Wh] and water [l] consumption during filling tank
+        // ----------------------------------------------------------
+        IF #operate.state.FillingTank THEN
+            "FC_1_Random_Number"(Min := 10,
+                            Max := 20,
+                            RandomNumber => #tempRandomFillingTank);
+            #tempRandomFillingTank := #tempRandomFillingTank / 100;
+            #signals.energySignals.energyConsumptionFillingTank := #signals.energySignals.energyConsumptionFillingTank + #tempRandomFillingTank;
+            #signals.energySignals.waterConsumptionFillingTank := #signals.tankSignals.actLevel;
+        END_IF;
+        
+        // energy and gas consumption during heating tank [Wh]
+        // ---------------------------------------------------
+        IF #operate.state.HeatingTank THEN
+            IF #hmiSignals.HMI_RenewHeatingElement THEN
+                "FC_1_Random_Number"(Min := 1,
+                                Max := 5,
+                                RandomNumber => #"tempRandomHeatingTank");
+            ELSE
+                "FC_1_Random_Number"(Min := 1,
+                                Max := 8,
+                                RandomNumber => #"tempRandomHeatingTank");
+            END_IF;
+            
+            #"tempRandomHeatingTank" := #"tempRandomHeatingTank" / 10;
+            #signals.energySignals.energyConsumptionHeatingTank := #signals.energySignals.energyConsumptionHeatingTank + #"tempRandomHeatingTank";
+            #signals.energySignals.gasConsumptionHeatingTank := #signals.energySignals.gasConsumptionHeatingTank + (#"tempRandomHeatingTank" * 1.5);
+        
+        END_IF;
+        
+        // energy consumption during filling bottles [Wh]
+        // -----------------------------------------------
+        IF #operate.state.FillingBottle OR #operate.state.ShiftingBottle THEN
+            "FC_1_Random_Number"(Min := 10,
+                            Max := 50,
+                            RandomNumber => #tempRandomFillingBottle);
+            #tempRandomFillingBottle := #tempRandomFillingBottle / 1000;
+            #signals.energySignals.energyConsumptionFillingBottles := #signals.energySignals.energyConsumptionFillingBottles + #tempRandomFillingBottle;
+        END_IF;
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkComment := "MLC_3MX";
+        S7_NetworkTitle := "MLC_3hD"
+    }
+    NETWORK
+        // simulated energy consumption [kWh] for standard machine states (independed from tank process)
+        // --------------------------------------------------------------
+        "FC_1_Random_Number"(Min := 35,
+                             Max := 40,
+                             RandomNumber => #statRandomNumberStates);
+        
+        // simulate standart states from 1-6
+        // ---------------------------------
+        
+        // 1 = power up
+        // 2 = power donw
+        // 3 = off
+        // 4 = standby
+        // 5 = operational
+        // 6 = working
+        
+        IF #statTimerRunning = false THEN
+            
+            "FC_1_Random_Number"(Min := 1,
+                                 Max := 500000,
+                                 RandomNumber => #statRandomState);
+        END_IF;
+        
+        // State 1-5
+        IF #statRandomState >= 1 AND #statRandomState <= 5 THEN
+            
+            #signals.energySignalsPerState.stateId := #statRandomState;
+            
+            IF #statTimerRunning = false THEN
+                #tempStartTimer := true;
+            END_IF;
+            
+            IF #statRandomState = 4 OR #statRandomState = 5 THEN
+                #statTimerDuration := T#20m;
+            ELSE
+                #statTimerDuration := T#5m;
+            END_IF;
+            
+            #instTimerRandomState.TP(PT := #statTimerDuration,
+                                     IN := #tempStartTimer);
+            
+            #statTimerRunning := true;
+            
+            IF #instTimerRandomState.Q = false THEN
+                RESET_TIMER(#instTimerRandomState);
+                #statTimerRunning := false;
+        END_IF;
+        
+            IF #statRandomState = 1 THEN
+                // POWER UP
+                #signals.energySignalsPerState.energyConsumptionStatePoweringUp := #statRandomNumberStates / 8;
+                
+                #signals.energySignalsPerState.energyConsumptionStatePoweringDown := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOff := 0;
+                #signals.energySignalsPerState.energyConsumptionStateStandby := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOperational := 0;
+                #signals.energySignalsPerState.energyConsumptionStateWorking := 0;
+                
+            ELSIF #statRandomState = 2 THEN
+                // POWER DOWN
+                #signals.energySignalsPerState.energyConsumptionStatePoweringDown := #statRandomNumberStates / 15;
+                
+                #signals.energySignalsPerState.energyConsumptionStatePoweringUp := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOff := 0;
+                #signals.energySignalsPerState.energyConsumptionStateStandby := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOperational := 0;
+                #signals.energySignalsPerState.energyConsumptionStateWorking := 0;
+                
+            ELSIF #statRandomState = 3 THEN
+                // OFF
+                #signals.energySignalsPerState.energyConsumptionStateOff := #statRandomNumberStates / 8;
+                
+                #signals.energySignalsPerState.energyConsumptionStatePoweringUp := 0;
+                #signals.energySignalsPerState.energyConsumptionStatePoweringDown := 0;
+                #signals.energySignalsPerState.energyConsumptionStateStandby := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOperational := 0;
+                #signals.energySignalsPerState.energyConsumptionStateWorking := 0;
+                
+            ELSIF #statRandomState = 4 THEN
+                // STANDBY
+                #signals.energySignalsPerState.energyConsumptionStateStandby := #statRandomNumberStates / 4;
+                
+                #signals.energySignalsPerState.energyConsumptionStatePoweringUp := 0;
+                #signals.energySignalsPerState.energyConsumptionStatePoweringDown := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOff := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOperational := 0;
+                #signals.energySignalsPerState.energyConsumptionStateWorking := 0;
+                
+            ELSIF #statRandomState = 5 THEN
+                // OPERATIONAL
+                #signals.energySignalsPerState.energyConsumptionStateOperational := #statRandomNumberStates / 2;
+                
+                #signals.energySignalsPerState.energyConsumptionStatePoweringUp := 0;
+                #signals.energySignalsPerState.energyConsumptionStatePoweringDown := 0;
+                #signals.energySignalsPerState.energyConsumptionStateOff := 0;
+                #signals.energySignalsPerState.energyConsumptionStateStandby := 0;
+                #signals.energySignalsPerState.energyConsumptionStateWorking := 0;
+                
+            END_IF;
+            
+        ELSE    // WORKING => State 6
+            
+            #signals.energySignalsPerState.stateId := 6;
+            #signals.energySignalsPerState.energyConsumptionStateWorking := #statRandomNumberStates;
+            
+            #signals.energySignalsPerState.energyConsumptionStatePoweringUp := 0;
+            #signals.energySignalsPerState.energyConsumptionStatePoweringDown := 0;
+            #signals.energySignalsPerState.energyConsumptionStateOff := 0;
+            #signals.energySignalsPerState.energyConsumptionStateStandby := 0;
+            #signals.energySignalsPerState.energyConsumptionStateOperational := 0;
+        END_IF;
+        
+        #signals.energySignalsPerState.energyConsumptionStatesTotal :=
+        #signals.energySignalsPerState.energyConsumptionStatePoweringUp +
+        #signals.energySignalsPerState.energyConsumptionStatePoweringDown +
+        #signals.energySignalsPerState.energyConsumptionStateOff +
+        #signals.energySignalsPerState.energyConsumptionStateStandby +
+        #signals.energySignalsPerState.energyConsumptionStateOperational +
+        #signals.energySignalsPerState.energyConsumptionStateWorking;
+        
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_Md"
+    }
+    NETWORK
+        RUNG #operate.state.ShiftingBottle
+            P_Coil(
+                operand => #tempShiftingTrigger,
+                bit := #statShiftingMem
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_3db"
+    }
+    NETWORK
+        IF #tempShiftingTrigger THEN
+            "FC_1_Random_Number"(Min := 0,
+                                 Max := 10,
+                                 RandomNumber => #tempRandomFaultyBottles);
+            
+            IF #tempRandomFaultyBottles = 1 THEN
+                #process.numberFaulty := #process.numberFaulty + 1;
+            END_IF;
+            
+        END_IF;
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_MM"
+    }
+    NETWORK
+        RUNG #operate.state.Stop
+            P_Coil(
+                operand => #tempStopTrigger,
+                bit := #statStopMem
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_3eN"
+    }
+    NETWORK
+            IF #appSignals.APP_ErrorSimulation THEN
+                
+                // random error generation
+                IF #tempShiftingTrigger THEN
+                    "FC_1_Random_Number"(Min := 0,
+                                    Max := 15000,
+                                    RandomNumber => #tempRandomErrorTrigger);
+                    
+                    // go into error state
+                    IF #tempRandomErrorTrigger = 1 THEN
+                        #appSignals.APP_Error := true;
+                    END_IF;
+                    
+                END_IF;
+                
+                // triggered error genertion
+                IF #errors.errorTrigger THEN
+                    #appSignals.APP_Error := true;
+                END_IF;
+                
+                
+                // if timer finished (negative edge on it's output), go in stop > start again
+                "F_TRIG_DB_Error_Finished"(CLK := #instTimerError.Q,
+                                           Q => #statResetError);
+                
+                // reset error > machine goes automatically into stop
+                IF #statResetError THEN
+                    #appSignals.APP_Error := false;
+                    #statResetError := false;
+                    #statStart := true;
+                END_IF;
+                
+                IF #tempStopTrigger AND #statStart THEN
+                    #appSignals.APP_Start := true;
+                    #statStart := false;
+                END_IF;
+                
+            END_IF;
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_sm"
+    }
+    NETWORK
+        RUNG #operate.state.Error
+            P_Coil(
+                operand => #tempErrorTrigger,
+                bit := #statErrorMem
+            )
+        END_RUNG
+        RUNG #tempErrorTrigger
+            { S7_Templates := "time_type := Time" }
+            #instTimerError.TP(
+                pt := #errors.errorDuration,
+                et =>  
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "SCL";
+        S7_NetworkComment := "MLC_4zd";
+        S7_NetworkTitle := "MLC_ha"
+    }
+    NETWORK
+        IF #appSignals.APP_ErrorSimulation THEN
+            
+            // generate random error code
+            IF #tempErrorTrigger AND (#signals.errorCode = "ERROR_0_NoError") THEN
+                
+                "FC_1_Random_Number"(Min := "ERROR_1_BottleInWrongPosition",
+                                Max := "ERROR_11_GenericError_ContactWithSupplier",
+                                RandomNumber => #tempRandomError);
+                
+                #signals.errorCode := INT_TO_UINT(#tempRandomError);
+                
+            END_IF;
+            
+        END_IF;
+    END_NETWORK
+END_FUNCTION_BLOCK

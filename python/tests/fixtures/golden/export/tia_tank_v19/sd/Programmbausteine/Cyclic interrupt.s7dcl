@@ -1,0 +1,76 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+ORGANIZATION_BLOCK "Cyclic interrupt"
+    VAR_TEMP
+        { S7_MLC := "MLC_1" }
+        tempStopCip : Bool;
+        { S7_MLC := "MLC_2" }
+        tempStartCip : Bool;
+    END_VAR
+
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_3"
+    }
+    NETWORK
+        RUNG true
+            "DB_1_Sequence"(
+                externalSignals := "GDB".externalSignals,
+                model := "GDB".model,
+                operate := "GDB".operate,
+                signals := "GDB".signals,
+                process := "GDB".process,
+                hmi := "GDB".hmiSignals,
+                app := "GDB".appSignals,
+                errors := "GDB".errors
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "FBD";
+        S7_NetworkTitle := "MLC_4"
+    }
+    NETWORK
+        RUNG
+            "DB_4_CIP_Simulation"(
+                cip := "GDB".cip,
+                startCip => #tempStartCip,
+                stopCip => #tempStopCip
+            )
+        END_RUNG
+        RUNG
+            "DB_5_CIP_Simulation_Graph"(
+                OFF_SQ := #tempStopCip,
+                INIT_SQ := #tempStartCip,
+                ACK_EF :=  ,
+                S_PREV :=  ,
+                S_NEXT :=  ,
+                SW_AUTO :=  ,
+                SW_TAP :=  ,
+                SW_TOP :=  ,
+                SW_MAN :=  ,
+                S_SEL :=  ,
+                S_ON :=  ,
+                S_OFF :=  ,
+                T_PUSH :=  ,
+                cip := "GDB".cip,
+                stepInitial :=  ,
+                step1Active :=  ,
+                step2Active :=  ,
+                step3Active :=  ,
+                step4Active :=  ,
+                S_NO =>  ,
+                S_MORE =>  ,
+                S_ACTIVE =>  ,
+                ERR_FLT =>  ,
+                AUTO_ON =>  ,
+                TAP_ON =>  ,
+                TOP_ON =>  ,
+                MAN_ON =>  
+            )
+        END_RUNG
+    END_NETWORK
+END_ORGANIZATION_BLOCK

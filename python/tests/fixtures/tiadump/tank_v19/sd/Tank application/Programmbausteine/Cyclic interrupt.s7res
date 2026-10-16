@@ -1,0 +1,9 @@
+﻿MultiLingualTexts:
+  - id: MLC_3Vt
+    en-US: stop CIP S7 graph sequence
+  - id: MLC_4ML
+    en-US: start CIP S7 graph sequence
+  - id: MLC_45j
+    en-US: call filling sequence
+  - id: MLC_3Zm
+    en-US: call CIP sequence

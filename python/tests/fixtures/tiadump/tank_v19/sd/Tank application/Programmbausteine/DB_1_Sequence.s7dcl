@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "2";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_1_Sequence : FB_1_Sequence
+END_DATA_BLOCK

@@ -1,0 +1,18 @@
+﻿TYPE
+    typeState : STRUCT
+        { S7_MLC := "MLC_1" }
+        FillingTank : Bool;
+        { S7_MLC := "MLC_2" }
+        HeatingTank : Bool;
+        { S7_MLC := "MLC_3" }
+        FillingBottle : Bool;
+        { S7_MLC := "MLC_4" }
+        ShiftingBottle : Bool;
+        { S7_MLC := "MLC_5" }
+        Stop : Bool;
+        { S7_MLC := "MLC_6" }
+        Reset : Bool;
+        { S7_MLC := "MLC_7" }
+        Error : Bool;
+    END_STRUCT;
+END_TYPE

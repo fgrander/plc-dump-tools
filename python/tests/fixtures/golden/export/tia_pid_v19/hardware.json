@@ -1,0 +1,84 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "firmware": "V3.1",
+      "name": "LLCCA_PID_PLC",
+      "order_no": "6ES7 510-1DK03-0AB0",
+      "ref": "cpu:LLCCA_PID_PLC"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V0.0",
+      "order_no": "6ES7 193-6AR00-0AA0",
+      "rack": "ET 200SP station_1/BA 2xRJ45",
+      "ref": "ET 200SP station_1/BA 2xRJ45",
+      "slot": 127,
+      "type": "BA 2xRJ45"
+    },
+    {
+      "firmware": "V3.1",
+      "order_no": "6ES7 510-1DK03-0AB0",
+      "rack": "ET 200SP station_1/LLCCA_PID_PLC",
+      "ref": "ET 200SP station_1/LLCCA_PID_PLC",
+      "slot": 1,
+      "type": "LLCCA_PID_PLC"
+    },
+    {
+      "firmware": "V1.2",
+      "order_no": "6ES7 193-6PA00-0AA0",
+      "rack": "ET 200SP station_1/Server module_1",
+      "ref": "ET 200SP station_1/Server module_1",
+      "slot": 2,
+      "type": "Server module_1"
+    },
+    {
+      "firmware": "17.0.0.0",
+      "order_no": "6AV2 124-0MC01-0AX0",
+      "rack": "LLCCA_PID_HMI/LLCCA_PID_HMI",
+      "ref": "LLCCA_PID_HMI/LLCCA_PID_HMI",
+      "slot": 0,
+      "type": "LLCCA_PID_HMI"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.0.1/24",
+      "device_name": "llcca_pid_plc",
+      "interface": "Ethernet",
+      "ref": "ET 200SP station_1/X1/Ethernet",
+      "subnet": "PN/IE_1"
+    },
+    {
+      "address": "1",
+      "interface": "Mpi",
+      "ref": "LLCCA_PID_HMI/PBMPI1/Mpi"
+    },
+    {
+      "address": "192.168.0.3/24",
+      "device_name": "llcca_pid_hmi",
+      "interface": "Ethernet",
+      "ref": "LLCCA_PID_HMI/X1/Ethernet",
+      "subnet": "PN/IE_1"
+    }
+  ],
+  "racks": [
+    {
+      "name": "BA 2xRJ45",
+      "ref": "ET 200SP station_1/BA 2xRJ45"
+    },
+    {
+      "name": "LLCCA_PID_PLC",
+      "ref": "ET 200SP station_1/LLCCA_PID_PLC"
+    },
+    {
+      "name": "Server module_1",
+      "ref": "ET 200SP station_1/Server module_1"
+    },
+    {
+      "name": "LLCCA_PID_HMI",
+      "ref": "LLCCA_PID_HMI/LLCCA_PID_HMI"
+    }
+  ]
+}

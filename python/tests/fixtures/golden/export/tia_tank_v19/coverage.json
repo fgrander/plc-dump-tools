@@ -1,0 +1,64 @@
+{
+  "categories": {
+    "datatypes": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hardware": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "hmi": {
+      "reason": "other:missing package WinCC Unified Comfort V21",
+      "state": "partial"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": null,
+      "state": "delivered"
+    }
+  },
+  "gaps": [
+    {
+      "category": "hmi",
+      "item": "HMI_RT_5 alarms",
+      "reason": "unsupported"
+    },
+    {
+      "category": "hmi",
+      "item": "MTP1500_Runtime",
+      "reason": "other:missing package WinCC Unified Comfort V21"
+    },
+    {
+      "category": "program_units",
+      "item": "FB_Prodiag",
+      "reason": "other:not supported by SIMATIC SD and SimaticML"
+    },
+    {
+      "category": "program_units",
+      "item": "ProDiagOB",
+      "reason": "other:not supported by SIMATIC SD and SimaticML"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "alarm_text_inherited",
+      "message": "Tank application: 1 alarm text(s) are inherited from the alarm type; type-level texts are not exported by TIA Openness"
+    },
+    {
+      "code": "hmi_plc_tag_unknown",
+      "message": "HMI_RT_5: the HMI tag export names the connection but not the PLC tag"
+    }
+  ]
+}

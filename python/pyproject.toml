@@ -1,0 +1,68 @@
+[project]
+name = "plcexport"
+version = "1.0.0"
+description = "Turns s7dump and tiadump output into the common PLC export format (JSON, Markdown, SimaticML)"
+readme = "README.md"
+license = "LGPL-2.1-only"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml>=6.0.2",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "typer>=0.12",
+    "structlog>=24.4",
+    "jsonschema>=4.23",
+    "defusedxml>=0.7.1",
+]
+
+[project.scripts]
+plcexport = "plcexport.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.7",
+    "mypy>=1.13",
+    "types-pyyaml>=6.0",
+    "types-jsonschema>=4.23",
+    "types-defusedxml>=0.7.0.20260504",
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/plcexport"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = [
+    "S101",  # assert is fine in tests and invariants
+    "S603",  # subprocess calls are to s7dump/tiadump with fixed argv
+    "RUF001", "RUF002", "RUF003",  # multilingual texts
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S108"]
+"src/plcexport/cli.py" = ["B008"]  # typer.Option defaults are the Typer idiom
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "src"
+packages = ["plcexport"]
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "s7reference: needs real STEP 7 V5.x projects in samples/s7classic (skipped if empty)",
+    "tiareference: needs real TIA projects in samples/tia-portal and TIA Portal (skipped if empty)",
+]

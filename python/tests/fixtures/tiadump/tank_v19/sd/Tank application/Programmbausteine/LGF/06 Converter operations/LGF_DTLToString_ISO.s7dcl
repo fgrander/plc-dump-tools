@@ -1,0 +1,222 @@
+﻿{
+    S7_Author := "Siemens_Digital_Industry";
+    S7_BlockComment := "MLC_4ZE";
+    S7_BlockTitle := "MLC_3tR";
+    S7_EditorMode := "SCL";
+    S7_Family := "LGF";
+    S7_IECCheck := "TRUE";
+    S7_Optimized := "TRUE";
+    S7_UserDefinedId := "LGF_DTLtoString_ISO"
+}
+FUNCTION "LGF_DTLToString_ISO" : String
+    VAR_INPUT
+        { S7_MLC := "MLC_4Jw" }
+        "date" : DTL;
+        { S7_MLC := "MLC_48u" }
+        separator : Char;
+    END_VAR
+    VAR_TEMP
+        { S7_MLC := "MLC_Sh" }
+        tempString : String;
+        { S7_MLC := "MLC_4qz" }
+        tempIndex : DInt;
+    END_VAR
+    VAR CONSTANT
+        { S7_MLC := "MLC_SS" }
+        CONVERT_SIZE_YEAR : USInt := 4;
+        { S7_MLC := "MLC_4CD" }
+        CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND : USInt := 2;
+        { S7_MLC := "MLC_4wt" }
+        CONVERT_SIZE_NANOSECOND : USInt := 9;
+        { S7_MLC := "MLC_Pb" }
+        CONVERT_PRECISION : USInt := 0;
+        { S7_MLC := "MLC_4VS" }
+        CONVERT_FORMAT_TO_STRING : Word := 16#0000;
+        { S7_MLC := "MLC_3F5" }
+        CONVERT_START_POSITION_YEAR : UInt := 1;
+        { S7_MLC := "MLC_4gF" }
+        CONVERT_START_POSITION_MONTH : UInt := 6;
+        { S7_MLC := "MLC_48r" }
+        CONVERT_START_POSITION_DAY : UInt := 9;
+        { S7_MLC := "MLC_4A6" }
+        CONVERT_START_POSITION_HOUR : UInt := 12;
+        { S7_MLC := "MLC_4pS" }
+        CONVERT_START_POSITION_MINUTE : UInt := 15;
+        { S7_MLC := "MLC_4Kj" }
+        CONVERT_START_POSITION_SECOND : UInt := 18;
+        { S7_MLC := "MLC_4n9" }
+        CONVERT_START_POSITION_NANOSECOND : UInt := 21;
+        { S7_MLC := "MLC_3Ut" }
+        SEPARATOR_POSITION_YEAR_MONTH : UInt := 5;
+        { S7_MLC := "MLC_3Re" }
+        SEPARATOR_POSITION_MONTH_DAY : UInt := 8;
+        { S7_MLC := "MLC_47R" }
+        SEPARATOR_POSITION_HOUR_MINUTE : UInt := 14;
+        { S7_MLC := "MLC_42y" }
+        SEPARATOR_POSITION_MINUTE_SECOND : UInt := 17;
+        { S7_MLC := "MLC_35J" }
+        SEPARATOR_POSITION_SECOND_NANOSECOND : UInt := 20;
+        { S7_MLC := "MLC_3mM" }
+        SEPARATOR_NANOSECOND : Char := '.';
+        { S7_MLC := "MLC_Mw" }
+        SEPARATOR_TIME : Char := ':';
+        { S7_MLC := "MLC_3uE" }
+        SEPARATOR_DATE : Char := '-';
+        { S7_MLC := "MLC_3EX" }
+        REPLACE_NANOSECOND_COUNT : DInt := 8;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION BLOCK INFO HEADER
+          //===============================================================================
+          // SIEMENS AG / (c)Copyright 2019
+          //-------------------------------------------------------------------------------
+          // Title:            LGF_DTLtoString_ISO
+          // Comment/Function: This function converts a date of data type DTL into a character string of data type STRING in international format (YYYY MM DD…).
+          // Library/Family:   LGF (Library General Functions)
+          // Author:           Siemens Digital Industry Support
+          // Tested with:      S7-PLCSIM Advanced V2.0 SP1
+          // Engineering:      TIA Portal V15.1
+          // Restrictions:     ENO mechanism is not used, no error handling
+          // Requirements:     PLC (S7-1200 / S7-1500)
+          //-------------------------------------------------------------------------------
+          // Change log table:
+          // Version  | Date       | Expert in charge       | Changes applied
+          //----------|------------|------------------------|------------------------------
+          // 01.00.00 | 15.06.2016 | Siemens Industry Online Support
+          //                         First released version
+          // 01.00.01 | 02.01.2017 | Siemens Industry Online Support
+          //                         Upgrade: TIA Portal V14 Update 1
+          // 01.00.02 | 17.08.2018 | Siemens Industry Online Support
+          //                         Upgrade: TIA V15 Update 2
+          // 01.00.03 | 23.11.2018 | Siemens Industry Online Support
+          //                         Upgrade: TIA V15.1
+          // 01.00.04 | 17.07.2019 | Simatic Systems Support
+          //                         Bugfix - nanosecond precision and '0' filling
+          // 01.00.05 | 18.07.2019 | Simatic Systems Support
+          //                         Renamed from "LGF_DTLtoString" to "LGF_DTLtoString_ISO"
+          //                         Split into two blocks, removed "format" input
+          // 03.00.00 | 23.04.2020 | Simatic Systems Support | Set version to V3.0.0
+          //                         Harmonize the version of the whole library
+          // 03.00.01 | 23.02.2021 | Simatic Systems Support
+          //                         Insert documentation
+          //=============================================================================
+        END_REGION Block info header
+        
+        REGION DESCRIPTION
+          { S7_MLC := "MLC_45V" }
+        END_REGION DESCRIPTION
+        
+        REGION INITIALISATION
+          #tempString := '';
+        END_REGION
+        
+        REGION CONVERTER
+          // Set format parameters for output string
+          // International ISO 8601
+          // DTL  | Y| Y| Y| Y| -| M| M| -| D| D|  | H| H| :| M| M| :| S| S| .|NS|NS|NS|NS|NS|NS|NS|NS|NS
+          // -----|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
+          // Pos  | 1| 2| 3| 4| 5| 6| 7| 8| 9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29
+          
+          // Convert "Value" into "String" and place at the right position
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.YEAR,
+                   P      := #CONVERT_START_POSITION_YEAR,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_YEAR,
+                   OUT    => #tempString);    // DTL YEAR --> String --> #tempPosYear
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.MONTH,
+                   P      := #CONVERT_START_POSITION_MONTH,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND,
+                   OUT    => #tempString);     // DTL MONTH --> String --> #tempPosMonth
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.DAY,
+                   P      := #CONVERT_START_POSITION_DAY,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND,
+                   OUT    => #tempString);     // DTL DAY --> String --> #tempPosDay
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.HOUR,
+                   P      := #CONVERT_START_POSITION_HOUR,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND,
+                   OUT    => #tempString);     // DTL HOUR --> String --> #tempPosHour
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.MINUTE,
+                   P      := #CONVERT_START_POSITION_MINUTE,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND,
+                   OUT    => #tempString);     // DTL MINUTE --> String --> #tempPosMinute
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.SECOND,
+                   P      := #CONVERT_START_POSITION_SECOND,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_MONTH_DAY_HOUR_MINUTE_SECOND,
+                   OUT    => #tempString);     // DTL SECOND --> String --> #tempPosSecond
+          
+          VAL_STRG(FORMAT := #CONVERT_FORMAT_TO_STRING,
+                   IN     := #date.NANOSECOND,
+                   P      := #CONVERT_START_POSITION_NANOSECOND,
+                   PREC   := #CONVERT_PRECISION,
+                   SIZE   := #CONVERT_SIZE_NANOSECOND,
+                   OUT    => #tempString);     // DTL NANOSECOND --> String --> #tempPosNanosecond
+          
+          // Place separators at the right position in the string
+          IF #separator = '' THEN
+            #tempString[#SEPARATOR_POSITION_YEAR_MONTH] := #SEPARATOR_DATE;
+            #tempString[#SEPARATOR_POSITION_MONTH_DAY] := #SEPARATOR_DATE;
+          ELSE
+            #tempString[#SEPARATOR_POSITION_YEAR_MONTH] := #separator;
+            #tempString[#SEPARATOR_POSITION_MONTH_DAY] := #separator;
+          END_IF;
+          #tempString[#SEPARATOR_POSITION_HOUR_MINUTE] := #SEPARATOR_TIME;
+          #tempString[#SEPARATOR_POSITION_MINUTE_SECOND] := #SEPARATOR_TIME;
+          #tempString[#SEPARATOR_POSITION_SECOND_NANOSECOND] := #SEPARATOR_NANOSECOND;
+          
+          // Correcting the string, due to the conversion of a leading "0" value into a "blank".
+          // Replacing of "blank" by "0"
+          IF (#tempString[#CONVERT_START_POSITION_MONTH] = ' ') THEN
+            #tempString[#CONVERT_START_POSITION_MONTH] := '0';
+          END_IF;
+          
+          IF (#tempString[#CONVERT_START_POSITION_DAY] = ' ') THEN
+            #tempString[#CONVERT_START_POSITION_DAY] := '0';
+          END_IF;
+          
+          IF (#tempString[#CONVERT_START_POSITION_HOUR] = ' ') THEN
+            #tempString[#CONVERT_START_POSITION_HOUR] := '0';
+          END_IF;
+          
+          IF (#tempString[#CONVERT_START_POSITION_MINUTE] = ' ') THEN
+            #tempString[#CONVERT_START_POSITION_MINUTE] := '0';
+          END_IF;
+          
+          IF (#tempString[#CONVERT_START_POSITION_SECOND] = ' ') THEN
+            #tempString[#CONVERT_START_POSITION_SECOND] := '0';
+          END_IF;
+          
+          FOR #tempIndex := 0 TO #REPLACE_NANOSECOND_COUNT DO
+            IF (#tempString[UINT_TO_SINT(#CONVERT_START_POSITION_NANOSECOND) + #tempIndex] = ' ') THEN
+              #tempString[UINT_TO_SINT(#CONVERT_START_POSITION_NANOSECOND) + #tempIndex] := '0';
+            ELSE
+              EXIT;
+            END_IF;
+          END_FOR;
+        END_REGION
+        
+        REGION OUTPUTS
+          #LGF_DTLToString_ISO := #tempString;
+          // no error handling needed
+          ENO := TRUE;
+        END_REGION
+        
+    END_NETWORK
+END_FUNCTION

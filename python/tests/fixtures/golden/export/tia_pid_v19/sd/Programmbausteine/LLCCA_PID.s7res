@@ -1,0 +1,37 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: LLCCA_PID
+  - id: MLC_2
+    en-US: |-
+      LCC Automation AB / (c)Copyright 2024
+      Released under the MIT License
+  - id: MLC_3
+    en-US: controller setpoint
+  - id: MLC_4
+    en-US: current value from the process
+  - id: MLC_5
+    en-US: manual value
+  - id: MLC_6
+    en-US: reset i term and all filters
+  - id: MLC_7
+    en-US: output value
+  - id: MLC_8
+    en-US: controller terms
+  - id: MLC_9
+    en-US: current mode of operation (0-Inactive, 1-Step tuning, 2-Reserved, 3-Automatic, 4-Manual)
+  - id: MLC_10
+    en-US: proportional gain
+  - id: MLC_11
+    en-US: integral action time [s]
+  - id: MLC_12
+    en-US: derivative action time [s]
+  - id: MLC_13
+    en-US: input with median filter
+  - id: MLC_14
+    en-US: input with PT1 filter
+  - id: MLC_15
+    en-US: delta time of the controller
+  - id: MLC_16
+    en-US: first order derivative
+  - id: MLC_17
+    en-US: second order derivative

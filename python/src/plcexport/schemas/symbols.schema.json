@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/symbols.schema.json",
+  "title": "symbols.json: global tags (contract §7)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "symbol",
+      "table",
+      "data_type",
+      "scope"
+    ],
+    "properties": {
+      "symbol": {
+        "type": "string"
+      },
+      "table": {
+        "type": "string"
+      },
+      "data_type": {
+        "type": "string"
+      },
+      "scope": {
+        "enum": [
+          "global_tag",
+          "db_member",
+          "fb_interface",
+          "fc_interface",
+          "udt_member"
+        ]
+      },
+      "address": {
+        "type": "string"
+      },
+      "initial": {
+        "type": "string"
+      },
+      "retain": {
+        "type": "boolean"
+      },
+      "comment": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "io_direction": {
+        "enum": [
+          "input",
+          "output",
+          "memory"
+        ]
+      },
+      "accessible": {
+        "type": "boolean"
+      },
+      "visible": {
+        "type": "boolean"
+      },
+      "writable": {
+        "type": "boolean"
+      },
+      "safety": {
+        "const": true
+      },
+      "parent": {
+        "type": "string"
+      },
+      "dims": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,6 +1,6 @@
 # `tiadump`: connections in `dump.json` (`tiadump project`, dump_version 1, additive)
 
-Extends [`tiadump.md`](tiadump.md). [`tiadump.schema.json`](../schema/tiadump.schema.json) has the keys below; dumps without them stay valid.
+Extends [`tiadump.md`](tiadump.md). [`tia/dump_schema.json`](../python/src/plcexport/extractors/tia/dump_schema.json) has the keys below; dumps without them stay valid.
 
 ## PLC device entry
 

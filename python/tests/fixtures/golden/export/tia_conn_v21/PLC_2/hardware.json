@@ -1,0 +1,53 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "firmware": "V2.9",
+      "name": "PLC_2",
+      "order_no": "6ES7 515-2AM02-0AB0",
+      "ref": "cpu:PLC_2"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V2.9",
+      "order_no": "6ES7 515-2AM02-0AB0",
+      "rack": "S7-1500/ET200MP-Station_2/PLC_2",
+      "ref": "S7-1500/ET200MP-Station_2/PLC_2",
+      "slot": 1,
+      "type": "PLC_2"
+    },
+    {
+      "order_no": "6ES7 590-1***0-0AA0",
+      "rack": "S7-1500/ET200MP-Station_2/Profilschiene_0",
+      "ref": "S7-1500/ET200MP-Station_2/Profilschiene_0",
+      "slot": 0,
+      "type": "Profilschiene_0"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.0.1/24",
+      "device_name": "plc_2.profinet-schnittstelle_1",
+      "interface": "Ethernet",
+      "ref": "S7-1500/ET200MP-Station_2/X1/Ethernet"
+    },
+    {
+      "address": "192.168.1.5/24",
+      "device_name": "plc_2.profinet-schnittstelle_2",
+      "interface": "Ethernet",
+      "ref": "S7-1500/ET200MP-Station_2/X2/Ethernet",
+      "subnet": "PN/IE_1"
+    }
+  ],
+  "racks": [
+    {
+      "name": "PLC_2",
+      "ref": "S7-1500/ET200MP-Station_2/PLC_2"
+    },
+    {
+      "name": "Profilschiene_0",
+      "ref": "S7-1500/ET200MP-Station_2/Profilschiene_0"
+    }
+  ]
+}

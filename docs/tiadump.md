@@ -53,7 +53,7 @@ common options: [--tia V21]                          # default: newest installed
 
 Canonical JSON, keys sorted, lists sorted as noted. Unit `part` is `sd`, `common` (SimaticML) or
 `none` (nothing exportable; see `errors`). The JSON Schema is
-[`schema/tiadump.schema.json`](../schema/tiadump.schema.json) (Draft 2020-12); consumers should
+[`tia/dump_schema.json`](../python/src/plcexport/extractors/tia/dump_schema.json) (Draft 2020-12); consumers should
 validate every dump against it.
 
 ```jsonc

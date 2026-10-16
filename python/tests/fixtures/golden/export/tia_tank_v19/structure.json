@@ -1,0 +1,93 @@
+{
+  "devices": [
+    {
+      "name": "MTP1500"
+    },
+    {
+      "name": "S71500/ET200MP station_1"
+    },
+    {
+      "name": "TP900"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Datentypen",
+      "units": [
+        "typeApp",
+        "typeCIP",
+        "typeError",
+        "typeHmi",
+        "typeInfo",
+        "typeModel",
+        "typeOperate",
+        "typeProcess",
+        "typeSignals",
+        "typeState"
+      ]
+    },
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Default tag table"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "Block_1_DB",
+        "Cyclic interrupt",
+        "DB_1_Sequence",
+        "DB_2_Filling_DB",
+        "DB_3_Simulation",
+        "DB_4_CIP_Simulation",
+        "DB_5_CIP_Simulation_Graph",
+        "FB_1_Sequence",
+        "FB_2_Filling",
+        "FB_3_Simulation",
+        "FB_4_CIP_Simulation",
+        "FB_5_CIP_Simulation_Graph",
+        "FB_Generate_Serial_Number",
+        "FB_Prodiag",
+        "FC_1_Random_Number",
+        "FC_2_GetStringSizeOfNumber",
+        "GDB",
+        "Generate_Serial_Number_DB",
+        "LSim_I",
+        "LSim_PT1",
+        "LSim_PT3",
+        "Main",
+        "ProDiagOB"
+      ]
+    },
+    {
+      "path": "Programmbausteine/LGF/06 Converter operations",
+      "units": [
+        "LGF_DTLToString_ISO"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "Cyclic interrupt",
+      "units": [
+        "Cyclic interrupt"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "ProDiagOB",
+      "units": [
+        "ProDiagOB"
+      ]
+    }
+  ]
+}

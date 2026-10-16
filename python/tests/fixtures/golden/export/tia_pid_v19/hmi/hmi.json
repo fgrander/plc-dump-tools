@@ -1,0 +1,412 @@
+{
+  "alarms": [],
+  "devices": [
+    {
+      "name": "HMI_RT_1",
+      "type": "comfort"
+    }
+  ],
+  "hmi_tags": [
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_ErrAcc_DB_LLCCA_PID_oErrAcc"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_ErrAcc_DB_PID_C_oErrAcc"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Input"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_ManualValue"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Out"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Setpoint"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Terms_d"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Terms_i"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_Terms_p"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_ioKp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_ioMode"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_ioTd"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_ioTi"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statAdvanced_derivateFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statAdvanced_inputFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statAdvanced_outMax"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statAdvanced_outMin"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statAdvanced_tuningRule"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statIntegralSum"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statStepTuning_state"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PID_DB_statStepTuning_t"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_addComp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_enable"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_input"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioAddFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioAddFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioAddTimeLag"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioNoiceFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubConstant"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubStartValue"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubTimeLag"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_ioSubType"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_out"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_reset"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_LLCCA_PID_DB_subComp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_addComp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_enable"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_input"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioAddFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioAddFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioAddTimeLag"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioNoiceFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubConstant"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubFactor"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubFilter"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubStartValue"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubTimeLag"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_ioSubType"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_out"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_reset"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "LLCCA_PvSim_PID_C_DB_subComp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ActivateRecoverMode"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_CancelTuningLevel"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Config"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_CtrlParamsBackUp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_CurrentSetpoint"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_CycleTime"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Disturbance"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Error"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ErrorAck"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ErrorBits"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Input"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_InputWarning_H"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_InputWarning_L"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Input_PER"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_IntegralResetMode"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_InternalVersion"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_LoadBackUp"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ManualEnable"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ManualValue"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Mode"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ModeActivate"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Output"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Output_PER"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Output_PWM"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_OverwriteInitialOutputValue"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_PIDCtrl"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_PIDSelfTune"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_PhysicalQuantity"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_PhysicalUnit"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Progress"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Reset"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Retain"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_RunModeByStartup"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_ScaledInput"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_SetSubstituteOutput"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Setpoint"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_SetpointLimit_H"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_SetpointLimit_L"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_State"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_SubstituteOutput"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_Warning"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "PID_Compact_1_WarningInternal"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "RUN_DB_resetAccErr"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "RUN_DB_resetAll"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "RUN_DB_resetPID"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "RUN_DB_resetPvSim"
+    },
+    {
+      "device": "HMI_RT_1",
+      "name": "RUN_DB_setpoint"
+    }
+  ],
+  "recipes": []
+}

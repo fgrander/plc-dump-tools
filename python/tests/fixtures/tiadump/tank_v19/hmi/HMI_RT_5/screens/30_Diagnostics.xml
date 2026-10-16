@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-10-14T03:09:03.7982512Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Screen.Screen ID="0">
+    <AttributeList>
+      <ActiveLayer>0</ActiveLayer>
+      <BackColor>218, 220, 224</BackColor>
+      <GridColor>0, 0, 0</GridColor>
+      <Height>480</Height>
+      <Name>30_Diagnostics</Name>
+      <Number>1</Number>
+      <Visible>true</Visible>
+      <Width>800</Width>
+    </AttributeList>
+    <LinkList>
+      <Template TargetID="@OpenLink">
+        <Name>01_One_Nav_Level</Name>
+      </Template>
+    </LinkList>
+    <ObjectList>
+      <Hmi.Event.Event ID="2" CompositionName="Events">
+        <AttributeList>
+          <Name>GenerateScreen</Name>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Event.FunctionListEventHandler ID="3" CompositionName="EventHandler">
+            <ObjectList>
+              <Hmi.Event.FunctionListEntry ID="4" CompositionName="FunctionListEntries">
+                <AttributeList>
+                  <Name>SetTag</Name>
+                  <Type>SystemFunction</Type>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEntryParameter ID="5" CompositionName="Parameters">
+                    <AttributeList>
+                      <Name>Tag</Name>
+                    </AttributeList>
+                    <LinkList>
+                      <Value TargetID="@OpenLink">
+                        <Name>MainNavigationState</Name>
+                      </Value>
+                    </LinkList>
+                  </Hmi.Event.FunctionListEntryParameter>
+                  <Hmi.Event.FunctionListEntryParameter ID="7" CompositionName="Parameters">
+                    <AttributeList>
+                      <Name>Value</Name>
+                      <Value Type="System.Double">3</Value>
+                    </AttributeList>
+                  </Hmi.Event.FunctionListEntryParameter>
+                </ObjectList>
+              </Hmi.Event.FunctionListEntry>
+            </ObjectList>
+          </Hmi.Event.FunctionListEventHandler>
+        </ObjectList>
+      </Hmi.Event.Event>
+      <MultilingualText ID="8" CompositionName="HelpText">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <Hmi.Screen.ScreenLayer ID="A" CompositionName="Layers">
+        <AttributeList>
+          <Index>0</Index>
+          <Name />
+          <VisibleES>true</VisibleES>
+        </AttributeList>
+      </Hmi.Screen.ScreenLayer>
+      <Hmi.Screen.ScreenLayer ID="B" CompositionName="Layers">
+        <AttributeList>
+          <Index>20</Index>
+          <Name />
+          <VisibleES>false</VisibleES>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Screen.GraphicView ID="C" CompositionName="ScreenItems">
+            <AttributeList>
+              <AutoSizing>StretchPicture</AutoSizing>
+              <BackColor>255, 255, 255</BackColor>
+              <BackFillStyle>Transparent</BackFillStyle>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <Height>480</Height>
+              <Left>0</Left>
+              <ObjectName>Graphic view_2</ObjectName>
+              <TabIndex>-1</TabIndex>
+              <Top>0</Top>
+              <TransparentColor>255, 0, 255</TransparentColor>
+              <UseTransparentColor>false</UseTransparentColor>
+              <Width>800</Width>
+            </AttributeList>
+            <LinkList>
+              <Picture TargetID="@OpenLink">
+                <Name>PopUpBackground</Name>
+              </Picture>
+            </LinkList>
+            <ObjectList>
+              <Hmi.Dynamic.VisibilityAnimation ID="E" CompositionName="Animations">
+                <AttributeList>
+                  <Name>VisibilityAnimation</Name>
+                  <RangeEnd>1</RangeEnd>
+                  <RangeStart>1</RangeStart>
+                  <Visible>true</Visible>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Dynamic.TagElementTrigger ID="F" CompositionName="VisibilityTag">
+                    <LinkList>
+                      <Tag TargetID="@OpenLink">
+                        <Name>PopUpBackground</Name>
+                      </Tag>
+                    </LinkList>
+                  </Hmi.Dynamic.TagElementTrigger>
+                </ObjectList>
+              </Hmi.Dynamic.VisibilityAnimation>
+            </ObjectList>
+          </Hmi.Screen.GraphicView>
+        </ObjectList>
+      </Hmi.Screen.ScreenLayer>
+    </ObjectList>
+  </Hmi.Screen.Screen>
+</Document>

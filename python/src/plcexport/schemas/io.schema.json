@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/io.schema.json",
+  "title": "io.json: inputs and outputs (contract §7)",
+  "type": "object",
+  "required": [
+    "inputs",
+    "outputs"
+  ],
+  "properties": {
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "symbol",
+          "address",
+          "data_type"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "data_type": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "channel_ref": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "symbol",
+          "address",
+          "data_type"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "data_type": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "channel_ref": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

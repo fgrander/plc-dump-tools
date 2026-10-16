@@ -1,0 +1,209 @@
+﻿MultiLingualTexts:
+  - id: MLC_3jc
+    en-US: Model Tank Level
+  - id: MLC_3Df
+    en-US: reset tanklevel
+  - id: MLC_3CN
+    en-US: model parameter
+  - id: MLC_3m6
+    en-US: operate parameter
+  - id: MLC_4fZ
+    en-US: current signals from tank
+  - id: MLC_4Ee
+    en-US: current process parameters
+  - id: MLC_vz
+    en-US: Vin[l/min]
+  - id: MLC_X2
+    en-US: Vin [m³/s]
+  - id: MLC_YX
+    en-US: 'TANK: input tank level for LSim_I [m³]'
+  - id: MLC_4pu
+    en-US: 'TANK: sqrt of tank level [m³]'
+  - id: MLC_yY
+    en-US: 'TANK: sqrt of GAIN_SQRT'
+  - id: MLC_3cA
+    en-US: 'TANK: divide AB/AT'
+  - id: MLC_4yN
+    en-US: 'TANK: output gain value'
+  - id: MLC_4XT
+    en-US: 'TANK: Vout switch'
+  - id: MLC_3UY
+    en-US: 'TANK: tank level sqrt *output gain value [m³]'
+  - id: MLC_3rB
+    en-US: 'TANK: current level of tank (m³)'
+  - id: MLC_4a6
+    en-US: 'TANK: liquid mass [kg]'
+  - id: MLC_3r7
+    en-US: 'TANK: liquid power [N]'
+  - id: MLC_392
+    en-US: 'TANK: liquid pressure [Pa]'
+  - id: MLC_4yu
+    en-US: 'TANK: instance of LSim_I'
+  - id: MLC_3sE
+    en-US: 'HEAT: input PT1_1'
+  - id: MLC_34J
+    en-US: 'HEAT: output PT1_1'
+  - id: MLC_4Sb
+    en-US: 'HEAT: output PT1_2'
+  - id: MLC_3Bb
+    en-US: 'HEAT: instance PT1 1'
+  - id: MLC_43Y
+    en-US: 'HEAT: instance PT1 2'
+  - id: MLC_3wd
+    en-US: 'HEAT: instance PT1 3'
+  - id: MLC_LX
+    en-US: 'HEAT: instance of PT3'
+  - id: MLC_Wb
+    en-US: 'HEAT: input value for PT3'
+  - id: MLC_pV
+    en-US: 'BOTTLE: instance of LSim_I'
+  - id: MLC_3sz
+    en-US: 'BOTTLE: Input bottle level for LSim_I'
+  - id: MLC_3gr
+    en-US: trigger for resetting heating
+  - id: MLC_Ld
+    en-US: is set, when heating is active (to 80°C)
+  - id: MLC_4wU
+    en-US: trigger memory for stop
+  - id: MLC_4mB
+    en-US: trigger memory for shifting bottle
+  - id: MLC_4Mg
+    en-US: trigger memory for new error
+  - id: MLC_4WY
+    en-US: helper bit for error > start workflow
+  - id: MLC_iM
+    en-US: helper to go in Start state
+  - id: MLC_4jB
+    en-US: 'HEAT: time input for LSim_PT1 -> value per runtime'
+  - id: MLC_3NQ
+    en-US: 'TANK: time input for Lsim_I'
+  - id: MLC_gV
+    en-US: 'BOTTLE: time input for Lsim_I'
+  - id: MLC_4RZ
+    en-US: enable heating controller
+  - id: MLC_4r2
+    en-US: random number for faulty bottle generation
+  - id: MLC_4wq
+    en-US: random number for error code
+  - id: MLC_3wK
+    en-US: random number for error state
+  - id: MLC_Zn
+    en-US: trigger for stop
+  - id: MLC_493
+    en-US: trigger for shifting bottle
+  - id: MLC_fA
+    en-US: trigger for new error
+  - id: MLC_3bY
+    en-US: 'TANK: 1.667E-05 (1/1000 * 1/60), recalc Vin l/min -> m³/s'
+  - id: MLC_4QD
+    en-US: 'TANK: 2*9.81'
+  - id: MLC_uw
+    en-US: 'HEAT: gain value'
+  - id: MLC_Vd
+    en-US: gravitational acceleration (a = 9,81 m/s²)
+  - id: MLC_fC
+    en-US: 'TANK: Vin switch [l/min]'
+  - id: MLC_5BZ
+    en-US: 'TANK: Vin recalculation (l/min => m³/s) [m³/s]'
+  - id: MLC_3cj
+    en-US: 'TANK: sqrt of tank level [m³]'
+  - id: MLC_4jg
+    en-US: 'TANK: calculate output gain (AB/AT *sqrt(2*9,81)) -> fix value'
+  - id: MLC_33B
+    en-US: 'TANK: multiply output gain [m³]  -  fix value for option ''install filling pump'''
+  - id: MLC_3xc
+    en-US: 'TANK: Vout switch (input for bottle)'
+  - id: MLC_Lc
+    en-US: 'TANK: Vout multiplier [m³/s]'
+  - id: MLC_4w6
+    en-US: 'TANK: input tank level (Vin - Vout) [m³/s]'
+  - id: MLC_34m
+    en-US: 'TANK: tank level [m³]'
+  - id: MLC_4Dy
+    en-US: 'TANK: max value reached'
+  - id: MLC_jF
+    en-US: 'TANK: recalculate tank level (m³ -> l)'
+  - id: MLC_4u5
+    en-US: 'TANK PRESSURE: calc mass (m = V * p)'
+  - id: MLC_3s6
+    en-US: |-
+      m = mass [kg]
+      V = volume [m³]
+      p = density [kg/m³]
+  - id: MLC_3Sv
+    en-US: 'TANK PRESSURE: calc power (F = m * a)'
+  - id: MLC_xk
+    en-US: |-
+      F = power [N]
+      m = mass [kg]
+      a = acceleration [m/s²]
+  - id: MLC_X4
+    en-US: 'TANK PRESSURE: calc pressure (p = F / A) in [hPa]'
+  - id: MLC_Vc
+    en-US: |-
+      p = pressure [Pa]
+      F = power [N]
+      A = surface [m²]
+  - id: MLC_4AZ
+    en-US: 'BOTTLE: bottle level [m³] - model (LSim_I)'
+  - id: MLC_3Sf
+    en-US: 'BOTTLE: max value reached'
+  - id: MLC_53U
+    en-US: 'BOTTLE: recalculate bottle level (m³ -> l)'
+  - id: MLC_nZ
+    en-US: 'HEAT: set init values'
+  - id: MLC_kN
+    en-US: |-
+      default value (statHeatingActive = false)
+      - temp = 20°C
+      - tmLag = 0.01
+      (set PT1 controller to initial temperature, otherwise PT1 controller would always start at 0°C)
+
+      heating phase (statHeatingActive = true)
+      - temp = 80°C
+      - tmLag = 1
+  - id: MLC_tC
+    en-US: 'HEAT: enable heating (PT1 controller)'
+  - id: MLC_4Dm
+    en-US: 'HEAT: reset trigger'
+  - id: MLC_3J3
+    en-US: 'HEAT: PT1-1'
+  - id: MLC_q9
+    en-US: 'HEAT: PT1-2'
+  - id: MLC_vf
+    en-US: 'HEAT: PT1-3'
+  - id: MLC_576
+    en-US: 'HEAT: PT3 (DISABLED)'
+  - id: MLC_3bM
+    en-US: 'HEAT: max value reached'
+  - id: MLC_3vY
+    en-US: 'ENERGY: reset production values when filling process starts'
+  - id: MLC_3Jx
+    en-US: 'ENERGY: calculate consumption values for filling process'
+  - id: MLC_577
+    en-US: generate random values for energy / water / gas consumption
+  - id: MLC_3hD
+    en-US: 'ENERGY: calculate consumption values per state'
+  - id: MLC_3MX
+    en-US: |-
+      Standart states: 
+      1 = powering up
+      2 = powering down
+      3 = off
+      4  = standby
+      5 = operational
+      6 = working
+  - id: MLC_Md
+    en-US: 'FAULTY BOTTLES: Trigger when shifting bottle'
+  - id: MLC_3db
+    en-US: 'FAULTY BOTTLES: Simulate faulty bottles (generate random number)'
+  - id: MLC_MM
+    en-US: 'ERROR: Trigger when stop'
+  - id: MLC_3eN
+    en-US: 'ERROR: Simulate error'
+  - id: MLC_sm
+    en-US: 'ERROR: Trigger when new error comes in and start timer'
+  - id: MLC_ha
+    en-US: 'ERROR: Simulate error codes'
+  - id: MLC_4zd
+    en-US: Codes btw. 8001-8011 (8001 = standart HMI error) > see alarm codes

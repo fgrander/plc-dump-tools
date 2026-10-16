@@ -1,0 +1,23 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: product id of current bottle
+  - id: MLC_2
+    en-US: number of filled bottles
+  - id: MLC_3
+    en-US: number of faulty bottles
+  - id: MLC_4
+    en-US: number of good bottles
+  - id: MLC_5
+    en-US: batch id (according to tank filling)
+  - id: MLC_6
+    en-US: type id - for generating of the serial number and QR code
+  - id: MLC_7
+    en-US: type name of product
+  - id: MLC_8
+    en-US: serial number per product
+  - id: MLC_9
+    en-US: qr code per product
+  - id: MLC_10
+    en-US: actual production speed (pcs/h)
+  - id: MLC_11
+    en-US: target production speed (pcs/h)

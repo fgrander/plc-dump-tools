@@ -1,0 +1,61 @@
+{
+  "company": false,
+  "duplicate_of": null,
+  "kind": "project",
+  "master_copies": [],
+  "name": "EdgeHowTos_V19",
+  "types": [
+    {
+      "folder": "HMI Template Suite/01 - HMI Style",
+      "kind": "hmi_type",
+      "name": "HMITemplateSuite",
+      "versions": [
+        {
+          "author": "Admin",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2018-10-25",
+          "gap_reason": "other:HMI type – metadata only",
+          "status": "released",
+          "version": "2.0.0"
+        }
+      ]
+    },
+    {
+      "folder": "HMI Template Suite/02 - Objects/ValueStepper",
+      "kind": "faceplate",
+      "name": "ValueStepperInt_Vertical2",
+      "versions": [
+        {
+          "author": "Siemens",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2018-10-25",
+          "gap_reason": "other:HMI type – metadata only",
+          "status": "released",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "folder": "LGF/06 Converter operations",
+      "kind": "plc_block",
+      "name": "LGF_DTLToString_ISO",
+      "versions": [
+        {
+          "author": "Author A",
+          "comment": {},
+          "content_part": "none",
+          "content_path": null,
+          "date": "2021-02-23",
+          "gap_reason": "other:project library – the linked units hold the content",
+          "status": "released",
+          "version": "3.0.1"
+        }
+      ]
+    }
+  ],
+  "version": null
+}

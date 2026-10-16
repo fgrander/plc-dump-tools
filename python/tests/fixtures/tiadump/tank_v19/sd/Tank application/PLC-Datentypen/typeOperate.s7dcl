@@ -1,0 +1,18 @@
+﻿TYPE
+    typeOperate : STRUCT
+        { S7_MLC := "MLC_3LN" }
+        extModeActive : Bool := false;
+        {
+            S7_MLC := "MLC_4tQ";
+            S7_Setpoint := "False"
+        }
+        state : _.typeState;
+        {
+            S7_MLC := "MLC_3PY";
+            S7_Setpoint := "True"
+        }
+        machineState : Int := 0;
+        { S7_MLC := "MLC_3sk" }
+        machineStateOEE : Int := 0;
+    END_STRUCT;
+END_TYPE

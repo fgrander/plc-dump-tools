@@ -1,0 +1,113 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "2.01"
+}
+FUNCTION_BLOCK "LSim_PT1"
+    VAR_INPUT
+        { S7_MLC := "MLC_1" }
+        calcParam : Bool;
+        { S7_MLC := "MLC_2" }
+        input : Real;
+        { S7_MLC := "MLC_3" }
+        tmLag1 : Real := 1.0;
+        { S7_MLC := "MLC_4" }
+        gain : Real := 1.0;
+        { S7_MLC := "MLC_5" }
+        cycle : Real := 0.1;
+        { S7_MLC := "MLC_6" }
+        maxOut : Real := 100.0;
+        { S7_MLC := "MLC_7" }
+        minOut : Real;
+        { S7_MLC := "MLC_8" }
+        reset : Bool;
+    END_VAR
+    VAR_OUTPUT
+        { S7_MLC := "MLC_9" }
+        error : Bool;
+        { S7_MLC := "MLC_10" }
+        status : Word;
+        { S7_MLC := "MLC_11" }
+        maxReached : Bool;
+        { S7_MLC := "MLC_12" }
+        minReached : Bool;
+        { S7_MLC := "MLC_13" }
+        output : Real;
+    END_VAR
+    VAR
+        statRf1 : Real;
+        statRe1 : Real;
+        statOverfirst : Bool;
+        statOutput : Real;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //=============================================================================
+        //SIEMENS AG
+        //(c)Copyright 2017 All Rights Reserved
+        //-----------------------------------------------------------------------------
+        //Library:       Library for Controlled System Simulation
+        //Tested with:   S7-1500 FW V2.0 / S7-1200 FW V4.2
+        //Engineering:   STEP 7 V14 Upd2 (TIA Portal)
+        //Restrictions:  Cyclic interrupt
+        //Requirements:  memory card needed for S7-1500
+        //Functionality: Simulation of a PT1-System
+        //
+        //              gain
+        //  F(p) = ---------------
+        //          tmLag1 * p + 1
+        //          
+        //  Call the simulation in a cyclic interrupt with
+        //  cyclic interrupt time at least = tmLag1/10!
+        //-----------------------------------------------------------------------------
+        //Change log table:
+        //Version  Date       Expert in charge                Changes applied
+        //02.00.00 03.02.2016 Siemens Industry Online Support Release (STEP 7 V13 SP1)
+        //02.00.01 02.03.2017 Siemens Industry Online Support Release (STEP 7 V14)
+        //=============================================================================
+        // check parameter
+        IF #tmLag1 <= 0 THEN
+          #error := TRUE;
+          #status := W#16#8001;     // Parameter Error
+          #statOutput := 0;
+          #output := 0;
+          RETURN;
+        ELSE
+          #error := FALSE;
+          #status := W#16#0000;     // no error
+        END_IF;
+        
+        IF #calcParam = True OR NOT #statOverfirst THEN
+          #statOverfirst:=1;
+        // Z-parameters For Laplace PT1-System
+        #statRe1 := - EXP(-#cycle/#tmLag1);
+        #statRf1 := #gain*(1 + #statRe1);
+        END_IF;
+        
+        // Differencial Equation of PT1-System
+        #statOutput := #input*#statRf1 - #statOutput*#statRe1;
+        
+        // max limit of acutating variable
+        IF #statOutput > #maxOut THEN
+          #statOutput := #maxOut;
+          #maxReached:= True;
+        ELSE
+          #maxReached := False;
+        END_IF;
+        
+        // min limit of acutating variable
+        IF #statOutput < #minOut THEN
+          #statOutput := #minOut;
+          #minReached := True;
+        ELSE
+          #minReached := False;
+        END_IF;
+        
+        IF #reset THEN
+          #statOutput := 0;
+        END_IF;
+        
+        #output := #statOutput;
+    END_NETWORK
+END_FUNCTION_BLOCK

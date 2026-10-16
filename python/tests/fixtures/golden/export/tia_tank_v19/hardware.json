@@ -1,0 +1,84 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "firmware": "V2.8",
+      "name": "Tank application",
+      "order_no": "6ES7 513-1AL02-0AB0",
+      "ref": "cpu:Tank application"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "19.0.0.0",
+      "order_no": "6AV2 128-3QB06-0AXx",
+      "rack": "MTP1500/0",
+      "ref": "MTP1500/0",
+      "slot": 0,
+      "type": "0"
+    },
+    {
+      "order_no": "6ES7 590-1***0-0AA0",
+      "rack": "S71500/ET200MP station_1/Rail_0",
+      "ref": "S71500/ET200MP station_1/Rail_0",
+      "slot": 0,
+      "type": "Rail_0"
+    },
+    {
+      "firmware": "V2.8",
+      "order_no": "6ES7 513-1AL02-0AB0",
+      "rack": "S71500/ET200MP station_1/Tank application",
+      "ref": "S71500/ET200MP station_1/Tank application",
+      "slot": 1,
+      "type": "Tank application"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.112.14/24",
+      "device_name": "mtp1500.profinet interface_1",
+      "interface": "Ethernet",
+      "ref": "MTP1500/X1/Ethernet",
+      "subnet": "PN/IE_1"
+    },
+    {
+      "address": "192.168.1.2/24",
+      "device_name": "mtp1500.profinet interface_gbit",
+      "interface": "Ethernet",
+      "ref": "MTP1500/X2/Ethernet"
+    },
+    {
+      "address": "192.168.112.1/24",
+      "device_name": "tank application.profinet interface_1",
+      "interface": "Ethernet",
+      "ref": "S71500/ET200MP station_1/X1/Ethernet",
+      "subnet": "PN/IE_1"
+    },
+    {
+      "address": "1",
+      "interface": "Mpi",
+      "ref": "TP900/PBMPI1/Mpi"
+    },
+    {
+      "address": "192.168.112.15/24",
+      "device_name": "tp900",
+      "interface": "Ethernet",
+      "ref": "TP900/X1/Ethernet",
+      "subnet": "PN/IE_1"
+    }
+  ],
+  "racks": [
+    {
+      "name": "0",
+      "ref": "MTP1500/0"
+    },
+    {
+      "name": "Rail_0",
+      "ref": "S71500/ET200MP station_1/Rail_0"
+    },
+    {
+      "name": "Tank application",
+      "ref": "S71500/ET200MP station_1/Tank application"
+    }
+  ]
+}

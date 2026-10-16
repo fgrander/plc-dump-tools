@@ -1,0 +1,40 @@
+{
+  "devices": [
+    {
+      "name": "PLC_1"
+    }
+  ],
+  "folders": [
+    {
+      "path": "PLC-Variablen",
+      "units": [
+        "Default tag table"
+      ]
+    },
+    {
+      "path": "Programmbausteine",
+      "units": [
+        "FOB_RTG1",
+        "Main",
+        "Main_Safety_RTG1",
+        "Main_Safety_RTG1_DB"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "FOB_RTG1",
+      "units": [
+        "FOB_RTG1"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "Main",
+      "units": [
+        "Main"
+      ]
+    }
+  ]
+}

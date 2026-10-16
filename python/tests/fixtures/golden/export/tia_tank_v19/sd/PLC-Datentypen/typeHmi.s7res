@@ -1,0 +1,15 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: trigger from hmi to start
+  - id: MLC_2
+    en-US: trigger from hmi to stop
+  - id: MLC_3
+    en-US: trigger from hmi to reset
+  - id: MLC_4
+    en-US: trigger from hmi to shift bottle
+  - id: MLC_5
+    en-US: trigger from hmi to generate error
+  - id: MLC_6
+    en-US: trigger from hmi to install filling pump
+  - id: MLC_7
+    en-US: trigger from hmi to renew heating element

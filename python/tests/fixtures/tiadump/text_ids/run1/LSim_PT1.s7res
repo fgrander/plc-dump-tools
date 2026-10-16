@@ -1,0 +1,27 @@
+﻿MultiLingualTexts:
+  - id: MLC_4M3
+    en-US: recalculate with new parameters
+  - id: MLC_4fz
+    en-US: input signal
+  - id: MLC_4RL
+    en-US: time constant T1 [sec]
+  - id: MLC_zy
+    en-US: gain factor
+  - id: MLC_zT
+    en-US: cyclic time [sec]
+  - id: MLC_3jZ
+    en-US: max. output limit
+  - id: MLC_3Ct
+    en-US: min. output limit
+  - id: MLC_Rj
+    en-US: resets all relevant parameters to ‘0’ including the output
+  - id: MLC_3et
+    en-US: 'error (#tmLag1 <= 0)'
+  - id: MLC_4aw
+    en-US: 'status (if #tmLag1 <= 0 then status = 16#8001)'
+  - id: MLC_mR
+    en-US: output has reached max. limit
+  - id: MLC_Qh
+    en-US: output has reached min. limit
+  - id: MLC_32t
+    en-US: 'output signal (if #error = FALSE)'

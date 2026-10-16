@@ -1,0 +1,356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/manifest.schema.json",
+  "title": "manifest.json (common format v1, contract §3)",
+  "type": "object",
+  "required": [
+    "format_version",
+    "source",
+    "platform",
+    "project",
+    "extractor",
+    "upgrade",
+    "exported_at",
+    "counts",
+    "coverage_summary"
+  ],
+  "properties": {
+    "format_version": {
+      "const": 1
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "path",
+        "kind",
+        "checksum"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "folder",
+            "archive",
+            "multiproject_member"
+          ]
+        },
+        "checksum": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "platform": {
+      "type": "object",
+      "required": [
+        "id",
+        "version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "controller",
+        "line_or_machine",
+        "languages"
+      ],
+      "properties": {
+        "controller": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "line_or_machine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "extractor": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "route",
+        "worker",
+        "vendor_software"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "route": {
+          "enum": [
+            "local",
+            "worker"
+          ]
+        },
+        "worker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "vendor_software": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fallback_from": {
+          "type": "object",
+          "required": [
+            "id",
+            "reason"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "upgrade": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "from",
+            "to",
+            "tool"
+          ],
+          "properties": {
+            "from": {
+              "type": "string"
+            },
+            "to": {
+              "type": "string"
+            },
+            "tool": {
+              "type": "string"
+            },
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "exported_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "units",
+        "variables",
+        "xrefs",
+        "hardware_modules",
+        "hmi_screens"
+      ],
+      "properties": {
+        "units": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "variables": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xrefs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hardware_modules": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hmi_screens": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "coverage_summary": {
+      "type": "object",
+      "required": [
+        "program_units",
+        "symbols",
+        "datatypes",
+        "hardware",
+        "safety",
+        "hmi",
+        "structure"
+      ],
+      "properties": {
+        "program_units": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "symbols": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "datatypes": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "hardware": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "safety": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "hmi": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "structure": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "connections": {
+          "enum": [
+            "delivered",
+            "partial",
+            "unavailable"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "kind": {
+      "enum": [
+        "project",
+        "library"
+      ]
+    },
+    "device": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "kind",
+              "path"
+            ],
+            "properties": {
+              "kind": {
+                "const": "common"
+              },
+              "path": {
+                "const": "."
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": [
+              "kind",
+              "path",
+              "files",
+              "checksum"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "not": {
+                  "const": "common"
+                }
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "files": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "checksum": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

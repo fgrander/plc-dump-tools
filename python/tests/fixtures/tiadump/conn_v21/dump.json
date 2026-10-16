@@ -1,0 +1,1214 @@
+{
+  "cleanup": {
+    "outside_work": []
+  },
+  "compiled_units": [
+    "PLC_1/Baustein_Graph"
+  ],
+  "counts": {
+    "PLC_1": {
+      "tag_tables": 1,
+      "tags": 0,
+      "units": 7
+    },
+    "PLC_2": {
+      "tag_tables": 1,
+      "tags": 0,
+      "units": 1
+    },
+    "_hardware": {
+      "modules": 25
+    },
+    "_project_library": {
+      "master_copies": 0,
+      "type_versions": 0,
+      "types": 0
+    }
+  },
+  "devices": [
+    {
+      "alarms": {
+        "supervisions_file": "alarms/PLC_1/supervisions.xlsx",
+        "texts_file": null
+      },
+      "configured_connections": [
+        {
+          "class": "S7Connection",
+          "local_active": true,
+          "local_address": "192.168.1.1",
+          "local_id": "100",
+          "local_interface": "X2",
+          "local_name": "S7_Verbindung_1",
+          "local_node_type": "Ethernet",
+          "local_rack": 0,
+          "local_slot": 1,
+          "local_subnet": "PN/IE_1",
+          "local_tsap": "14.01",
+          "owner_item": "PLC_1",
+          "partner_active": false,
+          "partner_address": "192.168.1.50",
+          "partner_id": null,
+          "partner_name": null,
+          "partner_rack": 0,
+          "partner_slot": 2,
+          "partner_tsap": "15.02",
+          "type": "S7Connection",
+          "type_value": 1,
+          "use_acc": false,
+          "valid": true
+        },
+        {
+          "class": "S7Connection",
+          "local_active": true,
+          "local_address": "192.168.1.1",
+          "local_id": "101",
+          "local_interface": "X2",
+          "local_name": "S7_Verbindung_2",
+          "local_node_type": "Ethernet",
+          "local_rack": 0,
+          "local_slot": 1,
+          "local_subnet": "PN/IE_1",
+          "local_tsap": "10.01",
+          "owner_item": "PLC_1",
+          "partner_active": false,
+          "partner_address": "192.168.1.70",
+          "partner_id": null,
+          "partner_name": null,
+          "partner_rack": 0,
+          "partner_slot": 1,
+          "partner_tsap": "11.01",
+          "type": "S7Connection",
+          "type_value": 1,
+          "use_acc": false,
+          "valid": true
+        },
+        {
+          "class": "S7Connection",
+          "local_active": false,
+          "local_address": "192.168.1.1",
+          "local_id": "102",
+          "local_interface": "X2",
+          "local_name": "S7_Verbindung_3",
+          "local_node_type": "Ethernet",
+          "local_rack": 0,
+          "local_slot": 1,
+          "local_subnet": "PN/IE_1",
+          "local_tsap": "SIMATIC-ACC10201",
+          "owner_item": "PLC_1",
+          "partner_active": true,
+          "partner_address": "192.168.1.5",
+          "partner_id": "110",
+          "partner_name": "PLC_2",
+          "partner_rack": 0,
+          "partner_slot": 1,
+          "partner_tsap": "SIMATIC-ACC11001",
+          "type": "S7Connection",
+          "type_value": 1,
+          "use_acc": true,
+          "valid": true
+        }
+      ],
+      "configured_connections_error": null,
+      "connected_hmis": [],
+      "family": "S7-1500",
+      "firmware": "V3.1",
+      "kind": "plc",
+      "library_links": [],
+      "name": "PLC_1",
+      "order_no": "6ES7 517-3FP00-0AB0",
+      "safety": {
+        "signatures": []
+      },
+      "tag_tables": [
+        {
+          "file": "simaticml/PLC_1/tags/PLC-Variablen/Standard-Variablentabelle.xml",
+          "folder": "PLC-Variablen",
+          "name": "Standard-Variablentabelle"
+        }
+      ],
+      "units": [
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": true,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "Main",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": true,
+          "error": "know-how protected",
+          "files": [],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "SCL",
+          "name": "FOB_RTG1",
+          "number": 123,
+          "part": "none",
+          "protected": true,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.OB'.\r\n\r\nThe block is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": true,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main_Safety_RTG1.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "F_FBD",
+          "name": "Main_Safety_RTG1",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": true,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Main_Safety_RTG1_DB.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "IDB",
+          "language": "F_DB",
+          "name": "Main_Safety_RTG1_DB",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": true
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": true,
+          "error": null,
+          "files": [
+            "sd/PLC_1/Programmbausteine/Datenbaustein_1.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "DB",
+          "language": "DB",
+          "name": "Datenbaustein_1",
+          "number": 3,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        },
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "simaticml/PLC_1/units/Programmbausteine/Baustein_Graph.xml"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "FB",
+          "language": "GRAPH",
+          "name": "Baustein_Graph",
+          "number": 2,
+          "part": "common",
+          "protected": false,
+          "safety": false,
+          "sd_error": "Error when calling method 'ExportAsDocuments' of type 'Siemens.Engineering.SW.Blocks.FB'.\r\n\r\nThe block 'Baustein_Graph' is know-how-protected and cannot be exported."
+        },
+        {
+          "attributes": {},
+          "consistent": true,
+          "error": null,
+          "files": [
+            "sd/PLC_1/PLC-Datentypen/send_rec.s7dcl"
+          ],
+          "folder": "PLC-Datentypen",
+          "kind": "UDT",
+          "language": "UDT",
+          "name": "send_rec",
+          "number": null,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        }
+      ]
+    },
+    {
+      "alarms": {
+        "supervisions_file": "alarms/PLC_2/supervisions.xlsx",
+        "texts_file": null
+      },
+      "configured_connections": [
+        {
+          "class": "S7Connection",
+          "local_active": true,
+          "local_address": "192.168.1.5",
+          "local_id": "110",
+          "local_interface": "X2",
+          "local_name": "S7_Verbindung_3",
+          "local_node_type": "Ethernet",
+          "local_rack": 0,
+          "local_slot": 1,
+          "local_subnet": "PN/IE_1",
+          "local_tsap": "SIMATIC-ACC11001",
+          "owner_item": "PLC_2",
+          "partner_active": false,
+          "partner_address": "192.168.1.1",
+          "partner_id": "102",
+          "partner_name": "PLC_1",
+          "partner_rack": 0,
+          "partner_slot": 1,
+          "partner_tsap": "SIMATIC-ACC10201",
+          "type": "S7Connection",
+          "type_value": 1,
+          "use_acc": true,
+          "valid": true
+        }
+      ],
+      "configured_connections_error": null,
+      "connected_hmis": [],
+      "family": "S7-1500",
+      "firmware": "V2.9",
+      "kind": "plc",
+      "library_links": [],
+      "name": "PLC_2",
+      "order_no": "6ES7 515-2AM02-0AB0",
+      "safety": {
+        "signatures": []
+      },
+      "tag_tables": [
+        {
+          "file": "simaticml/PLC_2/tags/PLC-Variablen/Standard-Variablentabelle.xml",
+          "folder": "PLC-Variablen",
+          "name": "Standard-Variablentabelle"
+        }
+      ],
+      "units": [
+        {
+          "attributes": {
+            "author": "",
+            "family": "",
+            "version": "0.1"
+          },
+          "consistent": false,
+          "error": null,
+          "files": [
+            "sd/PLC_2/Programmbausteine/Main.s7dcl"
+          ],
+          "folder": "Programmbausteine",
+          "kind": "OB",
+          "language": "LAD",
+          "name": "Main",
+          "number": 1,
+          "part": "sd",
+          "protected": false,
+          "safety": false
+        }
+      ]
+    }
+  ],
+  "dump_version": 1,
+  "errors": [
+    {
+      "kind": "protected",
+      "message": "know-how protected - logic not exported",
+      "where": "PLC_1/FOB_RTG1"
+    }
+  ],
+  "hardware": {
+    "devices": [
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Profilschiene_0",
+            "order_no": "6ES7 590-1***0-0AA0",
+            "path": "Profilschiene_0",
+            "rack": "Profilschiene_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V3.1",
+            "interfaces": [],
+            "name": "PLC_1",
+            "order_no": "6ES7 517-3FP00-0AB0",
+            "path": "PLC_1",
+            "rack": "PLC_1",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "2",
+                "device_name": null,
+                "node": "X3",
+                "subnet": "PROFIBUS_1",
+                "type": "Profibus"
+              }
+            ],
+            "name": "DP-Schnittstelle_1",
+            "order_no": null,
+            "path": "PLC_1/DP-Schnittstelle_1",
+            "rack": "PLC_1",
+            "slot": 33280
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.1/24",
+                "device_name": "plc_1.profinet-schnittstelle_1",
+                "node": "X1",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle_1",
+            "order_no": null,
+            "path": "PLC_1/PROFINET-Schnittstelle_1",
+            "rack": "PLC_1",
+            "slot": 32768
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.1/24",
+                "device_name": "plc_1.profinet-schnittstelle_2",
+                "node": "X2",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle_2",
+            "order_no": null,
+            "path": "PLC_1/PROFINET-Schnittstelle_2",
+            "rack": "PLC_1",
+            "slot": 33024
+          }
+        ],
+        "name": "S7-1500/ET200MP-Station_1"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Profilschiene_0",
+            "order_no": "6ES7 590-1***0-0AA0",
+            "path": "Profilschiene_0",
+            "rack": "Profilschiene_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V2.9",
+            "interfaces": [],
+            "name": "PLC_2",
+            "order_no": "6ES7 515-2AM02-0AB0",
+            "path": "PLC_2",
+            "rack": "PLC_2",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.1/24",
+                "device_name": "plc_2.profinet-schnittstelle_1",
+                "node": "X1",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle_1",
+            "order_no": null,
+            "path": "PLC_2/PROFINET-Schnittstelle_1",
+            "rack": "PLC_2",
+            "slot": 32768
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.5/24",
+                "device_name": "plc_2.profinet-schnittstelle_2",
+                "node": "X2",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle_2",
+            "order_no": null,
+            "path": "PLC_2/PROFINET-Schnittstelle_2",
+            "rack": "PLC_2",
+            "slot": 33024
+          }
+        ],
+        "name": "S7-1500/ET200MP-Station_2"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": "V4.6",
+            "interfaces": [],
+            "name": "Switch_1",
+            "order_no": "6GK5 205-3BB00-2TB2",
+            "path": "Switch_1",
+            "rack": "Switch_1",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.4/24",
+                "device_name": "switch_1",
+                "node": "IE1",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "PROFINET IO-System",
+              "number": 100
+            },
+            "name": "SCALANCE-Schnittstelle_1",
+            "order_no": null,
+            "path": "Switch_1/SCALANCE-Schnittstelle_1",
+            "rack": "Switch_1",
+            "slot": 1
+          }
+        ],
+        "name": "SCALANCE XB-200"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "Profilschiene_0",
+            "order_no": "6ES7 390-1***0-0AA0",
+            "path": "Profilschiene_0",
+            "rack": "Profilschiene_0",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": "V4.0",
+            "interfaces": [],
+            "name": "IO-Device_3",
+            "order_no": "6ES7 153-4BA00-0XB0",
+            "path": "IO-Device_3",
+            "rack": "IO-Device_3",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.3/24",
+                "device_name": "io-device_3",
+                "node": "IE1",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "PROFINET IO-System",
+              "number": 100
+            },
+            "name": "PROFINET-Schnittstelle",
+            "order_no": null,
+            "path": "IO-Device_3/PROFINET-Schnittstelle",
+            "rack": "IO-Device_3",
+            "slot": 1
+          },
+          {
+            "addresses": [
+              {
+                "io": "input",
+                "length": 16,
+                "start": 0
+              },
+              {
+                "io": "output",
+                "length": 16,
+                "start": 0
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "DI 8/DX 8x24VDC_1",
+            "order_no": "6ES7 327-1BH00-0AB0",
+            "path": "DI 8/DX 8x24VDC_1",
+            "rack": "DI 8/DX 8x24VDC_1",
+            "slot": 1
+          },
+          {
+            "addresses": [
+              {
+                "io": "input",
+                "length": 16,
+                "start": 2
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "DI 16x24VDC_1",
+            "order_no": "6ES7 321-1BH10-0AA0",
+            "path": "DI 16x24VDC_1",
+            "rack": "DI 16x24VDC_1",
+            "slot": 2
+          },
+          {
+            "addresses": [
+              {
+                "io": "output",
+                "length": 16,
+                "start": 2
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "DO 16x24VDC/0.5A_1",
+            "order_no": "6ES7 322-1BH10-0AA0",
+            "path": "DO 16x24VDC/0.5A_1",
+            "rack": "DO 16x24VDC/0.5A_1",
+            "slot": 3
+          }
+        ],
+        "name": "S7-300/ET200M-Station_1"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": "V3.0",
+            "interfaces": [],
+            "name": "PNPN Coupler.X1",
+            "order_no": "6ES7 158-3AD01-0XA0",
+            "path": "PNPN Coupler.X1",
+            "rack": "PNPN Coupler.X1",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.6/24",
+                "device_name": "pnpn coupler.x1",
+                "node": "IE1",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "PROFINET IO-System",
+              "number": 100
+            },
+            "name": "PROFINET-Schnittstelle X1",
+            "order_no": null,
+            "path": "PNPN Coupler.X1/PROFINET-Schnittstelle X1",
+            "rack": "PNPN Coupler.X1",
+            "slot": 1,
+            "transfer_areas": [
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 80,
+                    "controller": "PLC_1",
+                    "io": "input",
+                    "start": 500
+                  }
+                ],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_IN1",
+                "partner_to_local_bytes": 10,
+                "position": 1,
+                "type": "IN"
+              },
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 80,
+                    "controller": "PLC_1",
+                    "io": "input",
+                    "start": 26
+                  }
+                ],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_2",
+                "partner_to_local_bytes": 10,
+                "position": 2,
+                "type": "IN"
+              },
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 8,
+                    "controller": "PLC_1",
+                    "io": "output",
+                    "start": 8
+                  }
+                ],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_3",
+                "partner_to_local_bytes": 0,
+                "position": 3,
+                "type": "OUT"
+              },
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 8,
+                    "controller": "PLC_1",
+                    "io": "output",
+                    "start": 9
+                  }
+                ],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_4",
+                "partner_to_local_bytes": 0,
+                "position": 4,
+                "type": "OUT"
+              },
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 8,
+                    "controller": "PLC_1",
+                    "io": "input",
+                    "start": 5
+                  }
+                ],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_5",
+                "partner_to_local_bytes": 1,
+                "position": 5,
+                "type": "IN"
+              },
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 8,
+                    "controller": "PLC_1",
+                    "io": "input",
+                    "start": 38
+                  },
+                  {
+                    "bits": 8,
+                    "controller": "PLC_1",
+                    "io": "output",
+                    "start": 10
+                  }
+                ],
+                "direction": "Bidirectional",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_6",
+                "partner_to_local_bytes": 1,
+                "position": 6,
+                "type": "IN_OUT"
+              }
+            ]
+          },
+          {
+            "addresses": [],
+            "firmware": "V3.0",
+            "interfaces": [],
+            "name": "PNPN Coupler.X2",
+            "order_no": "6ES7 158-3AD01-0XA0",
+            "path": "PNPN Coupler.X2",
+            "rack": "PNPN Coupler.X2",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.1/24",
+                "device_name": "pnpn coupler.x2",
+                "node": "IE1",
+                "subnet": "PN/IE_2",
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle X2",
+            "order_no": null,
+            "path": "PNPN Coupler.X2/PROFINET-Schnittstelle X2",
+            "rack": "PNPN Coupler.X2",
+            "slot": 1,
+            "transfer_areas": [
+              {
+                "controller_addresses": [],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 10,
+                "name": "Transferbereich_IN1",
+                "partner_to_local_bytes": 0,
+                "position": 1,
+                "type": "OUT"
+              },
+              {
+                "controller_addresses": [],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 10,
+                "name": "Transferbereich_2",
+                "partner_to_local_bytes": 0,
+                "position": 2,
+                "type": "OUT"
+              },
+              {
+                "controller_addresses": [],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_3",
+                "partner_to_local_bytes": 1,
+                "position": 3,
+                "type": "IN"
+              },
+              {
+                "controller_addresses": [],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_4",
+                "partner_to_local_bytes": 1,
+                "position": 4,
+                "type": "IN"
+              },
+              {
+                "controller_addresses": [],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_5",
+                "partner_to_local_bytes": 0,
+                "position": 5,
+                "type": "OUT"
+              },
+              {
+                "controller_addresses": [],
+                "direction": "Bidirectional",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_6",
+                "partner_to_local_bytes": 1,
+                "position": 6,
+                "type": "IN_OUT"
+              }
+            ]
+          },
+          {
+            "addresses": [],
+            "firmware": "V0.0",
+            "interfaces": [],
+            "name": "BA 2xRJ45",
+            "order_no": "6ES7 193-6AR00-0AA0",
+            "path": "BA 2xRJ45",
+            "rack": "BA 2xRJ45",
+            "slot": 127
+          },
+          {
+            "addresses": [],
+            "firmware": "V0.0",
+            "interfaces": [],
+            "name": "BA 2xRJ45",
+            "order_no": "6ES7 193-6AR00-0AA0",
+            "path": "BA 2xRJ45",
+            "rack": "BA 2xRJ45",
+            "slot": 127
+          }
+        ],
+        "name": "PNPN Coupler"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": "B0",
+            "interfaces": [
+              {
+                "address": "3",
+                "device_name": null,
+                "node": "PB1",
+                "subnet": "PROFIBUS_1",
+                "type": "Profibus"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "DP-Mastersystem",
+              "number": 1
+            },
+            "name": "Slave_1",
+            "order_no": "6ES7 158-0AD01-0XA0",
+            "path": "Slave_1",
+            "rack": "Slave_1",
+            "slot": 0
+          },
+          {
+            "addresses": [
+              {
+                "io": "input",
+                "length": 128,
+                "start": 10
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "16 Bytes Eingang_1",
+            "order_no": null,
+            "path": "16 Bytes Eingang_1",
+            "rack": "16 Bytes Eingang_1",
+            "slot": 1
+          },
+          {
+            "addresses": [
+              {
+                "io": "output",
+                "length": 32,
+                "start": 4
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "4 Bytes Ausgang_1",
+            "order_no": null,
+            "path": "4 Bytes Ausgang_1",
+            "rack": "4 Bytes Ausgang_1",
+            "slot": 2
+          }
+        ],
+        "name": "GSD-Geraet_1"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": "V5.0",
+            "interfaces": [],
+            "name": "IO-Device_1",
+            "order_no": "6ES7 151-3AA22-0AB0",
+            "path": "IO-Device_1",
+            "rack": "IO-Device_1",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.7/24",
+                "device_name": "io-device_1",
+                "node": "IE1",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "PROFINET IO-System",
+              "number": 100
+            },
+            "name": "PROFINET-Schnittstelle",
+            "order_no": null,
+            "path": "IO-Device_1/PROFINET-Schnittstelle",
+            "rack": "IO-Device_1",
+            "slot": 1
+          },
+          {
+            "addresses": [
+              {
+                "io": "input",
+                "length": 2,
+                "start": 4
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "2DI x DC24V HF_1",
+            "order_no": "6ES7 131-4BB01-0AB0",
+            "path": "2DI x DC24V HF_1",
+            "rack": "2DI x DC24V HF_1",
+            "slot": 2
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [],
+            "name": "PM-E DC24V_1",
+            "order_no": "6ES7 138-4CA01-0AA0",
+            "path": "PM-E DC24V_1",
+            "rack": "PM-E DC24V_1",
+            "slot": 1
+          },
+          {
+            "addresses": [
+              {
+                "io": "input",
+                "length": 32,
+                "start": 6
+              }
+            ],
+            "firmware": null,
+            "interfaces": [],
+            "name": "2AI x U HS_1",
+            "order_no": "6ES7 134-4FB52-0AB0",
+            "path": "2AI x U HS_1",
+            "rack": "2AI x U HS_1",
+            "slot": 3
+          }
+        ],
+        "name": "ET 200S-Station_1"
+      },
+      {
+        "items": [
+          {
+            "addresses": [],
+            "firmware": "V6.0",
+            "interfaces": [],
+            "name": "PNPN Coupler_1.X1",
+            "order_no": "6ES7 158-3AD10-0XA0",
+            "path": "PNPN Coupler_1.X1",
+            "rack": "PNPN Coupler_1.X1",
+            "slot": 0
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.1.8/24",
+                "device_name": "pnpn coupler_1.x1",
+                "node": "IE1",
+                "subnet": "PN/IE_1",
+                "type": "Ethernet"
+              }
+            ],
+            "io_system": {
+              "controller": "S7-1500/ET200MP-Station_1/PLC_1",
+              "name": "PROFINET IO-System",
+              "number": 100
+            },
+            "name": "PROFINET-Schnittstelle X1",
+            "order_no": null,
+            "path": "PNPN Coupler_1.X1/PROFINET-Schnittstelle X1",
+            "rack": "PNPN Coupler_1.X1",
+            "slot": 1,
+            "transfer_areas": [
+              {
+                "controller_addresses": [
+                  {
+                    "bits": 16,
+                    "controller": "PLC_1",
+                    "io": "input",
+                    "start": 36
+                  }
+                ],
+                "direction": "LocalToPartner",
+                "local_to_partner_bytes": 0,
+                "name": "Transferbereich_1",
+                "partner_to_local_bytes": 1,
+                "position": 1,
+                "type": "IN"
+              }
+            ]
+          },
+          {
+            "addresses": [],
+            "firmware": "V6.0",
+            "interfaces": [],
+            "name": "PNPN Coupler_1.X2",
+            "order_no": "6ES7 158-3AD10-0XA0",
+            "path": "PNPN Coupler_1.X2",
+            "rack": "PNPN Coupler_1.X2",
+            "slot": 1
+          },
+          {
+            "addresses": [],
+            "firmware": null,
+            "interfaces": [
+              {
+                "address": "192.168.0.1/24",
+                "device_name": "pnpn coupler_1.x2",
+                "node": "IE1",
+                "subnet": null,
+                "type": "Ethernet"
+              }
+            ],
+            "name": "PROFINET-Schnittstelle X2",
+            "order_no": null,
+            "path": "PNPN Coupler_1.X2/PROFINET-Schnittstelle X2",
+            "rack": "PNPN Coupler_1.X2",
+            "slot": 1,
+            "transfer_areas": [
+              {
+                "controller_addresses": [],
+                "direction": "PartnerToLocal",
+                "local_to_partner_bytes": 1,
+                "name": "Transferbereich_1",
+                "partner_to_local_bytes": 0,
+                "position": 1,
+                "type": "OUT"
+              }
+            ]
+          },
+          {
+            "addresses": [],
+            "firmware": "V0.0",
+            "interfaces": [],
+            "name": "BA 2xRJ45",
+            "order_no": "6ES7 193-6AR00-0AA0",
+            "path": "BA 2xRJ45",
+            "rack": "BA 2xRJ45",
+            "slot": 127
+          },
+          {
+            "addresses": [],
+            "firmware": "V0.0",
+            "interfaces": [],
+            "name": "BA 2xRJ45",
+            "order_no": "6ES7 193-6AR00-0AA0",
+            "path": "BA 2xRJ45",
+            "rack": "BA 2xRJ45",
+            "slot": 127
+          }
+        ],
+        "name": "PNPN Coupler_1"
+      }
+    ],
+    "subnets": [
+      {
+        "io_systems": [
+          "PROFINET IO-System"
+        ],
+        "kind": "Ethernet",
+        "name": "PN/IE_1",
+        "nodes": [
+          "S7-1500/ET200MP-Station_1/X2",
+          "S7-300/ET200M-Station_1/IE1",
+          "SCALANCE XB-200/IE1",
+          "S7-1500/ET200MP-Station_2/X2",
+          "PNPN Coupler/IE1",
+          "ET 200S-Station_1/IE1",
+          "PNPN Coupler_1/IE1"
+        ]
+      },
+      {
+        "io_systems": [
+          "DP-Mastersystem"
+        ],
+        "kind": "Profibus",
+        "name": "PROFIBUS_1",
+        "nodes": [
+          "S7-1500/ET200MP-Station_1/X3",
+          "GSD-Geraet_1/PB1"
+        ]
+      },
+      {
+        "io_systems": [],
+        "kind": "Ethernet",
+        "name": "PN/IE_2",
+        "nodes": [
+          "PNPN Coupler/IE1"
+        ]
+      }
+    ]
+  },
+  "languages": {
+    "editing": "de-DE",
+    "project": [
+      "de-DE"
+    ],
+    "reference": "de-DE"
+  },
+  "library": null,
+  "missing_packages": [
+    {
+      "name": "STEP 7 Safety V21",
+      "objects": []
+    },
+    {
+      "name": "WinCC Basic/Comfort/Advanced V11 Update 2",
+      "objects": []
+    }
+  ],
+  "multiuser": {
+    "kind": "none"
+  },
+  "project_library": {
+    "kind": "project",
+    "master_copies": [],
+    "name": "myTiaProject1",
+    "types": [],
+    "version": null
+  },
+  "source": {
+    "file": "myTiaProject1.ap21",
+    "kind": "project",
+    "saved_update": null,
+    "saved_version": "V21"
+  },
+  "tia": {
+    "upgrade": null,
+    "version": "V21"
+  },
+  "tool": {
+    "name": "tiadump",
+    "openness": "V21",
+    "version": "1.0.0"
+  }
+}

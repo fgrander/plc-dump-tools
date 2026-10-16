@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_3F4
+    en-US: LLCCA_TimeLag
+  - id: MLC_4d7
+    en-US: |-
+      LCC Automation AB / (c)Copyright 2024
+      Released under the MIT License
+  - id: MLC_w7
+    en-US: input value
+  - id: MLC_3Qv
+    en-US: time lag memory = in
+  - id: MLC_4jb
+    en-US: time lag memory = 0.0
+  - id: MLC_53r
+    en-US: output value
+  - id: MLC_4xy
+    en-US: time lag [s]

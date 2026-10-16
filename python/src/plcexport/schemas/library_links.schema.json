@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/library_links.schema.json",
+  "title": "library_links.json (docs/common-format-tia.md §4)",
+  "type": "object",
+  "required": [
+    "compared_with",
+    "links"
+  ],
+  "properties": {
+    "compared_with": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "library",
+          "path",
+          "commit"
+        ],
+        "properties": {
+          "library": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "commit": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "object",
+          "object_kind",
+          "type_name",
+          "type_folder",
+          "version",
+          "status",
+          "original_library",
+          "origin",
+          "library",
+          "comparison",
+          "newest_released"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "object_kind": {
+            "enum": [
+              "unit",
+              "hmi_object"
+            ]
+          },
+          "type_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type_folder": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "released",
+              "in_work"
+            ]
+          },
+          "original_library": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "origin": {
+            "enum": [
+              "company_library",
+              "other_library",
+              "project_only",
+              "unknown_library"
+            ]
+          },
+          "library": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "comparison": {
+            "enum": [
+              "current",
+              "outdated",
+              "version_not_in_library",
+              "not_compared"
+            ]
+          },
+          "newest_released": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

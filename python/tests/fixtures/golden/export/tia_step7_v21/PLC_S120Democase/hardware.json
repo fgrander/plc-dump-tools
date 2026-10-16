@@ -1,0 +1,53 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "firmware": "V2.9",
+      "name": "PLC_S120Democase",
+      "order_no": "6ES7 515-2UM01-0AB0",
+      "ref": "cpu:PLC_S120Democase"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V2.9",
+      "order_no": "6ES7 515-2UM01-0AB0",
+      "rack": "PLC_S120Democase/PLC_S120Democase",
+      "ref": "PLC_S120Democase/PLC_S120Democase",
+      "slot": 1,
+      "type": "PLC_S120Democase"
+    },
+    {
+      "order_no": "6ES7 590-1***0-0AA0",
+      "rack": "PLC_S120Democase/Rail_0",
+      "ref": "PLC_S120Democase/Rail_0",
+      "slot": 0,
+      "type": "Rail_0"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.0.1/24",
+      "device_name": "plc_s120democase.profinet interface_1",
+      "interface": "Ethernet",
+      "ref": "PLC_S120Democase/X1/Ethernet",
+      "subnet": "S120Democase_PN_2"
+    },
+    {
+      "address": "192.168.1.1/24",
+      "device_name": "plc_s120democase.profinet interface_2",
+      "interface": "Ethernet",
+      "ref": "PLC_S120Democase/X2/Ethernet"
+    }
+  ],
+  "racks": [
+    {
+      "name": "PLC_S120Democase",
+      "ref": "PLC_S120Democase/PLC_S120Democase"
+    },
+    {
+      "name": "Rail_0",
+      "ref": "PLC_S120Democase/Rail_0"
+    }
+  ]
+}

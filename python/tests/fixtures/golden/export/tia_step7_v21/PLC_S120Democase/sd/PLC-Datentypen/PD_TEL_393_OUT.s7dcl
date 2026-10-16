@@ -1,0 +1,77 @@
+﻿TYPE
+    PD_TEL_393_OUT : STRUCT
+        CU_STW : STRUCT
+            Bit_08 : Bool;
+            Bit_09 : Bool;
+            Bit_10 : Bool;
+            Bit_11 : Bool;
+            Bit_12 : Bool;
+            Bit_13 : Bool;
+            Bit_14 : Bool;
+            Bit_15 : Bool;
+            Bit_00 : Bool;
+            Bit_01 : Bool;
+            Bit_02 : Bool;
+            Bit_03 : Bool;
+            Bit_04 : Bool;
+            Bit_05 : Bool;
+            Bit_06 : Bool;
+            Acknowledge : Bool;
+        END_STRUCT;
+        A_DIGITAL : STRUCT
+            DIO_08 : Bool;
+            DIO_09 : Bool;
+            DIO_10 : Bool;
+            DIO_11 : Bool;
+            DIO_12 : Bool;
+            DIO_13 : Bool;
+            DIO_14 : Bool;
+            DIO_15 : Bool;
+            Bit_00 : Bool;
+            Bit_01 : Bool;
+            Bit_02 : Bool;
+            Bit_03 : Bool;
+            Bit_04 : Bool;
+            Bit_05 : Bool;
+            Bit_06 : Bool;
+            Bit_07 : Bool;
+        END_STRUCT;
+        A_DIGITAL_1 : STRUCT
+            Bit_08 : Bool;
+            Bit_09 : Bool;
+            Bit_10 : Bool;
+            Bit_11 : Bool;
+            Bit_12 : Bool;
+            Bit_13 : Bool;
+            Bit_14 : Bool;
+            Bit_15 : Bool;
+            DIO_16 : Bool;
+            Bit_01 : Bool;
+            Bit_02 : Bool;
+            Bit_03 : Bool;
+            Bit_04 : Bool;
+            Bit_05 : Bool;
+            Bit_06 : Bool;
+            Bit_07 : Bool;
+        END_STRUCT;
+        MT_STW : STRUCT
+            Bit_08 : Bool;
+            Bit_09 : Bool;
+            Bit_10 : Bool;
+            Bit_11 : Bool;
+            Bit_12 : Bool;
+            Bit_13 : Bool;
+            Bit_14 : Bool;
+            Bit_15 : Bool;
+            Bit_16 : Bool;
+            Bit_00 : Bool;
+            Bit_01 : Bool;
+            Bit_02 : Bool;
+            Bit_03 : Bool;
+            Bit_04 : Bool;
+            Bit_05 : Bool;
+            Bit_06 : Bool;
+            Bit_07 : Bool;
+        END_STRUCT;
+    END_STRUCT;
+END_TYPE

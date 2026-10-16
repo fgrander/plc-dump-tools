@@ -1,0 +1,11 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "SclBlock"
+    { S7_Language := "SCL" }
+    NETWORK
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

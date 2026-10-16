@@ -1,0 +1,46 @@
+{
+  "inputs": [
+    {
+      "address": "I 0.0",
+      "comment": {
+        "de": "Start Taster"
+      },
+      "data_type": "BOOL",
+      "symbol": "\"I_Start\""
+    },
+    {
+      "address": "I 0.1",
+      "comment": {
+        "de": "Stopp Taster (Öffner)"
+      },
+      "data_type": "BOOL",
+      "symbol": "\"I_Stop\""
+    },
+    {
+      "address": "PIW 256",
+      "comment": {
+        "de": "Plattentemperatur"
+      },
+      "data_type": "INT",
+      "symbol": "\"I_TempPlate\""
+    }
+  ],
+  "outputs": [
+    {
+      "address": "Q 4.0",
+      "comment": {
+        "de": "Hydraulikpumpe"
+      },
+      "data_type": "BOOL",
+      "symbol": "\"Q_Pump\""
+    },
+    {
+      "address": "Q 4.1",
+      "comment": {
+        "de": "Heizung ein"
+      },
+      "data_type": "BOOL",
+      "symbol": "\"Q_Heater_On\""
+    }
+  ]
+}

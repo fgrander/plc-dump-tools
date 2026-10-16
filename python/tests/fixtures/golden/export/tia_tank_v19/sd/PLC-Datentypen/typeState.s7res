@@ -1,0 +1,15 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: filling tank
+  - id: MLC_2
+    en-US: heating tank
+  - id: MLC_3
+    en-US: filling bottle
+  - id: MLC_4
+    en-US: shifting bottle
+  - id: MLC_5
+    en-US: stop filling application
+  - id: MLC_6
+    en-US: reset application
+  - id: MLC_7
+    en-US: error within filling application

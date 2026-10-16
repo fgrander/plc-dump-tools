@@ -1,0 +1,39 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: LLCCA_PvSim
+  - id: MLC_2
+    en-US: |-
+      LCC Automation AB / (c)Copyright 2024
+      Released under the MIT License
+  - id: MLC_3
+    en-US: enable simulation
+  - id: MLC_4
+    en-US: input (Output from PID) [%]
+  - id: MLC_5
+    en-US: reset
+  - id: MLC_6
+    en-US: simulated process value [unit]
+  - id: MLC_7
+    en-US: additive component [unit/min]
+  - id: MLC_8
+    en-US: subtracting component [unit/min]
+  - id: MLC_9
+    en-US: 'additive component  factor ( addComp :=  input * addFactor ; 100% * 0.01 = 1 unit/min )'
+  - id: MLC_10
+    en-US: additive component time lag [s]
+  - id: MLC_11
+    en-US: additive component filter [s]
+  - id: MLC_12
+    en-US: '0:start val proportial 1:constant'
+  - id: MLC_13
+    en-US: 'subtracting component factor ( subComp := ( out - subStartVal ) * subFactor ; sub (120 unit - 20 unit *0.01 =  1 unit/min)'
+  - id: MLC_14
+    en-US: subtracting component time lag [s]
+  - id: MLC_15
+    en-US: subtracting component filter [s]
+  - id: MLC_16
+    en-US: substracting constant
+  - id: MLC_17
+    en-US: subtracting component start value [unit]
+  - id: MLC_18
+    en-US: random noice factor of simulated process value

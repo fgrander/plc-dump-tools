@@ -1,0 +1,61 @@
+{
+  "inputs": [
+    {
+      "address": "%I260.0",
+      "data_type": "\"PD_TEL105_IN\"",
+      "symbol": "\"SynchronousAxis_red_Actor_Interface_AddressIn\""
+    },
+    {
+      "address": "%I280.0",
+      "data_type": "\"PD_TEL105_IN\"",
+      "symbol": "\"PositioningAxis_blue_Actor_Interface_AddressIn\""
+    },
+    {
+      "address": "%I300.0",
+      "data_type": "\"PD_TEL_393_IN\"",
+      "symbol": "\"ControlUnit_AddressIn\""
+    },
+    {
+      "address": "%IW2",
+      "data_type": "Int",
+      "symbol": "\"ET200_AI_0\""
+    },
+    {
+      "address": "%IW342",
+      "data_type": "Word",
+      "symbol": "\"TB30_AI_0\""
+    },
+    {
+      "address": "%IW344",
+      "data_type": "Word",
+      "symbol": "\"TB30_AI_1\""
+    },
+    {
+      "address": "%IW4",
+      "data_type": "Int",
+      "symbol": "\"ET200_AI_1\""
+    }
+  ],
+  "outputs": [
+    {
+      "address": "%Q260.0",
+      "data_type": "\"PD_TEL105_OUT\"",
+      "symbol": "\"SynchronousAxis_red_Actor_Interface_AddressOut\""
+    },
+    {
+      "address": "%Q280.0",
+      "data_type": "\"PD_TEL105_OUT\"",
+      "symbol": "\"PositioningAxis_blue_Actor_Interface_AddressOut\""
+    },
+    {
+      "address": "%Q300.0",
+      "data_type": "\"PD_TEL_393_OUT\"",
+      "symbol": "\"ControlUnit_AddressOut\""
+    },
+    {
+      "address": "%Q303.5",
+      "data_type": "Bool",
+      "symbol": "\"OutputCam_1_Interface_Address\""
+    }
+  ]
+}

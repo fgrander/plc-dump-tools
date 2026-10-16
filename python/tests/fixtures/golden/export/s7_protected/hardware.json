@@ -1,0 +1,44 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "name": "CPU 315-2 PN/DP",
+      "order_no": "6ES7 315-2EH14-0AB0",
+      "ref": "cpu:CPU 315-2 PN/DP",
+      "type": "Simatic300"
+    }
+  ],
+  "modules": [
+    {
+      "order_no": "6ES7 315-2EH14-0AB0",
+      "rack": "SIMATIC 300(1)/R0",
+      "ref": "SIMATIC 300(1)/0.2",
+      "slot": 2,
+      "type": "CPU 315-2 PN/DP"
+    },
+    {
+      "rack": "SIMATIC 300(1)/R0",
+      "ref": "SIMATIC 300(1)/0.4",
+      "slot": 4,
+      "type": "CP 343-1"
+    }
+  ],
+  "networks": [
+    {
+      "address": "192.168.0.10",
+      "interface": "ethernet",
+      "ref": "CPU 315-2 PN/DP/ethernet"
+    },
+    {
+      "address": "2",
+      "interface": "mpi",
+      "ref": "CPU 315-2 PN/DP/mpi"
+    }
+  ],
+  "racks": [
+    {
+      "name": "SIMATIC 300(1) rack 0",
+      "ref": "SIMATIC 300(1)/R0"
+    }
+  ]
+}

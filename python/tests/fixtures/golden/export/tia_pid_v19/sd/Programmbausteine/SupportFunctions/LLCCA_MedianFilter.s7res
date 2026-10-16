@@ -1,0 +1,13 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: LLCCA_MedianFilter
+  - id: MLC_2
+    en-US: |-
+      LCC Automation AB / (c)Copyright 2024
+      Released under the MIT License
+  - id: MLC_3
+    en-US: input value
+  - id: MLC_4
+    en-US: reset
+  - id: MLC_5
+    en-US: output value

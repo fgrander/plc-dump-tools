@@ -1,0 +1,307 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/coverage.schema.json",
+  "title": "coverage.json (contract §4)",
+  "type": "object",
+  "required": [
+    "categories",
+    "gaps"
+  ],
+  "properties": {
+    "categories": {
+      "type": "object",
+      "required": [
+        "program_units",
+        "symbols",
+        "datatypes",
+        "hardware",
+        "safety",
+        "hmi",
+        "structure"
+      ],
+      "properties": {
+        "program_units": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "symbols": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "datatypes": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "hardware": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "safety": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "hmi": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "structure": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "connections": {
+          "type": "object",
+          "required": [
+            "state",
+            "reason"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "delivered",
+                "partial",
+                "unavailable"
+              ]
+            },
+            "reason": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "item",
+          "reason"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "program_units",
+              "symbols",
+              "datatypes",
+              "hardware",
+              "safety",
+              "hmi",
+              "structure",
+              "connections"
+            ]
+          },
+          "item": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "pattern": "^(protected|corrupt|unsupported|not_exported_cfc_sfc|not_in_project|other:.+)$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

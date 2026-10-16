@@ -1,0 +1,227 @@
+{
+  "connections": [
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.1.1",
+        "id": "0x0100",
+        "interface": "S7-1500/ET200MP-Station_1/X2/Ethernet",
+        "module": "S7-1500/ET200MP-Station_1/PLC_1",
+        "tsap": "14.01"
+      },
+      "name": "S7_Verbindung_1",
+      "partner": {
+        "address": "192.168.1.50",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "15.02"
+      },
+      "ref": "S7-1500/ET200MP-Station_1/PLC_1/0x0100"
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.1.1",
+        "id": "0x0101",
+        "interface": "S7-1500/ET200MP-Station_1/X2/Ethernet",
+        "module": "S7-1500/ET200MP-Station_1/PLC_1",
+        "tsap": "10.01"
+      },
+      "name": "S7_Verbindung_2",
+      "partner": {
+        "address": "192.168.1.70",
+        "rack": 0,
+        "slot": 1,
+        "specified": false,
+        "tsap": "11.01"
+      },
+      "ref": "S7-1500/ET200MP-Station_1/PLC_1/0x0101"
+    },
+    {
+      "active": false,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "192.168.1.1",
+        "id": "0x0102",
+        "interface": "S7-1500/ET200MP-Station_1/X2/Ethernet",
+        "module": "S7-1500/ET200MP-Station_1/PLC_1",
+        "tsap": "SIMATIC-ACC10201"
+      },
+      "name": "S7_Verbindung_3",
+      "partner": {
+        "address": "192.168.1.5",
+        "name": "PLC_2",
+        "rack": 0,
+        "slot": 1,
+        "specified": false,
+        "tsap": "SIMATIC-ACC11001"
+      },
+      "ref": "S7-1500/ET200MP-Station_1/PLC_1/0x0102"
+    }
+  ],
+  "couplers": [
+    {
+      "kind": "dp_dp",
+      "order_no": "6ES7 158-0AD01-0XA0",
+      "ref": "GSD-Geraet_1/Slave_1",
+      "transfer_areas": [
+        {
+          "direction": "in",
+          "length_bytes": 16,
+          "module": "GSD-Geraet_1/16 Bytes Eingang_1",
+          "range": "%I10.0-%I25.7"
+        },
+        {
+          "direction": "out",
+          "length_bytes": 4,
+          "module": "GSD-Geraet_1/4 Bytes Ausgang_1",
+          "range": "%Q4.0-%Q7.7"
+        }
+      ]
+    },
+    {
+      "address": "192.168.1.6",
+      "kind": "pn_pn",
+      "order_no": "6ES7 158-3AD01-0XA0",
+      "ref": "PNPN Coupler/PNPN Coupler.X1",
+      "transfer_areas": [
+        {
+          "direction": "in",
+          "length_bytes": 10,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%I500.0-%I509.7"
+        },
+        {
+          "direction": "in",
+          "length_bytes": 10,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%I26.0-%I35.7"
+        },
+        {
+          "direction": "out",
+          "length_bytes": 1,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%Q8.0-%Q8.7"
+        },
+        {
+          "direction": "out",
+          "length_bytes": 1,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%Q9.0-%Q9.7"
+        },
+        {
+          "direction": "in",
+          "length_bytes": 1,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%I5.0-%I5.7"
+        },
+        {
+          "direction": "in",
+          "length_bytes": 1,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%I38.0-%I38.7"
+        },
+        {
+          "direction": "out",
+          "length_bytes": 1,
+          "module": "PNPN Coupler/PNPN Coupler.X1",
+          "range": "%Q10.0-%Q10.7"
+        }
+      ]
+    },
+    {
+      "address": "192.168.1.8",
+      "kind": "pn_pn",
+      "order_no": "6ES7 158-3AD10-0XA0",
+      "ref": "PNPN Coupler_1/PNPN Coupler_1.X1",
+      "transfer_areas": [
+        {
+          "direction": "in",
+          "length_bytes": 2,
+          "module": "PNPN Coupler_1/PNPN Coupler_1.X1",
+          "range": "%I36.0-%I37.7"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "S7-1500/ET200MP-Station_1/PLC_1/0x0102"
+    },
+    {
+      "code": "coupler_side_without_controller",
+      "coupler": "PNPN Coupler/PNPN Coupler.X2"
+    },
+    {
+      "code": "coupler_side_without_controller",
+      "coupler": "PNPN Coupler_1/PNPN Coupler_1.X2"
+    },
+    {
+      "code": "transfer_area_length_mismatch",
+      "coupler": "PNPN Coupler_1/PNPN Coupler_1.X1"
+    }
+  ],
+  "uses": [
+    {
+      "areas": [
+        {
+          "db": "Datenbaustein_1",
+          "members": [
+            "\"Datenbaustein_1\".write"
+          ],
+          "param": "SD_1",
+          "pointer": "\"Datenbaustein_1\".write",
+          "role": "send"
+        }
+      ],
+      "block": "BSEND",
+      "called": "\"BSEND_DB\".BSEND",
+      "connection": "S7-1500/ET200MP-Station_1/PLC_1/0x0100",
+      "id": {
+        "value": "0x0100"
+      },
+      "len": {
+        "unresolved": "\"Datenbaustein_1\".Len1"
+      },
+      "network_no": 1,
+      "r_id": {
+        "value": "0x0000000B"
+      },
+      "unit": "Main"
+    },
+    {
+      "areas": [
+        {
+          "db": "Datenbaustein_1",
+          "members": [
+            "\"Datenbaustein_1\".read"
+          ],
+          "param": "RD_1",
+          "pointer": "\"Datenbaustein_1\".read",
+          "role": "receive"
+        }
+      ],
+      "block": "BRCV",
+      "called": "\"BRCV_DB\".BRCV",
+      "connection": "S7-1500/ET200MP-Station_1/PLC_1/0x0101",
+      "id": {
+        "value": "0x0101"
+      },
+      "len": {
+        "unresolved": "\"Datenbaustein_1\".Len2"
+      },
+      "network_no": 2,
+      "r_id": {
+        "value": "0x0000000A"
+      },
+      "unit": "Main"
+    }
+  ]
+}

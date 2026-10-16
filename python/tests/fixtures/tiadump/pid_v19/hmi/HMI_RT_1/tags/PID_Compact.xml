@@ -1,0 +1,4511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V21" />
+  <DocumentInfo>
+    <Created>2026-10-14T03:11:19.8058014Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>Tech WebApplication</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V21</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Tag.TagTable ID="0">
+    <AttributeList>
+      <Name>PID_Compact</Name>
+    </AttributeList>
+    <ObjectList>
+      <Hmi.Tag.Tag ID="1" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Input</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>100 ms</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="C" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Output</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>100 ms</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="11" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="12" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="13" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Setpoint</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>100 ms</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="14" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="18" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="1A" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Input_PER</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="1E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="20" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="22" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="24" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Disturbance</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="25" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="27" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="2B" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ManualEnable</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="2E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="30" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="32" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="34" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ManualValue</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="35" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="37" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="39" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="3B" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ErrorAck</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="3C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="3E" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="40" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="42" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Reset</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="43" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="45" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="49" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ModeActivate</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="4A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4C" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="50" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ScaledInput</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="51" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="53" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="55" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="56" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="57" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Output_PER</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="58" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="59" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5A" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5C" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="5E" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Output_PWM</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="5F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="60" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="61" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="62" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="63" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="65" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_SetpointLimit_H</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="66" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="67" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="68" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="69" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6A" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="6C" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_SetpointLimit_L</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="6D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6F" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="70" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="71" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="72" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="73" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_InputWarning_H</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="74" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="75" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="76" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="77" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="78" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="79" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="7A" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_InputWarning_L</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="7B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="7D" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="7E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="7F" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="80" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="81" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_State</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="82" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="83" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="84" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="85" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="86" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="87" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="88" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Error</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="89" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8B" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="8C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8D" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="8E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="8F" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ErrorBits</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>DWord</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>UDInt</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="92" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="93" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="94" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="95" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="96" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="97" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="98" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Mode</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="99" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="9A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="9B" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="9C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="9D" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="9E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="9F" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_InternalVersion</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>DWord</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>UDInt</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="A0" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A2" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="A3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A4" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="A5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="A6" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_IntegralResetMode</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="A7" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A9" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="AA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="AB" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="AC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="AD" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_OverwriteInitialOutputValue</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="AE" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="AF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B0" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="B1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B2" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="B3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="B4" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_RunModeByStartup</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="B5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B7" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="B8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B9" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="BA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="BB" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_LoadBackUp</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="BC" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="BD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="BE" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="BF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C0" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="C1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="C2" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_SetSubstituteOutput</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="C3" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="C4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C5" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="C6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C7" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="C8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="C9" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_PhysicalUnit</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="CA" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="CB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="CC" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="CD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="CE" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="CF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="D0" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>2</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_PhysicalQuantity</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Int</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="D1" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="D3" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="D4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="D5" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="D6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="D7" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>1</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_ActivateRecoverMode</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Bool</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="D8" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="DA" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="DB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="DC" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="DD" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="DE" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Warning</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>DWord</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>UDInt</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="DF" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="E0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="E1" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="E2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="E3" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="E4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="E5" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_WarningInternal</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>DWord</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>UDInt</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="E6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="E7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="E8" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="E9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="EA" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="EB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="EC" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Progress</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="ED" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="EE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="EF" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="F0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F1" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="F2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="F3" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_CurrentSetpoint</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="F4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F6" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="F7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F8" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="F9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="FA" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_CancelTuningLevel</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="FB" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="FC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="FD" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="FE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="FF" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="100" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="101" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>IEEE754Float</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>4</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_SubstituteOutput</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>Real</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="102" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="103" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="104" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="105" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="106" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="107" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="108" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>60</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Config</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CompactConfig</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CompactConfig</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="10A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="10B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10C" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="10D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="10E" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputPerOn</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="10F" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="110" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="111" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InvertControl</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="112" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="113" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="114" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>OutputSelect</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="115" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="116" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="117" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputUpperLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="118" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="119" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="11A" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputLowerLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="11B" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="11C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="11D" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputUpperWarning</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="11E" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="11F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="120" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputLowerWarning</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="121" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="122" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="123" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>OutputUpperLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="124" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="125" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="126" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>OutputLowerLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="127" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="128" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="129" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>SetpointUpperLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="12A" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="12B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="12C" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>SetpointLowerLimit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="12D" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="12E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="12F" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>MinimumOnTime</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="130" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="131" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="132" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>MinimumOffTime</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="133" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="134" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="135" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>InputScaling</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="136" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="137" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Tag.TagStructureMember ID="138" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>UpperPointIn</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="139" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="13A" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="13B" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>LowerPointIn</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="13C" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="13D" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="13E" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>UpperPointOut</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="13F" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="140" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="141" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>LowerPointOut</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="142" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="143" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="144" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="145" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="146" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>32</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_CycleTime</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CycleTime</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CycleTime</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="147" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="148" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="149" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="14A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="14B" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>StartEstimation</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="14C" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="14D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="14E" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>EnEstimation</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="14F" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="150" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="151" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>EnMonitoring</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="152" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="153" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="154" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>Value</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="155" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="156" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="157" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="158" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="159" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>36</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_CtrlParamsBackUp</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CompactControlParams</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CompactControlParams</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="15A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="15B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15C" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="15D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="15E" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>SetByUser</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="15F" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="160" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="161" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>Gain</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="162" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="163" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="164" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>Ti</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="165" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="166" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="167" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>Td</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="168" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="169" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="16A" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>TdFiltRatio</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="16B" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="16C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="16D" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>PWeighting</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="16E" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="16F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="170" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>DWeighting</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="171" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="172" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="173" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>Cycle</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="174" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="175" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="176" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>DeadZone</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="177" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="178" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="179" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="17A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="17B" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>376</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_PIDSelfTune</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CompactSelfTune</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CompactSelfTune</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="17C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="17D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="17E" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="17F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="180" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>SUT</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="181" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="182" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Tag.TagStructureMember ID="183" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>CalculateParams</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="184" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="185" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="186" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>TuneRule</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="187" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="188" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="189" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>State</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="18A" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="18B" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="18C" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>TIR</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="18D" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="18E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Tag.TagStructureMember ID="18F" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>RunIn</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="190" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="191" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="192" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>CalculateParams</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="193" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="194" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="195" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>TuneRule</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="196" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="197" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="198" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>State</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="199" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="19A" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="19B" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="19C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="19D" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>60</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_PIDCtrl</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>100 ms</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CompactControl</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CompactControl</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="19E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A0" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="1A1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="1A2" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>PIDInit</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="1A3" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="1A4" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <Hmi.Tag.TagStructureMember ID="1A5" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>IntegralSum</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="1A6" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="1A7" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="1A8" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="1A9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+      <Hmi.Tag.Tag ID="1AA" CompositionName="Tags">
+        <AttributeList>
+          <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+          <AddressAccessMode>Symbolic</AddressAccessMode>
+          <Coding>Binary</Coding>
+          <ConfirmationType>None</ConfirmationType>
+          <GmpRelevant>false</GmpRelevant>
+          <JobNumber>0</JobNumber>
+          <Length>36</Length>
+          <LinearScaling>false</LinearScaling>
+          <LogicalAddress />
+          <MandatoryCommenting>false</MandatoryCommenting>
+          <Name>PID_Compact_1_Retain</Name>
+          <Persistency>false</Persistency>
+          <QualityCode>false</QualityCode>
+          <ScalingHmiHigh>100</ScalingHmiHigh>
+          <ScalingHmiLow>0</ScalingHmiLow>
+          <ScalingPlcHigh>10</ScalingPlcHigh>
+          <ScalingPlcLow>0</ScalingPlcLow>
+          <StartValue />
+          <SubstituteValue />
+          <SubstituteValueUsage>None</SubstituteValueUsage>
+          <Synchronization>false</Synchronization>
+          <UpdateMode>ProjectWide</UpdateMode>
+          <UseMultiplexing>false</UseMultiplexing>
+        </AttributeList>
+        <LinkList>
+          <AcquisitionCycle TargetID="@OpenLink">
+            <Name>1 s</Name>
+          </AcquisitionCycle>
+          <Connection TargetID="@OpenLink">
+            <Name>HMI_Connection_1</Name>
+          </Connection>
+          <DataType TargetID="@OpenLink">
+            <Name>PID_CompactRetain</Name>
+          </DataType>
+          <HmiDataType TargetID="@OpenLink">
+            <Name>PID_CompactRetain</Name>
+          </HmiDataType>
+        </LinkList>
+        <ObjectList>
+          <MultilingualText ID="1AB" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1AC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1AD" CompositionName="DisplayName">
+            <ObjectList>
+              <MultilingualTextItem ID="1AE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <Hmi.Tag.TagStructureMember ID="1AF" CompositionName="Members">
+            <AttributeList>
+              <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+              <LinearScaling>false</LinearScaling>
+              <LogicalAddress />
+              <Name>CtrlParams</Name>
+              <ScalingHmiHigh>100</ScalingHmiHigh>
+              <ScalingHmiLow>0</ScalingHmiLow>
+              <ScalingPlcHigh>10</ScalingPlcHigh>
+              <ScalingPlcLow>0</ScalingPlcLow>
+              <StartValue />
+              <SubstituteValue />
+              <SubstituteValueUsage>None</SubstituteValueUsage>
+            </AttributeList>
+            <ObjectList>
+              <MultilingualText ID="1B0" CompositionName="Comment">
+                <ObjectList>
+                  <MultilingualTextItem ID="1B1" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>en-US</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <Hmi.Tag.TagStructureMember ID="1B2" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>SetByUser</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1B3" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1B4" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1B5" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>Gain</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1B6" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1B7" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1B8" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>Ti</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1B9" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1BA" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1BB" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>Td</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1BC" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1BD" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1BE" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>TdFiltRatio</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1BF" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1C0" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1C1" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>PWeighting</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1C2" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1C3" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1C4" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>DWeighting</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1C5" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1C6" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1C7" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>Cycle</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1C8" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1C9" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+              <Hmi.Tag.TagStructureMember ID="1CA" CompositionName="Members">
+                <AttributeList>
+                  <AcquisitionTriggerMode>Visible</AcquisitionTriggerMode>
+                  <LinearScaling>false</LinearScaling>
+                  <LogicalAddress />
+                  <Name>DeadZone</Name>
+                  <ScalingHmiHigh>100</ScalingHmiHigh>
+                  <ScalingHmiLow>0</ScalingHmiLow>
+                  <ScalingPlcHigh>10</ScalingPlcHigh>
+                  <ScalingPlcLow>0</ScalingPlcLow>
+                  <StartValue />
+                  <SubstituteValue />
+                  <SubstituteValueUsage>None</SubstituteValueUsage>
+                </AttributeList>
+                <ObjectList>
+                  <MultilingualText ID="1CB" CompositionName="Comment">
+                    <ObjectList>
+                      <MultilingualTextItem ID="1CC" CompositionName="Items">
+                        <AttributeList>
+                          <Culture>en-US</Culture>
+                          <Text />
+                        </AttributeList>
+                      </MultilingualTextItem>
+                    </ObjectList>
+                  </MultilingualText>
+                </ObjectList>
+              </Hmi.Tag.TagStructureMember>
+            </ObjectList>
+          </Hmi.Tag.TagStructureMember>
+          <MultilingualText ID="1CD" CompositionName="TagValue">
+            <ObjectList>
+              <MultilingualTextItem ID="1CE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </Hmi.Tag.Tag>
+    </ObjectList>
+  </Hmi.Tag.TagTable>
+</Document>

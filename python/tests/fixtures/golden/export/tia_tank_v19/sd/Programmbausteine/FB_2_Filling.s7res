@@ -1,0 +1,48 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: Filling process
+  - id: MLC_2
+    en-US: signals from external model
+  - id: MLC_3
+    en-US: model parameter
+  - id: MLC_4
+    en-US: application operation
+  - id: MLC_5
+    en-US: current signals from tank
+  - id: MLC_6
+    en-US: current process information
+  - id: MLC_7
+    en-US: error information
+  - id: MLC_8
+    en-US: parameter for HMI to show current bottle level
+  - id: MLC_9
+    en-US: trigger for HMI to shift bottles
+  - id: MLC_10
+    en-US: trigger for HMI for faulty bottle
+  - id: MLC_11
+    en-US: helper when batchID changed
+  - id: MLC_12
+    en-US: Calculation of params
+  - id: MLC_13
+    en-US: Set process values (filling tank)
+  - id: MLC_14
+    en-US: Set process values (shifting bottle, number produced)
+  - id: MLC_15
+    en-US: Set process values (product type ID, name)
+  - id: MLC_16
+    en-US: |-
+      1 'Sparkling water'
+      2 'Medium water'
+      3 'Still water'
+  - id: MLC_17
+    en-US: Generate serial number and QR code
+  - id: MLC_18
+    en-US: Calculate production speed (pcs/h)
+  - id: MLC_19
+    en-US: Generate produt ID (batchID.numberProduced)
+  - id: MLC_20
+    en-US: Set cycle time
+  - id: MLC_21
+    en-US: Simulation (fill tank / heat tank / fill bottle)
+  - id: MLC_22
+    en-US: Reset process parameter

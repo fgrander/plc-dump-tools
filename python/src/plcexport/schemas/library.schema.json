@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "plcexport/library.schema.json",
+  "title": "library.json (docs/common-format-tia.md §3)",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "kind",
+    "company",
+    "duplicate_of",
+    "types",
+    "master_copies"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "global",
+        "project"
+      ]
+    },
+    "company": {
+      "type": "boolean"
+    },
+    "duplicate_of": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "folder",
+          "kind",
+          "versions"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "folder": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "plc_block",
+              "plc_type",
+              "hmi_type",
+              "faceplate",
+              "other"
+            ]
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "version",
+                "status",
+                "author",
+                "date",
+                "comment",
+                "content_part",
+                "content_path",
+                "gap_reason"
+              ],
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "status": {
+                  "enum": [
+                    "released",
+                    "in_work"
+                  ]
+                },
+                "author": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date"
+                },
+                "comment": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "content_part": {
+                  "enum": [
+                    "sd",
+                    "common",
+                    "none"
+                  ]
+                },
+                "content_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "gap_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "master_copies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "folder",
+          "objects",
+          "content_path"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "objects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "content_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

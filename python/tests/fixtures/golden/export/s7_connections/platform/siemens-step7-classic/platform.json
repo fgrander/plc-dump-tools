@@ -1,0 +1,9 @@
+{
+  "encoding": "windows-1252",
+  "library": false,
+  "mnemonic": "en",
+  "mnemonic_project": "de",
+  "pcs7": false,
+  "s7dump": "1.0.0",
+  "toolbox_library": "4.4.10.0"
+}

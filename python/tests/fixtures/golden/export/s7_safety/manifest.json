@@ -1,0 +1,44 @@
+{
+  "counts": {
+    "hardware_modules": 2,
+    "hmi_screens": 0,
+    "units": 14,
+    "variables": 29,
+    "xrefs": 23
+  },
+  "coverage_summary": {
+    "datatypes": "delivered",
+    "hardware": "partial",
+    "hmi": "unavailable",
+    "program_units": "delivered",
+    "safety": "delivered",
+    "structure": "delivered",
+    "symbols": "delivered"
+  },
+  "exported_at": "<exported_at>",
+  "extractor": {
+    "id": "s7classic-direct",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.0.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "platform": {
+    "id": "siemens-step7-classic",
+    "version": null
+  },
+  "project": {
+    "controller": "CPU 315-2 PN/DP",
+    "languages": [
+      "de"
+    ],
+    "line_or_machine": "PRESS_1"
+  },
+  "source": {
+    "checksum": "sha256:011e87d35a7566d900c66bc902c789a9b25668937e20295714c6495ff4ec60cd",
+    "kind": "folder",
+    "path": "<source.path>"
+  },
+  "upgrade": null
+}

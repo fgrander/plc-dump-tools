@@ -1,0 +1,22 @@
+﻿TYPE
+    typeModel : STRUCT
+        { S7_MLC := "MLC_1" }
+        cycleTime : Real;
+        { S7_MLC := "MLC_2" }
+        tank : STRUCT
+            "AT" : Real;
+            H : Real;
+            Vin : Real;
+            maxLevel : Real;
+            roomTemperature : Real;
+            maxTemperature : Real;
+            density : Real;
+        END_STRUCT;
+        { S7_MLC := "MLC_3" }
+        bottle : STRUCT
+            maxLevel : Real;
+            "AB" : Real;
+            shiftingCycle : UInt;
+        END_STRUCT;
+    END_STRUCT;
+END_TYPE

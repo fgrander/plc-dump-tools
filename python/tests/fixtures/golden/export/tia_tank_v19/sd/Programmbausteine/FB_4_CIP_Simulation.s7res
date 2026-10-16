@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_1
+    en-US: start CIP S7 graph sequence
+  - id: MLC_2
+    en-US: stop CIP S7 graph sequence
+  - id: MLC_3
+    en-US: current date
+  - id: MLC_4
+    en-US: difference bzw. start and current time
+  - id: MLC_5
+    en-US: start time
+  - id: MLC_6
+    en-US: current time-of-day
+  - id: MLC_7
+    en-US: current time
+  - id: MLC_8
+    en-US: start date
+  - id: MLC_9
+    en-US: TON timer output
+  - id: MLC_10
+    en-US: CIP simulation

@@ -1,0 +1,18 @@
+﻿TYPE
+    typeHmi : STRUCT
+        { S7_MLC := "MLC_3FK" }
+        HMI_Start : Bool;
+        { S7_MLC := "MLC_YT" }
+        HMI_Stop : Bool;
+        { S7_MLC := "MLC_4Fu" }
+        HMI_Reset : Bool;
+        { S7_MLC := "MLC_4LQ" }
+        HMI_NextBottle : Bool;
+        { S7_MLC := "MLC_4Dg" }
+        HMI_Error : Bool;
+        { S7_MLC := "MLC_53Y" }
+        HMI_InstallFillingPump : Bool;
+        { S7_MLC := "MLC_4T3" }
+        HMI_RenewHeatingElement : Bool;
+    END_STRUCT;
+END_TYPE

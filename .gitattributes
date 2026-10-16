@@ -4,3 +4,10 @@
 # PowerShell scripts use CRLF on Windows
 *.ps1 text eol=crlf
 *.psm1 text eol=crlf
+
+# Test fixtures must stay byte-identical across platforms (golden files, line numbers)
+python/tests/fixtures/** text eol=lf
+
+# Files recorded from TIA Portal: byte-exact, BOM and CRLF as TIA writes them
+python/tests/fixtures/tiadump/** -text
+python/tests/fixtures/golden/export/tia_*/** -text

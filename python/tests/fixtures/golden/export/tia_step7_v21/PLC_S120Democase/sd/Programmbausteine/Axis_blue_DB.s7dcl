@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "10";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK Axis_blue_DB : Axis_blue
+END_DATA_BLOCK

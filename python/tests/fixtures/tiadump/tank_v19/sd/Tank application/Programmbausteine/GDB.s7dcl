@@ -1,0 +1,57 @@
+﻿{
+    S7_BlockNumber := "1";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "TRUE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK GDB
+    VAR RETAIN
+        {
+            S7_MLC := "MLC_32K";
+            S7_Setpoint := "False"
+        }
+        operate : _.typeOperate;
+        { S7_MLC := "MLC_37B" }
+        model : _.typeModel;
+        { S7_MLC := "MLC_49M" }
+        externalSignals : _.typeSignals;
+        { S7_MLC := "MLC_3mW" }
+        signals : _.typeSignals;
+        { S7_MLC := "MLC_45c" }
+        process : _.typeProcess;
+        { S7_MLC := "MLC_ha" }
+        hmiSignals : _.typeHmi;
+        { S7_MLC := "MLC_4Up" }
+        appSignals : _.typeApp;
+        { S7_MLC := "MLC_4Tx" }
+        projectInfo : _.typeInfo;
+        { S7_MLC := "MLC_5Am" }
+        errors : _.typeError;
+        { S7_MLC := "MLC_4BP" }
+        cip : _.typeCIP;
+    END_VAR
+
+        operate.extModeActive := false;
+        model.cycleTime := 0.005;
+        model.tank."AT" := 0.8;
+        model.tank.H := 2.0;
+        model.tank.Vin := 500.0;
+        model.tank.maxLevel := 1.6;
+        model.tank.roomTemperature := 20.0;
+        model.tank.maxTemperature := 80.0;
+        model.tank.density := 997.0;
+        model.bottle.maxLevel := 0.001;
+        model.bottle."AB" := 5.0E-06;
+        model.bottle.shiftingCycle := 50;
+        process.productId := '';
+        process.numberProduced := 0;
+        process.numberFaulty := 0;
+        process.speedActual := 3700;
+        process.speedTarget := 4000;
+        hmiSignals.HMI_Start := true;
+        appSignals.APP_ErrorSimulation := true;
+        projectInfo."version" := 'V4.0';
+        projectInfo."date" := '2025-07-01';
+        errors.errorDuration := T#10m;
+
+END_DATA_BLOCK

@@ -1,0 +1,21 @@
+﻿{
+    S7_BlockTitle := "MLC_ks";
+    S7_IECCheck := "TRUE";
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "FBD";
+    S7_Version := "0.1"
+}
+ORGANIZATION_BLOCK "Main"
+    { S7_Language := "FBD" }
+    NETWORK
+        RUNG
+            "RUN_DB"(
+                setpoint :=  ,
+                resetAll :=  ,
+                resetPvSim :=  ,
+                resetPID :=  ,
+                resetAccErr :=  
+            )
+        END_RUNG
+    END_NETWORK
+END_ORGANIZATION_BLOCK
