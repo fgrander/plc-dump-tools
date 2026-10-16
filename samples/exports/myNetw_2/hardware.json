@@ -1,0 +1,46 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "name": "CPU 416-3 PN/DP",
+      "order_no": "6ES7 416-3ES07-0AB0",
+      "ref": "cpu:CPU 416-3 PN/DP",
+      "type": "Simatic400"
+    }
+  ],
+  "modules": [
+    {
+      "order_no": "6ES7 405-0KA00-0AA0",
+      "rack": "SIMATIC 400(1)/R0",
+      "ref": "SIMATIC 400(1)/0.1",
+      "slot": 1,
+      "type": "PS 405 10A"
+    },
+    {
+      "firmware": "V7.0",
+      "order_no": "6ES7 416-3ES07-0AB0",
+      "rack": "SIMATIC 400(1)/R0",
+      "ref": "SIMATIC 400(1)/0.3",
+      "slot": 3,
+      "type": "CPU 416-3 PN/DP"
+    }
+  ],
+  "networks": [
+    {
+      "address": "10.102.10.20/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 400(1)/CPU 416-3 PN/DP/ethernet"
+    },
+    {
+      "address": "2",
+      "interface": "mpi",
+      "ref": "SIMATIC 400(1)/CPU 416-3 PN/DP/mpi"
+    }
+  ],
+  "racks": [
+    {
+      "name": "SIMATIC 400(1) rack 0",
+      "ref": "SIMATIC 400(1)/R0"
+    }
+  ]
+}

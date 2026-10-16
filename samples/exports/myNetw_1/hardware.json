@@ -1,0 +1,39 @@
+{
+  "channels": [],
+  "controllers": [
+    {
+      "name": "CPU 315F-2 PN/DP",
+      "order_no": "6ES7 315-2FJ14-0AB0",
+      "ref": "cpu:CPU 315F-2 PN/DP",
+      "type": "Simatic300"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V3.2.18",
+      "order_no": "6ES7 315-2FJ14-0AB0",
+      "rack": "SIMATIC 300(1)/R0",
+      "ref": "SIMATIC 300(1)/0.2",
+      "slot": 2,
+      "type": "CPU 315F-2 PN/DP"
+    }
+  ],
+  "networks": [
+    {
+      "address": "10.101.10.20/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300(1)/CPU 315F-2 PN/DP/ethernet"
+    },
+    {
+      "address": "2",
+      "interface": "mpi",
+      "ref": "SIMATIC 300(1)/CPU 315F-2 PN/DP/mpi"
+    }
+  ],
+  "racks": [
+    {
+      "name": "SIMATIC 300(1) rack 0",
+      "ref": "SIMATIC 300(1)/R0"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "channels": [
+    {
+      "address": "Q 10.0",
+      "module_ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4/Q 10.0",
+      "symbol": "\"S7-Programm(2)/DO_CONT_S_UP\""
+    },
+    {
+      "address": "Q 10.1",
+      "module_ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4/Q 10.1",
+      "symbol": "\"S7-Programm(2)/DO_CONT_S_DN\""
+    }
+  ],
+  "controllers": [
+    {
+      "name": "CPU 317F-2 PN/DP",
+      "order_no": "6ES7 317-2FK14-0AB0",
+      "ref": "cpu:CPU 317F-2 PN/DP",
+      "type": "Simatic300"
+    },
+    {
+      "name": "CPU 414-3 PN/DP",
+      "order_no": "6ES7 414-3EM05-0AB0",
+      "ref": "cpu:CPU 414-3 PN/DP",
+      "type": "Simatic400"
+    }
+  ],
+  "modules": [
+    {
+      "firmware": "V3.2.18",
+      "order_no": "6ES7 317-2FK14-0AB0",
+      "rack": "SIMATIC 300-Station/R0",
+      "ref": "SIMATIC 300-Station/0.2",
+      "slot": 2,
+      "type": "CPU 317F-2 PN/DP"
+    },
+    {
+      "address_ranges": [
+        "%I1024.0-%I1039.7",
+        "%Q1024.0-%Q1039.7"
+      ],
+      "firmware": "V1.0",
+      "order_no": "6GK7 343-1HX00-0XE0",
+      "rack": "SIMATIC 300-Station/R0",
+      "ref": "SIMATIC 300-Station/0.4",
+      "slot": 4,
+      "type": "CP 343-1 PN"
+    },
+    {
+      "firmware": "V4.2",
+      "order_no": "6ES7 158-3AD10-0XA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #1",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #1.1",
+      "slot": 1,
+      "type": "6ES7 158-3AD10-0XA0"
+    },
+    {
+      "address_ranges": [
+        "%I2.0-%I13.7",
+        "%Q2.0-%Q7.7"
+      ],
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #1",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #1.2",
+      "slot": 2,
+      "type": "PROFIsafe IN/OUT 12 Byt~"
+    },
+    {
+      "order_no": "6ES7 151-3AA20-0AB0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.1",
+      "slot": 1,
+      "type": "_S7H_HSP_IO_ET200S_ETER~"
+    },
+    {
+      "order_no": "6ES7 138-4CA00-0AA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.2",
+      "slot": 2,
+      "type": "PM-E DC24V"
+    },
+    {
+      "address_ranges": [
+        "%I0.0-%I0.7"
+      ],
+      "order_no": "6ES7 131-4BB00-0AA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.3",
+      "slot": 3,
+      "type": "2DI DC24V ST"
+    },
+    {
+      "address_ranges": [
+        "%Q10.0-%Q10.7"
+      ],
+      "order_no": "6ES7 132-4BB00-0AA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4",
+      "slot": 4,
+      "type": "2DO DC24V/0,5A ST"
+    },
+    {
+      "address_ranges": [
+        "%Q256.0-%Q259.7"
+      ],
+      "order_no": "6ES7 135-4GB00-0AB0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.5",
+      "slot": 5,
+      "type": "2AO I ST"
+    },
+    {
+      "address_ranges": [
+        "%I256.0-%I259.7"
+      ],
+      "order_no": "6ES7 134-4JB50-0AB0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #2",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2.6",
+      "slot": 6,
+      "type": "2AI RTD ST"
+    },
+    {
+      "firmware": "V2.1",
+      "order_no": "6ES7 151-3BA60-0AB0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #3",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #3.1",
+      "slot": 1,
+      "type": "_S7H_HSP_151_3BA60_V21_~"
+    },
+    {
+      "firmware": "V6.1",
+      "order_no": "6ES7 151-3AA23-0AB0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #4",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #4.1",
+      "slot": 1,
+      "type": "_S7H_HSP_151_3AA23_V61_~"
+    },
+    {
+      "firmware": "V1.0",
+      "order_no": "3RK1 335-0AS01-0AA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #5",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #5.1",
+      "slot": 1,
+      "type": "_S7H_HSP_ETER_PN_3RK1_3~"
+    },
+    {
+      "address_ranges": [
+        "%I14.0-%I15.7",
+        "%Q0.0-%Q1.7"
+      ],
+      "order_no": "3RK1 395-6KS41-0AD5",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #5",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #5.2",
+      "slot": 2,
+      "type": "DSte 4DI/2DO/BO 2A"
+    },
+    {
+      "firmware": "V1.0",
+      "order_no": "3RK1 335-0AS01-0AA0",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #6",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #6.1",
+      "slot": 1,
+      "type": "_S7H_HSP_ETER_PN_3RK1_3~"
+    },
+    {
+      "address_ranges": [
+        "%I16.0-%I17.7",
+        "%Q8.0-%Q9.7"
+      ],
+      "order_no": "3RK1 395-6KS71-1AD5",
+      "rack": "SIMATIC 300-Station/PROFINET-IO-System #6",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #6.2",
+      "slot": 2,
+      "type": "sRSSte 4DI/2DO/BO 2A"
+    },
+    {
+      "order_no": "6ES7 405-0DA00-0AA0",
+      "rack": "SIMATIC 400(1)/R0",
+      "ref": "SIMATIC 400(1)/0.1",
+      "slot": 1,
+      "type": "PS 405 4A"
+    },
+    {
+      "firmware": "V5.0",
+      "order_no": "6ES7 414-3EM05-0AB0",
+      "rack": "SIMATIC 400(1)/R0",
+      "ref": "SIMATIC 400(1)/0.2",
+      "slot": 2,
+      "type": "CPU 414-3 PN/DP"
+    }
+  ],
+  "networks": [
+    {
+      "address": "10.100.10.10/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/6ES7 158-3AD10-0XA0 #1/ethernet"
+    },
+    {
+      "address": "10.60.10.2/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/CP 343-1 PN/ethernet"
+    },
+    {
+      "address": "10.100.10.20/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/CPU 317F-2 PN/DP/ethernet"
+    },
+    {
+      "address": "2",
+      "interface": "mpi",
+      "ref": "SIMATIC 300-Station/CPU 317F-2 PN/DP/mpi"
+    },
+    {
+      "address": "10.100.10.23/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/_S7H_HSP_151_3AA23_V61_~ #4/ethernet"
+    },
+    {
+      "address": "10.100.10.22/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/_S7H_HSP_151_3BA60_V21_~ #3/ethernet"
+    },
+    {
+      "address": "10.100.10.24/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/_S7H_HSP_ETER_PN_3RK1_3~ #5/ethernet"
+    },
+    {
+      "address": "10.100.10.25/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/_S7H_HSP_ETER_PN_3RK1_3~ #6/ethernet"
+    },
+    {
+      "address": "10.100.10.21/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 300-Station/_S7H_HSP_IO_ET200S_ETER~ #2/ethernet"
+    },
+    {
+      "address": "10.60.10.3/24",
+      "interface": "ethernet",
+      "ref": "SIMATIC 400(1)/CPU 414-3 PN/DP/ethernet"
+    },
+    {
+      "address": "2",
+      "interface": "mpi",
+      "ref": "SIMATIC 400(1)/CPU 414-3 PN/DP/mpi"
+    }
+  ],
+  "racks": [
+    {
+      "name": "PN-PN-Coupler (device 1 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #1"
+    },
+    {
+      "name": "IM151-3PN (device 2 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #2"
+    },
+    {
+      "name": "IM151-3PN (device 3 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #3"
+    },
+    {
+      "name": "IM151-3PN (device 4 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #4"
+    },
+    {
+      "name": "DSte-4DI-2DO-BO-2A (device 5 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #5"
+    },
+    {
+      "name": "sRSSte-4DI-2DO-BO-2A (device 6 on PROFINET-IO-System)",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #6"
+    },
+    {
+      "name": "SIMATIC 300-Station rack 0",
+      "ref": "SIMATIC 300-Station/R0"
+    },
+    {
+      "name": "SIMATIC 400(1) rack 0",
+      "ref": "SIMATIC 400(1)/R0"
+    }
+  ]
+}

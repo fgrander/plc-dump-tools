@@ -1,0 +1,270 @@
+{
+  "connections": [
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.100.10.20",
+        "id": "0x0001",
+        "interface": "SIMATIC 300-Station/CPU 317F-2 PN/DP/ethernet",
+        "module": "SIMATIC 300-Station/0.2",
+        "tsap": "10.02"
+      },
+      "name": "S7-Verbindung 1",
+      "one_way": true,
+      "partner": {
+        "address": "10.101.10.20",
+        "name": "HomePLC2",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "10.02"
+      },
+      "ref": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0001",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    },
+    {
+      "active": false,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.100.10.20",
+        "id": "0x0010",
+        "interface": "SIMATIC 300-Station/CPU 317F-2 PN/DP/ethernet",
+        "module": "SIMATIC 300-Station/0.2",
+        "tsap": "11.02"
+      },
+      "name": "S7-Verbindung 2",
+      "one_way": true,
+      "partner": {
+        "address": "10.102.10.20",
+        "name": "HomePLC3",
+        "rack": 0,
+        "slot": 3,
+        "specified": false,
+        "tsap": "10.03"
+      },
+      "ref": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0010",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.100.10.20",
+        "id": "0x0012",
+        "interface": "SIMATIC 300-Station/CPU 317F-2 PN/DP/ethernet",
+        "module": "SIMATIC 300-Station/0.2",
+        "tsap": "12.02"
+      },
+      "name": "S7-Verbindung 2",
+      "one_way": true,
+      "partner": {
+        "address": "10.5.5.5",
+        "name": "unbekannt",
+        "rack": 0,
+        "slot": 0,
+        "specified": false,
+        "tsap": "03.00"
+      },
+      "ref": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0012",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    },
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.60.10.3",
+        "id": "0x0001",
+        "interface": "SIMATIC 400(1)/CPU 414-3 PN/DP/ethernet",
+        "module": "SIMATIC 400(1)/0.2",
+        "tsap": "10.02"
+      },
+      "name": "S7-Verbindung 1",
+      "one_way": true,
+      "partner": {
+        "address": "10.60.10.2",
+        "module": "SIMATIC 300-Station/0.4",
+        "name": "CP 343-1 PN",
+        "rack": 0,
+        "slot": 4,
+        "specified": true,
+        "tsap": "03.02"
+      },
+      "ref": "SIMATIC 400(1)/CPU 414-3 PN/DP/0x0001",
+      "sources": {
+        "active": "both",
+        "partner_address": "compiled",
+        "tsaps": "compiled"
+      }
+    }
+  ],
+  "couplers": [
+    {
+      "address": "10.100.10.10",
+      "kind": "pn_pn",
+      "order_no": "6ES7 158-3AD10-0XA0",
+      "ref": "SIMATIC 300-Station/PROFINET-IO-System #1",
+      "safety": true,
+      "transfer_areas": [
+        {
+          "direction": "in",
+          "length_bytes": 12,
+          "module": "SIMATIC 300-Station/PROFINET-IO-System #1.2",
+          "range": "%I2.0-%I13.7"
+        },
+        {
+          "direction": "out",
+          "length_bytes": 6,
+          "module": "SIMATIC 300-Station/PROFINET-IO-System #1.2",
+          "range": "%Q2.0-%Q7.7"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0012"
+    },
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 400(1)/CPU 414-3 PN/DP/0x0001"
+    }
+  ],
+  "uses": [
+    {
+      "areas": [
+        {
+          "length_bytes": 2,
+          "param": "ADDR_1",
+          "pointer": "P#DB1.DBX0.0 INT 1",
+          "role": "remote",
+          "start": "0.0"
+        },
+        {
+          "param": "ADDR_2",
+          "role": "remote",
+          "unassigned": true
+        },
+        {
+          "param": "ADDR_3",
+          "role": "remote",
+          "unassigned": true
+        },
+        {
+          "param": "ADDR_4",
+          "role": "remote",
+          "unassigned": true
+        },
+        {
+          "db": "S7-Programm(2)/DB_SEND_PLC2",
+          "length_bytes": 2,
+          "members": [
+            "\"S7-Programm(2)/DB_SEND_PLC2\".DB_VAR"
+          ],
+          "param": "RD_1",
+          "pointer": "P#DB2.DBX0.0 INT 1",
+          "role": "receive",
+          "start": "0.0"
+        },
+        {
+          "param": "RD_2",
+          "role": "receive",
+          "unassigned": true
+        },
+        {
+          "param": "RD_3",
+          "role": "receive",
+          "unassigned": true
+        },
+        {
+          "param": "RD_4",
+          "role": "receive",
+          "unassigned": true
+        }
+      ],
+      "block": "GET",
+      "called": "SFB 14 #ReadPLC2",
+      "connection": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0001",
+      "id": {
+        "value": "0x0001"
+      },
+      "network_no": 1,
+      "unit": "S7-Programm(2)/Ethernet_Comm"
+    },
+    {
+      "areas": [
+        {
+          "db": "S7-Programm(2)/DB_SEND_PLC3",
+          "length_bytes": 2,
+          "members": [
+            "\"S7-Programm(2)/DB_SEND_PLC3\".DB_VAR"
+          ],
+          "param": "SD_1",
+          "pointer": "P#DB4.DBX0.0 INT 1",
+          "role": "send",
+          "start": "0.0"
+        }
+      ],
+      "block": "BSEND",
+      "called": "FB 12 #WritePLC3",
+      "connection": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0010",
+      "id": {
+        "value": "0x0010"
+      },
+      "len": {
+        "unassigned": true
+      },
+      "network_no": 2,
+      "r_id": {
+        "value": "0x0000AAAA"
+      },
+      "unit": "S7-Programm(2)/Ethernet_Comm"
+    },
+    {
+      "areas": [
+        {
+          "db": "S7-Programm(2)/DB_READ_PLC3",
+          "length_bytes": 2,
+          "members": [
+            "\"S7-Programm(2)/DB_READ_PLC3\".DB_VAR"
+          ],
+          "param": "RD_1",
+          "pointer": "P#DB3.DBX0.0 INT 1",
+          "role": "receive",
+          "start": "0.0"
+        }
+      ],
+      "block": "BRCV",
+      "called": "FB 13 #ReadPLC3",
+      "connection": "SIMATIC 300-Station/CPU 317F-2 PN/DP/0x0001",
+      "id": {
+        "value": "0x0001"
+      },
+      "len": {
+        "unassigned": true
+      },
+      "network_no": 3,
+      "r_id": {
+        "value": "0x0000BBBB"
+      },
+      "unit": "S7-Programm(2)/Ethernet_Comm"
+    }
+  ]
+}

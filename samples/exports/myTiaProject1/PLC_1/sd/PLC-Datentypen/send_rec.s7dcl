@@ -1,0 +1,8 @@
+﻿TYPE
+    send_rec : STRUCT
+        bool1 : Bool;
+        bool2 : Bool;
+        bool3 : Bool;
+        "int" : Int;
+    END_STRUCT;
+END_TYPE

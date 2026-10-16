@@ -1,0 +1,17 @@
+{
+  "inputs": [],
+  "outputs": [
+    {
+      "address": "Q 10.0",
+      "channel_ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4/Q 10.0",
+      "data_type": "BOOL",
+      "symbol": "\"S7-Programm(2)/DO_CONT_S_UP\""
+    },
+    {
+      "address": "Q 10.1",
+      "channel_ref": "SIMATIC 300-Station/PROFINET-IO-System #2.4/Q 10.1",
+      "data_type": "BOOL",
+      "symbol": "\"S7-Programm(2)/DO_CONT_S_DN\""
+    }
+  ]
+}

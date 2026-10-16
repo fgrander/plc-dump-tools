@@ -1,0 +1,40 @@
+{
+  "connections": [
+    {
+      "active": false,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.101.10.20",
+        "id": "0x0001",
+        "interface": "SIMATIC 300(1)/CPU 315F-2 PN/DP/ethernet",
+        "module": "SIMATIC 300(1)/0.2",
+        "tsap": "10.02"
+      },
+      "name": "S7-Verbindung 1",
+      "one_way": true,
+      "partner": {
+        "address": "10.100.10.20",
+        "name": "HomePLC1",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "10.02"
+      },
+      "ref": "SIMATIC 300(1)/CPU 315F-2 PN/DP/0x0001",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    }
+  ],
+  "couplers": [],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 300(1)/CPU 315F-2 PN/DP/0x0001"
+    }
+  ],
+  "uses": []
+}

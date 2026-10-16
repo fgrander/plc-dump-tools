@@ -1,0 +1,69 @@
+{
+  "categories": {
+    "connections": {
+      "reason": "other:calls in 2 protected block(s) not readable",
+      "state": "partial"
+    },
+    "datatypes": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "hardware": {
+      "reason": "other:direct route reads stations, CPUs, CPs and networks only",
+      "state": "partial"
+    },
+    "hmi": {
+      "reason": "unsupported",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": null,
+      "state": "delivered"
+    }
+  },
+  "gaps": [
+    {
+      "category": "connections",
+      "item": "S7-Programm(2)/SCALE",
+      "reason": "protected"
+    },
+    {
+      "category": "connections",
+      "item": "S7-Programm(2)/UNSCALE",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "S7-Programm(2)/BRCV",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "S7-Programm(2)/BSEND",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "S7-Programm(2)/SCALE",
+      "reason": "protected"
+    },
+    {
+      "category": "program_units",
+      "item": "S7-Programm(2)/UNSCALE",
+      "reason": "protected"
+    }
+  ],
+  "warnings": []
+}

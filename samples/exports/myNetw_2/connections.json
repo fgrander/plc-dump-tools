@@ -1,0 +1,115 @@
+{
+  "connections": [
+    {
+      "active": true,
+      "details": "read",
+      "kind": "s7",
+      "local": {
+        "address": "10.102.10.20",
+        "id": "0x0001",
+        "interface": "SIMATIC 400(1)/CPU 416-3 PN/DP/ethernet",
+        "module": "SIMATIC 400(1)/0.3",
+        "tsap": "10.03"
+      },
+      "name": "S7-Verbindung 1",
+      "one_way": true,
+      "partner": {
+        "address": "10.100.10.20",
+        "name": "HomePLC1",
+        "rack": 0,
+        "slot": 2,
+        "specified": false,
+        "tsap": "11.02"
+      },
+      "ref": "SIMATIC 400(1)/CPU 416-3 PN/DP/0x0001",
+      "sources": {
+        "active": "both",
+        "partner_address": "both",
+        "tsaps": "both"
+      }
+    }
+  ],
+  "couplers": [],
+  "findings": [
+    {
+      "code": "connection_unused",
+      "connection": "SIMATIC 400(1)/CPU 416-3 PN/DP/0x0001"
+    }
+  ],
+  "uses": [
+    {
+      "areas": [
+        {
+          "db": "DB_SEND_PLC1",
+          "length_bytes": 2,
+          "members": [
+            "\"DB_SEND_PLC1\".DB_VAR"
+          ],
+          "param": "SD_1",
+          "pointer": "P#DB4.DBX0.0 INT 1",
+          "role": "send",
+          "start": "0.0"
+        }
+      ],
+      "block": "BSEND",
+      "called": "FB 12 #WritePLC3",
+      "findings": [
+        {
+          "code": "id_not_configured"
+        },
+        {
+          "code": "id_r_id_maybe_swapped",
+          "connection": "SIMATIC 400(1)/CPU 416-3 PN/DP/0x0001"
+        }
+      ],
+      "id": {
+        "value": "0xBBBB"
+      },
+      "len": {
+        "unassigned": true
+      },
+      "network_no": 1,
+      "r_id": {
+        "value": "0x00000001"
+      },
+      "unit": "Ethernet_Comm"
+    },
+    {
+      "areas": [
+        {
+          "db": "DB_READ_PLC1",
+          "length_bytes": 2,
+          "members": [
+            "\"DB_READ_PLC1\".DB_VAR"
+          ],
+          "param": "RD_1",
+          "pointer": "P#DB3.DBX0.0 INT 1",
+          "role": "receive",
+          "start": "0.0"
+        }
+      ],
+      "block": "BRCV",
+      "called": "FB 13 #ReadPLC3",
+      "findings": [
+        {
+          "code": "id_not_configured"
+        },
+        {
+          "code": "id_r_id_maybe_swapped",
+          "connection": "SIMATIC 400(1)/CPU 416-3 PN/DP/0x0001"
+        }
+      ],
+      "id": {
+        "value": "0xAAAA"
+      },
+      "len": {
+        "unassigned": true
+      },
+      "network_no": 2,
+      "r_id": {
+        "value": "0x00000001"
+      },
+      "unit": "Ethernet_Comm"
+    }
+  ]
+}

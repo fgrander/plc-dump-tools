@@ -1,0 +1,15 @@
+[
+  {
+    "attributes": {
+      "version": "0.1"
+    },
+    "files": [
+      "sd/Programmbausteine/Main.s7dcl"
+    ],
+    "folder": "Programmbausteine",
+    "kind": "OB",
+    "language": "LAD",
+    "name": "Main",
+    "number": 1
+  }
+]

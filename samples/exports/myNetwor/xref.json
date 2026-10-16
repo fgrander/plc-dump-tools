@@ -1,0 +1,98 @@
+[
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 44,
+    "network_no": 2,
+    "target": "S7-Programm(2)/SCALE",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 62,
+    "network_no": 3,
+    "target": "DB100",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 62,
+    "network_no": 3,
+    "target": "S7-Programm(2)/CONT_C",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 101,
+    "network_no": 3,
+    "target": "S7-Programm(2)/UNSCALE",
+    "target_kind": "unit"
+  },
+  {
+    "access": "write",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 112,
+    "network_no": 3,
+    "target": "PQW256",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 119,
+    "network_no": 4,
+    "target": "DB101",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/CYC_INT5",
+    "line": 119,
+    "network_no": 4,
+    "target": "S7-Programm(2)/CONT_S",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/Ethernet_Comm",
+    "line": 37,
+    "network_no": 1,
+    "target": "S7-Programm(2)/GET",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/Ethernet_Comm",
+    "line": 57,
+    "network_no": 2,
+    "target": "S7-Programm(2)/BSEND",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/Ethernet_Comm",
+    "line": 73,
+    "network_no": 3,
+    "target": "S7-Programm(2)/BRCV",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/MAIN",
+    "line": 24,
+    "network_no": 1,
+    "target": "\"S7-Programm(2)/DB_COMM\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "S7-Programm(2)/MAIN",
+    "line": 24,
+    "network_no": 1,
+    "target": "S7-Programm(2)/Ethernet_Comm",
+    "target_kind": "unit"
+  }
+]

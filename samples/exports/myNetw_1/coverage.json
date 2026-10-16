@@ -1,0 +1,38 @@
+{
+  "categories": {
+    "connections": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "datatypes": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "hardware": {
+      "reason": "other:direct route reads stations, CPUs, CPs and networks only",
+      "state": "partial"
+    },
+    "hmi": {
+      "reason": "unsupported",
+      "state": "unavailable"
+    },
+    "program_units": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "safety": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    },
+    "structure": {
+      "reason": null,
+      "state": "delivered"
+    },
+    "symbols": {
+      "reason": "not_in_project",
+      "state": "unavailable"
+    }
+  },
+  "gaps": [],
+  "warnings": []
+}

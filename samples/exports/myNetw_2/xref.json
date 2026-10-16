@@ -1,0 +1,34 @@
+[
+  {
+    "access": "call",
+    "from_unit": "Ethernet_Comm",
+    "line": 33,
+    "network_no": 1,
+    "target": "BSEND",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "Ethernet_Comm",
+    "line": 49,
+    "network_no": 2,
+    "target": "BRCV",
+    "target_kind": "unit"
+  },
+  {
+    "access": "call",
+    "from_unit": "MAIN",
+    "line": 23,
+    "network_no": 1,
+    "target": "\"DB_COMM\"",
+    "target_kind": "variable"
+  },
+  {
+    "access": "call",
+    "from_unit": "MAIN",
+    "line": 23,
+    "network_no": 1,
+    "target": "Ethernet_Comm",
+    "target_kind": "unit"
+  }
+]

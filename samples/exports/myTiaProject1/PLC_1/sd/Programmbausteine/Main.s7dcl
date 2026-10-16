@@ -1,0 +1,48 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+ORGANIZATION_BLOCK "Main"
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            "BSEND_DB".BSEND(
+                REQ :=  ,
+                R :=  ,
+                ID := 16#100,
+                R_ID := 16#B,
+                DONE =>  ,
+                ERROR =>  ,
+                STATUS =>  ,
+                SD_1 := "Datenbaustein_1".write,
+                LEN := "Datenbaustein_1".Len1
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            "BRCV_DB".BRCV(
+                EN_R :=  ,
+                ID := 16#101,
+                R_ID := 16#A,
+                NDR =>  ,
+                ERROR =>  ,
+                STATUS =>  ,
+                RD_1 := "Datenbaustein_1".read,
+                LEN := "Datenbaustein_1".Len2
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+        END_RUNG
+    END_NETWORK
+END_ORGANIZATION_BLOCK

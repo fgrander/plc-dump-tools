@@ -1,0 +1,69 @@
+{
+  "devices": [
+    {
+      "name": "SIMATIC 300-Station",
+      "type": "Simatic300"
+    },
+    {
+      "name": "SIMATIC 400(1)",
+      "type": "Simatic400"
+    }
+  ],
+  "folders": [
+    {
+      "path": "S7-Programm(2)",
+      "units": [
+        "S7-Programm(2)/BRCV",
+        "S7-Programm(2)/BSEND",
+        "S7-Programm(2)/CONT_C",
+        "S7-Programm(2)/CONT_S",
+        "S7-Programm(2)/CYC_INT5",
+        "S7-Programm(2)/DB100",
+        "S7-Programm(2)/DB101",
+        "S7-Programm(2)/DB_COMM",
+        "S7-Programm(2)/DB_READ_PLC2",
+        "S7-Programm(2)/DB_READ_PLC3",
+        "S7-Programm(2)/DB_SEND_PLC2",
+        "S7-Programm(2)/DB_SEND_PLC3",
+        "S7-Programm(2)/Ethernet_Comm",
+        "S7-Programm(2)/GET",
+        "S7-Programm(2)/MAIN",
+        "S7-Programm(2)/SCALE",
+        "S7-Programm(2)/SFB12",
+        "S7-Programm(2)/SFB13",
+        "S7-Programm(2)/Symbols",
+        "S7-Programm(2)/UNSCALE"
+      ]
+    },
+    {
+      "path": "S7-Programm(3)",
+      "units": [
+        "S7-Programm(3)/OB1",
+        "S7-Programm(3)/ProcessValues"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "S7-Programm(2)/CYC_INT5",
+      "units": [
+        "S7-Programm(2)/CYC_INT5"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "S7-Programm(2)/MAIN",
+      "units": [
+        "S7-Programm(2)/MAIN"
+      ]
+    },
+    {
+      "kind": "ob",
+      "name": "S7-Programm(3)/OB1",
+      "units": [
+        "S7-Programm(3)/OB1"
+      ]
+    }
+  ]
+}

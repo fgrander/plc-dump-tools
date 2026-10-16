@@ -1,0 +1,18 @@
+{
+  "devices": [
+    {
+      "name": "SIMATIC 400(1)",
+      "type": "Simatic400"
+    }
+  ],
+  "folders": [],
+  "tasks": [
+    {
+      "kind": "ob",
+      "name": "MAIN",
+      "units": [
+        "MAIN"
+      ]
+    }
+  ]
+}

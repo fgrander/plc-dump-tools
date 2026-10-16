@@ -53,7 +53,8 @@ The dump formats of the two tools:
 Tests that need real projects look for them in `samples/s7classic` (STEP 7 V5.x projects
 zipped) and `samples/tia-portal` (TIA Portal projects) in the repository root, or in the folders
 named by `S7DUMP_SAMPLES_DIR` and `TIADUMP_SAMPLES_DIR`. Without samples those tests are skipped.
-`samples/` is ignored by git.
+`samples/` is ignored by git; the sample projects in it and their `plcexport one` results in
+`samples/exports/` are force-added (`git add -f`).
 
 ## License
 

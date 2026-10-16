@@ -11,3 +11,6 @@ python/tests/fixtures/** text eol=lf
 # Files recorded from TIA Portal: byte-exact, BOM and CRLF as TIA writes them
 python/tests/fixtures/tiadump/** -text
 python/tests/fixtures/golden/export/tia_*/** -text
+
+# Committed sample projects and their exports: byte-exact as the tools wrote them
+samples/** -text

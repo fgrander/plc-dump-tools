@@ -1,0 +1,18 @@
+[
+  {
+    "address": "Q 10.1",
+    "data_type": "BOOL",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"S7-Programm(2)/DO_CONT_S_DN\"",
+    "table": "S7-Programm(2)/Symbols"
+  },
+  {
+    "address": "Q 10.0",
+    "data_type": "BOOL",
+    "io_direction": "output",
+    "scope": "global_tag",
+    "symbol": "\"S7-Programm(2)/DO_CONT_S_UP\"",
+    "table": "S7-Programm(2)/Symbols"
+  }
+]

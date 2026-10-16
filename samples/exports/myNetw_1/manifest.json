@@ -1,0 +1,45 @@
+{
+  "counts": {
+    "hardware_modules": 1,
+    "hmi_screens": 0,
+    "units": 1,
+    "variables": 0,
+    "xrefs": 0
+  },
+  "coverage_summary": {
+    "connections": "delivered",
+    "datatypes": "unavailable",
+    "hardware": "partial",
+    "hmi": "unavailable",
+    "program_units": "delivered",
+    "safety": "unavailable",
+    "structure": "delivered",
+    "symbols": "unavailable"
+  },
+  "exported_at": "2026-10-16T19:30:29Z",
+  "extractor": {
+    "id": "s7classic-direct",
+    "route": "local",
+    "vendor_software": null,
+    "version": "1.0.0",
+    "worker": null
+  },
+  "format_version": 1,
+  "platform": {
+    "id": "siemens-step7-classic",
+    "version": null
+  },
+  "project": {
+    "controller": "CPU 315F-2 PN/DP",
+    "languages": [
+      "de"
+    ],
+    "line_or_machine": "myNetworkDemo2"
+  },
+  "source": {
+    "checksum": "sha256:b5802739a492c11b9d44f2395237aa63fa380ddee6ba3cb3df5d2d30ec4f615b",
+    "kind": "folder",
+    "path": "myNetw_1"
+  },
+  "upgrade": null
+}

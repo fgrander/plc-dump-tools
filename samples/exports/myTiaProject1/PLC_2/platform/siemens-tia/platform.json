@@ -1,0 +1,16 @@
+{
+  "compiled_units": [],
+  "missing_packages": [
+    "STEP 7 Safety V21",
+    "WinCC Basic/Comfort/Advanced V11 Update 2"
+  ],
+  "saved_version": "V21",
+  "tia_version": "V21",
+  "tiadump": "1.0.0",
+  "used_products": [
+    "STEP 7 Professional V21",
+    "STEP 7 Safety V21",
+    "Totally Integrated Automation Portal V21",
+    "WinCC Basic/Comfort/Advanced V11 Update 2"
+  ]
+}
